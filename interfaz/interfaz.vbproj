@@ -73,11 +73,22 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.vb">
+    <Compile Include="AgregarPaciente.Designer.vb">
+      <DependentUpon>AgregarPaciente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarPaciente.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="Medicos.Designer.vb">
+      <DependentUpon>Medicos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Medicos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExpedientePaciente.Designer.vb">
+      <DependentUpon>ExpedientePaciente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ExpedientePaciente.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -97,8 +108,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="AgregarPaciente.resx">
+      <DependentUpon>AgregarPaciente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Medicos.resx">
+      <DependentUpon>Medicos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpedientePaciente.resx">
+      <DependentUpon>ExpedientePaciente.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
