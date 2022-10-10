@@ -33,41 +33,41 @@ Partial Class AgregarMedico
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.txtNombre = New System.Windows.Forms.TextBox()
+        Me.txtApellidos = New System.Windows.Forms.TextBox()
+        Me.txtIdentificacion = New System.Windows.Forms.TextBox()
+        Me.cboTipoIdentificacion = New System.Windows.Forms.ComboBox()
+        Me.cboSexo = New System.Windows.Forms.ComboBox()
+        Me.cboEstadoCivil = New System.Windows.Forms.ComboBox()
+        Me.txtNacionalidad = New System.Windows.Forms.TextBox()
+        Me.dateFechaNacimiento = New System.Windows.Forms.DateTimePicker()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.txtCanton = New System.Windows.Forms.TextBox()
+        Me.txtDistrito = New System.Windows.Forms.TextBox()
+        Me.cboProvincia = New System.Windows.Forms.ComboBox()
+        Me.txtOtros = New System.Windows.Forms.TextBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
-        Me.TextBox10 = New System.Windows.Forms.TextBox()
-        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.txtTelefono = New System.Windows.Forms.TextBox()
+        Me.txtCorreo = New System.Windows.Forms.TextBox()
+        Me.txtNombreEspecialidad = New System.Windows.Forms.TextBox()
+        Me.txtAñosExperiencia = New System.Windows.Forms.NumericUpDown()
+        Me.btnAgregarEspecialidad = New System.Windows.Forms.Button()
+        Me.btnLimpiar = New System.Windows.Forms.Button()
+        Me.btnAgregarMedico = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtAñosExperiencia, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -171,14 +171,14 @@ Partial Class AgregarMedico
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.DateTimePicker1)
-        Me.GroupBox1.Controls.Add(Me.TextBox4)
-        Me.GroupBox1.Controls.Add(Me.ComboBox3)
-        Me.GroupBox1.Controls.Add(Me.ComboBox2)
-        Me.GroupBox1.Controls.Add(Me.ComboBox1)
-        Me.GroupBox1.Controls.Add(Me.TextBox3)
-        Me.GroupBox1.Controls.Add(Me.TextBox2)
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
+        Me.GroupBox1.Controls.Add(Me.dateFechaNacimiento)
+        Me.GroupBox1.Controls.Add(Me.txtNacionalidad)
+        Me.GroupBox1.Controls.Add(Me.cboEstadoCivil)
+        Me.GroupBox1.Controls.Add(Me.cboSexo)
+        Me.GroupBox1.Controls.Add(Me.cboTipoIdentificacion)
+        Me.GroupBox1.Controls.Add(Me.txtIdentificacion)
+        Me.GroupBox1.Controls.Add(Me.txtApellidos)
+        Me.GroupBox1.Controls.Add(Me.txtNombre)
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.Label9)
         Me.GroupBox1.Controls.Add(Me.Label2)
@@ -196,71 +196,74 @@ Partial Class AgregarMedico
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Información personal"
         '
-        'TextBox1
+        'txtNombre
         '
-        Me.TextBox1.Location = New System.Drawing.Point(245, 53)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(312, 27)
-        Me.TextBox1.TabIndex = 9
+        Me.txtNombre.Location = New System.Drawing.Point(245, 53)
+        Me.txtNombre.Name = "txtNombre"
+        Me.txtNombre.Size = New System.Drawing.Size(312, 27)
+        Me.txtNombre.TabIndex = 9
         '
-        'TextBox2
+        'txtApellidos
         '
-        Me.TextBox2.Location = New System.Drawing.Point(245, 90)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(312, 27)
-        Me.TextBox2.TabIndex = 10
+        Me.txtApellidos.Location = New System.Drawing.Point(245, 90)
+        Me.txtApellidos.Name = "txtApellidos"
+        Me.txtApellidos.Size = New System.Drawing.Size(312, 27)
+        Me.txtApellidos.TabIndex = 10
         '
-        'TextBox3
+        'txtIdentificacion
         '
-        Me.TextBox3.Location = New System.Drawing.Point(245, 190)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(312, 27)
-        Me.TextBox3.TabIndex = 11
+        Me.txtIdentificacion.Location = New System.Drawing.Point(245, 190)
+        Me.txtIdentificacion.Name = "txtIdentificacion"
+        Me.txtIdentificacion.Size = New System.Drawing.Size(312, 27)
+        Me.txtIdentificacion.TabIndex = 11
         '
-        'ComboBox1
+        'cboTipoIdentificacion
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(245, 139)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(312, 26)
-        Me.ComboBox1.TabIndex = 12
+        Me.cboTipoIdentificacion.FormattingEnabled = True
+        Me.cboTipoIdentificacion.Items.AddRange(New Object() {"", "Nacional", "Pasaporte", "DIMEX"})
+        Me.cboTipoIdentificacion.Location = New System.Drawing.Point(245, 139)
+        Me.cboTipoIdentificacion.Name = "cboTipoIdentificacion"
+        Me.cboTipoIdentificacion.Size = New System.Drawing.Size(312, 26)
+        Me.cboTipoIdentificacion.TabIndex = 12
         '
-        'ComboBox2
+        'cboSexo
         '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(245, 239)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(312, 26)
-        Me.ComboBox2.TabIndex = 13
+        Me.cboSexo.FormattingEnabled = True
+        Me.cboSexo.Items.AddRange(New Object() {"", "Femenino", "Masculino", "Otro"})
+        Me.cboSexo.Location = New System.Drawing.Point(245, 239)
+        Me.cboSexo.Name = "cboSexo"
+        Me.cboSexo.Size = New System.Drawing.Size(312, 26)
+        Me.cboSexo.TabIndex = 13
         '
-        'ComboBox3
+        'cboEstadoCivil
         '
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(245, 288)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(312, 26)
-        Me.ComboBox3.TabIndex = 14
+        Me.cboEstadoCivil.FormattingEnabled = True
+        Me.cboEstadoCivil.Items.AddRange(New Object() {"", "Soltero", "Casado", "Divorciado", "Viudo"})
+        Me.cboEstadoCivil.Location = New System.Drawing.Point(245, 288)
+        Me.cboEstadoCivil.Name = "cboEstadoCivil"
+        Me.cboEstadoCivil.Size = New System.Drawing.Size(312, 26)
+        Me.cboEstadoCivil.TabIndex = 14
         '
-        'TextBox4
+        'txtNacionalidad
         '
-        Me.TextBox4.Location = New System.Drawing.Point(245, 335)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(312, 27)
-        Me.TextBox4.TabIndex = 15
+        Me.txtNacionalidad.Location = New System.Drawing.Point(245, 335)
+        Me.txtNacionalidad.Name = "txtNacionalidad"
+        Me.txtNacionalidad.Size = New System.Drawing.Size(312, 27)
+        Me.txtNacionalidad.TabIndex = 15
         '
-        'DateTimePicker1
+        'dateFechaNacimiento
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(245, 387)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(312, 27)
-        Me.DateTimePicker1.TabIndex = 16
+        Me.dateFechaNacimiento.Location = New System.Drawing.Point(245, 387)
+        Me.dateFechaNacimiento.Name = "dateFechaNacimiento"
+        Me.dateFechaNacimiento.Size = New System.Drawing.Size(312, 27)
+        Me.dateFechaNacimiento.TabIndex = 16
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.TextBox7)
-        Me.GroupBox2.Controls.Add(Me.ComboBox4)
-        Me.GroupBox2.Controls.Add(Me.TextBox6)
-        Me.GroupBox2.Controls.Add(Me.TextBox5)
+        Me.GroupBox2.Controls.Add(Me.txtOtros)
+        Me.GroupBox2.Controls.Add(Me.cboProvincia)
+        Me.GroupBox2.Controls.Add(Me.txtDistrito)
+        Me.GroupBox2.Controls.Add(Me.txtCanton)
         Me.GroupBox2.Controls.Add(Me.Label13)
         Me.GroupBox2.Controls.Add(Me.Label12)
         Me.GroupBox2.Controls.Add(Me.Label11)
@@ -314,41 +317,42 @@ Partial Class AgregarMedico
         Me.Label13.TabIndex = 3
         Me.Label13.Text = "Cantón:"
         '
-        'TextBox5
+        'txtCanton
         '
-        Me.TextBox5.Location = New System.Drawing.Point(244, 53)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(312, 27)
-        Me.TextBox5.TabIndex = 10
+        Me.txtCanton.Location = New System.Drawing.Point(244, 53)
+        Me.txtCanton.Name = "txtCanton"
+        Me.txtCanton.Size = New System.Drawing.Size(312, 27)
+        Me.txtCanton.TabIndex = 10
         '
-        'TextBox6
+        'txtDistrito
         '
-        Me.TextBox6.Location = New System.Drawing.Point(244, 90)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(312, 27)
-        Me.TextBox6.TabIndex = 11
+        Me.txtDistrito.Location = New System.Drawing.Point(244, 90)
+        Me.txtDistrito.Name = "txtDistrito"
+        Me.txtDistrito.Size = New System.Drawing.Size(312, 27)
+        Me.txtDistrito.TabIndex = 11
         '
-        'ComboBox4
+        'cboProvincia
         '
-        Me.ComboBox4.FormattingEnabled = True
-        Me.ComboBox4.Location = New System.Drawing.Point(244, 18)
-        Me.ComboBox4.Name = "ComboBox4"
-        Me.ComboBox4.Size = New System.Drawing.Size(312, 26)
-        Me.ComboBox4.TabIndex = 13
+        Me.cboProvincia.FormattingEnabled = True
+        Me.cboProvincia.Items.AddRange(New Object() {"", "Alajuela", "San José", "Heredia", "Cartago", "Puntarenas", "Guanacaste", "Limón"})
+        Me.cboProvincia.Location = New System.Drawing.Point(244, 18)
+        Me.cboProvincia.Name = "cboProvincia"
+        Me.cboProvincia.Size = New System.Drawing.Size(312, 26)
+        Me.cboProvincia.TabIndex = 13
         '
-        'TextBox7
+        'txtOtros
         '
-        Me.TextBox7.Location = New System.Drawing.Point(244, 123)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(312, 27)
-        Me.TextBox7.TabIndex = 17
+        Me.txtOtros.Location = New System.Drawing.Point(244, 123)
+        Me.txtOtros.Name = "txtOtros"
+        Me.txtOtros.Size = New System.Drawing.Size(312, 27)
+        Me.txtOtros.TabIndex = 17
         '
         'GroupBox3
         '
-        Me.GroupBox3.Controls.Add(Me.Button2)
-        Me.GroupBox3.Controls.Add(Me.Button1)
-        Me.GroupBox3.Controls.Add(Me.NumericUpDown1)
-        Me.GroupBox3.Controls.Add(Me.TextBox10)
+        Me.GroupBox3.Controls.Add(Me.btnLimpiar)
+        Me.GroupBox3.Controls.Add(Me.btnAgregarEspecialidad)
+        Me.GroupBox3.Controls.Add(Me.txtAñosExperiencia)
+        Me.GroupBox3.Controls.Add(Me.txtNombreEspecialidad)
         Me.GroupBox3.Controls.Add(Me.Label15)
         Me.GroupBox3.Controls.Add(Me.Label14)
         Me.GroupBox3.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -362,8 +366,8 @@ Partial Class AgregarMedico
         '
         'GroupBox4
         '
-        Me.GroupBox4.Controls.Add(Me.TextBox9)
-        Me.GroupBox4.Controls.Add(Me.TextBox8)
+        Me.GroupBox4.Controls.Add(Me.txtCorreo)
+        Me.GroupBox4.Controls.Add(Me.txtTelefono)
         Me.GroupBox4.Controls.Add(Me.Label17)
         Me.GroupBox4.Controls.Add(Me.Label16)
         Me.GroupBox4.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -419,64 +423,64 @@ Partial Class AgregarMedico
         Me.Label17.TabIndex = 20
         Me.Label17.Text = "Correo electrónico:"
         '
-        'TextBox8
+        'txtTelefono
         '
-        Me.TextBox8.Location = New System.Drawing.Point(213, 34)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(312, 27)
-        Me.TextBox8.TabIndex = 17
+        Me.txtTelefono.Location = New System.Drawing.Point(213, 34)
+        Me.txtTelefono.Name = "txtTelefono"
+        Me.txtTelefono.Size = New System.Drawing.Size(312, 27)
+        Me.txtTelefono.TabIndex = 17
         '
-        'TextBox9
+        'txtCorreo
         '
-        Me.TextBox9.Location = New System.Drawing.Point(213, 73)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(312, 27)
-        Me.TextBox9.TabIndex = 21
+        Me.txtCorreo.Location = New System.Drawing.Point(213, 73)
+        Me.txtCorreo.Name = "txtCorreo"
+        Me.txtCorreo.Size = New System.Drawing.Size(312, 27)
+        Me.txtCorreo.TabIndex = 21
         '
-        'TextBox10
+        'txtNombreEspecialidad
         '
-        Me.TextBox10.Location = New System.Drawing.Point(226, 36)
-        Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(185, 27)
-        Me.TextBox10.TabIndex = 22
+        Me.txtNombreEspecialidad.Location = New System.Drawing.Point(226, 36)
+        Me.txtNombreEspecialidad.Name = "txtNombreEspecialidad"
+        Me.txtNombreEspecialidad.Size = New System.Drawing.Size(185, 27)
+        Me.txtNombreEspecialidad.TabIndex = 22
         '
-        'NumericUpDown1
+        'txtAñosExperiencia
         '
-        Me.NumericUpDown1.Location = New System.Drawing.Point(226, 78)
-        Me.NumericUpDown1.Name = "NumericUpDown1"
-        Me.NumericUpDown1.Size = New System.Drawing.Size(185, 27)
-        Me.NumericUpDown1.TabIndex = 23
+        Me.txtAñosExperiencia.Location = New System.Drawing.Point(226, 78)
+        Me.txtAñosExperiencia.Name = "txtAñosExperiencia"
+        Me.txtAñosExperiencia.Size = New System.Drawing.Size(185, 27)
+        Me.txtAñosExperiencia.TabIndex = 23
         '
-        'Button1
+        'btnAgregarEspecialidad
         '
-        Me.Button1.BackColor = System.Drawing.Color.SteelBlue
-        Me.Button1.Location = New System.Drawing.Point(448, 27)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(127, 36)
-        Me.Button1.TabIndex = 24
-        Me.Button1.Text = "Agregar"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnAgregarEspecialidad.BackColor = System.Drawing.Color.SteelBlue
+        Me.btnAgregarEspecialidad.Location = New System.Drawing.Point(448, 27)
+        Me.btnAgregarEspecialidad.Name = "btnAgregarEspecialidad"
+        Me.btnAgregarEspecialidad.Size = New System.Drawing.Size(127, 36)
+        Me.btnAgregarEspecialidad.TabIndex = 24
+        Me.btnAgregarEspecialidad.Text = "Agregar"
+        Me.btnAgregarEspecialidad.UseVisualStyleBackColor = False
         '
-        'Button2
+        'btnLimpiar
         '
-        Me.Button2.BackColor = System.Drawing.Color.SteelBlue
-        Me.Button2.Location = New System.Drawing.Point(448, 69)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(127, 36)
-        Me.Button2.TabIndex = 25
-        Me.Button2.Text = "Limpiar"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.btnLimpiar.BackColor = System.Drawing.Color.SteelBlue
+        Me.btnLimpiar.Location = New System.Drawing.Point(448, 69)
+        Me.btnLimpiar.Name = "btnLimpiar"
+        Me.btnLimpiar.Size = New System.Drawing.Size(127, 36)
+        Me.btnLimpiar.TabIndex = 25
+        Me.btnLimpiar.Text = "Limpiar"
+        Me.btnLimpiar.UseVisualStyleBackColor = False
         '
-        'Button3
+        'btnAgregarMedico
         '
-        Me.Button3.BackColor = System.Drawing.Color.SteelBlue
-        Me.Button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button3.Location = New System.Drawing.Point(556, 580)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(228, 62)
-        Me.Button3.TabIndex = 26
-        Me.Button3.Text = "Agregar"
-        Me.Button3.UseVisualStyleBackColor = False
+        Me.btnAgregarMedico.BackColor = System.Drawing.Color.SteelBlue
+        Me.btnAgregarMedico.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnAgregarMedico.Location = New System.Drawing.Point(556, 580)
+        Me.btnAgregarMedico.Name = "btnAgregarMedico"
+        Me.btnAgregarMedico.Size = New System.Drawing.Size(228, 62)
+        Me.btnAgregarMedico.TabIndex = 26
+        Me.btnAgregarMedico.Text = "Agregar"
+        Me.btnAgregarMedico.UseVisualStyleBackColor = False
         '
         'AgregarMedico
         '
@@ -484,7 +488,7 @@ Partial Class AgregarMedico
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightBlue
         Me.ClientSize = New System.Drawing.Size(1383, 666)
-        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.btnAgregarMedico)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
@@ -503,7 +507,7 @@ Partial Class AgregarMedico
         Me.GroupBox3.PerformLayout()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtAñosExperiencia, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -519,34 +523,34 @@ Partial Class AgregarMedico
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents ComboBox3 As ComboBox
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents dateFechaNacimiento As DateTimePicker
+    Friend WithEvents txtNacionalidad As TextBox
+    Friend WithEvents cboEstadoCivil As ComboBox
+    Friend WithEvents cboSexo As ComboBox
+    Friend WithEvents cboTipoIdentificacion As ComboBox
+    Friend WithEvents txtIdentificacion As TextBox
+    Friend WithEvents txtApellidos As TextBox
+    Friend WithEvents txtNombre As TextBox
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents Label13 As Label
     Friend WithEvents Label12 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents Label14 As Label
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents ComboBox4 As ComboBox
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents txtOtros As TextBox
+    Friend WithEvents cboProvincia As ComboBox
+    Friend WithEvents txtDistrito As TextBox
+    Friend WithEvents txtCanton As TextBox
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents GroupBox4 As GroupBox
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
-    Friend WithEvents NumericUpDown1 As NumericUpDown
-    Friend WithEvents TextBox10 As TextBox
+    Friend WithEvents btnLimpiar As Button
+    Friend WithEvents btnAgregarEspecialidad As Button
+    Friend WithEvents txtAñosExperiencia As NumericUpDown
+    Friend WithEvents txtNombreEspecialidad As TextBox
     Friend WithEvents Label15 As Label
-    Friend WithEvents TextBox9 As TextBox
-    Friend WithEvents TextBox8 As TextBox
+    Friend WithEvents txtCorreo As TextBox
+    Friend WithEvents txtTelefono As TextBox
     Friend WithEvents Label17 As Label
     Friend WithEvents Label16 As Label
-    Friend WithEvents Button3 As Button
+    Friend WithEvents btnAgregarMedico As Button
 End Class
