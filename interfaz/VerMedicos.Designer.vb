@@ -25,9 +25,9 @@ Partial Class VerMedicos
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(VerMedicos))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.dgListaMedicos = New System.Windows.Forms.DataGridView()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.txtModificarMedico = New System.Windows.Forms.Button()
         Me.txtEliminarMedico = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.dgListaMedicos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -46,22 +46,12 @@ Partial Class VerMedicos
         '
         Me.dgListaMedicos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgListaMedicos.Location = New System.Drawing.Point(85, 159)
-        Me.dgListaMedicos.Margin = New System.Windows.Forms.Padding(8, 8, 8, 8)
+        Me.dgListaMedicos.Margin = New System.Windows.Forms.Padding(8)
         Me.dgListaMedicos.Name = "dgListaMedicos"
         Me.dgListaMedicos.RowHeadersWidth = 51
         Me.dgListaMedicos.RowTemplate.Height = 24
         Me.dgListaMedicos.Size = New System.Drawing.Size(733, 276)
         Me.dgListaMedicos.TabIndex = 1
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.interfaz.My.Resources.Resources.png_transparent_stethoscope_medicine_nursing_health_care_physician_health_blue_logo_medical_care
-        Me.PictureBox1.Location = New System.Drawing.Point(619, 25)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(124, 102)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 2
-        Me.PictureBox1.TabStop = False
         '
         'txtModificarMedico
         '
@@ -85,6 +75,16 @@ Partial Class VerMedicos
         Me.txtEliminarMedico.Text = "Eliminar"
         Me.txtEliminarMedico.UseVisualStyleBackColor = False
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.interfaz.My.Resources.Resources.médicos_en_fondo_transparente_97513063
+        Me.PictureBox1.Location = New System.Drawing.Point(619, 25)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(124, 102)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 2
+        Me.PictureBox1.TabStop = False
+        '
         'VerMedicos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(22.0!, 40.0!)
@@ -99,7 +99,7 @@ Partial Class VerMedicos
         Me.Font = New System.Drawing.Font("Mongolian Baiti", 22.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(8, 8, 8, 8)
+        Me.Margin = New System.Windows.Forms.Padding(8)
         Me.Name = "VerMedicos"
         Me.Text = "Médicos"
         CType(Me.dgListaMedicos, System.ComponentModel.ISupportInitialize).EndInit()
