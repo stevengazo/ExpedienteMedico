@@ -83,24 +83,18 @@
       <DependentUpon>Autenticacion.vb</DependentUpon>
     </Compile>
     <Compile Include="Autenticacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="AgregarPaciente.Designer.vb">
       <DependentUpon>AgregarPaciente.vb</DependentUpon>
     </Compile>
     <Compile Include="AgregarPaciente.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form1.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="ModoAdmin.Designer.vb">
       <DependentUpon>ModoAdmin.vb</DependentUpon>
     </Compile>
     <Compile Include="ModoAdmin.vb">
-    </Compile>
-    <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Medicos.Designer.vb">
@@ -147,6 +141,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ModoAdmin.resx">
       <DependentUpon>ModoAdmin.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AgregarPaciente.resx">
       <DependentUpon>AgregarPaciente.vb</DependentUpon>
     </EmbeddedResource>
