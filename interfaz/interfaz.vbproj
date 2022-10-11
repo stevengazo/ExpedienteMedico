@@ -73,6 +73,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgregarEnfermedad.Designer.vb">
+      <DependentUpon>AgregarEnfermedad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarEnfermedad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarMedicamento.Designer.vb">
+      <DependentUpon>AgregarMedicamento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarMedicamento.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="AgregarMedico.Designer.vb">
       <DependentUpon>AgregarMedico.vb</DependentUpon>
     </Compile>
@@ -145,6 +157,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AgregarEnfermedad.resx">
+      <DependentUpon>AgregarEnfermedad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarMedicamento.resx">
+      <DependentUpon>AgregarMedicamento.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AgregarMedico.resx">
       <DependentUpon>AgregarMedico.vb</DependentUpon>
     </EmbeddedResource>

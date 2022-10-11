@@ -54,4 +54,27 @@
     Private Sub ModoAdmin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
+
+    Private Sub AgregarUnaEnfermedadToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AgregarUnaEnfermedadToolStripMenuItem.Click
+        AgregarEnfermedad.Show()
+
+    End Sub
+
+    Private Sub AgregarMedicamentoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AgregarMedicamentoToolStripMenuItem.Click
+        AgregarMedicamento.Show()
+
+    End Sub
+
+    Private Sub PacientesToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles PacientesToolStripMenuItem1.Click
+        Medicos.Show()
+
+    End Sub
+
+    Private Sub PacientesToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles PacientesToolStripMenuItem2.Click
+        Medicos.Show()
+    End Sub
+
+    Private Sub PacientesToolStripMenuItem3_Click(sender As Object, e As EventArgs) Handles PacientesToolStripMenuItem3.Click
+        Medicos.Show()
+    End Sub
 End Class
