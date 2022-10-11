@@ -24,11 +24,11 @@ Partial Class Medicos
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Medicos))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.btnExpediente = New System.Windows.Forms.Button()
         Me.btnAgregarPaciente = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.btnEliminarPaciente = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -44,6 +44,17 @@ Partial Class Medicos
         Me.Panel1.Size = New System.Drawing.Size(920, 430)
         Me.Panel1.TabIndex = 0
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label2.Location = New System.Drawing.Point(19, 9)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(307, 18)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "Información de pacientes registrados"
+        '
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -57,7 +68,8 @@ Partial Class Medicos
         'btnExpediente
         '
         Me.btnExpediente.BackColor = System.Drawing.Color.SteelBlue
-        Me.btnExpediente.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnExpediente.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnExpediente.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.btnExpediente.Location = New System.Drawing.Point(68, 527)
         Me.btnExpediente.Name = "btnExpediente"
         Me.btnExpediente.Size = New System.Drawing.Size(173, 48)
@@ -68,7 +80,8 @@ Partial Class Medicos
         'btnAgregarPaciente
         '
         Me.btnAgregarPaciente.BackColor = System.Drawing.Color.SteelBlue
-        Me.btnAgregarPaciente.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAgregarPaciente.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAgregarPaciente.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.btnAgregarPaciente.Location = New System.Drawing.Point(385, 527)
         Me.btnAgregarPaciente.Name = "btnAgregarPaciente"
         Me.btnAgregarPaciente.Size = New System.Drawing.Size(187, 48)
@@ -80,27 +93,18 @@ Partial Class Medicos
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Mongolian Baiti", 28.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Label1.Location = New System.Drawing.Point(254, 8)
+        Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label1.Location = New System.Drawing.Point(248, 9)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(422, 50)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Módulo de Médicos"
         '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(19, 9)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(307, 18)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Información de pacientes registrados"
-        '
         'btnEliminarPaciente
         '
         Me.btnEliminarPaciente.BackColor = System.Drawing.Color.SteelBlue
-        Me.btnEliminarPaciente.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEliminarPaciente.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEliminarPaciente.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.btnEliminarPaciente.Location = New System.Drawing.Point(678, 527)
         Me.btnEliminarPaciente.Name = "btnEliminarPaciente"
         Me.btnEliminarPaciente.Size = New System.Drawing.Size(160, 48)

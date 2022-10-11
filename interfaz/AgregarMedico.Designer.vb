@@ -33,41 +33,41 @@ Partial Class AgregarMedico
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.txtNombre = New System.Windows.Forms.TextBox()
-        Me.txtApellidos = New System.Windows.Forms.TextBox()
-        Me.txtIdentificacion = New System.Windows.Forms.TextBox()
-        Me.cboTipoIdentificacion = New System.Windows.Forms.ComboBox()
-        Me.cboSexo = New System.Windows.Forms.ComboBox()
-        Me.cboEstadoCivil = New System.Windows.Forms.ComboBox()
-        Me.txtNacionalidad = New System.Windows.Forms.TextBox()
         Me.dateFechaNacimiento = New System.Windows.Forms.DateTimePicker()
+        Me.txtNacionalidad = New System.Windows.Forms.TextBox()
+        Me.cboEstadoCivil = New System.Windows.Forms.ComboBox()
+        Me.cboSexo = New System.Windows.Forms.ComboBox()
+        Me.cboTipoIdentificacion = New System.Windows.Forms.ComboBox()
+        Me.txtIdentificacion = New System.Windows.Forms.TextBox()
+        Me.txtApellidos = New System.Windows.Forms.TextBox()
+        Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.txtCanton = New System.Windows.Forms.TextBox()
-        Me.txtDistrito = New System.Windows.Forms.TextBox()
-        Me.cboProvincia = New System.Windows.Forms.ComboBox()
         Me.txtOtros = New System.Windows.Forms.TextBox()
+        Me.cboProvincia = New System.Windows.Forms.ComboBox()
+        Me.txtDistrito = New System.Windows.Forms.TextBox()
+        Me.txtCanton = New System.Windows.Forms.TextBox()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.txtTelefono = New System.Windows.Forms.TextBox()
-        Me.txtCorreo = New System.Windows.Forms.TextBox()
-        Me.txtNombreEspecialidad = New System.Windows.Forms.TextBox()
-        Me.txtAñosExperiencia = New System.Windows.Forms.NumericUpDown()
-        Me.btnAgregarEspecialidad = New System.Windows.Forms.Button()
         Me.btnLimpiar = New System.Windows.Forms.Button()
+        Me.btnAgregarEspecialidad = New System.Windows.Forms.Button()
+        Me.txtAñosExperiencia = New System.Windows.Forms.NumericUpDown()
+        Me.txtNombreEspecialidad = New System.Windows.Forms.TextBox()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.txtCorreo = New System.Windows.Forms.TextBox()
+        Me.txtTelefono = New System.Windows.Forms.TextBox()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
         Me.btnAgregarMedico = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
-        Me.GroupBox4.SuspendLayout()
         CType(Me.txtAñosExperiencia, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox4.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -196,44 +196,19 @@ Partial Class AgregarMedico
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Información personal"
         '
-        'txtNombre
+        'dateFechaNacimiento
         '
-        Me.txtNombre.Location = New System.Drawing.Point(245, 53)
-        Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(312, 27)
-        Me.txtNombre.TabIndex = 9
+        Me.dateFechaNacimiento.Location = New System.Drawing.Point(245, 387)
+        Me.dateFechaNacimiento.Name = "dateFechaNacimiento"
+        Me.dateFechaNacimiento.Size = New System.Drawing.Size(312, 27)
+        Me.dateFechaNacimiento.TabIndex = 16
         '
-        'txtApellidos
+        'txtNacionalidad
         '
-        Me.txtApellidos.Location = New System.Drawing.Point(245, 90)
-        Me.txtApellidos.Name = "txtApellidos"
-        Me.txtApellidos.Size = New System.Drawing.Size(312, 27)
-        Me.txtApellidos.TabIndex = 10
-        '
-        'txtIdentificacion
-        '
-        Me.txtIdentificacion.Location = New System.Drawing.Point(245, 190)
-        Me.txtIdentificacion.Name = "txtIdentificacion"
-        Me.txtIdentificacion.Size = New System.Drawing.Size(312, 27)
-        Me.txtIdentificacion.TabIndex = 11
-        '
-        'cboTipoIdentificacion
-        '
-        Me.cboTipoIdentificacion.FormattingEnabled = True
-        Me.cboTipoIdentificacion.Items.AddRange(New Object() {"", "Nacional", "Pasaporte", "DIMEX"})
-        Me.cboTipoIdentificacion.Location = New System.Drawing.Point(245, 139)
-        Me.cboTipoIdentificacion.Name = "cboTipoIdentificacion"
-        Me.cboTipoIdentificacion.Size = New System.Drawing.Size(312, 26)
-        Me.cboTipoIdentificacion.TabIndex = 12
-        '
-        'cboSexo
-        '
-        Me.cboSexo.FormattingEnabled = True
-        Me.cboSexo.Items.AddRange(New Object() {"", "Femenino", "Masculino", "Otro"})
-        Me.cboSexo.Location = New System.Drawing.Point(245, 239)
-        Me.cboSexo.Name = "cboSexo"
-        Me.cboSexo.Size = New System.Drawing.Size(312, 26)
-        Me.cboSexo.TabIndex = 13
+        Me.txtNacionalidad.Location = New System.Drawing.Point(245, 335)
+        Me.txtNacionalidad.Name = "txtNacionalidad"
+        Me.txtNacionalidad.Size = New System.Drawing.Size(312, 27)
+        Me.txtNacionalidad.TabIndex = 15
         '
         'cboEstadoCivil
         '
@@ -244,19 +219,44 @@ Partial Class AgregarMedico
         Me.cboEstadoCivil.Size = New System.Drawing.Size(312, 26)
         Me.cboEstadoCivil.TabIndex = 14
         '
-        'txtNacionalidad
+        'cboSexo
         '
-        Me.txtNacionalidad.Location = New System.Drawing.Point(245, 335)
-        Me.txtNacionalidad.Name = "txtNacionalidad"
-        Me.txtNacionalidad.Size = New System.Drawing.Size(312, 27)
-        Me.txtNacionalidad.TabIndex = 15
+        Me.cboSexo.FormattingEnabled = True
+        Me.cboSexo.Items.AddRange(New Object() {"", "Femenino", "Masculino", "Otro"})
+        Me.cboSexo.Location = New System.Drawing.Point(245, 239)
+        Me.cboSexo.Name = "cboSexo"
+        Me.cboSexo.Size = New System.Drawing.Size(312, 26)
+        Me.cboSexo.TabIndex = 13
         '
-        'dateFechaNacimiento
+        'cboTipoIdentificacion
         '
-        Me.dateFechaNacimiento.Location = New System.Drawing.Point(245, 387)
-        Me.dateFechaNacimiento.Name = "dateFechaNacimiento"
-        Me.dateFechaNacimiento.Size = New System.Drawing.Size(312, 27)
-        Me.dateFechaNacimiento.TabIndex = 16
+        Me.cboTipoIdentificacion.FormattingEnabled = True
+        Me.cboTipoIdentificacion.Items.AddRange(New Object() {"", "Nacional", "Pasaporte", "DIMEX"})
+        Me.cboTipoIdentificacion.Location = New System.Drawing.Point(245, 139)
+        Me.cboTipoIdentificacion.Name = "cboTipoIdentificacion"
+        Me.cboTipoIdentificacion.Size = New System.Drawing.Size(312, 26)
+        Me.cboTipoIdentificacion.TabIndex = 12
+        '
+        'txtIdentificacion
+        '
+        Me.txtIdentificacion.Location = New System.Drawing.Point(245, 190)
+        Me.txtIdentificacion.Name = "txtIdentificacion"
+        Me.txtIdentificacion.Size = New System.Drawing.Size(312, 27)
+        Me.txtIdentificacion.TabIndex = 11
+        '
+        'txtApellidos
+        '
+        Me.txtApellidos.Location = New System.Drawing.Point(245, 90)
+        Me.txtApellidos.Name = "txtApellidos"
+        Me.txtApellidos.Size = New System.Drawing.Size(312, 27)
+        Me.txtApellidos.TabIndex = 10
+        '
+        'txtNombre
+        '
+        Me.txtNombre.Location = New System.Drawing.Point(245, 53)
+        Me.txtNombre.Name = "txtNombre"
+        Me.txtNombre.Size = New System.Drawing.Size(312, 27)
+        Me.txtNombre.TabIndex = 9
         '
         'GroupBox2
         '
@@ -277,35 +277,35 @@ Partial Class AgregarMedico
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Lugar de residencia"
         '
-        'Label10
+        'txtOtros
         '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Mongolian Baiti", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(25, 23)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(104, 21)
-        Me.Label10.TabIndex = 0
-        Me.Label10.Text = "Provincia:"
+        Me.txtOtros.Location = New System.Drawing.Point(244, 123)
+        Me.txtOtros.Name = "txtOtros"
+        Me.txtOtros.Size = New System.Drawing.Size(312, 27)
+        Me.txtOtros.TabIndex = 17
         '
-        'Label11
+        'cboProvincia
         '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Mongolian Baiti", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(25, 130)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(67, 21)
-        Me.Label11.TabIndex = 1
-        Me.Label11.Text = "Otros:"
+        Me.cboProvincia.FormattingEnabled = True
+        Me.cboProvincia.Items.AddRange(New Object() {"", "Alajuela", "San José", "Heredia", "Cartago", "Puntarenas", "Guanacaste", "Limón"})
+        Me.cboProvincia.Location = New System.Drawing.Point(244, 18)
+        Me.cboProvincia.Name = "cboProvincia"
+        Me.cboProvincia.Size = New System.Drawing.Size(312, 26)
+        Me.cboProvincia.TabIndex = 13
         '
-        'Label12
+        'txtDistrito
         '
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Mongolian Baiti", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(25, 96)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(88, 21)
-        Me.Label12.TabIndex = 2
-        Me.Label12.Text = "Distrito:"
+        Me.txtDistrito.Location = New System.Drawing.Point(244, 90)
+        Me.txtDistrito.Name = "txtDistrito"
+        Me.txtDistrito.Size = New System.Drawing.Size(312, 27)
+        Me.txtDistrito.TabIndex = 11
+        '
+        'txtCanton
+        '
+        Me.txtCanton.Location = New System.Drawing.Point(244, 53)
+        Me.txtCanton.Name = "txtCanton"
+        Me.txtCanton.Size = New System.Drawing.Size(312, 27)
+        Me.txtCanton.TabIndex = 10
         '
         'Label13
         '
@@ -317,35 +317,35 @@ Partial Class AgregarMedico
         Me.Label13.TabIndex = 3
         Me.Label13.Text = "Cantón:"
         '
-        'txtCanton
+        'Label12
         '
-        Me.txtCanton.Location = New System.Drawing.Point(244, 53)
-        Me.txtCanton.Name = "txtCanton"
-        Me.txtCanton.Size = New System.Drawing.Size(312, 27)
-        Me.txtCanton.TabIndex = 10
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Mongolian Baiti", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(25, 96)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(88, 21)
+        Me.Label12.TabIndex = 2
+        Me.Label12.Text = "Distrito:"
         '
-        'txtDistrito
+        'Label11
         '
-        Me.txtDistrito.Location = New System.Drawing.Point(244, 90)
-        Me.txtDistrito.Name = "txtDistrito"
-        Me.txtDistrito.Size = New System.Drawing.Size(312, 27)
-        Me.txtDistrito.TabIndex = 11
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Mongolian Baiti", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(25, 130)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(67, 21)
+        Me.Label11.TabIndex = 1
+        Me.Label11.Text = "Otros:"
         '
-        'cboProvincia
+        'Label10
         '
-        Me.cboProvincia.FormattingEnabled = True
-        Me.cboProvincia.Items.AddRange(New Object() {"", "Alajuela", "San José", "Heredia", "Cartago", "Puntarenas", "Guanacaste", "Limón"})
-        Me.cboProvincia.Location = New System.Drawing.Point(244, 18)
-        Me.cboProvincia.Name = "cboProvincia"
-        Me.cboProvincia.Size = New System.Drawing.Size(312, 26)
-        Me.cboProvincia.TabIndex = 13
-        '
-        'txtOtros
-        '
-        Me.txtOtros.Location = New System.Drawing.Point(244, 123)
-        Me.txtOtros.Name = "txtOtros"
-        Me.txtOtros.Size = New System.Drawing.Size(312, 27)
-        Me.txtOtros.TabIndex = 17
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Mongolian Baiti", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(25, 23)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(104, 21)
+        Me.Label10.TabIndex = 0
+        Me.Label10.Text = "Provincia:"
         '
         'GroupBox3
         '
@@ -364,6 +364,62 @@ Partial Class AgregarMedico
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Especialidad médica"
         '
+        'btnLimpiar
+        '
+        Me.btnLimpiar.BackColor = System.Drawing.Color.SteelBlue
+        Me.btnLimpiar.Location = New System.Drawing.Point(448, 69)
+        Me.btnLimpiar.Name = "btnLimpiar"
+        Me.btnLimpiar.Size = New System.Drawing.Size(127, 36)
+        Me.btnLimpiar.TabIndex = 25
+        Me.btnLimpiar.Text = "Limpiar"
+        Me.btnLimpiar.UseVisualStyleBackColor = False
+        '
+        'btnAgregarEspecialidad
+        '
+        Me.btnAgregarEspecialidad.BackColor = System.Drawing.Color.SteelBlue
+        Me.btnAgregarEspecialidad.Location = New System.Drawing.Point(448, 27)
+        Me.btnAgregarEspecialidad.Name = "btnAgregarEspecialidad"
+        Me.btnAgregarEspecialidad.Size = New System.Drawing.Size(127, 36)
+        Me.btnAgregarEspecialidad.TabIndex = 24
+        Me.btnAgregarEspecialidad.Text = "Agregar"
+        Me.btnAgregarEspecialidad.UseVisualStyleBackColor = False
+        '
+        'txtAñosExperiencia
+        '
+        Me.txtAñosExperiencia.Location = New System.Drawing.Point(226, 78)
+        Me.txtAñosExperiencia.Name = "txtAñosExperiencia"
+        Me.txtAñosExperiencia.Size = New System.Drawing.Size(185, 27)
+        Me.txtAñosExperiencia.TabIndex = 23
+        '
+        'txtNombreEspecialidad
+        '
+        Me.txtNombreEspecialidad.Location = New System.Drawing.Point(226, 36)
+        Me.txtNombreEspecialidad.Name = "txtNombreEspecialidad"
+        Me.txtNombreEspecialidad.Size = New System.Drawing.Size(185, 27)
+        Me.txtNombreEspecialidad.TabIndex = 22
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Mongolian Baiti", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label15.Location = New System.Drawing.Point(19, 78)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(201, 21)
+        Me.Label15.TabIndex = 18
+        Me.Label15.Text = "Años de experiencia:"
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Mongolian Baiti", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label14.Location = New System.Drawing.Point(19, 42)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(89, 21)
+        Me.Label14.TabIndex = 17
+        Me.Label14.Text = "Nombre:"
+        '
         'GroupBox4
         '
         Me.GroupBox4.Controls.Add(Me.txtCorreo)
@@ -379,38 +435,19 @@ Partial Class AgregarMedico
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Información de contacto"
         '
-        'Label14
+        'txtCorreo
         '
-        Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Mongolian Baiti", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label14.Location = New System.Drawing.Point(19, 42)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(89, 21)
-        Me.Label14.TabIndex = 17
-        Me.Label14.Text = "Nombre:"
+        Me.txtCorreo.Location = New System.Drawing.Point(213, 73)
+        Me.txtCorreo.Name = "txtCorreo"
+        Me.txtCorreo.Size = New System.Drawing.Size(312, 27)
+        Me.txtCorreo.TabIndex = 21
         '
-        'Label15
+        'txtTelefono
         '
-        Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Mongolian Baiti", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label15.Location = New System.Drawing.Point(19, 78)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(201, 21)
-        Me.Label15.TabIndex = 18
-        Me.Label15.Text = "Años de experiencia:"
-        '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.Label16.Font = New System.Drawing.Font("Mongolian Baiti", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label16.Location = New System.Drawing.Point(19, 40)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(98, 21)
-        Me.Label16.TabIndex = 19
-        Me.Label16.Text = "Teléfono:"
+        Me.txtTelefono.Location = New System.Drawing.Point(213, 34)
+        Me.txtTelefono.Name = "txtTelefono"
+        Me.txtTelefono.Size = New System.Drawing.Size(312, 27)
+        Me.txtTelefono.TabIndex = 17
         '
         'Label17
         '
@@ -423,53 +460,16 @@ Partial Class AgregarMedico
         Me.Label17.TabIndex = 20
         Me.Label17.Text = "Correo electrónico:"
         '
-        'txtTelefono
+        'Label16
         '
-        Me.txtTelefono.Location = New System.Drawing.Point(213, 34)
-        Me.txtTelefono.Name = "txtTelefono"
-        Me.txtTelefono.Size = New System.Drawing.Size(312, 27)
-        Me.txtTelefono.TabIndex = 17
-        '
-        'txtCorreo
-        '
-        Me.txtCorreo.Location = New System.Drawing.Point(213, 73)
-        Me.txtCorreo.Name = "txtCorreo"
-        Me.txtCorreo.Size = New System.Drawing.Size(312, 27)
-        Me.txtCorreo.TabIndex = 21
-        '
-        'txtNombreEspecialidad
-        '
-        Me.txtNombreEspecialidad.Location = New System.Drawing.Point(226, 36)
-        Me.txtNombreEspecialidad.Name = "txtNombreEspecialidad"
-        Me.txtNombreEspecialidad.Size = New System.Drawing.Size(185, 27)
-        Me.txtNombreEspecialidad.TabIndex = 22
-        '
-        'txtAñosExperiencia
-        '
-        Me.txtAñosExperiencia.Location = New System.Drawing.Point(226, 78)
-        Me.txtAñosExperiencia.Name = "txtAñosExperiencia"
-        Me.txtAñosExperiencia.Size = New System.Drawing.Size(185, 27)
-        Me.txtAñosExperiencia.TabIndex = 23
-        '
-        'btnAgregarEspecialidad
-        '
-        Me.btnAgregarEspecialidad.BackColor = System.Drawing.Color.SteelBlue
-        Me.btnAgregarEspecialidad.Location = New System.Drawing.Point(448, 27)
-        Me.btnAgregarEspecialidad.Name = "btnAgregarEspecialidad"
-        Me.btnAgregarEspecialidad.Size = New System.Drawing.Size(127, 36)
-        Me.btnAgregarEspecialidad.TabIndex = 24
-        Me.btnAgregarEspecialidad.Text = "Agregar"
-        Me.btnAgregarEspecialidad.UseVisualStyleBackColor = False
-        '
-        'btnLimpiar
-        '
-        Me.btnLimpiar.BackColor = System.Drawing.Color.SteelBlue
-        Me.btnLimpiar.Location = New System.Drawing.Point(448, 69)
-        Me.btnLimpiar.Name = "btnLimpiar"
-        Me.btnLimpiar.Size = New System.Drawing.Size(127, 36)
-        Me.btnLimpiar.TabIndex = 25
-        Me.btnLimpiar.Text = "Limpiar"
-        Me.btnLimpiar.UseVisualStyleBackColor = False
+        Me.Label16.AutoSize = True
+        Me.Label16.Font = New System.Drawing.Font("Mongolian Baiti", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label16.Location = New System.Drawing.Point(19, 40)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(98, 21)
+        Me.Label16.TabIndex = 19
+        Me.Label16.Text = "Teléfono:"
         '
         'btnAgregarMedico
         '
@@ -505,9 +505,9 @@ Partial Class AgregarMedico
         Me.GroupBox2.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
+        CType(Me.txtAñosExperiencia, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
-        CType(Me.txtAñosExperiencia, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

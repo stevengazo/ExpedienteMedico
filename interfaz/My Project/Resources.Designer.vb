@@ -63,6 +63,16 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property pastilla() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("pastilla", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property png_transparent_stethoscope_medicine_nursing_health_care_physician_health_blue_logo_medical_care() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("png-transparent-stethoscope-medicine-nursing-health-care-physician-health-blue-lo"& _ 
