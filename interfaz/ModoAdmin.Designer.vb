@@ -41,10 +41,10 @@ Partial Class ModoAdmin
         Me.VerInformaciónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AgregarMédicoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PacientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EnfermedadesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MedicamentosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VerPacientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AgregarPacienteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EnfermedadesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MedicamentosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CerrarSesiónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -168,18 +168,6 @@ Partial Class ModoAdmin
         Me.PacientesToolStripMenuItem.Size = New System.Drawing.Size(110, 28)
         Me.PacientesToolStripMenuItem.Text = "Pacientes"
         '
-        'EnfermedadesToolStripMenuItem
-        '
-        Me.EnfermedadesToolStripMenuItem.Name = "EnfermedadesToolStripMenuItem"
-        Me.EnfermedadesToolStripMenuItem.Size = New System.Drawing.Size(157, 28)
-        Me.EnfermedadesToolStripMenuItem.Text = "Enfermedades"
-        '
-        'MedicamentosToolStripMenuItem
-        '
-        Me.MedicamentosToolStripMenuItem.Name = "MedicamentosToolStripMenuItem"
-        Me.MedicamentosToolStripMenuItem.Size = New System.Drawing.Size(159, 28)
-        Me.MedicamentosToolStripMenuItem.Text = "Medicamentos"
-        '
         'VerPacientesToolStripMenuItem
         '
         Me.VerPacientesToolStripMenuItem.Name = "VerPacientesToolStripMenuItem"
@@ -191,6 +179,18 @@ Partial Class ModoAdmin
         Me.AgregarPacienteToolStripMenuItem.Name = "AgregarPacienteToolStripMenuItem"
         Me.AgregarPacienteToolStripMenuItem.Size = New System.Drawing.Size(260, 28)
         Me.AgregarPacienteToolStripMenuItem.Text = "Agregar Paciente "
+        '
+        'EnfermedadesToolStripMenuItem
+        '
+        Me.EnfermedadesToolStripMenuItem.Name = "EnfermedadesToolStripMenuItem"
+        Me.EnfermedadesToolStripMenuItem.Size = New System.Drawing.Size(157, 28)
+        Me.EnfermedadesToolStripMenuItem.Text = "Enfermedades"
+        '
+        'MedicamentosToolStripMenuItem
+        '
+        Me.MedicamentosToolStripMenuItem.Name = "MedicamentosToolStripMenuItem"
+        Me.MedicamentosToolStripMenuItem.Size = New System.Drawing.Size(159, 28)
+        Me.MedicamentosToolStripMenuItem.Text = "Medicamentos"
         '
         'CerrarSesiónToolStripMenuItem
         '

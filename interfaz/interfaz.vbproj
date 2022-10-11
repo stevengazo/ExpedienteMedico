@@ -85,13 +85,6 @@
     <Compile Include="Autenticacion.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="ModoAdmin.Designer.vb">
       <DependentUpon>ModoAdmin.vb</DependentUpon>
     </Compile>
@@ -126,9 +119,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Autenticacion.resx">
       <DependentUpon>Autenticacion.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModoAdmin.resx">
       <DependentUpon>ModoAdmin.vb</DependentUpon>
