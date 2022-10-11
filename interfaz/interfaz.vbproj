@@ -79,6 +79,12 @@
     <Compile Include="AgregarPaciente.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Medicos.Designer.vb">
       <DependentUpon>Medicos.vb</DependentUpon>
     </Compile>
