@@ -117,17 +117,36 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="png-transparent-stethoscope-medicine-nursing-health-care-physician-health-blue-logo-medical-care" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\png-transparent-stethoscope-medicine-nursing-health-care-physician-health-blue-logo-medical-care.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="enfe" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\enfe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pastilla" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pastilla.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="médicos-en-fondo-transparente-97513063" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\médicos-en-fondo-transparente-97513063.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <metadata name="MenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEACABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAACAAACAAAAAgIAAgAAAAIAAgACAgAAAwMDAAMDcwADwyqYAAAAAACkwWgAYIGMAGChrADFB
+        UgA5SVoAOUljADFZawA5SXMAOVFzADlRewBCQUoAQlFaAFJRUgBSWVoAWllaAEpRYwBCUWsASllrAEJZ
+        ewBKYWsAY2FjAGtpawBzcXMAGDiUACE4jAAQMLUAEDi1ADlZjAAhQZwAGGmUACFhjAApYYwAOWGcABh5
+        rQA5aa0AOXG9ADF5vQBCWZQAQlmcAEJpnABCYa0AQmm1AEpptQBCab0AQnG9ABhR1gAxcc4AOXHOADl5
+        1gBCcc4AQnnWAFKOrQBSlr0AOY7WADmO3gAhltYAIZbvADmW7wAxlvcAOZb3ADGW/wAxnv8AQo7eAEqW
+        3gBSlt4AY67OAEKW7wBSnu8AQp73AFq27wBKrvcAa67vAGO+9wBzz/cAjLbeAIzX9wCU1/8A////AK2u
+        tQCttrUAtba1AL2+vQCMz4wAjNecAJTfpQCM370AlN+1AITntQD3z4wA59eEAO/HlADnx5wA78+cAPfP
+        lAD315wA/++cAO/PpQD/36UA99etAJTnzgCc//8Apf//AMDAwADGx8YA9+/GAP//zgAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACkoKAAgICAAAAA/wAA/wAAAP//AP8AAAD/AP8A//8AAP//
+        /wBLVaAAAAAAAAAAAAAAAAAAAAAAAAAAHioWGRkAAAAAAAAAAAAAADU8SUFCKBERIAAAAAAAAAA1PT1J
+        RERFQywpGCEAAAAALz09PUlBRERFR0hFHwAAADw8PD09SURERkVISB8AAAA9PDY3PT1JQURERUcfAAAA
+        QDQ1Njw9PUlEREZFHwAAADQUMzEUEiYrOkFERB8AAAAyMDc3NzdMPh0TLS4XAAAAGzc9PT09UFNKPT09
+        EAAAABpVS0pJSUlJSUlJSQ8AAAAcHS05TlJWV1ZUUU8VAAAAAAAAIg4bMi1NHS0dGQAAAAAAADsnIwsL
+        DAAAAAAAAAAAAAA/ODglJA0AAAAAAP//AADB/wAAwB8AAMADAADAAQAAwAEAAMABAADAAQAAwAEAAMAB
+        AADAAQAAwAEAAMABAAD4AQAA+B8AAPgfAAA=
+</value>
   </data>
 </root>

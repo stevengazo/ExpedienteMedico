@@ -27,10 +27,10 @@ Partial Class Autenticacion
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.txtNombreUsuario = New System.Windows.Forms.TextBox()
+        Me.txtContraseña = New System.Windows.Forms.TextBox()
+        Me.cboRoles = New System.Windows.Forms.ComboBox()
+        Me.btnIngresar = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -74,38 +74,39 @@ Partial Class Autenticacion
         Me.Label4.TabIndex = 3
         Me.Label4.Text = "Nombre de Usuario"
         '
-        'TextBox1
+        'txtNombreUsuario
         '
-        Me.TextBox1.Location = New System.Drawing.Point(123, 162)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(206, 34)
-        Me.TextBox1.TabIndex = 4
+        Me.txtNombreUsuario.Location = New System.Drawing.Point(123, 162)
+        Me.txtNombreUsuario.Name = "txtNombreUsuario"
+        Me.txtNombreUsuario.Size = New System.Drawing.Size(206, 34)
+        Me.txtNombreUsuario.TabIndex = 4
         '
-        'TextBox2
+        'txtContraseña
         '
-        Me.TextBox2.Location = New System.Drawing.Point(123, 260)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(206, 34)
-        Me.TextBox2.TabIndex = 5
+        Me.txtContraseña.Location = New System.Drawing.Point(123, 260)
+        Me.txtContraseña.Name = "txtContraseña"
+        Me.txtContraseña.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtContraseña.Size = New System.Drawing.Size(206, 34)
+        Me.txtContraseña.TabIndex = 5
         '
-        'ComboBox1
+        'cboRoles
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"", "Administrador", "Médico"})
-        Me.ComboBox1.Location = New System.Drawing.Point(123, 352)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(206, 32)
-        Me.ComboBox1.TabIndex = 6
+        Me.cboRoles.FormattingEnabled = True
+        Me.cboRoles.Items.AddRange(New Object() {"", "Administrador", "Médico"})
+        Me.cboRoles.Location = New System.Drawing.Point(123, 352)
+        Me.cboRoles.Name = "cboRoles"
+        Me.cboRoles.Size = New System.Drawing.Size(206, 32)
+        Me.cboRoles.TabIndex = 6
         '
-        'Button1
+        'btnIngresar
         '
-        Me.Button1.BackColor = System.Drawing.Color.SteelBlue
-        Me.Button1.Location = New System.Drawing.Point(151, 425)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(153, 52)
-        Me.Button1.TabIndex = 7
-        Me.Button1.Text = "Ingresar"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnIngresar.BackColor = System.Drawing.Color.SteelBlue
+        Me.btnIngresar.Location = New System.Drawing.Point(151, 425)
+        Me.btnIngresar.Name = "btnIngresar"
+        Me.btnIngresar.Size = New System.Drawing.Size(153, 52)
+        Me.btnIngresar.TabIndex = 7
+        Me.btnIngresar.Text = "Ingresar"
+        Me.btnIngresar.UseVisualStyleBackColor = False
         '
         'Autenticacion
         '
@@ -113,10 +114,10 @@ Partial Class Autenticacion
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightBlue
         Me.ClientSize = New System.Drawing.Size(466, 502)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.btnIngresar)
+        Me.Controls.Add(Me.cboRoles)
+        Me.Controls.Add(Me.txtContraseña)
+        Me.Controls.Add(Me.txtNombreUsuario)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -136,8 +137,8 @@ Partial Class Autenticacion
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents txtNombreUsuario As TextBox
+    Friend WithEvents txtContraseña As TextBox
+    Friend WithEvents cboRoles As ComboBox
+    Friend WithEvents btnIngresar As Button
 End Class

@@ -1,3 +1,3 @@
-﻿Public Class Principal
+﻿Public Class Form1
 
 End Class

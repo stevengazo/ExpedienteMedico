@@ -117,17 +117,33 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="png-transparent-stethoscope-medicine-nursing-health-care-physician-health-blue-logo-medical-care" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\png-transparent-stethoscope-medicine-nursing-health-care-physician-health-blue-logo-medical-care.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="enfe" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\enfe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pastilla" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pastilla.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="médicos-en-fondo-transparente-97513063" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\médicos-en-fondo-transparente-97513063.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEACABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAACAAACAAAAAgIAAgAAAAIAAgACAgAAAwMDAAMDcwADwyqYAAAAAACGGKQA5tlIAY6ZjAGuu
+        hACU34wAKVn/AGN5/wBrroQAGKbGABCG/wAQjv8Ac473AHuW9wBzpv8AQsf/AErP/wB77/8Ac/f/AJTf
+        jACctvcAlMf/AL3P9wDetnsAWkmUAGthnABaSb0AY0mtAHNppQB7caUAc2HGAHtxxgCEcZwAhHmtAIR5
+        zgCMYdYAjHHWAJRx5wBzrrUAc6a9AHuuvQBztsYAc77OAHu+1gBzz84Aa8/eAHvX3gBr1+8Aa9//AGvn
+        /wBr7/8Ac+//AHvv/wBz9/cAc/f/AHv3/wCMhpwApZaMALWmlAC1rpwAlIalAIyepQCUjr0AhK69AJym
+        tQCEtr0AjLa9AJy2vQCtpr0Arb69AOe+hACEx7UA3secAN7PnAD3z5wA3selAN7PpQDnz6UA59elAPfX
+        pQD336UA99+tAP/frQD3560A/+etAPfntQD/77UA/++9AIyOxgCtnt4AnIbnAJyO5wCcju8ArZbvAKWW
+        9wCtlvcAhM/GAIzPxgDn//8A7///APf//wD///8AxqalAM6mpQDGrq0AnMecAL3HpQD3x4QA98+UAP/P
+        lADGx60A1tetAM7XtQDG370A1te1AMbnpQD/560A/++9AK2mzgC1rsYAzr7GAM7PxgDOz84A1tfOAN7X
+        1gDe594A5+fOAO/vzgD/58YA9/fGAP/3zgDn59YA///WAP/33gDv9+8A///nAPf/9wD///cA////AAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACkoKAAgICAAAAA/wAA/wAAAP//AP8AAAD/AP8A//8AAP//
+        /wBLVaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4LCw4AAAAAAAAAAAAAAAANDwwLAAAAAAAAAAAAAAAA
+        DQ8MCwAAAAAAAAAAAAAAAA0PDAsAAAAAAAAAAAAAAAANDwwLAAAAAAAAAA4LCwsLCw8MCwsLCwsOAAAN
+        DAwMDAwMDAwMDAwMCwAADQ8PDw8PDwwPDw8PDwsAAA4NDQ0NDQ8MCwsLCwsOAAAAAAAAAA0PDAsAAAAA
+        AAAAAAAAAAANDwwLAAAAAAAAAAAAAAAADQ8MCwAAAAAAAAAAAAAAAA0PDAsAAAAAAAAAAAAAAAAODQ0O
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAD8PwAA/D8AAPw/AAD8PwAA/D8AAIABAACAAQAAgAEAAIAB
+        AAD8PwAA/D8AAPw/AAD8PwAA/D8AAP//AAA=
+</value>
   </data>
 </root>

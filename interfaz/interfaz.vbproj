@@ -73,17 +73,34 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgregarEnfermedad.Designer.vb">
+      <DependentUpon>AgregarEnfermedad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarEnfermedad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarMedicamento.Designer.vb">
+      <DependentUpon>AgregarMedicamento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarMedicamento.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarMedico.Designer.vb">
+      <DependentUpon>AgregarMedico.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarMedico.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Autenticacion.Designer.vb">
       <DependentUpon>Autenticacion.vb</DependentUpon>
     </Compile>
     <Compile Include="Autenticacion.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.vb">
-      <SubType>Form</SubType>
+    <Compile Include="AgregarPaciente.Designer.vb">
+      <DependentUpon>AgregarPaciente.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="AgregarPaciente.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ModoAdmin.Designer.vb">
@@ -92,10 +109,23 @@
     <Compile Include="ModoAdmin.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Medicos.Designer.vb">
+      <DependentUpon>Medicos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Medicos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExpedientePaciente.Designer.vb">
+      <DependentUpon>ExpedientePaciente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ExpedientePaciente.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -107,16 +137,64 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="VerEnfermedades.Designer.vb">
+      <DependentUpon>VerEnfermedades.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VerEnfermedades.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerMedicamentos.Designer.vb">
+      <DependentUpon>VerMedicamentos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VerMedicamentos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerMedicos.Designer.vb">
+      <DependentUpon>VerMedicos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VerMedicos.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="AgregarEnfermedad.resx">
+      <DependentUpon>AgregarEnfermedad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarMedicamento.resx">
+      <DependentUpon>AgregarMedicamento.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarMedico.resx">
+      <DependentUpon>AgregarMedico.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Autenticacion.resx">
+      <DependentUpon>Autenticacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModoAdmin.resx">
+      <DependentUpon>ModoAdmin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarPaciente.resx">
+      <DependentUpon>AgregarPaciente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Medicos.resx">
+      <DependentUpon>Medicos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpedientePaciente.resx">
+      <DependentUpon>ExpedientePaciente.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerEnfermedades.resx">
+      <DependentUpon>VerEnfermedades.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerMedicamentos.resx">
+      <DependentUpon>VerMedicamentos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerMedicos.resx">
+      <DependentUpon>VerMedicos.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -130,6 +208,18 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-transparent-stethoscope-medicine-nursing-health-care-physician-health-blue-logo-medical-care.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pastilla.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enfe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\médicos-en-fondo-transparente-97513063.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
