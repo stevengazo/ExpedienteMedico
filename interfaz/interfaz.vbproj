@@ -221,5 +221,15 @@
   <ItemGroup>
     <None Include="Resources\médicos-en-fondo-transparente-97513063.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Negocio\Negocio.vbproj">
+      <Project>{c8361c5d-ec96-4b34-9d06-b16b3134d415}</Project>
+      <Name>Negocio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Objetos\Objetos.vbproj">
+      <Project>{cddc4a92-5df4-4da0-9513-d1a1eb2292b8}</Project>
+      <Name>Objetos</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
