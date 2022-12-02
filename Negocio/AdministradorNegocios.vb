@@ -1,5 +1,6 @@
 ﻿Imports System.Runtime.InteropServices.WindowsRuntime
 Imports Objetos
+Imports AccesoDatos
 Public Class AdministradorNegocios
 
     ''' <summary>
@@ -67,10 +68,17 @@ Public Class AdministradorNegocios
     ''' <returns>True si la contraseña es correcta, False si no lo es o presenta error</returns>
     Public Function InicioSesion(nombreUsuario As String, contraseña As String) As Boolean
         Try
-            Throw New NotImplementedException()
-            Return True
+            If Not String.IsNullOrEmpty(nombreUsuario) Or Not String.IsNullOrEmpty(contraseña) Then
+                Dim administradorDatos As New AdministradorDatos()
+                Dim bandera As Boolean = administradorDatos.InicioSesion(nombreUsuario, contraseña)
+                If bandera Then
+                    Return True
+                Else
+                    Return False
+                End If
+            End If
         Catch ex As Exception
-            Throw New NotImplementedException()
+            Throw New Exception(ex.Message)
             Return False
         End Try
     End Function
