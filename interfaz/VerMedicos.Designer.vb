@@ -38,18 +38,20 @@ Partial Class VerMedicos
         Me.Label1.Location = New System.Drawing.Point(297, 61)
         Me.Label1.Margin = New System.Windows.Forms.Padding(8, 0, 8, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(286, 40)
+        Me.Label1.Size = New System.Drawing.Size(236, 31)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Lista de Médicos"
         '
         'dgListaMedicos
         '
         Me.dgListaMedicos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgListaMedicos.GridColor = System.Drawing.SystemColors.Control
         Me.dgListaMedicos.Location = New System.Drawing.Point(85, 159)
         Me.dgListaMedicos.Margin = New System.Windows.Forms.Padding(8)
         Me.dgListaMedicos.Name = "dgListaMedicos"
         Me.dgListaMedicos.RowHeadersWidth = 51
-        Me.dgListaMedicos.RowTemplate.Height = 24
+        Me.dgListaMedicos.RowTemplate.Height = 20
+        Me.dgListaMedicos.RowTemplate.ReadOnly = True
         Me.dgListaMedicos.Size = New System.Drawing.Size(733, 276)
         Me.dgListaMedicos.TabIndex = 1
         '
@@ -87,7 +89,7 @@ Partial Class VerMedicos
         '
         'VerMedicos
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(22.0!, 40.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(18.0!, 31.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightBlue
         Me.ClientSize = New System.Drawing.Size(915, 604)

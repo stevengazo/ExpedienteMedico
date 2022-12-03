@@ -54,4 +54,74 @@ Public Class MetodosMedico
         Return idMedico
     End Function
 
+    ''' <summary>
+    ''' 
+    ''' </summary>
+    ''' <returns></returns>
+    Public Function ObtenerListaMedicos() As List(Of Objetos.Medico)
+        Try
+            Dim _dataSet As New DataSet()
+            Dim listaMedicos As New List(Of Objetos.Medico)
+            Dim comando As New SqlCommand()
+            comando.CommandText = "Select * from Medicos"
+            comando.CommandType = CommandType.Text
+            comando.Connection = conection
+
+            conection.Open()
+            Dim adapter As New SqlDataAdapter(comando)
+            adapter.Fill(_dataSet, "Medicos")
+            conection.Close()
+
+
+            For Each datarow In _dataSet.Tables(0).Rows
+                Dim tmp As New Objetos.Medico
+                tmp.idMedico = Integer.Parse(datarow(0))
+                tmp.Usuario = datarow(1)
+                tmp.Nombre = datarow(3)
+                tmp.Apellido = datarow(4)
+                tmp.Identificacion = datarow(5)
+                tmp.TipoIdentificación = datarow(6)
+                tmp.Sexo = datarow(7)
+                tmp.EstadoCivil = datarow(8)
+                tmp.Nacionalidad = datarow(9)
+                tmp.FechaNacimiento = datarow(10)
+                tmp.NumeroTelefono = Integer.Parse(datarow(11))
+                tmp.Correo = datarow(12)
+                tmp.OtrasSenas = datarow(13)
+                tmp.IdDistrito = Integer.Parse(datarow(14))
+                listaMedicos.Add(tmp)
+            Next
+
+
+            Return listaMedicos
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+            Return New List(Of Objetos.Medico)
+        End Try
+    End Function
+    ''' <summary>
+    ''' 
+    ''' </summary>
+    ''' <returns></returns>
+    Public Function ObtenerDataSetMedicos() As DataSet
+        Dim _dataSet As New DataSet()
+        Try
+            Dim listaMedicos As New List(Of Objetos.Medico)
+            Dim comando As New SqlCommand()
+            comando.CommandText = "Select * from Medicos"
+            comando.CommandType = CommandType.Text
+            comando.Connection = conection
+
+            conection.Open()
+            Dim adapter As New SqlDataAdapter()
+            adapter.Fill(_dataSet, "Medicos")
+            conection.Close()
+
+            Return _dataSet
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+            Return _dataSet
+        End Try
+    End Function
+
 End Class

@@ -12,4 +12,14 @@ Public Class MedicoNegocio
             Return 0
         End Try
     End Function
+
+    Public Function ListaMedicos() As List(Of Objetos.Medico)
+        Try
+            Dim tmpNegocio As New AccesoDatos.MetodosMedico
+            Return tmpNegocio.ObtenerListaMedicos()
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+            Return New List(Of Medico)
+        End Try
+    End Function
 End Class
