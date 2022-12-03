@@ -66,10 +66,13 @@
   <ItemGroup>
     <Compile Include="AdministradorNegocios.vb" />
     <Compile Include="CitasNegocios.vb" />
+    <Compile Include="Comunes.vb" />
     <Compile Include="DiagnosticoNegocios.vb" />
     <Compile Include="EnfermedadNegocio.vb" />
+    <Compile Include="Especialidad.vb" />
     <Compile Include="EspecialidadNegocio.vb" />
     <Compile Include="MedicoNegocio.vb" />
+    <Compile Include="MediHasEspe.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>

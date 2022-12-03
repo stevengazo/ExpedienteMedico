@@ -3,7 +3,7 @@ Imports System.Data.SqlClient
 Imports Objetos
 
 Public Class MetodosEnfermedad
-    Dim conection As New SqlConnection("Data Source=LAPTOP-B2U83SJU\SQLEXPRESS;Initial Catalog=Proyecto_Hospital;Integrated Security=True")
+    Dim conection As New SqlConnection("Data Source=127.0.0.1;Initial Catalog=Proyecto_Hospital;Persist Security Info=True;User ID=sa;Password=Password123")
     Public Function InsertaEnfermedad(nombre As String, desc As String, sin As String) As Integer
         Dim idEnfermedad As Integer = 0
         Try

@@ -65,8 +65,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Administrador.vb" />
+    <Compile Include="Canton.vb" />
     <Compile Include="Citas.vb" />
     <Compile Include="Diagnostico.vb" />
+    <Compile Include="Distrito.vb" />
     <Compile Include="Enfermedad.vb" />
     <Compile Include="Especialidad.vb" />
     <Compile Include="ExpedienteMedico.vb" />
@@ -91,6 +93,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Paciente.vb" />
+    <Compile Include="Provincia.vb" />
     <Compile Include="ReceHasMedi.vb" />
     <Compile Include="Receta.vb" />
     <Compile Include="Registro.vb" />

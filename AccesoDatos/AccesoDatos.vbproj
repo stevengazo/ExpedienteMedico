@@ -64,6 +64,9 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Canton.vb" />
+    <Compile Include="Especialidades.vb" />
+    <Compile Include="MedHasEspe.vb" />
     <Compile Include="MetodosMedico.vb" />
     <Compile Include="MetodosEnfermedad.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -81,6 +84,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Provincia.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">

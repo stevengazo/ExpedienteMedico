@@ -10,9 +10,8 @@
     Public FechaNacimiento As DateTime
     Public NumeroTelefonico As Integer
     Public Correo As Integer
-    Public Provincia As String
-    Public Canton As String
     Public EstaActivo As Boolean
+    Public IdDistrito As Integer
     ' Dependencia de expediente
 
     Public Expediente As ExpedienteMedico

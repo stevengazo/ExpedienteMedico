@@ -1,4 +1,4 @@
-﻿Imports Microsoft.SqlServer.Server
+﻿
 
 Public Class Medico
 
@@ -11,13 +11,10 @@ Public Class Medico
     Public Sexo As String
     Public EstadoCivil As String
     Public Nacionalidad As String
-    Public FechaNacimiento As String
+    Public FechaNacimiento As DateTime
     Public NumeroTelefono As Integer
     Public Correo As String
-    Public idEspecialidad As String
-    Public AniosExp As Integer
-    Public idProvincia As String
-    Public Canton As String
-    Public Distrito As String
+    Public IdDistrito As Integer
     Public OtrasSenas As String
+    Public Especialidades As New List(Of Objetos.MedHasEspe)
 End Class
