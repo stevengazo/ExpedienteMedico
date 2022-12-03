@@ -1,7 +1,7 @@
 ﻿Imports Microsoft.SqlServer.Server
 
 Public Class Medico
-    Public idMedico As Integer
+
     Public Usuario As String
     Public Contraseña As String
     Public Nombre As String
@@ -11,7 +11,13 @@ Public Class Medico
     Public Sexo As String
     Public EstadoCivil As String
     Public Nacionalidad As String
-    Public FechaNacimiento As DateTime
+    Public FechaNacimiento As String
     Public NumeroTelefono As Integer
     Public Correo As String
+    Public idEspecialidad As String
+    Public AniosExp As Integer
+    Public idProvincia As String
+    Public Canton As String
+    Public Distrito As String
+    Public OtrasSenas As String
 End Class

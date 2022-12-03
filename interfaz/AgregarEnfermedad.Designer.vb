@@ -29,6 +29,9 @@ Partial Class AgregarEnfermedad
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnAgregarEnfermedad = New System.Windows.Forms.Button()
+        Me.SqlConnection1 = New System.Data.SqlClient.SqlConnection()
+        Me.txtSintomas = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'txtDescripcionEnfermedad
@@ -85,19 +88,46 @@ Partial Class AgregarEnfermedad
         Me.btnAgregarEnfermedad.BackColor = System.Drawing.Color.SteelBlue
         Me.btnAgregarEnfermedad.Font = New System.Drawing.Font("Mongolian Baiti", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAgregarEnfermedad.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnAgregarEnfermedad.Location = New System.Drawing.Point(264, 244)
+        Me.btnAgregarEnfermedad.Location = New System.Drawing.Point(264, 282)
         Me.btnAgregarEnfermedad.Name = "btnAgregarEnfermedad"
         Me.btnAgregarEnfermedad.Size = New System.Drawing.Size(204, 50)
         Me.btnAgregarEnfermedad.TabIndex = 16
         Me.btnAgregarEnfermedad.Text = "Agregar"
         Me.btnAgregarEnfermedad.UseVisualStyleBackColor = False
         '
+        'SqlConnection1
+        '
+        Me.SqlConnection1.ConnectionString = "Data Source=LAPTOP-B2U83SJU\SQLEXPRESS;Initial Catalog=Proyecto_Hospital;Integrat" &
+    "ed Security=True"
+        Me.SqlConnection1.FireInfoMessageEventOnUserErrors = False
+        '
+        'txtSintomas
+        '
+        Me.txtSintomas.Font = New System.Drawing.Font("Mongolian Baiti", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSintomas.Location = New System.Drawing.Point(211, 212)
+        Me.txtSintomas.Name = "txtSintomas"
+        Me.txtSintomas.Size = New System.Drawing.Size(420, 28)
+        Me.txtSintomas.TabIndex = 18
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Mongolian Baiti", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label3.Location = New System.Drawing.Point(52, 216)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(111, 24)
+        Me.Label3.TabIndex = 17
+        Me.Label3.Text = "Síntomas:"
+        '
         'AgregarEnfermedad
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightBlue
-        Me.ClientSize = New System.Drawing.Size(718, 323)
+        Me.ClientSize = New System.Drawing.Size(718, 374)
+        Me.Controls.Add(Me.txtSintomas)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.btnAgregarEnfermedad)
         Me.Controls.Add(Me.txtDescripcionEnfermedad)
         Me.Controls.Add(Me.txtNombreEnfermedad)
@@ -118,4 +148,7 @@ Partial Class AgregarEnfermedad
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents btnAgregarEnfermedad As Button
+    Friend WithEvents SqlConnection1 As SqlClient.SqlConnection
+    Friend WithEvents txtSintomas As TextBox
+    Friend WithEvents Label3 As Label
 End Class

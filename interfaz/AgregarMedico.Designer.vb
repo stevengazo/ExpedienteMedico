@@ -33,7 +33,6 @@ Partial Class AgregarMedico
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.dateFechaNacimiento = New System.Windows.Forms.DateTimePicker()
         Me.txtNacionalidad = New System.Windows.Forms.TextBox()
         Me.cboEstadoCivil = New System.Windows.Forms.ComboBox()
         Me.cboSexo = New System.Windows.Forms.ComboBox()
@@ -63,6 +62,11 @@ Partial Class AgregarMedico
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.btnAgregarMedico = New System.Windows.Forms.Button()
+        Me.txtContrasena = New System.Windows.Forms.TextBox()
+        Me.txtUsuario = New System.Windows.Forms.TextBox()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.txtFechaN = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -86,7 +90,7 @@ Partial Class AgregarMedico
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Mongolian Baiti", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label2.Location = New System.Drawing.Point(25, 53)
+        Me.Label2.Location = New System.Drawing.Point(30, 123)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(89, 21)
         Me.Label2.TabIndex = 1
@@ -97,7 +101,7 @@ Partial Class AgregarMedico
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Mongolian Baiti", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label3.Location = New System.Drawing.Point(25, 393)
+        Me.Label3.Location = New System.Drawing.Point(30, 463)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(177, 21)
         Me.Label3.TabIndex = 2
@@ -108,7 +112,7 @@ Partial Class AgregarMedico
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Mongolian Baiti", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label4.Location = New System.Drawing.Point(25, 341)
+        Me.Label4.Location = New System.Drawing.Point(30, 411)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(137, 21)
         Me.Label4.TabIndex = 3
@@ -119,7 +123,7 @@ Partial Class AgregarMedico
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Mongolian Baiti", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label5.Location = New System.Drawing.Point(25, 293)
+        Me.Label5.Location = New System.Drawing.Point(30, 363)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(126, 21)
         Me.Label5.TabIndex = 4
@@ -130,7 +134,7 @@ Partial Class AgregarMedico
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Mongolian Baiti", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label6.Location = New System.Drawing.Point(25, 244)
+        Me.Label6.Location = New System.Drawing.Point(30, 314)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(61, 21)
         Me.Label6.TabIndex = 5
@@ -141,7 +145,7 @@ Partial Class AgregarMedico
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Mongolian Baiti", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label7.Location = New System.Drawing.Point(25, 196)
+        Me.Label7.Location = New System.Drawing.Point(30, 266)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(145, 21)
         Me.Label7.TabIndex = 6
@@ -152,7 +156,7 @@ Partial Class AgregarMedico
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Mongolian Baiti", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label8.Location = New System.Drawing.Point(25, 144)
+        Me.Label8.Location = New System.Drawing.Point(30, 214)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(192, 21)
         Me.Label8.TabIndex = 7
@@ -163,7 +167,7 @@ Partial Class AgregarMedico
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Mongolian Baiti", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label9.Location = New System.Drawing.Point(25, 96)
+        Me.Label9.Location = New System.Drawing.Point(30, 166)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(105, 21)
         Me.Label9.TabIndex = 8
@@ -171,10 +175,14 @@ Partial Class AgregarMedico
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.dateFechaNacimiento)
+        Me.GroupBox1.Controls.Add(Me.txtFechaN)
+        Me.GroupBox1.Controls.Add(Me.txtContrasena)
         Me.GroupBox1.Controls.Add(Me.txtNacionalidad)
+        Me.GroupBox1.Controls.Add(Me.txtUsuario)
         Me.GroupBox1.Controls.Add(Me.cboEstadoCivil)
+        Me.GroupBox1.Controls.Add(Me.Label18)
         Me.GroupBox1.Controls.Add(Me.cboSexo)
+        Me.GroupBox1.Controls.Add(Me.Label19)
         Me.GroupBox1.Controls.Add(Me.cboTipoIdentificacion)
         Me.GroupBox1.Controls.Add(Me.txtIdentificacion)
         Me.GroupBox1.Controls.Add(Me.txtApellidos)
@@ -191,21 +199,14 @@ Partial Class AgregarMedico
         Me.GroupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.GroupBox1.Location = New System.Drawing.Point(12, 90)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(602, 464)
+        Me.GroupBox1.Size = New System.Drawing.Size(602, 509)
         Me.GroupBox1.TabIndex = 9
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Información personal"
         '
-        'dateFechaNacimiento
-        '
-        Me.dateFechaNacimiento.Location = New System.Drawing.Point(245, 387)
-        Me.dateFechaNacimiento.Name = "dateFechaNacimiento"
-        Me.dateFechaNacimiento.Size = New System.Drawing.Size(312, 27)
-        Me.dateFechaNacimiento.TabIndex = 16
-        '
         'txtNacionalidad
         '
-        Me.txtNacionalidad.Location = New System.Drawing.Point(245, 335)
+        Me.txtNacionalidad.Location = New System.Drawing.Point(250, 405)
         Me.txtNacionalidad.Name = "txtNacionalidad"
         Me.txtNacionalidad.Size = New System.Drawing.Size(312, 27)
         Me.txtNacionalidad.TabIndex = 15
@@ -214,7 +215,7 @@ Partial Class AgregarMedico
         '
         Me.cboEstadoCivil.FormattingEnabled = True
         Me.cboEstadoCivil.Items.AddRange(New Object() {"", "Soltero", "Casado", "Divorciado", "Viudo"})
-        Me.cboEstadoCivil.Location = New System.Drawing.Point(245, 288)
+        Me.cboEstadoCivil.Location = New System.Drawing.Point(250, 358)
         Me.cboEstadoCivil.Name = "cboEstadoCivil"
         Me.cboEstadoCivil.Size = New System.Drawing.Size(312, 26)
         Me.cboEstadoCivil.TabIndex = 14
@@ -223,7 +224,7 @@ Partial Class AgregarMedico
         '
         Me.cboSexo.FormattingEnabled = True
         Me.cboSexo.Items.AddRange(New Object() {"", "Femenino", "Masculino", "Otro"})
-        Me.cboSexo.Location = New System.Drawing.Point(245, 239)
+        Me.cboSexo.Location = New System.Drawing.Point(250, 309)
         Me.cboSexo.Name = "cboSexo"
         Me.cboSexo.Size = New System.Drawing.Size(312, 26)
         Me.cboSexo.TabIndex = 13
@@ -232,28 +233,28 @@ Partial Class AgregarMedico
         '
         Me.cboTipoIdentificacion.FormattingEnabled = True
         Me.cboTipoIdentificacion.Items.AddRange(New Object() {"", "Nacional", "Pasaporte", "DIMEX"})
-        Me.cboTipoIdentificacion.Location = New System.Drawing.Point(245, 139)
+        Me.cboTipoIdentificacion.Location = New System.Drawing.Point(250, 209)
         Me.cboTipoIdentificacion.Name = "cboTipoIdentificacion"
         Me.cboTipoIdentificacion.Size = New System.Drawing.Size(312, 26)
         Me.cboTipoIdentificacion.TabIndex = 12
         '
         'txtIdentificacion
         '
-        Me.txtIdentificacion.Location = New System.Drawing.Point(245, 190)
+        Me.txtIdentificacion.Location = New System.Drawing.Point(250, 260)
         Me.txtIdentificacion.Name = "txtIdentificacion"
         Me.txtIdentificacion.Size = New System.Drawing.Size(312, 27)
         Me.txtIdentificacion.TabIndex = 11
         '
         'txtApellidos
         '
-        Me.txtApellidos.Location = New System.Drawing.Point(245, 90)
+        Me.txtApellidos.Location = New System.Drawing.Point(250, 160)
         Me.txtApellidos.Name = "txtApellidos"
         Me.txtApellidos.Size = New System.Drawing.Size(312, 27)
         Me.txtApellidos.TabIndex = 10
         '
         'txtNombre
         '
-        Me.txtNombre.Location = New System.Drawing.Point(245, 53)
+        Me.txtNombre.Location = New System.Drawing.Point(250, 123)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(312, 27)
         Me.txtNombre.TabIndex = 9
@@ -475,12 +476,56 @@ Partial Class AgregarMedico
         '
         Me.btnAgregarMedico.BackColor = System.Drawing.Color.SteelBlue
         Me.btnAgregarMedico.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnAgregarMedico.Location = New System.Drawing.Point(556, 580)
+        Me.btnAgregarMedico.Location = New System.Drawing.Point(619, 592)
         Me.btnAgregarMedico.Name = "btnAgregarMedico"
         Me.btnAgregarMedico.Size = New System.Drawing.Size(228, 62)
         Me.btnAgregarMedico.TabIndex = 26
         Me.btnAgregarMedico.Text = "Agregar"
         Me.btnAgregarMedico.UseVisualStyleBackColor = False
+        '
+        'txtContrasena
+        '
+        Me.txtContrasena.Location = New System.Drawing.Point(250, 83)
+        Me.txtContrasena.Name = "txtContrasena"
+        Me.txtContrasena.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtContrasena.Size = New System.Drawing.Size(312, 27)
+        Me.txtContrasena.TabIndex = 20
+        '
+        'txtUsuario
+        '
+        Me.txtUsuario.Location = New System.Drawing.Point(250, 41)
+        Me.txtUsuario.Name = "txtUsuario"
+        Me.txtUsuario.Size = New System.Drawing.Size(312, 27)
+        Me.txtUsuario.TabIndex = 19
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Font = New System.Drawing.Font("Mongolian Baiti", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label18.Location = New System.Drawing.Point(30, 89)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(118, 21)
+        Me.Label18.TabIndex = 18
+        Me.Label18.Text = "Contraseña:"
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Font = New System.Drawing.Font("Mongolian Baiti", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label19.Location = New System.Drawing.Point(30, 47)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(88, 21)
+        Me.Label19.TabIndex = 17
+        Me.Label19.Text = "Usuario:"
+        '
+        'txtFechaN
+        '
+        Me.txtFechaN.Location = New System.Drawing.Point(250, 457)
+        Me.txtFechaN.Name = "txtFechaN"
+        Me.txtFechaN.Size = New System.Drawing.Size(312, 27)
+        Me.txtFechaN.TabIndex = 21
         '
         'AgregarMedico
         '
@@ -523,7 +568,6 @@ Partial Class AgregarMedico
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents dateFechaNacimiento As DateTimePicker
     Friend WithEvents txtNacionalidad As TextBox
     Friend WithEvents cboEstadoCivil As ComboBox
     Friend WithEvents cboSexo As ComboBox
@@ -553,4 +597,9 @@ Partial Class AgregarMedico
     Friend WithEvents Label17 As Label
     Friend WithEvents Label16 As Label
     Friend WithEvents btnAgregarMedico As Button
+    Friend WithEvents txtContrasena As TextBox
+    Friend WithEvents txtUsuario As TextBox
+    Friend WithEvents Label18 As Label
+    Friend WithEvents Label19 As Label
+    Friend WithEvents txtFechaN As TextBox
 End Class

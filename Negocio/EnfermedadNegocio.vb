@@ -1,16 +1,21 @@
 ﻿Imports Objetos
+Imports AccesoDatos
+Imports System.Security.Cryptography
+
 Public Class EnfermedadNegocio
     ''' <summary>
     ''' 
     ''' </summary>
     ''' <param name="objEnfermedad"></param>
-    Public Sub AgregarEnfermedad(objEnfermedad As Enfermedad)
+    Public Function AgregarEnfermedad(nombre As String, desc As String, sin As String)
         Try
-            Throw New NotImplementedException()
+            Dim obtieneDatos As New AccesoDatos.MetodosEnfermedad
+
+            Return obtieneDatos.InsertaEnfermedad(nombre, desc, sin)
         Catch ex As Exception
-            Throw New NotImplementedException()
+            Throw New Exception(ex.Message)
         End Try
-    End Sub
+    End Function
     ''' <summary>
     ''' 
     ''' </summary>
