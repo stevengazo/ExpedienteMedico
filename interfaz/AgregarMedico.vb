@@ -2,6 +2,8 @@
 Imports System.Linq
 Public Class AgregarMedico
     Private listaProvincias As New List(Of Objetos.Provincia)
+    Private listaCantones As New List(Of Objetos.Canton)
+    Private listaDistritos As New List(Of Objetos.Distrito)
     Private listaEspecialidades As New List(Of Objetos.Especialidad)
     Private tmpMedico As New Objetos.Medico
     Private tmpMediHasEspe As New List(Of Objetos.MedHasEspe)
@@ -28,28 +30,27 @@ Public Class AgregarMedico
 
             Dim medico As New Medico()
 
-            medico.Usuario = txtUsuario.Text
-            medico.Contraseña = txtContrasena.Text
-            medico.Nombre = txtNombre.Text
-            medico.Apellido = txtApellidos.Text
-            medico.Identificacion = txtIdentificacion.Text
-            medico.TipoIdentificación = cboTipoIdentificacion.Text
-            medico.Sexo = cboSexo.Text
-            medico.EstadoCivil = cboEstadoCivil.Text
-            medico.Nacionalidad = txtNacionalidad.Text
-            medico.FechaNacimiento = dtNacimiento.Value
-            medico.NumeroTelefono = Integer.Parse(txtTelefono.Text)
-            medico.Correo = txtCorreo.Text
-            medico.IdDistrito = Integer.Parse(cbDistrito.Text)
-            medico.OtrasSenas = txtOtros.Text
+            tmpMedico.Usuario = txtUsuario.Text
+            tmpMedico.Contraseña = txtContrasena.Text
+            tmpMedico.Nombre = txtNombre.Text
+            tmpMedico.Apellido = txtApellidos.Text
+            tmpMedico.Identificacion = txtIdentificacion.Text
+            tmpMedico.TipoIdentificación = cboTipoIdentificacion.Text
+            tmpMedico.Sexo = cboSexo.Text
+            tmpMedico.EstadoCivil = cboEstadoCivil.Text
+            tmpMedico.Nacionalidad = txtNacionalidad.Text
+            tmpMedico.FechaNacimiento = dtNacimiento.Value
+            tmpMedico.NumeroTelefono = Integer.Parse(txtTelefono.Text)
+            tmpMedico.Correo = txtCorreo.Text
+            tmpMedico.OtrasSenas = txtOtros.Text
 
-            If String.IsNullOrEmpty(medico.Nombre) Then
+            If String.IsNullOrEmpty(tmpMedico.Nombre) Then
                 MessageBox.Show("Debe colocar al menos el nombre", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Else
                 Dim negocios As New Negocio.MedicoNegocio
                 Dim objMedico As New Objetos.Medico
 
-                Dim idMedico = negocios.AgregarMedico(medico)
+                Dim idMedico = negocios.AgregarMedico(tmpMedico)
 
                 If idMedico > 0 Then
                     MessageBox.Show("El médico se agregó correctamente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -104,7 +105,6 @@ Public Class AgregarMedico
                 MessageBox.Show("Especialidad " + especialidad.Nombre + " Agregada", "información", MessageBoxButtons.OK)
                 txtAñosExperiencia.Value = 0
                 cbEspecialidad.SelectedIndex = -1
-
             End If
         Next
     End Sub
@@ -114,15 +114,41 @@ Public Class AgregarMedico
     End Sub
 
     Private Sub cbProvincia_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbProvincia.SelectedIndexChanged
+        cbDistrito.Items.Clear()
         Dim ProvinciaNombre As String = cbProvincia.Text
         For Each provincia In listaProvincias
+
             If provincia.Nombre.Equals(ProvinciaNombre) Then
                 cbCanton.Items.Clear()
                 Dim tmpcomun As New Negocio.Comunes
-                Dim listaCantones = tmpcomun.ListarCantonesPorProvincia(provincia.IdProvincia)
+                listaCantones.Clear()
+                listaCantones = tmpcomun.ListarCantonesPorProvincia(provincia.IdProvincia)
                 For Each canton In listaCantones
                     cbCanton.Items.Add(canton.Canton)
                 Next
+            End If
+        Next
+    End Sub
+
+    Private Sub cbCanton_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbCanton.SelectedIndexChanged
+        Dim canton As String = cbCanton.Text
+        For Each _canton As Objetos.Canton In listaCantones
+            If _canton.Canton.Equals(canton) Then
+                Dim tmpcomun As New Negocio.Comunes
+                listaDistritos.Clear()
+                listaDistritos = tmpcomun.ListarDistritosPorCanton(_canton.IdCanton)
+                For Each item In listaDistritos
+                    cbDistrito.Items.Add(item.Nombre)
+                Next
+            End If
+        Next
+    End Sub
+
+    Private Sub cbDistrito_SelectedValueChanged(sender As Object, e As EventArgs) Handles cbDistrito.SelectedValueChanged
+        Dim distrito As String = cbDistrito.Text
+        For Each _distrito As Objetos.Distrito In listaDistritos
+            If _distrito.Nombre.Equals(distrito) Then
+                tmpMedico.IdDistrito = _distrito.IdDistrito
             End If
         Next
     End Sub

@@ -1,6 +1,4 @@
-﻿
-
-Public Class Medico
+﻿Public Class Medico
     Public idMedico As Integer
     Public Usuario As String
     Public Contraseña As String

@@ -6,7 +6,7 @@ Public Class MetodosMedico
 
     Dim conection As New SqlConnection("Data Source=127.0.0.1;Initial Catalog=Proyecto_Hospital;Persist Security Info=True;User ID=sa;Password=Password123")
 
-    Public Function InsertaMedico(medico As Medico) As Integer
+    Public Function InsertaMedico(medico As Objetos.Medico) As Integer
         Dim idMedico As Integer = 0
         Try
             'instanciar el comando
@@ -27,7 +27,7 @@ Public Class MetodosMedico
             command.Parameters.Add("@_EstadoCivil", SqlDbType.VarChar, 15).Value = medico.EstadoCivil
             command.Parameters.Add("@_Nacionalidad", SqlDbType.VarChar, 15).Value = medico.Nacionalidad
             command.Parameters.Add("@_FechaNacimiento", SqlDbType.VarChar, 10).Value = medico.FechaNacimiento.ToString()
-            command.Parameters.Add("@_IdDistrito", SqlDbType.Int).Value = medico.IdDistrito
+            command.Parameters.Add("@_IdDistrito", SqlDbType.Int).Value = medico.IdDistrito.ToString()
             'agregar los parametros de salida
             command.Parameters.Add("@_codigo_error", SqlDbType.Int).Direction = ParameterDirection.Output
             command.Parameters.Add("@_mensaje_error", SqlDbType.VarChar, 255).Direction = ParameterDirection.Output
@@ -121,6 +121,50 @@ Public Class MetodosMedico
         Catch ex As Exception
             Throw New Exception(ex.Message)
             Return _dataSet
+        End Try
+    End Function
+
+
+    ''' <summary>
+    ''' envia la información a la DB para ver si el medico puede iniciar sesión
+    ''' </summary>
+    ''' <param name="usuario">nombre de usuario del medico</param>
+    ''' <param name="contraseña">contraseña del médico</param>
+    ''' <returns>true si es valido, false si presenta error</returns>
+    Public Function InicioSesion(usuario As String, contraseña As String) As Boolean
+        Try
+            Dim comando As New SqlCommand()
+            comando.CommandText = "[dbo].[MedicoComprobarSesion]"
+            comando.CommandType = CommandType.StoredProcedure
+            comando.Connection = conection
+
+            ' parametros entrada 
+            comando.Parameters.Add("@_usuario", SqlDbType.VarChar, 25).Value = usuario
+            comando.Parameters.Add("@_contrasena", SqlDbType.VarChar, 50).Value = contraseña
+            ' parametros de salida
+            comando.Parameters.Add("@_codigo_error", SqlDbType.Int).Direction = ParameterDirection.Output
+            comando.Parameters.Add("@_mensaje_error", SqlDbType.VarChar, 255).Direction = ParameterDirection.Output
+            comando.Parameters.Add("@idMedico", SqlDbType.Int).Direction = ParameterDirection.Output
+
+            ' abre la conexión
+            conection.Open()
+            ' ejecuta 
+            comando.ExecuteNonQuery()
+            ' cierra la conexion
+            conection.Close()
+
+            If comando.Parameters("@_codigo_error").Value <> 0 Then
+                Throw New Exception("Error: " + comando.Parameters("@msj_error").Value)
+            Else
+                If comando.Parameters("@idMedico").Value = 0 Then
+                    Return False
+                Else
+                    Return True
+                End If
+            End If
+        Catch ex As Exception
+            Console.WriteLine("Error: " + ex.Message)
+            Return False
         End Try
     End Function
 

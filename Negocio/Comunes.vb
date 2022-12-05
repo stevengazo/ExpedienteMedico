@@ -23,4 +23,14 @@ Public Class Comunes
         End Try
     End Function
 
+
+    Public Function ListarDistritosPorCanton(idCanton As String) As List(Of Objetos.Distrito)
+        Try
+            Dim tmpComun As New AccesoDatos.Distrito
+            Return tmpComun.ObtenerDistriosPorCanton(idCanton)
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+            Return New List(Of Objetos.Distrito)
+        End Try
+    End Function
 End Class

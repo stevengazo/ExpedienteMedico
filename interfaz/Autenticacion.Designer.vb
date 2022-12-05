@@ -40,7 +40,7 @@ Partial Class Autenticacion
         Me.Label1.Location = New System.Drawing.Point(97, 53)
         Me.Label1.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(271, 40)
+        Me.Label1.Size = New System.Drawing.Size(223, 31)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Inicio de Sesión"
         '
@@ -50,7 +50,7 @@ Partial Class Autenticacion
         Me.Label2.Location = New System.Drawing.Point(201, 317)
         Me.Label2.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(45, 24)
+        Me.Label2.Size = New System.Drawing.Size(40, 20)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Rol"
         '
@@ -60,7 +60,7 @@ Partial Class Autenticacion
         Me.Label3.Location = New System.Drawing.Point(161, 224)
         Me.Label3.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(124, 24)
+        Me.Label3.Size = New System.Drawing.Size(104, 20)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Contraseña"
         '
@@ -70,7 +70,7 @@ Partial Class Autenticacion
         Me.Label4.Location = New System.Drawing.Point(119, 124)
         Me.Label4.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(210, 24)
+        Me.Label4.Size = New System.Drawing.Size(177, 20)
         Me.Label4.TabIndex = 3
         Me.Label4.Text = "Nombre de Usuario"
         '
@@ -78,7 +78,7 @@ Partial Class Autenticacion
         '
         Me.txtNombreUsuario.Location = New System.Drawing.Point(123, 162)
         Me.txtNombreUsuario.Name = "txtNombreUsuario"
-        Me.txtNombreUsuario.Size = New System.Drawing.Size(206, 34)
+        Me.txtNombreUsuario.Size = New System.Drawing.Size(206, 29)
         Me.txtNombreUsuario.TabIndex = 4
         '
         'txtContraseña
@@ -86,7 +86,7 @@ Partial Class Autenticacion
         Me.txtContraseña.Location = New System.Drawing.Point(123, 260)
         Me.txtContraseña.Name = "txtContraseña"
         Me.txtContraseña.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtContraseña.Size = New System.Drawing.Size(206, 34)
+        Me.txtContraseña.Size = New System.Drawing.Size(206, 29)
         Me.txtContraseña.TabIndex = 5
         '
         'cboRoles
@@ -95,7 +95,7 @@ Partial Class Autenticacion
         Me.cboRoles.Items.AddRange(New Object() {"", "Administrador", "Médico"})
         Me.cboRoles.Location = New System.Drawing.Point(123, 352)
         Me.cboRoles.Name = "cboRoles"
-        Me.cboRoles.Size = New System.Drawing.Size(206, 32)
+        Me.cboRoles.Size = New System.Drawing.Size(206, 27)
         Me.cboRoles.TabIndex = 6
         '
         'btnIngresar
@@ -110,7 +110,7 @@ Partial Class Autenticacion
         '
         'Autenticacion
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(14.0!, 24.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 19.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightBlue
         Me.ClientSize = New System.Drawing.Size(466, 502)
@@ -127,6 +127,7 @@ Partial Class Autenticacion
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.Name = "Autenticacion"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Autenticación"
         Me.ResumeLayout(False)
         Me.PerformLayout()

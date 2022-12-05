@@ -197,7 +197,7 @@ Partial Class AgregarMedico
         Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 90)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 71)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(602, 509)
         Me.GroupBox1.TabIndex = 9
@@ -316,7 +316,7 @@ Partial Class AgregarMedico
         Me.GroupBox2.Controls.Add(Me.Label10)
         Me.GroupBox2.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.GroupBox2.Location = New System.Drawing.Point(718, 90)
+        Me.GroupBox2.Location = New System.Drawing.Point(640, 71)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(601, 165)
         Me.GroupBox2.TabIndex = 10
@@ -404,7 +404,7 @@ Partial Class AgregarMedico
         Me.GroupBox3.Controls.Add(Me.Label14)
         Me.GroupBox3.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.GroupBox3.Location = New System.Drawing.Point(718, 275)
+        Me.GroupBox3.Location = New System.Drawing.Point(640, 242)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(601, 129)
         Me.GroupBox3.TabIndex = 11
@@ -421,7 +421,8 @@ Partial Class AgregarMedico
         '
         'btnLimpiar
         '
-        Me.btnLimpiar.BackColor = System.Drawing.Color.SteelBlue
+        Me.btnLimpiar.BackColor = System.Drawing.Color.Azure
+        Me.btnLimpiar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnLimpiar.Location = New System.Drawing.Point(448, 69)
         Me.btnLimpiar.Name = "btnLimpiar"
         Me.btnLimpiar.Size = New System.Drawing.Size(127, 36)
@@ -431,7 +432,8 @@ Partial Class AgregarMedico
         '
         'btnAgregarEspecialidad
         '
-        Me.btnAgregarEspecialidad.BackColor = System.Drawing.Color.SteelBlue
+        Me.btnAgregarEspecialidad.BackColor = System.Drawing.Color.Azure
+        Me.btnAgregarEspecialidad.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnAgregarEspecialidad.Location = New System.Drawing.Point(448, 27)
         Me.btnAgregarEspecialidad.Name = "btnAgregarEspecialidad"
         Me.btnAgregarEspecialidad.Size = New System.Drawing.Size(127, 36)
@@ -476,7 +478,7 @@ Partial Class AgregarMedico
         Me.GroupBox4.Controls.Add(Me.Label16)
         Me.GroupBox4.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox4.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.GroupBox4.Location = New System.Drawing.Point(718, 431)
+        Me.GroupBox4.Location = New System.Drawing.Point(640, 385)
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Size = New System.Drawing.Size(601, 123)
         Me.GroupBox4.TabIndex = 12
@@ -521,11 +523,11 @@ Partial Class AgregarMedico
         '
         'btnAgregarMedico
         '
-        Me.btnAgregarMedico.BackColor = System.Drawing.Color.SteelBlue
-        Me.btnAgregarMedico.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnAgregarMedico.Location = New System.Drawing.Point(619, 592)
+        Me.btnAgregarMedico.BackColor = System.Drawing.Color.Beige
+        Me.btnAgregarMedico.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.btnAgregarMedico.Location = New System.Drawing.Point(640, 534)
         Me.btnAgregarMedico.Name = "btnAgregarMedico"
-        Me.btnAgregarMedico.Size = New System.Drawing.Size(228, 62)
+        Me.btnAgregarMedico.Size = New System.Drawing.Size(155, 36)
         Me.btnAgregarMedico.TabIndex = 26
         Me.btnAgregarMedico.Text = "Agregar"
         Me.btnAgregarMedico.UseVisualStyleBackColor = False
@@ -534,8 +536,8 @@ Partial Class AgregarMedico
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 19.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.LightBlue
-        Me.ClientSize = New System.Drawing.Size(1383, 666)
+        Me.BackColor = System.Drawing.Color.DarkSlateGray
+        Me.ClientSize = New System.Drawing.Size(1247, 583)
         Me.Controls.Add(Me.btnAgregarMedico)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox3)
@@ -546,6 +548,7 @@ Partial Class AgregarMedico
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.Name = "AgregarMedico"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Agregar Médico"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()

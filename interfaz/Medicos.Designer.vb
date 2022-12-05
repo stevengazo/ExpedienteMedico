@@ -51,7 +51,7 @@ Partial Class Medicos
         Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label2.Location = New System.Drawing.Point(19, 9)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(307, 18)
+        Me.Label2.Size = New System.Drawing.Size(250, 15)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Información de pacientes registrados"
         '
@@ -96,7 +96,7 @@ Partial Class Medicos
         Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label1.Location = New System.Drawing.Point(248, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(422, 50)
+        Me.Label1.Size = New System.Drawing.Size(343, 40)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Módulo de Médicos"
         '
@@ -114,7 +114,7 @@ Partial Class Medicos
         '
         'Medicos
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 14.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 11.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightBlue
         Me.ClientSize = New System.Drawing.Size(921, 609)
@@ -126,6 +126,7 @@ Partial Class Medicos
         Me.Font = New System.Drawing.Font("Mongolian Baiti", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Medicos"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Módulo Médicos"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
