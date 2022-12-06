@@ -2,8 +2,13 @@
 Imports Objetos
 
 Public Class MedHasEspe
-    Dim conection As New SqlConnection("Data Source=127.0.0.1;Initial Catalog=Proyecto_Hospital;Persist Security Info=True;User ID=sa;Password=Password123")
+    Dim conection As New SqlConnection(DATOSGENERALES.StringConnection)
 
+    ''' <summary>
+    ''' Asigna una especialidad médica a un medico
+    ''' </summary>
+    ''' <param name="registro">Objeto de tipo MedHasEspe</param>
+    ''' <returns>True si lo ingresa en la DB</returns>
     Public Function AgregarEspecialidad(registro As Objetos.MedHasEspe) As Boolean
         Try
             Dim comando As New SqlCommand

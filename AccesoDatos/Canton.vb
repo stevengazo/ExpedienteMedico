@@ -2,9 +2,13 @@
 Imports Objetos
 
 Public Class Canton
-    Dim conection As New SqlConnection("Data Source=127.0.0.1;Initial Catalog=Proyecto_Hospital;Persist Security Info=True;User ID=sa;Password=Password123")
+    Dim conection As New SqlConnection(DATOSGENERALES.StringConnection)
 
-
+    ''' <summary>
+    ''' Generar una lista de cantones por una provincia en especifico
+    ''' </summary>
+    ''' <param name="idProvincia">Id de la provincia a buscar</param>
+    ''' <returns>Retorna una lista de tipo Canton</returns>
     Public Function ObtenerCantonesPorProvincia(idProvincia As String) As List(Of Objetos.Canton)
         Try
             Dim data As New DataSet()

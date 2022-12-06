@@ -66,8 +66,10 @@
   <ItemGroup>
     <Compile Include="Administrador.vb" />
     <Compile Include="Canton.vb" />
+    <Compile Include="DATOSGENERALES.vb" />
     <Compile Include="Distrito.vb" />
     <Compile Include="Especialidades.vb" />
+    <Compile Include="ExpedienteMedico.vb" />
     <Compile Include="MedHasEspe.vb" />
     <Compile Include="Medico.vb" />
     <Compile Include="MetodosMedico.vb" />

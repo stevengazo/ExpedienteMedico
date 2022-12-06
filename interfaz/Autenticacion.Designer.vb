@@ -94,11 +94,12 @@ Partial Class Autenticacion
         'cboRoles
         '
         Me.cboRoles.FormattingEnabled = True
-        Me.cboRoles.Items.AddRange(New Object() {"", "Administrador", "Médico"})
+        Me.cboRoles.Items.AddRange(New Object() {"Administrador", "Médico"})
         Me.cboRoles.Location = New System.Drawing.Point(21, 199)
         Me.cboRoles.Name = "cboRoles"
         Me.cboRoles.Size = New System.Drawing.Size(206, 28)
         Me.cboRoles.TabIndex = 6
+        Me.cboRoles.Text = "Médico"
         '
         'btnIngresar
         '

@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 
 Public Class Medico
-    Dim conexion As New SqlConnection("Data Source=127.0.0.1;Initial Catalog=Proyecto_Hospital;Persist Security Info=True;User ID=sa;Password=Password123")
+    Dim conexion As New SqlConnection(DATOSGENERALES.StringConnection)
 
     ''' <summary>
     ''' envia la información a la DB para ver si el medico puede iniciar sesión

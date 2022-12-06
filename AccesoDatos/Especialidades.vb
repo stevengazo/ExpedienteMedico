@@ -2,8 +2,12 @@
 Imports Objetos
 
 Public Class Especialidades
-    Dim conection As New SqlConnection("Data Source=127.0.0.1;Initial Catalog=Proyecto_Hospital;Persist Security Info=True;User ID=sa;Password=Password123")
+    Dim conection As New SqlConnection(DATOSGENERALES.StringConnection)
 
+    ''' <summary>
+    ''' Lista las especialidades medicas almacenadas en la DB
+    ''' </summary>
+    ''' <returns>lista de objetos de tipo especialidad</returns>
     Public Function ListarEspecialidades() As List(Of Objetos.Especialidad)
         Try
             Dim data As New DataSet()

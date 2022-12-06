@@ -1,8 +1,13 @@
 ﻿Imports System.Data.SqlClient
 Imports Objetos
 Public Class Distrito
-    Dim conection As New SqlConnection("Data Source=127.0.0.1;Initial Catalog=Proyecto_Hospital;Persist Security Info=True;User ID=sa;Password=Password123")
+    Dim conection As New SqlConnection(DATOSGENERALES.StringConnection)
 
+    ''' <summary>
+    ''' Obtiene una lista de distritos según un cantón especifico
+    ''' </summary>
+    ''' <param name="idCanton">id Del cantona a buscar</param>
+    ''' <returns>lista de tipo distritos</returns>
     Public Function ObtenerDistriosPorCanton(idCanton As String) As List(Of Objetos.Distrito)
         Try
             Dim data As New DataSet()

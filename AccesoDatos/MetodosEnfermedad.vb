@@ -3,7 +3,14 @@ Imports System.Data.SqlClient
 Imports Objetos
 
 Public Class MetodosEnfermedad
-    Dim conection As New SqlConnection("Data Source=127.0.0.1;Initial Catalog=Proyecto_Hospital;Persist Security Info=True;User ID=sa;Password=Password123")
+    Dim conection As New SqlConnection(DATOSGENERALES.StringConnection)
+    ''' <summary>
+    ''' Ingresa una nueva enfermedad en el sistema 
+    ''' </summary>
+    ''' <param name="nombre">nombre de la enfermedad </param>
+    ''' <param name="desc">Descripción de la enfermedad</param>
+    ''' <param name="sin">Sintomas de la enfermedad</param>
+    ''' <returns>Retorna el id de la enfermedad ingresada</returns>
     Public Function InsertaEnfermedad(nombre As String, desc As String, sin As String) As Integer
         Dim idEnfermedad As Integer = 0
         Try
@@ -40,7 +47,7 @@ Public Class MetodosEnfermedad
             End If
 
         Catch ex As Exception
-            Throw New Exception(ex.Message)
+            Console.WriteLine(ex.Message)
         End Try
         Return idEnfermedad
     End Function

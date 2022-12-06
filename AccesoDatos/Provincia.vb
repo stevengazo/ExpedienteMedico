@@ -2,9 +2,12 @@
 Imports Objetos
 
 Public Class Provincia
-    Dim conection As New SqlConnection("Data Source=127.0.0.1;Initial Catalog=Proyecto_Hospital;Persist Security Info=True;User ID=sa;Password=Password123")
+    Dim conection As New SqlConnection(DATOSGENERALES.StringConnection)
 
-
+    ''' <summary>
+    ''' Obtiene una lista de provincias de la DB
+    ''' </summary>
+    ''' <returns>Lista de objetos de tipo provincia</returns>
     Public Function ObtenerProvincias() As List(Of Objetos.Provincia)
         Try
             Dim data As New DataSet()

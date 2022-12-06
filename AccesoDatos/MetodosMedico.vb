@@ -4,8 +4,13 @@ Imports Objetos
 
 Public Class MetodosMedico
 
-    Dim conection As New SqlConnection("Data Source=127.0.0.1;Initial Catalog=Proyecto_Hospital;Persist Security Info=True;User ID=sa;Password=Password123")
+    Dim conection As New SqlConnection(DATOSGENERALES.StringConnection)
 
+    ''' <summary>
+    ''' Ingresa un nuevo médico en la base de datos
+    ''' </summary>
+    ''' <param name="medico">Objeto de tipo médico a ingresar</param>
+    ''' <returns>0 si presenta un error, si no el ID del médico</returns>
     Public Function InsertaMedico(medico As Objetos.Medico) As Integer
         Dim idMedico As Integer = 0
         Try

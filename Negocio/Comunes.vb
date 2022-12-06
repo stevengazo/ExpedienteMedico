@@ -3,6 +3,16 @@ Imports Objetos
 
 Public Class Comunes
 
+
+    Public Function GenerarExpediente() As Integer
+        Try
+            Dim tmpComun As New AccesoDatos.ExpedienteMedico
+            Return tmpComun.GenerarExpediente()
+        Catch ex As Exception
+            Console.WriteLine(ex.Message)
+            Return 0
+        End Try
+    End Function
     Public Function ListarProvincias() As List(Of Objetos.Provincia)
         Try
             Dim tmpProvincia As New AccesoDatos.Provincia
