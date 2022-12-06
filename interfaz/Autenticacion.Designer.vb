@@ -31,13 +31,15 @@ Partial Class Autenticacion
         Me.txtContraseña = New System.Windows.Forms.TextBox()
         Me.cboRoles = New System.Windows.Forms.ComboBox()
         Me.btnIngresar = New System.Windows.Forms.Button()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Mongolian Baiti", 22.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(97, 53)
+        Me.Label1.Location = New System.Drawing.Point(27, 9)
         Me.Label1.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(223, 31)
@@ -47,43 +49,43 @@ Partial Class Autenticacion
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(201, 317)
+        Me.Label2.Location = New System.Drawing.Point(99, 176)
         Me.Label2.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(40, 20)
+        Me.Label2.Size = New System.Drawing.Size(37, 20)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Rol"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(161, 224)
+        Me.Label3.Location = New System.Drawing.Point(74, 106)
         Me.Label3.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(104, 20)
+        Me.Label3.Size = New System.Drawing.Size(94, 20)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Contraseña"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(119, 124)
+        Me.Label4.Location = New System.Drawing.Point(44, 25)
         Me.Label4.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(177, 20)
+        Me.Label4.Size = New System.Drawing.Size(160, 20)
         Me.Label4.TabIndex = 3
         Me.Label4.Text = "Nombre de Usuario"
         '
         'txtNombreUsuario
         '
-        Me.txtNombreUsuario.Location = New System.Drawing.Point(123, 162)
+        Me.txtNombreUsuario.Location = New System.Drawing.Point(21, 48)
         Me.txtNombreUsuario.Name = "txtNombreUsuario"
         Me.txtNombreUsuario.Size = New System.Drawing.Size(206, 29)
         Me.txtNombreUsuario.TabIndex = 4
         '
         'txtContraseña
         '
-        Me.txtContraseña.Location = New System.Drawing.Point(123, 260)
+        Me.txtContraseña.Location = New System.Drawing.Point(21, 129)
         Me.txtContraseña.Name = "txtContraseña"
         Me.txtContraseña.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtContraseña.Size = New System.Drawing.Size(206, 29)
@@ -93,34 +95,46 @@ Partial Class Autenticacion
         '
         Me.cboRoles.FormattingEnabled = True
         Me.cboRoles.Items.AddRange(New Object() {"", "Administrador", "Médico"})
-        Me.cboRoles.Location = New System.Drawing.Point(123, 352)
+        Me.cboRoles.Location = New System.Drawing.Point(21, 199)
         Me.cboRoles.Name = "cboRoles"
-        Me.cboRoles.Size = New System.Drawing.Size(206, 27)
+        Me.cboRoles.Size = New System.Drawing.Size(206, 28)
         Me.cboRoles.TabIndex = 6
         '
         'btnIngresar
         '
         Me.btnIngresar.BackColor = System.Drawing.Color.SteelBlue
-        Me.btnIngresar.Location = New System.Drawing.Point(151, 425)
+        Me.btnIngresar.Font = New System.Drawing.Font("Mongolian Baiti", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnIngresar.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnIngresar.Location = New System.Drawing.Point(60, 307)
         Me.btnIngresar.Name = "btnIngresar"
-        Me.btnIngresar.Size = New System.Drawing.Size(153, 52)
+        Me.btnIngresar.Size = New System.Drawing.Size(156, 41)
         Me.btnIngresar.TabIndex = 7
         Me.btnIngresar.Text = "Ingresar"
         Me.btnIngresar.UseVisualStyleBackColor = False
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.Label4)
+        Me.GroupBox1.Controls.Add(Me.txtContraseña)
+        Me.GroupBox1.Controls.Add(Me.cboRoles)
+        Me.GroupBox1.Controls.Add(Me.Label2)
+        Me.GroupBox1.Controls.Add(Me.Label3)
+        Me.GroupBox1.Controls.Add(Me.txtNombreUsuario)
+        Me.GroupBox1.Font = New System.Drawing.Font("Mongolian Baiti", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 52)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(259, 249)
+        Me.GroupBox1.TabIndex = 8
+        Me.GroupBox1.TabStop = False
         '
         'Autenticacion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 19.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.LightBlue
-        Me.ClientSize = New System.Drawing.Size(466, 502)
+        Me.BackColor = System.Drawing.Color.DarkSlateGray
+        Me.ClientSize = New System.Drawing.Size(280, 363)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btnIngresar)
-        Me.Controls.Add(Me.cboRoles)
-        Me.Controls.Add(Me.txtContraseña)
-        Me.Controls.Add(Me.txtNombreUsuario)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Font = New System.Drawing.Font("Mongolian Baiti", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ForeColor = System.Drawing.SystemColors.ButtonHighlight
@@ -129,6 +143,8 @@ Partial Class Autenticacion
         Me.Name = "Autenticacion"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Autenticación"
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -142,4 +158,5 @@ Partial Class Autenticacion
     Friend WithEvents txtContraseña As TextBox
     Friend WithEvents cboRoles As ComboBox
     Friend WithEvents btnIngresar As Button
+    Friend WithEvents GroupBox1 As GroupBox
 End Class

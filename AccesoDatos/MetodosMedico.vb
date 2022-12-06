@@ -104,6 +104,7 @@ Public Class MetodosMedico
     ''' </summary>
     ''' <returns></returns>
     Public Function ObtenerDataSetMedicos() As DataSet
+
         Dim _dataSet As New DataSet()
         Try
             Dim listaMedicos As New List(Of Objetos.Medico)

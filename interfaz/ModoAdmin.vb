@@ -42,8 +42,8 @@
     End Sub
 
     Private Sub AgregarPacienteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AgregarPacienteToolStripMenuItem.Click
-        AgregarPaciente.Show()
-
+        Dim agregarPacienteForm As New AgregarPaciente()
+        agregarPacienteForm.ShowDialog()
     End Sub
 
     Private Sub VerListaDeEnfermedadesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VerListaDeEnfermedadesToolStripMenuItem.Click

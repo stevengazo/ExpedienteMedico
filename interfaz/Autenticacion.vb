@@ -45,7 +45,5 @@ Public Class Autenticacion
         cboRoles.SelectedIndex = -1
     End Sub
 
-    Private Sub Autenticacion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-    End Sub
 End Class

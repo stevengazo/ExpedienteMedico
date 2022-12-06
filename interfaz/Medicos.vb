@@ -8,7 +8,7 @@
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnAgregarPaciente.Click
-        AgregarPaciente.Show()
+
     End Sub
 
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
