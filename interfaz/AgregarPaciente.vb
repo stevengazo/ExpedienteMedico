@@ -5,6 +5,7 @@ Public Class AgregarPaciente
     Private ListaCanton As New List(Of Objetos.Canton)
     Private ListaDistritos As New List(Of Objetos.Distrito)
     Private TemporalPaciente As New Objetos.Paciente()
+    Private temporalExpediente As New Objetos.ExpedienteMedico()
 
     ' Conexion con comunes
     Dim comunes As New Negocio.Comunes()
@@ -65,31 +66,58 @@ Public Class AgregarPaciente
     End Sub
 
     Private Sub btnAgregarPaciente_Click(sender As Object, e As EventArgs) Handles btnAgregarPaciente.Click
-
-        ' asignación de datos de paciente a paciente en memoria
-        TemporalPaciente.Nombre = txtNombrePaciente.Text
-        TemporalPaciente.Apellidos = txtApellidosPaciente.Text
-        TemporalPaciente.Identificacion = txtIdenPaciente.Text
-        TemporalPaciente.TipoIdentificacion = cbTipoIdenPaciente.Text
-        TemporalPaciente.Sexo = cbSexoPaciente.Text
-        TemporalPaciente.EstadoCivil = cbEstadoCivilPaciente.Text
-        TemporalPaciente.Nacionalidad = txtNacionalidadPaciente.Text
-        ' la asignación de id distrito se realiza en otro sitio
-        TemporalPaciente.NumeroTelefonico = txtTelefonoPaciente.Text
-        TemporalPaciente.Correo = txtCorreoPaciente.Text
-        If cbSeguro.Text.Equals("No") Then
-            TemporalPaciente.EstaActivo = False
+        Dim banderaExpediente = GenerarExpediente()
+        If banderaExpediente Then
+            ' asignación de datos de paciente a paciente en memoria
+            TemporalPaciente.Nombre = txtNombrePaciente.Text
+            TemporalPaciente.Apellidos = txtApellidosPaciente.Text
+            TemporalPaciente.Identificacion = txtIdenPaciente.Text
+            TemporalPaciente.TipoIdentificacion = cbTipoIdenPaciente.Text
+            TemporalPaciente.Sexo = cbSexoPaciente.Text
+            TemporalPaciente.EstadoCivil = cbEstadoCivilPaciente.Text
+            TemporalPaciente.FechaNacimiento = datePaciente.Value
+            TemporalPaciente.Nacionalidad = txtNacionalidadPaciente.Text
+            ' la asignación de id distrito se realiza en otro sitio
+            TemporalPaciente.NumeroTelefonico = Integer.Parse(txtTelefonoPaciente.Text)
+            TemporalPaciente.Correo = txtCorreoPaciente.Text
+            If cbSeguro.Text.Equals("No") Then
+                TemporalPaciente.EstaActivo = False
+            Else
+                TemporalPaciente.EstaActivo = True
+            End If
+            ' envio a negocios e inserción en db
+            Dim negocios As New Negocio.PacienteNegocio()
+            Dim idPaciente = negocios.AgregarPaciente(TemporalPaciente)
+            TemporalPaciente = New Objetos.Paciente()
+            If idPaciente <> 0 Then
+                MessageBox.Show("Usuario Agregado. Id interno: " + idPaciente.ToString(), "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Else
+                MessageBox.Show("Error interno", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            End If
         Else
-            TemporalPaciente.EstaActivo = True
+            MessageBox.Show("Error interno", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
 
-        ' envio a negocios e inserción en db
-
-
-
-
-
     End Sub
+
+
+
+    Private Function GenerarExpediente() As Boolean
+        Try
+            Dim negocio As New Negocio.Comunes
+            temporalExpediente.idExpediente = negocio.GenerarExpediente()
+            If temporalExpediente.idExpediente <> 0 Then
+                TemporalPaciente.Expediente = temporalExpediente
+                Return True
+            Else
+                Return False
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Error generando expediente. " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+            Return False
+        End Try
+    End Function
 
     Private Sub cbDistrito_SelectedValueChanged(sender As Object, e As EventArgs) Handles cbDistrito.SelectedValueChanged
         Dim distrito As String = cbDistrito.Text
@@ -99,4 +127,6 @@ Public Class AgregarPaciente
             End If
         Next
     End Sub
+
+
 End Class

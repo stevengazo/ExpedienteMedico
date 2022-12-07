@@ -1,5 +1,6 @@
 ﻿Imports Objetos
 Imports AccesoDatos
+Imports System.Net.Http.Headers
 
 Public Class PacienteNegocio
 
@@ -11,12 +12,21 @@ Public Class PacienteNegocio
     ''' <returns>0 si presenta error, </returns>
     Public Function AgregarPaciente(pacienteTMP As Objetos.Paciente) As Integer
         Try
-
-
-            Return 1
+            Dim accesoDatosPaciente As New AccesoDatos.Paciente
+            Return accesoDatosPaciente.AgregarPaciente(pacienteTMP)
         Catch ex As Exception
             Throw New Exception(ex.Message)
             Return 0
+        End Try
+    End Function
+
+
+    Public Function ObtenerPacientes() As List(Of Objetos.Paciente)
+        Try
+            Dim accesoDatosPaciente As New AccesoDatos.Paciente
+            Return accesoDatosPaciente.ListarPacientes()
+        Catch ex As Exception
+            Return New List(Of Objetos.Paciente)
         End Try
     End Function
 End Class

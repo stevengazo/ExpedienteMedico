@@ -103,6 +103,12 @@
     <Compile Include="AgregarPaciente.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ListaPacientes.Designer.vb">
+      <DependentUpon>ListaPacientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ListaPacientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ModoAdmin.Designer.vb">
       <DependentUpon>ModoAdmin.vb</DependentUpon>
     </Compile>

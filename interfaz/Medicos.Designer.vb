@@ -25,20 +25,20 @@ Partial Class Medicos
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Medicos))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.dgListaPacientes = New System.Windows.Forms.DataGridView()
         Me.btnExpediente = New System.Windows.Forms.Button()
         Me.btnAgregarPaciente = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnEliminarPaciente = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgListaPacientes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Controls.Add(Me.DataGridView1)
+        Me.Panel1.Controls.Add(Me.dgListaPacientes)
         Me.Panel1.Location = New System.Drawing.Point(2, 73)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(920, 430)
@@ -55,15 +55,15 @@ Partial Class Medicos
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Información de pacientes registrados"
         '
-        'DataGridView1
+        'dgListaPacientes
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(9, 35)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(900, 376)
-        Me.DataGridView1.TabIndex = 0
+        Me.dgListaPacientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgListaPacientes.Location = New System.Drawing.Point(9, 35)
+        Me.dgListaPacientes.Name = "dgListaPacientes"
+        Me.dgListaPacientes.RowHeadersWidth = 51
+        Me.dgListaPacientes.RowTemplate.Height = 24
+        Me.dgListaPacientes.Size = New System.Drawing.Size(900, 376)
+        Me.dgListaPacientes.TabIndex = 0
         '
         'btnExpediente
         '
@@ -130,14 +130,14 @@ Partial Class Medicos
         Me.Text = "Módulo Médicos"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgListaPacientes, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents dgListaPacientes As DataGridView
     Friend WithEvents Label2 As Label
     Friend WithEvents btnExpediente As Button
     Friend WithEvents btnAgregarPaciente As Button

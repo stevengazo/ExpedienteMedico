@@ -9,7 +9,7 @@
     Public Nacionalidad As String
     Public FechaNacimiento As DateTime
     Public NumeroTelefonico As Integer
-    Public Correo As Integer
+    Public Correo As String
     Public EstaActivo As Boolean
     Public IdDistrito As Integer
     ' Dependencia de expediente
