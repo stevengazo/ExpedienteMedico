@@ -61,14 +61,15 @@ Public Class EnfermedadNegocio
     ''' <summary>
     ''' 
     ''' </summary>
-    ''' <returns></returns>
-    Public Function ListaEnfermedades() As List(Of Enfermedad)
+    ''' <returns></returns
+
+    Public Function ListaEnfermedad() As List(Of Objetos.Enfermedad)
         Try
-            Throw New NotImplementedException()
-            Return New List(Of Enfermedad)
+            Dim tmpNegocio As New AccesoDatos.MetodosEnfermedad
+            Return tmpNegocio.ObtenerListaEnfermedades()
         Catch ex As Exception
-            Throw New NotImplementedException()
-            Return New List(Of Enfermedad)
+            Throw New Exception(ex.Message)
+            Return New List(Of Objetos.Enfermedad)
         End Try
     End Function
 

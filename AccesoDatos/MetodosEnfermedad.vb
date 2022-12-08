@@ -51,4 +51,36 @@ Public Class MetodosEnfermedad
         End Try
         Return idEnfermedad
     End Function
+
+
+    Public Function ObtenerListaEnfermedades() As List(Of Objetos.Enfermedad)
+        Try
+            Dim _dataSet As New DataSet()
+            Dim listaEnfe As New List(Of Objetos.Enfermedad)
+            Dim comando As New SqlCommand()
+            comando.CommandText = "Select * from Enfermedades"
+            comando.CommandType = CommandType.Text
+            comando.Connection = conection
+
+            conection.Open()
+            Dim adapter As New SqlDataAdapter(comando)
+            adapter.Fill(_dataSet, "Enfermedades")
+            conection.Close()
+
+
+            For Each datarow In _dataSet.Tables(0).Rows
+                Dim tmp As New Objetos.Enfermedad
+                tmp.id = Integer.Parse(datarow(0))
+                tmp.Nombre = datarow(1)
+                tmp.Descripcion = datarow(2)
+                tmp.sintomas = datarow(3)
+                listaEnfe.Add(tmp)
+            Next
+            Return listaEnfe
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+            Return New List(Of Objetos.Enfermedad)
+        End Try
+    End Function
+
 End Class
