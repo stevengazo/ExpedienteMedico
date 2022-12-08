@@ -7,11 +7,11 @@ Public Class EnfermedadNegocio
     ''' 
     ''' </summary>
     ''' <param name="objEnfermedad"></param>
-    Public Function AgregarEnfermedad(nombre As String, desc As String, sin As String)
+    Public Function AgregarEnfermedad(enfermedad As Objetos.Enfermedad) As Integer
         Try
             Dim obtieneDatos As New AccesoDatos.MetodosEnfermedad
 
-            Return obtieneDatos.InsertaEnfermedad(nombre, desc, sin)
+            Return obtieneDatos.InsertaEnfermedad(enfermedad)
         Catch ex As Exception
             Throw New Exception(ex.Message)
         End Try

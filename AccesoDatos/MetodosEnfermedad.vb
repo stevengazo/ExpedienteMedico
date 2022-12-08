@@ -11,7 +11,7 @@ Public Class MetodosEnfermedad
     ''' <param name="desc">Descripción de la enfermedad</param>
     ''' <param name="sin">Sintomas de la enfermedad</param>
     ''' <returns>Retorna el id de la enfermedad ingresada</returns>
-    Public Function InsertaEnfermedad(nombre As String, desc As String, sin As String) As Integer
+    Public Function InsertaEnfermedad(enfermedad As Objetos.Enfermedad) As Integer
         Dim idEnfermedad As Integer = 0
         Try
             'instanciar el comando
@@ -22,9 +22,9 @@ Public Class MetodosEnfermedad
 
             'agregar parametros
             'son parametros de entrada
-            command.Parameters.Add("@_Nombre", SqlDbType.VarChar, 50).Value = nombre
-            command.Parameters.Add("@_Descripcion ", SqlDbType.VarChar, 1000).Value = desc
-            command.Parameters.Add("@_Sintomas ", SqlDbType.VarChar, 100).Value = sin
+            command.Parameters.Add("@_Nombre", SqlDbType.VarChar, 50).Value = enfermedad.Nombre
+            command.Parameters.Add("@_Descripcion ", SqlDbType.VarChar, 1000).Value = enfermedad.Descripcion
+            command.Parameters.Add("@_Sintomas ", SqlDbType.VarChar, 100).Value = enfermedad.sintomas
 
             'agregar los parametros de salida
             command.Parameters.Add("@_codigo_error", SqlDbType.Int).Direction = ParameterDirection.Output
