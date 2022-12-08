@@ -73,6 +73,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgregarEnfermedad.Designer.vb">
+      <DependentUpon>AgregarEnfermedad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarEnfermedad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarMedicamento.Designer.vb">
+      <DependentUpon>AgregarMedicamento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarMedicamento.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="AgregarMedico.Designer.vb">
       <DependentUpon>AgregarMedico.vb</DependentUpon>
     </Compile>
@@ -125,6 +137,18 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="VerEnfermedades.Designer.vb">
+      <DependentUpon>VerEnfermedades.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VerEnfermedades.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerMedicamentos.Designer.vb">
+      <DependentUpon>VerMedicamentos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VerMedicamentos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="VerMedicos.Designer.vb">
       <DependentUpon>VerMedicos.vb</DependentUpon>
     </Compile>
@@ -133,6 +157,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AgregarEnfermedad.resx">
+      <DependentUpon>AgregarEnfermedad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarMedicamento.resx">
+      <DependentUpon>AgregarMedicamento.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AgregarMedico.resx">
       <DependentUpon>AgregarMedico.vb</DependentUpon>
     </EmbeddedResource>
@@ -157,6 +187,12 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="VerEnfermedades.resx">
+      <DependentUpon>VerEnfermedades.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerMedicamentos.resx">
+      <DependentUpon>VerMedicamentos.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VerMedicos.resx">
       <DependentUpon>VerMedicos.vb</DependentUpon>
     </EmbeddedResource>
@@ -175,6 +211,25 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\png-transparent-stethoscope-medicine-nursing-health-care-physician-health-blue-logo-medical-care.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pastilla.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enfe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\médicos-en-fondo-transparente-97513063.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Negocio\Negocio.vbproj">
+      <Project>{c8361c5d-ec96-4b34-9d06-b16b3134d415}</Project>
+      <Name>Negocio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Objetos\Objetos.vbproj">
+      <Project>{cddc4a92-5df4-4da0-9513-d1a1eb2292b8}</Project>
+      <Name>Objetos</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
