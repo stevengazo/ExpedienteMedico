@@ -32,6 +32,9 @@ Public Class MetodosMedico
             command.Parameters.Add("@_EstadoCivil", SqlDbType.VarChar, 15).Value = medico.EstadoCivil
             command.Parameters.Add("@_Nacionalidad", SqlDbType.VarChar, 15).Value = medico.Nacionalidad
             command.Parameters.Add("@_FechaNacimiento", SqlDbType.VarChar, 10).Value = medico.FechaNacimiento.ToString()
+            command.Parameters.Add("@_NumeroTelefonico", SqlDbType.Int).Value = medico.NumeroTelefono
+            command.Parameters.Add("@_correo", SqlDbType.VarChar, 40).Value = medico.Correo
+            command.Parameters.Add("@_OtrasSenas", SqlDbType.VarChar, 100).Value = medico.OtrasSenas
             command.Parameters.Add("@_IdDistrito", SqlDbType.Int).Value = medico.IdDistrito.ToString()
             'agregar los parametros de salida
             command.Parameters.Add("@_codigo_error", SqlDbType.Int).Direction = ParameterDirection.Output
@@ -89,7 +92,7 @@ Public Class MetodosMedico
                 tmp.Sexo = datarow(7)
                 tmp.EstadoCivil = datarow(8)
                 tmp.Nacionalidad = datarow(9)
-                tmp.FechaNacimiento = datarow(10)
+                tmp.FechaNacimiento = Date.Parse(datarow(10))
                 tmp.NumeroTelefono = Integer.Parse(datarow(11))
                 tmp.Correo = datarow(12)
                 tmp.OtrasSenas = datarow(13)

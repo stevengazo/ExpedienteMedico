@@ -72,6 +72,7 @@
     <Compile Include="ExpedienteMedico.vb" />
     <Compile Include="MedHasEspe.vb" />
     <Compile Include="Medico.vb" />
+    <Compile Include="MetodoPacientes.vb" />
     <Compile Include="MetodosMedico.vb" />
     <Compile Include="MetodosEnfermedad.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
