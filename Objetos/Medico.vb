@@ -15,4 +15,24 @@
     Public IdDistrito As Integer
     Public OtrasSenas As String
     Public Especialidades As New List(Of Objetos.MedHasEspe)
+
+
+    Public Sub New()
+        idMedico = 0
+        Usuario = String.Empty
+        Contraseña = String.Empty
+        Nombre = String.Empty
+        Apellido = String.Empty
+        Identificacion = String.Empty
+        TipoIdentificación = String.Empty
+        Sexo = String.Empty
+        EstadoCivil = String.Empty
+        Nacionalidad = String.Empty
+        FechaNacimiento = DateTime.Now
+        NumeroTelefono = 0
+        Correo = String.Empty
+        IdDistrito = 0
+        OtrasSenas = String.Empty
+
+    End Sub
 End Class

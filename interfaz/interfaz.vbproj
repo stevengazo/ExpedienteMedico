@@ -143,6 +143,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="TEMPORAL.vb" />
     <Compile Include="VerEnfermedades.Designer.vb">
       <DependentUpon>VerEnfermedades.vb</DependentUpon>
     </Compile>
@@ -153,6 +154,12 @@
       <DependentUpon>VerMedicamentos.vb</DependentUpon>
     </Compile>
     <Compile Include="VerMedicamentos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerMedico.Designer.vb">
+      <DependentUpon>VerMedico.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VerMedico.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="VerMedicos.Designer.vb">
@@ -198,6 +205,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VerMedicamentos.resx">
       <DependentUpon>VerMedicamentos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerMedico.resx">
+      <DependentUpon>VerMedico.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VerMedicos.resx">
       <DependentUpon>VerMedicos.vb</DependentUpon>

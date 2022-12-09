@@ -177,4 +177,45 @@ Public Class MetodosMedico
         End Try
     End Function
 
+    ''' <summary>
+    ''' Consulta un id a la base de datos y retorna un médico
+    ''' </summary>
+    ''' <param name="id">id del Médico</param>
+    ''' <returns>Objeto de tipo médico</returns>
+    Public Function ObtenerMedico(id As Integer) As Objetos.Medico
+        Try
+            Dim _dataSet As New DataSet()
+            Dim Medico As New Objetos.Medico()
+            Dim comando As New SqlCommand()
+            comando.CommandText = "SELECT * FROM MEDICOS WHERE idMedico= " + id.ToString()
+            comando.CommandType = CommandType.Text
+            comando.Connection = conection
+            conection.Open()
+            Dim adaptador As New SqlDataAdapter(comando)
+            adaptador.Fill(_dataSet, "Medicos")
+            conection.Close()
+            For Each row In _dataSet.Tables(0).Rows
+                Medico.idMedico = Integer.Parse(row(0))
+                Medico.Usuario = row(1)
+                Medico.Contraseña = "" 'row()
+                Medico.Nombre = row(3)
+                Medico.Apellido = row(4)
+                Medico.Identificacion = row(5)
+                Medico.TipoIdentificación = row(6)
+                Medico.Sexo = row(7)
+                Medico.EstadoCivil = row(8)
+                Medico.Nacionalidad = row(9)
+                Medico.FechaNacimiento = row(10)
+                Medico.NumeroTelefono = Integer.Parse(row(11))
+                Medico.Correo = row(12)
+                Medico.OtrasSenas = row(13)
+                Medico.IdDistrito = row(14)
+            Next
+            Return Medico
+        Catch ex As Exception
+            Console.WriteLine("Error: " + ex.Message)
+            Return New Objetos.Medico()
+        End Try
+    End Function
+
 End Class

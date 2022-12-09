@@ -51,6 +51,17 @@
     End Sub
 
     Private Sub dgListaMedicos_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgListaMedicos.CellContentClick
-
+        If e.ColumnIndex = 7 Then
+            ' selecciona el id del medico
+            Dim id = dgListaMedicos.Rows.Item(e.RowIndex).Cells(0).Value
+            ' asigna el medico al modulo de forma temporal
+            Dim tmpNegocios As New Negocio.MedicoNegocio()
+            Dim medico = tmpNegocios.ObtenerMedicoPorId(id)
+            TEMPORAL.Medico = medico
+            VerMedico.ShowDialog()
+            TEMPORAL.Medico = New Objetos.Medico()
+        End If
     End Sub
+
+
 End Class
