@@ -92,7 +92,7 @@ Public Class MetodosMedico
                 tmp.Sexo = datarow(7)
                 tmp.EstadoCivil = datarow(8)
                 tmp.Nacionalidad = datarow(9)
-                tmp.FechaNacimiento = Date.Parse(datarow(10))
+                tmp.FechaNacimiento = datarow(10)
                 tmp.NumeroTelefono = Integer.Parse(datarow(11))
                 tmp.Correo = datarow(12)
                 tmp.OtrasSenas = datarow(13)

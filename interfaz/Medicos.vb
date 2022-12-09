@@ -6,7 +6,7 @@ Public Class Medicos
 
             Dim tmpNegocios As New Negocio.PacienteNegocio
             Dim listaPaciente As List(Of Objetos.Paciente)
-            listaPaciente = tmpNegocios.ListaPacientes()
+            listaPaciente = tmpNegocios.ObtenerPacientes()
 
             If listaPaciente.Count > 0 Then
                 Dim _tabla As New DataTable
@@ -28,25 +28,25 @@ Public Class Medicos
                     _tabla.Rows.Add(objP.idPaciente, objP.Nombre, objP.Apellidos, objP.Identificacion, objP.TipoIdentificacion, objP.Sexo, objP.EstadoCivil, objP.Nacionalidad, objP.FechaNacimiento, objP.NumeroTelefonico, objP.Correo, objP.EstaActivo, objP.IdDistrito)
                 Next
 
-                DataGridView1.Columns.Clear()
-                DataGridView1.DataSource = _tabla
+                dgListaPacientes.Columns.Clear()
+                dgListaPacientes.DataSource = _tabla
 
-        Dim buttonVer As New DataGridViewButtonColumn
+                Dim buttonVer As New DataGridViewButtonColumn
         buttonVer.HeaderText = "Ver"
         buttonVer.Text = "Ver"
         buttonVer.Name = "btnVerPaciente"
         buttonVer.UseColumnTextForButtonValue = True
-        DataGridView1.Columns.Add(buttonVer)
+                dgListaPacientes.Columns.Add(buttonVer)
 
 
-        Dim buttonBorrar As New DataGridViewButtonColumn
+                Dim buttonBorrar As New DataGridViewButtonColumn
         buttonBorrar.HeaderText = "Borrar"
         buttonBorrar.Text = "Borrar"
         buttonBorrar.Name = "Borrar"
         buttonBorrar.UseColumnTextForButtonValue = True
-        DataGridView1.Columns.Add(buttonBorrar)
+                dgListaPacientes.Columns.Add(buttonBorrar)
 
-        End If
+            End If
 
 
         Catch ex As Exception
