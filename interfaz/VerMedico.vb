@@ -7,5 +7,6 @@
         txtContrasena.Enabled = False
         txtUsuario.Text = TEMPORAL.Medico.Usuario
         txtIdentificacion.Text = TEMPORAL.Medico.Identificacion
+        txtCorreo.Text = TEMPORAL.Medico.Correo
     End Sub
 End Class
