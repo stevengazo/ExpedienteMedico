@@ -7,7 +7,7 @@
     Public Sexo As String
     Public EstadoCivil As String
     Public Nacionalidad As String
-    Public FechaNacimiento As DateTime
+    Public FechaNacimiento As Date
     Public NumeroTelefonico As Integer
     Public Correo As String
     Public EstaActivo As Boolean

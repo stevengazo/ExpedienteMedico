@@ -7,11 +7,11 @@ Public Class EnfermedadNegocio
     ''' 
     ''' </summary>
     ''' <param name="objEnfermedad"></param>
-    Public Function AgregarEnfermedad(nombre As String, desc As String, sin As String)
+    Public Function AgregarEnfermedad(enfermedad As Objetos.Enfermedad) As Integer
         Try
             Dim obtieneDatos As New AccesoDatos.MetodosEnfermedad
 
-            Return obtieneDatos.InsertaEnfermedad(nombre, desc, sin)
+            Return obtieneDatos.InsertaEnfermedad(enfermedad)
         Catch ex As Exception
             Throw New Exception(ex.Message)
         End Try
@@ -61,14 +61,15 @@ Public Class EnfermedadNegocio
     ''' <summary>
     ''' 
     ''' </summary>
-    ''' <returns></returns>
-    Public Function ListaEnfermedades() As List(Of Enfermedad)
+    ''' <returns></returns
+
+    Public Function ListaEnfermedad() As List(Of Objetos.Enfermedad)
         Try
-            Throw New NotImplementedException()
-            Return New List(Of Enfermedad)
+            Dim tmpNegocio As New AccesoDatos.MetodosEnfermedad
+            Return tmpNegocio.ObtenerListaEnfermedades()
         Catch ex As Exception
-            Throw New NotImplementedException()
-            Return New List(Of Enfermedad)
+            Throw New Exception(ex.Message)
+            Return New List(Of Objetos.Enfermedad)
         End Try
     End Function
 
