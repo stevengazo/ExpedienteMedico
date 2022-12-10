@@ -6,12 +6,16 @@
             PanelEditable.Show()
             PanelInformación.Hide()
             Bandera = False
-            btnEditar.Text = "Editar Información"
+            btnEditar.Text = "Ver Información"
         Else
             PanelEditable.Hide()
             PanelInformación.Show()
             Bandera = True
-            btnEditar.Text = "Ver Información"
+            btnEditar.Text = "Editar información"
         End If
+    End Sub
+
+    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
+
     End Sub
 End Class

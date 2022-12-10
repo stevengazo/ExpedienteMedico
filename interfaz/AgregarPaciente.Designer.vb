@@ -55,10 +55,10 @@ Partial Class AgregarPaciente
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnAgregarPaciente = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.cbSeguro = New System.Windows.Forms.ComboBox()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -370,6 +370,16 @@ Partial Class AgregarPaciente
         Me.btnAgregarPaciente.Text = "Agregar Nuevo Paciente"
         Me.btnAgregarPaciente.UseVisualStyleBackColor = False
         '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.SteelBlue
+        Me.Button1.Location = New System.Drawing.Point(425, 521)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(247, 39)
+        Me.Button1.TabIndex = 7
+        Me.Button1.Text = "Limpiar"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
         'Label13
         '
         Me.Label13.AutoSize = True
@@ -398,16 +408,6 @@ Partial Class AgregarPaciente
         Me.GroupBox4.Size = New System.Drawing.Size(836, 68)
         Me.GroupBox4.TabIndex = 6
         Me.GroupBox4.TabStop = False
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.SteelBlue
-        Me.Button1.Location = New System.Drawing.Point(425, 521)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(247, 39)
-        Me.Button1.TabIndex = 7
-        Me.Button1.Text = "Limpiar"
-        Me.Button1.UseVisualStyleBackColor = False
         '
         'AgregarPaciente
         '
@@ -468,11 +468,11 @@ Partial Class AgregarPaciente
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents btnAgregarPaciente As Button
-    Friend WithEvents Label13 As Label
-    Friend WithEvents cbSeguro As ComboBox
-    Friend WithEvents GroupBox4 As GroupBox
     Friend WithEvents Button1 As Button
     Friend WithEvents cbDistrito As ComboBox
     Friend WithEvents cbCanton As ComboBox
     Friend WithEvents cbProvincia As ComboBox
+    Friend WithEvents Label13 As Label
+    Friend WithEvents cbSeguro As ComboBox
+    Friend WithEvents GroupBox4 As GroupBox
 End Class
