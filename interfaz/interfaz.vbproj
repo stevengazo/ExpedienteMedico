@@ -103,28 +103,16 @@
     <Compile Include="AgregarPaciente.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ListaPacientes.Designer.vb">
-      <DependentUpon>ListaPacientes.vb</DependentUpon>
-    </Compile>
-    <Compile Include="ListaPacientes.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="ModoAdmin.Designer.vb">
       <DependentUpon>ModoAdmin.vb</DependentUpon>
     </Compile>
     <Compile Include="ModoAdmin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Medicos.Designer.vb">
-      <DependentUpon>Medicos.vb</DependentUpon>
+    <Compile Include="ModoMedicos.Designer.vb">
+      <DependentUpon>ModoMedicos.vb</DependentUpon>
     </Compile>
-    <Compile Include="Medicos.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ExpedientePaciente.Designer.vb">
-      <DependentUpon>ExpedientePaciente.vb</DependentUpon>
-    </Compile>
-    <Compile Include="ExpedientePaciente.vb">
+    <Compile Include="ModoMedicos.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -150,6 +138,12 @@
     <Compile Include="VerEnfermedades.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="VerExpediente.Designer.vb">
+      <DependentUpon>VerExpediente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VerExpediente.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="VerMedicamentos.Designer.vb">
       <DependentUpon>VerMedicamentos.vb</DependentUpon>
     </Compile>
@@ -166,6 +160,12 @@
       <DependentUpon>VerMedicos.vb</DependentUpon>
     </Compile>
     <Compile Include="VerMedicos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerPaciente.Designer.vb">
+      <DependentUpon>VerPaciente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VerPaciente.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -188,11 +188,8 @@
     <EmbeddedResource Include="AgregarPaciente.resx">
       <DependentUpon>AgregarPaciente.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Medicos.resx">
-      <DependentUpon>Medicos.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ExpedientePaciente.resx">
-      <DependentUpon>ExpedientePaciente.vb</DependentUpon>
+    <EmbeddedResource Include="ModoMedicos.resx">
+      <DependentUpon>ModoMedicos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -203,6 +200,9 @@
     <EmbeddedResource Include="VerEnfermedades.resx">
       <DependentUpon>VerEnfermedades.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VerExpediente.resx">
+      <DependentUpon>VerExpediente.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VerMedicamentos.resx">
       <DependentUpon>VerMedicamentos.vb</DependentUpon>
     </EmbeddedResource>
@@ -211,6 +211,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VerMedicos.resx">
       <DependentUpon>VerMedicos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerPaciente.resx">
+      <DependentUpon>VerPaciente.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

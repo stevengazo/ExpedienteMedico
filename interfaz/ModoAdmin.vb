@@ -20,8 +20,7 @@
     End Sub
 
     Private Sub VerPacientesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VerPacientesToolStripMenuItem.Click
-        Medicos.Show()
-
+        ModoMedicos.ShowDialog()
     End Sub
 
     Private Sub VerListaDeMedicamentosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VerListaDeMedicamentosToolStripMenuItem.Click
@@ -61,20 +60,20 @@
     End Sub
 
     Private Sub AgregarMedicamentoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AgregarMedicamentoToolStripMenuItem.Click
-        AgregarMedicamento.Show()
+        AgregarMedicamento.ShowDialog()
 
     End Sub
 
     Private Sub PacientesToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles PacientesToolStripMenuItem1.Click
-        Medicos.Show()
+        ModoMedicos.ShowDialog()
 
     End Sub
 
     Private Sub PacientesToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles PacientesToolStripMenuItem2.Click
-        Medicos.Show()
+        ModoMedicos.ShowDialog()
     End Sub
 
     Private Sub PacientesToolStripMenuItem3_Click(sender As Object, e As EventArgs) Handles PacientesToolStripMenuItem3.Click
-        Medicos.Show()
+        ModoMedicos.ShowDialog()
     End Sub
 End Class
