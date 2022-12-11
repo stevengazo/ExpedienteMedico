@@ -34,7 +34,7 @@ Public Class VerExpediente
         Try
             PanelAgregarRegistro.Hide()
             btnGenerarRegistro.Enabled = True
-
+            Throw New NotImplementedException()
         Catch ex As Exception
             MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
