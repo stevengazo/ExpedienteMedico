@@ -1,5 +1,5 @@
 ﻿Public Class VerExpediente
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles txtIdentificacion.TextChanged
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
 
     End Sub
 End Class
