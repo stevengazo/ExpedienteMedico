@@ -92,6 +92,8 @@
     </Compile>
     <Compile Include="Paciente.vb" />
     <Compile Include="Provincia.vb" />
+    <Compile Include="Registro.vb" />
+    <Compile Include="Sucursal.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">

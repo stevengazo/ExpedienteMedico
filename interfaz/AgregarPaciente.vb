@@ -100,8 +100,6 @@ Public Class AgregarPaciente
 
     End Sub
 
-
-
     Private Function GenerarExpediente() As Boolean
         Try
             Dim negocio As New Negocio.Comunes
@@ -114,7 +112,6 @@ Public Class AgregarPaciente
             End If
         Catch ex As Exception
             MessageBox.Show("Error generando expediente. " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-
             Return False
         End Try
     End Function

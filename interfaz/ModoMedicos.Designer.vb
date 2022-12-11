@@ -115,7 +115,7 @@ Partial Class ModoMedicos
         Me.btnEliminarPaciente.Text = "Eliminar paciente"
         Me.btnEliminarPaciente.UseVisualStyleBackColor = False
         '
-        'Medicos
+        'ModoMedicos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 11.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -128,7 +128,7 @@ Partial Class ModoMedicos
         Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("Mongolian Baiti", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Name = "Medicos"
+        Me.Name = "ModoMedicos"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Módulo Médicos"
         Me.Panel1.ResumeLayout(False)

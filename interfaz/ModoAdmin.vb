@@ -76,4 +76,8 @@
     Private Sub PacientesToolStripMenuItem3_Click(sender As Object, e As EventArgs) Handles PacientesToolStripMenuItem3.Click
         ModoMedicos.ShowDialog()
     End Sub
+
+    Private Sub ModoAdmin_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
+        Application.Exit()
+    End Sub
 End Class

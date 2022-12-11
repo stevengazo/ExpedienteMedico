@@ -3,7 +3,29 @@ Imports Objetos
 
 Public Class Comunes
 
-
+    Public Function ListaSucursales() As List(Of Objetos.Sucursal)
+        Try
+            Dim tmpNegocioSucursal As New AccesoDatos.Sucursal
+            Return tmpNegocioSucursal.ListarSucursales()
+        Catch ex As Exception
+            Return New List(Of Objetos.Sucursal)
+        End Try
+    End Function
+    Public Function ObtenerDistrito(id As Integer) As Objetos.Distrito
+        Try
+            Dim tmpAccesoDatos As New AccesoDatos.Distrito
+            Dim distrito As Objetos.Distrito = tmpAccesoDatos.ObtenerDistrito(id)
+            Dim tmpcanton As New AccesoDatos.Canton
+            Dim canton As Objetos.Canton = tmpcanton.ObtenerCanton(distrito.idCanton)
+            Dim tmpProvincia As New AccesoDatos.Provincia
+            Dim Provincia As Objetos.Provincia = tmpProvincia.ObtenerProvincia(canton.idProvincia)
+            canton.Provincia = Provincia
+            distrito.Canton = canton
+            Return distrito
+        Catch ex As Exception
+            Return New Objetos.Distrito()
+        End Try
+    End Function
     Public Function GenerarExpediente() As Integer
         Try
             Dim tmpComun As New AccesoDatos.ExpedienteMedico

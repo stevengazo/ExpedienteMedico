@@ -50,6 +50,11 @@ Partial Class VerExpediente
         Me.Label5 = New System.Windows.Forms.Label()
         Me.BtnGuardarCambios = New System.Windows.Forms.Button()
         Me.btnCerrar = New System.Windows.Forms.Button()
+        Me.PanelAgregarRegistro = New System.Windows.Forms.Panel()
+        Me.cbSucursal = New System.Windows.Forms.ComboBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.btnAgregarRegistro = New System.Windows.Forms.Button()
+        Me.btnCancelarAgregar = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.dgvRegistrosMedicos, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -57,6 +62,7 @@ Partial Class VerExpediente
         Me.PanelGeneral.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
+        Me.PanelAgregarRegistro.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -179,6 +185,7 @@ Partial Class VerExpediente
         '
         'PanelGeneral
         '
+        Me.PanelGeneral.Controls.Add(Me.PanelAgregarRegistro)
         Me.PanelGeneral.Controls.Add(Me.GroupBox1)
         Me.PanelGeneral.Controls.Add(Me.GroupBox2)
         Me.PanelGeneral.Controls.Add(Me.GroupBox3)
@@ -189,12 +196,12 @@ Partial Class VerExpediente
         '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.GroupBox4)
         Me.Panel1.Controls.Add(Me.BtnGuardarCambios)
         Me.Panel1.Controls.Add(Me.btnCerrar)
-        Me.Panel1.Location = New System.Drawing.Point(410, 4)
+        Me.Panel1.Controls.Add(Me.GroupBox4)
+        Me.Panel1.Location = New System.Drawing.Point(410, 1)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(407, 423)
+        Me.Panel1.Size = New System.Drawing.Size(407, 426)
         Me.Panel1.TabIndex = 5
         '
         'GroupBox4
@@ -333,13 +340,59 @@ Partial Class VerExpediente
         Me.btnCerrar.Text = "Cerrar"
         Me.btnCerrar.UseVisualStyleBackColor = True
         '
+        'PanelAgregarRegistro
+        '
+        Me.PanelAgregarRegistro.Controls.Add(Me.btnCancelarAgregar)
+        Me.PanelAgregarRegistro.Controls.Add(Me.btnAgregarRegistro)
+        Me.PanelAgregarRegistro.Controls.Add(Me.Label11)
+        Me.PanelAgregarRegistro.Controls.Add(Me.cbSucursal)
+        Me.PanelAgregarRegistro.Location = New System.Drawing.Point(19, 226)
+        Me.PanelAgregarRegistro.Name = "PanelAgregarRegistro"
+        Me.PanelAgregarRegistro.Size = New System.Drawing.Size(265, 75)
+        Me.PanelAgregarRegistro.TabIndex = 3
+        '
+        'cbSucursal
+        '
+        Me.cbSucursal.FormattingEnabled = True
+        Me.cbSucursal.Location = New System.Drawing.Point(113, 13)
+        Me.cbSucursal.Name = "cbSucursal"
+        Me.cbSucursal.Size = New System.Drawing.Size(140, 21)
+        Me.cbSucursal.TabIndex = 1
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(6, 16)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(48, 13)
+        Me.Label11.TabIndex = 8
+        Me.Label11.Text = "Sucursal"
+        '
+        'btnAgregarRegistro
+        '
+        Me.btnAgregarRegistro.Location = New System.Drawing.Point(9, 40)
+        Me.btnAgregarRegistro.Name = "btnAgregarRegistro"
+        Me.btnAgregarRegistro.Size = New System.Drawing.Size(111, 23)
+        Me.btnAgregarRegistro.TabIndex = 9
+        Me.btnAgregarRegistro.Text = "Agregar Registro"
+        Me.btnAgregarRegistro.UseVisualStyleBackColor = True
+        '
+        'btnCancelarAgregar
+        '
+        Me.btnCancelarAgregar.Location = New System.Drawing.Point(142, 40)
+        Me.btnCancelarAgregar.Name = "btnCancelarAgregar"
+        Me.btnCancelarAgregar.Size = New System.Drawing.Size(111, 23)
+        Me.btnCancelarAgregar.TabIndex = 10
+        Me.btnCancelarAgregar.Text = "Cancelar"
+        Me.btnCancelarAgregar.UseVisualStyleBackColor = True
+        '
         'VerExpediente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(821, 428)
-        Me.Controls.Add(Me.Panel1)
+        Me.ClientSize = New System.Drawing.Size(829, 433)
         Me.Controls.Add(Me.PanelGeneral)
+        Me.Controls.Add(Me.Panel1)
         Me.Name = "VerExpediente"
         Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -353,6 +406,8 @@ Partial Class VerExpediente
         Me.Panel1.ResumeLayout(False)
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
+        Me.PanelAgregarRegistro.ResumeLayout(False)
+        Me.PanelAgregarRegistro.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -385,4 +440,9 @@ Partial Class VerExpediente
     Friend WithEvents Label5 As Label
     Friend WithEvents BtnGuardarCambios As Button
     Friend WithEvents btnCerrar As Button
+    Friend WithEvents PanelAgregarRegistro As Panel
+    Friend WithEvents btnAgregarRegistro As Button
+    Friend WithEvents Label11 As Label
+    Friend WithEvents cbSucursal As ComboBox
+    Friend WithEvents btnCancelarAgregar As Button
 End Class

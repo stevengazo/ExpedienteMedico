@@ -36,4 +36,32 @@ Public Class Provincia
             Return New List(Of Objetos.Provincia)
         End Try
     End Function
+
+    ''' <summary>
+    ''' Busca una provincia en la base de datos con un id
+    ''' </summary>
+    ''' <param name="idProvincia">Id de la provincia</param>
+    ''' <returns></returns>
+    Public Function ObtenerProvincia(idProvincia As Integer) As Objetos.Provincia
+        Try
+
+            Dim data As New DataSet()
+            Dim Provincia As New Objetos.Provincia
+            Dim comando As New SqlCommand()
+            comando.CommandText = "SELECT * FROM Provincia WHERE Provincia.IdProvincia = " + idProvincia.ToString()
+            comando.CommandType = CommandType.Text
+            comando.Connection = conection
+            conection.Open()
+            Dim adapter As New SqlDataAdapter(comando)
+            adapter.Fill(data, "Provincia")
+            conection.Close()
+            For Each row In data.Tables(0).Rows
+                Provincia.IdProvincia = Integer.Parse(row(0))
+                Provincia.Nombre = row(1)
+            Next
+            Return Provincia
+        Catch ex As Exception
+            Return New Objetos.Provincia
+        End Try
+    End Function
 End Class

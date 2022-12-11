@@ -104,7 +104,10 @@ Public Class ModoMedicos
     Private Sub dgListaPacientes_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgListaPacientes.CellContentClick
         Dim id = Integer.Parse(dgListaPacientes.Rows.Item(e.RowIndex).Cells(0).Value)
         Dim tmpNegocios As New Negocio.PacienteNegocio
+        Dim tmpNegocioComun As New Negocio.Comunes
         Dim Paciente = tmpNegocios.ObtenerPaciente(id)
+        Paciente.Distrito = tmpNegocioComun.ObtenerDistrito(Paciente.IdDistrito)
+        TEMPORAL.Paciente = Paciente
         Select Case e.ColumnIndex
             ' Ver Expediente
             Case 9
@@ -126,5 +129,7 @@ Public Class ModoMedicos
 
     End Sub
 
-
+    Private Sub ModoMedicos_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        Application.Exit()
+    End Sub
 End Class
