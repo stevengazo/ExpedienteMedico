@@ -70,7 +70,7 @@ Public Class MetodosEnfermedad
 
             For Each datarow In _dataSet.Tables(0).Rows
                 Dim tmp As New Objetos.Enfermedad
-                tmp.id = Integer.Parse(datarow(0))
+                tmp.idEnfermedad = Integer.Parse(datarow(0))
                 tmp.Nombre = datarow(1)
                 tmp.Descripcion = datarow(2)
                 tmp.sintomas = datarow(3)
@@ -80,6 +80,31 @@ Public Class MetodosEnfermedad
         Catch ex As Exception
             Throw New Exception(ex.Message)
             Return New List(Of Objetos.Enfermedad)
+        End Try
+    End Function
+
+    Public Function BorrarEnfermedad(idEnfermedad As Integer) As Integer
+        Try
+            Dim _comando As New SqlCommand()
+            _comando.CommandText = "[dbo].[EliminarEnfermedad]"
+            _comando.CommandType = CommandType.StoredProcedure
+            _comando.Connection = conection
+            'son parametros de entrada (envia el id al procedimiento)
+            _comando.Parameters.Add("@idEnfermedad", SqlDbType.Int).Value = idEnfermedad
+            'agregar los parametros de salida
+            _comando.Parameters.Add("@ErrorMessage", SqlDbType.VarChar, 255).Direction = ParameterDirection.Output
+            _comando.Parameters.Add("@ErrorCode", SqlDbType.Int).Direction = ParameterDirection.Output
+
+            conection.Open()
+            _comando.ExecuteNonQuery()
+            conection.Close()
+            If _comando.Parameters("@ErrorCode").Value = 0 Then
+                Return 0
+            Else
+                Return _comando.Parameters("@ErrorCode").Value
+            End If
+        Catch ex As Exception
+            Return 1
         End Try
     End Function
 

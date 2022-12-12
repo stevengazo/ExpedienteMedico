@@ -3,6 +3,7 @@ Imports AccesoDatos
 Imports System.Security.Cryptography
 
 Public Class EnfermedadNegocio
+    Dim ConexionAccesoDatos As New AccesoDatos.MetodosEnfermedad
     ''' <summary>
     ''' 
     ''' </summary>
@@ -21,12 +22,16 @@ Public Class EnfermedadNegocio
     ''' </summary>
     ''' <param name="objEnfermedad"></param>
     ''' <returns></returns>
-    Public Function BorrarEnfermedad(objEnfermedad As Enfermedad) As Boolean
+    Public Function BorrarEnfermedad(idEnfermedad As Integer) As Boolean
         Try
-            Throw New NotImplementedException()
-            Return True
+            Dim codigo As Integer = ConexionAccesoDatos.BorrarEnfermedad(idEnfermedad)
+            If codigo = 0 Then
+                Return True
+            Else
+                Return False
+            End If
         Catch ex As Exception
-            Throw New NotImplementedException()
+            Console.Write(ex.Message)
             Return False
         End Try
     End Function

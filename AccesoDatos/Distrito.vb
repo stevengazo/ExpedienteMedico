@@ -38,4 +38,28 @@ Public Class Distrito
         End Try
     End Function
 
+
+    Public Function ObtenerDistrito(idDistrito As Integer) As Objetos.Distrito
+        Try
+            Dim data As New DataSet()
+            Dim distrito As New Objetos.Distrito()
+            Dim comando As New SqlCommand()
+            comando.CommandText = "SELECT * FROM Distrito WHERE Distrito.IdDistrito = " + idDistrito.ToString()
+            comando.CommandType = CommandType.Text
+            comando.Connection = conection
+            conection.Open()
+            Dim adapter As New SqlDataAdapter(comando)
+            adapter.Fill(data, "Distrito")
+            conection.Close()
+            For Each mydatarow In data.Tables(0).Rows
+                distrito.IdDistrito = Integer.Parse(mydatarow(0))
+                distrito.Nombre = mydatarow(1)
+                distrito.idCanton = Integer.Parse(mydatarow(2))
+            Next
+            Return distrito
+        Catch ex As Exception
+            Return New Objetos.Distrito
+        End Try
+    End Function
+
 End Class

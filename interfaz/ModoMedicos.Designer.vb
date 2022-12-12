@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Medicos
+Partial Class ModoMedicos
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -22,7 +22,7 @@ Partial Class Medicos
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Medicos))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ModoMedicos))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.dgListaPacientes = New System.Windows.Forms.DataGridView()
@@ -57,9 +57,12 @@ Partial Class Medicos
         '
         'dgListaPacientes
         '
+        Me.dgListaPacientes.AllowUserToAddRows = False
+        Me.dgListaPacientes.AllowUserToDeleteRows = False
         Me.dgListaPacientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgListaPacientes.Location = New System.Drawing.Point(9, 35)
         Me.dgListaPacientes.Name = "dgListaPacientes"
+        Me.dgListaPacientes.ReadOnly = True
         Me.dgListaPacientes.RowHeadersWidth = 51
         Me.dgListaPacientes.RowTemplate.Height = 24
         Me.dgListaPacientes.Size = New System.Drawing.Size(900, 376)
@@ -112,7 +115,7 @@ Partial Class Medicos
         Me.btnEliminarPaciente.Text = "Eliminar paciente"
         Me.btnEliminarPaciente.UseVisualStyleBackColor = False
         '
-        'Medicos
+        'ModoMedicos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 11.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -125,7 +128,7 @@ Partial Class Medicos
         Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("Mongolian Baiti", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Name = "Medicos"
+        Me.Name = "ModoMedicos"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Módulo Médicos"
         Me.Panel1.ResumeLayout(False)

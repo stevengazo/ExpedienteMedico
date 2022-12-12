@@ -32,8 +32,8 @@ Public Class MedicoNegocio
     Public Function InicioSesion(usuario As String, contraseña As String) As Boolean
         Try
             If Not String.IsNullOrEmpty(usuario) And Not String.IsNullOrEmpty(contraseña) Then
-                Dim mediNego As New MedicoNegocio()
-                Dim bandera As Boolean = mediNego.InicioSesion(usuario, contraseña)
+                Dim mediAccesoDatos As New AccesoDatos.Medico()
+                Dim bandera As Boolean = mediAccesoDatos.InicioSesion(usuario, contraseña)
                 If bandera Then
                     Return True
                 Else

@@ -12,6 +12,8 @@
     Public Correo As String
     Public EstaActivo As Boolean
     Public IdDistrito As Integer
+
+    Public Distrito As Objetos.Distrito
     ' Dependencia de expediente
 
     Public Expediente As ExpedienteMedico

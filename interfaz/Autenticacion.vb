@@ -28,7 +28,7 @@ Public Class Autenticacion
                 Dim negocioMedi As New Negocio.MedicoNegocio()
                 Dim aceptado = negocioMedi.InicioSesion(txtNombreUsuario.Text, txtContraseña.Text)
                 If aceptado Then
-                    Dim mediForm As New Medicos()
+                    Dim mediForm As New ModoMedicos()
                     Me.Hide()
                     mediForm.Show()
                     clean()
