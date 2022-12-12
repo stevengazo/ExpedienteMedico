@@ -24,15 +24,15 @@ Partial Class ExpedientePaciente
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ExpedientePaciente))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
-        Me.DataGridView3 = New System.Windows.Forms.DataGridView()
-        Me.DataGridView4 = New System.Windows.Forms.DataGridView()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.DataGridView5 = New System.Windows.Forms.DataGridView()
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.DataGridView4 = New System.Windows.Forms.DataGridView()
+        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.DataGridView3 = New System.Windows.Forms.DataGridView()
         Me.btnModificarInfoPaciente = New System.Windows.Forms.Button()
         Me.btnModificarEnfermedades = New System.Windows.Forms.Button()
         Me.btnAgregarEnfermedad = New System.Windows.Forms.Button()
@@ -41,15 +41,15 @@ Partial Class ExpedientePaciente
         Me.btnModificarMedicamentos = New System.Windows.Forms.Button()
         Me.btnEditarCitas = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
-        Me.GroupBox3.SuspendLayout()
-        Me.GroupBox4.SuspendLayout()
-        Me.GroupBox5.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox2.SuspendLayout()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView4, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox3.SuspendLayout()
         CType(Me.DataGridView5, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox4.SuspendLayout()
+        CType(Me.DataGridView4, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox5.SuspendLayout()
+        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -64,6 +64,16 @@ Partial Class ExpedientePaciente
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Información Personal"
         '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(21, 21)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.RowHeadersWidth = 51
+        Me.DataGridView1.RowTemplate.Height = 24
+        Me.DataGridView1.Size = New System.Drawing.Size(955, 107)
+        Me.DataGridView1.TabIndex = 0
+        '
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.DataGridView2)
@@ -75,6 +85,16 @@ Partial Class ExpedientePaciente
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Enfermedades"
+        '
+        'DataGridView2
+        '
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.Location = New System.Drawing.Point(21, 33)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.RowHeadersWidth = 51
+        Me.DataGridView2.RowTemplate.Height = 24
+        Me.DataGridView2.Size = New System.Drawing.Size(955, 115)
+        Me.DataGridView2.TabIndex = 0
         '
         'GroupBox3
         '
@@ -88,6 +108,16 @@ Partial Class ExpedientePaciente
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Información del médico que lo atendió"
         '
+        'DataGridView5
+        '
+        Me.DataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView5.Location = New System.Drawing.Point(25, 21)
+        Me.DataGridView5.Name = "DataGridView5"
+        Me.DataGridView5.RowHeadersWidth = 51
+        Me.DataGridView5.RowTemplate.Height = 24
+        Me.DataGridView5.Size = New System.Drawing.Size(955, 115)
+        Me.DataGridView5.TabIndex = 3
+        '
         'GroupBox4
         '
         Me.GroupBox4.Controls.Add(Me.DataGridView4)
@@ -99,6 +129,16 @@ Partial Class ExpedientePaciente
         Me.GroupBox4.TabIndex = 3
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Medicamentos recetados"
+        '
+        'DataGridView4
+        '
+        Me.DataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView4.Location = New System.Drawing.Point(25, 42)
+        Me.DataGridView4.Name = "DataGridView4"
+        Me.DataGridView4.RowHeadersWidth = 51
+        Me.DataGridView4.RowTemplate.Height = 24
+        Me.DataGridView4.Size = New System.Drawing.Size(955, 115)
+        Me.DataGridView4.TabIndex = 2
         '
         'GroupBox5
         '
@@ -112,26 +152,6 @@ Partial Class ExpedientePaciente
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "Citas médicas agendadas "
         '
-        'DataGridView1
-        '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(21, 21)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(955, 107)
-        Me.DataGridView1.TabIndex = 0
-        '
-        'DataGridView2
-        '
-        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Location = New System.Drawing.Point(21, 33)
-        Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.RowHeadersWidth = 51
-        Me.DataGridView2.RowTemplate.Height = 24
-        Me.DataGridView2.Size = New System.Drawing.Size(955, 115)
-        Me.DataGridView2.TabIndex = 0
-        '
         'DataGridView3
         '
         Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -141,26 +161,6 @@ Partial Class ExpedientePaciente
         Me.DataGridView3.RowTemplate.Height = 24
         Me.DataGridView3.Size = New System.Drawing.Size(955, 109)
         Me.DataGridView3.TabIndex = 1
-        '
-        'DataGridView4
-        '
-        Me.DataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView4.Location = New System.Drawing.Point(25, 42)
-        Me.DataGridView4.Name = "DataGridView4"
-        Me.DataGridView4.RowHeadersWidth = 51
-        Me.DataGridView4.RowTemplate.Height = 24
-        Me.DataGridView4.Size = New System.Drawing.Size(955, 115)
-        Me.DataGridView4.TabIndex = 2
-        '
-        'DataGridView5
-        '
-        Me.DataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView5.Location = New System.Drawing.Point(25, 21)
-        Me.DataGridView5.Name = "DataGridView5"
-        Me.DataGridView5.RowHeadersWidth = 51
-        Me.DataGridView5.RowTemplate.Height = 24
-        Me.DataGridView5.Size = New System.Drawing.Size(955, 115)
-        Me.DataGridView5.TabIndex = 3
         '
         'btnModificarInfoPaciente
         '
@@ -269,15 +269,15 @@ Partial Class ExpedientePaciente
         Me.Name = "ExpedientePaciente"
         Me.Text = "Expediente Médico"
         Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox3.ResumeLayout(False)
-        Me.GroupBox4.ResumeLayout(False)
-        Me.GroupBox5.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox2.ResumeLayout(False)
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridView4, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox3.ResumeLayout(False)
         CType(Me.DataGridView5, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox4.ResumeLayout(False)
+        CType(Me.DataGridView4, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox5.ResumeLayout(False)
+        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
