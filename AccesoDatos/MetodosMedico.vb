@@ -218,4 +218,29 @@ Public Class MetodosMedico
         End Try
     End Function
 
+    Public Function BorrarMedico(idMedico As Integer) As Integer
+        Try
+            Dim _comando As New SqlCommand()
+            _comando.CommandText = "[dbo].[EliminarMedico]"
+            _comando.CommandType = CommandType.StoredProcedure
+            _comando.Connection = conection
+            'son parametros de entrada (envia el id al procedimiento)
+            _comando.Parameters.Add("@idMedico", SqlDbType.Int).Value = idMedico
+            'agregar los parametros de salida
+            _comando.Parameters.Add("@ErrorMessage", SqlDbType.VarChar, 255).Direction = ParameterDirection.Output
+            _comando.Parameters.Add("@ErrorCode", SqlDbType.Int).Direction = ParameterDirection.Output
+
+            conection.Open()
+            _comando.ExecuteNonQuery()
+            conection.Close()
+            If _comando.Parameters("@ErrorCode").Value = 0 Then
+                Return 0
+            Else
+                Return _comando.Parameters("@ErrorCode").Value
+            End If
+        Catch ex As Exception
+            Return 1
+        End Try
+    End Function
+
 End Class

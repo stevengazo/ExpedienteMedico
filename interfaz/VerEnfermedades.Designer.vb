@@ -23,38 +23,12 @@ Partial Class VerEnfermedades
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(VerEnfermedades))
-        Me.txtEliminarMedico = New System.Windows.Forms.Button()
-        Me.txtModificarMedico = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.dgListaEnfermedades = New System.Windows.Forms.DataGridView()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgListaEnfermedades, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'txtEliminarMedico
-        '
-        Me.txtEliminarMedico.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.txtEliminarMedico.Font = New System.Drawing.Font("Mongolian Baiti", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEliminarMedico.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.txtEliminarMedico.Location = New System.Drawing.Point(519, 490)
-        Me.txtEliminarMedico.Name = "txtEliminarMedico"
-        Me.txtEliminarMedico.Size = New System.Drawing.Size(179, 44)
-        Me.txtEliminarMedico.TabIndex = 9
-        Me.txtEliminarMedico.Text = "Eliminar"
-        Me.txtEliminarMedico.UseVisualStyleBackColor = False
-        '
-        'txtModificarMedico
-        '
-        Me.txtModificarMedico.BackColor = System.Drawing.Color.SteelBlue
-        Me.txtModificarMedico.Font = New System.Drawing.Font("Mongolian Baiti", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtModificarMedico.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.txtModificarMedico.Location = New System.Drawing.Point(281, 490)
-        Me.txtModificarMedico.Name = "txtModificarMedico"
-        Me.txtModificarMedico.Size = New System.Drawing.Size(179, 44)
-        Me.txtModificarMedico.TabIndex = 8
-        Me.txtModificarMedico.Text = "Modificar"
-        Me.txtModificarMedico.UseVisualStyleBackColor = False
         '
         'Label1
         '
@@ -95,8 +69,6 @@ Partial Class VerEnfermedades
         Me.BackColor = System.Drawing.Color.LightBlue
         Me.ClientSize = New System.Drawing.Size(976, 570)
         Me.Controls.Add(Me.dgListaEnfermedades)
-        Me.Controls.Add(Me.txtEliminarMedico)
-        Me.Controls.Add(Me.txtModificarMedico)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label1)
         Me.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
@@ -109,9 +81,6 @@ Partial Class VerEnfermedades
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents txtEliminarMedico As Button
-    Friend WithEvents txtModificarMedico As Button
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label1 As Label
     Friend WithEvents dgListaEnfermedades As DataGridView

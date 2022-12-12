@@ -2,6 +2,7 @@
 Imports AccesoDatos
 
 Public Class MedicoNegocio
+    Dim ConexionAccesoDatos As New AccesoDatos.MetodosMedico
     Public Function AgregarMedico(medico As Objetos.Medico) As Integer
         Try
             Dim obtieneDatos As New AccesoDatos.MetodosMedico
@@ -61,5 +62,19 @@ Public Class MedicoNegocio
             Return New Objetos.Medico()
         End Try
 
+    End Function
+
+    Public Function BorrarMedico(idMedico As Integer) As Boolean
+        Try
+            Dim codigo As Integer = ConexionAccesoDatos.BorrarMedico(idMedico)
+            If codigo = 0 Then
+                Return True
+            Else
+                Return False
+            End If
+        Catch ex As Exception
+            Console.Write(ex.Message)
+            Return False
+        End Try
     End Function
 End Class
