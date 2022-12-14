@@ -8,25 +8,32 @@ Public Class Registro
     ''' </summary>
     Private conexion As New SqlConnection(DATOSGENERALES.StringConnection)
 
-    Public Function AñadirRegistro(idExpediente As Integer, idSucursal As Integer) As Boolean
-        Throw New NotImplementedException()
+    Public Function AñadirRegistro(idExpediente As Integer, idSucursal As Integer) As Integer
         Try
             Dim comando As New SqlCommand()
-            comando.CommandText = ""
+            comando.CommandText = "[dbo].[GenerarRegistroEnExpediente]"
             comando.CommandType = CommandType.StoredProcedure
             comando.Connection = conexion
             'Parametros Entrada
-            'comando.Parameters.Add("@_usuario", SqlDbType.VarChar, 25).Value = usuari
-            'comando.Parameters.Add("@_contrasena", SqlDbType.VarChar, 50).Value = contraseña
+            comando.Parameters.Add("@_idExpediente", SqlDbType.Int).Value = idExpediente
+            comando.Parameters.Add("@_idSucursal", SqlDbType.Int).Value = idSucursal
             ' Parametros salida
-            'comando.Parameters.Add("@_codigo_error", SqlDbType.Int).Direction = ParameterDirection.Output
-            'comando.Parameters.Add("@_mensaje_error", SqlDbType.VarChar, 255).Direction = ParameterDirection.Output
-            'comando.Parameters.Add("@idAdministrador", SqlDbType.Int).Direction = ParameterDirection.Output
-
-            Return True
+            comando.Parameters.Add("@_codigo_error", SqlDbType.Int).Direction = ParameterDirection.Output
+            comando.Parameters.Add("@_mensaje_error", SqlDbType.VarChar, 255).Direction = ParameterDirection.Output
+            comando.Parameters.Add("@idRegistro", SqlDbType.Int).Direction = ParameterDirection.Output
+            ' Conexion
+            conexion.Open()
+            comando.ExecuteNonQuery()
+            conexion.Close()
+            '
+            If comando.Parameters("@_codigo_error").Value = 0 Then
+                Return comando.Parameters("@idRegistro").Value
+            Else
+                Throw New Exception("Error")
+            End If
         Catch ex As Exception
             Throw New Exception(ex.Message)
-            Return False
+            Return 0
         End Try
     End Function
 

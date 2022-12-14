@@ -34,4 +34,28 @@ Public Class ExpedienteMedico
             Return 0
         End Try
     End Function
+
+    Public Function ObtenerExpediente(id As Integer) As Objetos.ExpedienteMedico
+        Try
+            Dim _dataset As New DataSet()
+            Dim Expediente As New Objetos.ExpedienteMedico()
+            Dim comando As New SqlCommand()
+            comando.CommandText = " select * from ExpedienteMedico WHERE idExpediente =  " + id
+            comando.CommandType = CommandType.Text
+            comando.Connection = conection
+            conection.Open()
+            Dim adaptador As New SqlDataAdapter(comando)
+            adaptador.Fill(_dataset, "ExpedienteMedico")
+            conection.Close()
+            For Each row In _dataset.Tables(0).Rows
+                Expediente.idExpediente = Integer.Parse(row(0))
+                Expediente.FechaApertura = row(1)
+                Expediente.UltimaModificacion = row(2)
+            Next
+            Return Expediente
+        Catch ex As Exception
+            Return New Objetos.ExpedienteMedico
+        End Try
+    End Function
+
 End Class

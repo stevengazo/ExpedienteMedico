@@ -9,7 +9,7 @@ Public Class Registro
     ''' <summary>
     ''' Conexión estandar a acceso a datos
     ''' </summary>
-    Private AccesoDatosRegistro As New AccesoDatos.Registro()
+    Private _AccesoDatosRegistro As New AccesoDatos.Registro()
     ''' <summary>
     ''' Lista todos los registros asociados a un expediente
     ''' </summary>
@@ -28,13 +28,11 @@ Public Class Registro
     ''' <param name="idExpediente"> Expediente al cual se agrega</param>
     ''' <param name="idSucursal">Sucursal en las cual será atendido (general de uso general para cita,receta y diagnostico)</param>
     ''' <returns>True si agrega el registro, false si no lo logra o presenta error</returns>
-    Private Function GenerarRegistro(idExpediente As Integer, idSucursal As Integer) As Boolean
+    Public Function GenerarRegistro(idExpediente As Integer, idSucursal As Integer) As Integer
         Try
-            'Dim Estado = AccesoDatosRegistro
-            Throw New NotImplementedException()
-            Return True
+            Return _AccesoDatosRegistro.AñadirRegistro(idExpediente, idSucursal)
         Catch ex As Exception
-            Return False
+            Return 0
         End Try
     End Function
 

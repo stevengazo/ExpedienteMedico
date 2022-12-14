@@ -11,4 +11,5 @@ Public Class MediHasEspe
             Return False
         End Try
     End Function
+
 End Class
