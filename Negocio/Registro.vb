@@ -15,9 +15,9 @@ Public Class Registro
     ''' </summary>
     ''' <param name="id">Expediente a consultar</param>
     ''' <returns>Lista de registros</returns>
-    Private Function ListarRegistrosPorExpediente(id As Integer) As List(Of Objetos.Registro)
+    Public Function ListarRegistrosPorExpediente(id As Integer) As List(Of Objetos.Registro)
         Try
-
+            Return _AccesoDatosRegistro.ListarRegistrosPorExpediente(id)
         Catch ex As Exception
             Return New List(Of Objetos.Registro)
         End Try

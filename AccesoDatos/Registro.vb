@@ -38,5 +38,34 @@ Public Class Registro
     End Function
 
 
+    Public Function ListarRegistrosPorExpediente(id As Integer) As List(Of Objetos.Registro)
+        Try
+            Dim _dataSet As New DataSet()
+            Dim listaRegistros As New List(Of Objetos.Registro)
+            Dim comando As New SqlCommand()
+            comando.CommandText = "SELECT * FROM Registro WHERE Registro.Expediente_id =" + id.ToString()
+            comando.CommandType = CommandType.Text
+            comando.Connection = conexion
+            conexion.Open()
+            Dim adaptador As New SqlDataAdapter(comando)
+            adaptador.Fill(_dataSet, "Registro")
+            conexion.Close()
+
+            For Each row In _dataSet.Tables(0).Rows
+                Dim tmp As New Objetos.Registro
+                tmp.idRegistro = Integer.Parse(row(0))
+                tmp.idMedico = Integer.Parse(row(1))
+                tmp.idDiagnostico = Integer.Parse(row(2))
+                tmp.idReceta = Integer.Parse(row(3))
+                tmp.idCita = Integer.Parse(row(4))
+                tmp.idSucursal = Integer.Parse(row(5))
+                tmp.idExpediente = Integer.Parse(row(6))
+                listaRegistros.Add(tmp)
+            Next
+            Return listaRegistros
+        Catch ex As Exception
+            Return New List(Of Objetos.Registro)
+        End Try
+    End Function
 
 End Class
