@@ -68,4 +68,35 @@ Public Class Registro
         End Try
     End Function
 
+
+    Public Function ActualizarRegistro(Registro As Objetos.Registro) As Boolean
+        Try
+            Dim comando As New SqlCommand()
+            comando.CommandText = "[dbo].[RegistroActualizar]"
+            comando.CommandType = CommandType.StoredProcedure
+            comando.Connection = conexion
+            'Parametros Entrada
+            comando.Parameters.Add("@_idRegistro", SqlDbType.Int).Value = Registro.idRegistro
+            comando.Parameters.Add("@_idMedico", SqlDbType.Int).Value = Registro.idMedico
+            comando.Parameters.Add("@_idDiagnostico", SqlDbType.Int).Value = Registro.idDiagnostico
+            comando.Parameters.Add("@_idReceta", SqlDbType.Int).Value = Registro.idReceta
+            comando.Parameters.Add("@_idCita", SqlDbType.Int).Value = Registro.idCita
+            ' Parametros salida
+            comando.Parameters.Add("@_codigo_error", SqlDbType.Int).Direction = ParameterDirection.Output
+            comando.Parameters.Add("@_mensaje_error", SqlDbType.VarChar, 255).Direction = ParameterDirection.Output
+            comando.Parameters.Add("@Editado", SqlDbType.Bit).Direction = ParameterDirection.Output
+            ' Conexion
+            conexion.Open()
+            comando.ExecuteNonQuery()
+            conexion.Close()
+            '
+            If comando.Parameters("@Editado").Value Then
+                Return True
+            Else
+                Return False
+            End If
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
 End Class

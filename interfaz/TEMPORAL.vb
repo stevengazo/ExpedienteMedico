@@ -7,4 +7,10 @@
     ''' Paciente temporal para usar en los formularios de la interfaz
     ''' </summary>
     Public Paciente As Objetos.Paciente
+
+    Public Expediente As Objetos.ExpedienteMedico
+
+    Public Sucursal As Objetos.Sucursal
+    Public RegistroTemp As Objetos.Registro
+
 End Module

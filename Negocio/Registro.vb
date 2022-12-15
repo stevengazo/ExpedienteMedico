@@ -36,5 +36,16 @@ Public Class Registro
         End Try
     End Function
 
+    Public Function ActualizarRegistro(registro As Objetos.Registro) As Boolean
+        Try
+            Dim estado = _AccesoDatosRegistro.ActualizarRegistro(registro)
+            If estado Then
+                Return True
+            Else
+                Return False
+            End If
+        Catch ex As Exception
 
+        End Try
+    End Function
 End Class

@@ -22,33 +22,33 @@ Partial Class AgregarCita
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.btnAgregarCita = New System.Windows.Forms.Button()
+        Me.dtpFecha = New System.Windows.Forms.DateTimePicker()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnCancelar = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.lblNombreSucursal = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'Button1
+        'btnAgregarCita
         '
-        Me.Button1.BackColor = System.Drawing.Color.DarkGreen
-        Me.Button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button1.Location = New System.Drawing.Point(5, 106)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(88, 23)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Agregar Cita"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnAgregarCita.BackColor = System.Drawing.Color.DarkGreen
+        Me.btnAgregarCita.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnAgregarCita.Location = New System.Drawing.Point(5, 106)
+        Me.btnAgregarCita.Name = "btnAgregarCita"
+        Me.btnAgregarCita.Size = New System.Drawing.Size(88, 23)
+        Me.btnAgregarCita.TabIndex = 0
+        Me.btnAgregarCita.Text = "Agregar Cita"
+        Me.btnAgregarCita.UseVisualStyleBackColor = False
         '
-        'DateTimePicker1
+        'dtpFecha
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(5, 80)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(188, 20)
-        Me.DateTimePicker1.TabIndex = 1
+        Me.dtpFecha.Location = New System.Drawing.Point(5, 80)
+        Me.dtpFecha.Name = "dtpFecha"
+        Me.dtpFecha.Size = New System.Drawing.Size(188, 20)
+        Me.dtpFecha.TabIndex = 1
         '
         'Label1
         '
@@ -60,30 +60,39 @@ Partial Class AgregarCita
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Fecha de la Cita "
         '
-        'Button2
+        'btnCancelar
         '
-        Me.Button2.BackColor = System.Drawing.Color.DarkRed
-        Me.Button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button2.Location = New System.Drawing.Point(109, 106)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(84, 23)
-        Me.Button2.TabIndex = 3
-        Me.Button2.Text = "Cancelar"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.btnCancelar.BackColor = System.Drawing.Color.DarkRed
+        Me.btnCancelar.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnCancelar.Location = New System.Drawing.Point(109, 106)
+        Me.btnCancelar.Name = "btnCancelar"
+        Me.btnCancelar.Size = New System.Drawing.Size(84, 23)
+        Me.btnCancelar.TabIndex = 3
+        Me.btnCancelar.Text = "Cancelar"
+        Me.btnCancelar.UseVisualStyleBackColor = False
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.Label3)
+        Me.GroupBox1.Controls.Add(Me.lblNombreSucursal)
         Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.DateTimePicker1)
+        Me.GroupBox1.Controls.Add(Me.dtpFecha)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Controls.Add(Me.Button2)
-        Me.GroupBox1.Controls.Add(Me.Button1)
+        Me.GroupBox1.Controls.Add(Me.btnCancelar)
+        Me.GroupBox1.Controls.Add(Me.btnAgregarCita)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(200, 145)
         Me.GroupBox1.TabIndex = 4
         Me.GroupBox1.TabStop = False
+        '
+        'lblNombreSucursal
+        '
+        Me.lblNombreSucursal.AutoSize = True
+        Me.lblNombreSucursal.Location = New System.Drawing.Point(11, 37)
+        Me.lblNombreSucursal.Name = "lblNombreSucursal"
+        Me.lblNombreSucursal.Size = New System.Drawing.Size(95, 13)
+        Me.lblNombreSucursal.TabIndex = 5
+        Me.lblNombreSucursal.Text = "Sucursal Asignada"
         '
         'Label2
         '
@@ -94,15 +103,6 @@ Partial Class AgregarCita
         Me.Label2.Size = New System.Drawing.Size(112, 13)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "Sucursal Asignada"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(11, 37)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(95, 13)
-        Me.Label3.TabIndex = 5
-        Me.Label3.Text = "Sucursal Asignada"
         '
         'AgregarCita
         '
@@ -122,11 +122,11 @@ Partial Class AgregarCita
 
     End Sub
 
-    Friend WithEvents Button1 As Button
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents btnAgregarCita As Button
+    Friend WithEvents dtpFecha As DateTimePicker
     Friend WithEvents Label1 As Label
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btnCancelar As Button
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents Label3 As Label
+    Friend WithEvents lblNombreSucursal As Label
     Friend WithEvents Label2 As Label
 End Class

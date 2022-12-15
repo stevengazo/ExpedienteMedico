@@ -1,19 +1,19 @@
 ﻿Imports Objetos
-
+Imports AccesoDatos
 
 Public Class CitasNegocios
-
+    Private _CitasAccesoDatos As New AccesoDatos.Cita
     ''' <summary>
     ''' Ingresa una nueva cita a la base de datos
     ''' </summary>
     ''' <param name="objCita">Objeto de tipo cita a ingresar</param>
-    Public Sub AgregarCita(objCita As Citas)
+    Public Function AgregarCita(objCita As Citas) As Integer
         Try
-            Throw New NotImplementedException()
+            Return _CitasAccesoDatos.InsertarCita(objCita)
         Catch ex As Exception
             Throw New NotImplementedException()
         End Try
-    End Sub
+    End Function
 
     ''' <summary>
     ''' Borra una cita almancenada en la base de datos

@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="Administrador.vb" />
     <Compile Include="Canton.vb" />
+    <Compile Include="Cita.vb" />
     <Compile Include="DATOSGENERALES.vb" />
     <Compile Include="Distrito.vb" />
     <Compile Include="Especialidades.vb" />
