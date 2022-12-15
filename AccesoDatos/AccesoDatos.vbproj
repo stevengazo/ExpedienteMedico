@@ -68,6 +68,7 @@
     <Compile Include="Canton.vb" />
     <Compile Include="Cita.vb" />
     <Compile Include="DATOSGENERALES.vb" />
+    <Compile Include="Diagnostico.vb" />
     <Compile Include="Distrito.vb" />
     <Compile Include="Especialidades.vb" />
     <Compile Include="ExpedienteMedico.vb" />

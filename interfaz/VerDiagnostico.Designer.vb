@@ -23,16 +23,16 @@ Partial Class VerDiagnostico
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.txtDescripcion = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.lblFechaSintomas = New System.Windows.Forms.Label()
-        Me.lblEnfermedadNombre = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.txtSintomasEnfermedad = New System.Windows.Forms.TextBox()
         Me.txtDescripcionEnfermedad = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.txtSintomasEnfermedad = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblEnfermedadNombre = New System.Windows.Forms.Label()
+        Me.lblFechaSintomas = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.txtDescripcionDiagnostico = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -45,7 +45,7 @@ Partial Class VerDiagnostico
         Me.GroupBox1.Controls.Add(Me.lblEnfermedadNombre)
         Me.GroupBox1.Controls.Add(Me.lblFechaSintomas)
         Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Controls.Add(Me.txtDescripcion)
+        Me.GroupBox1.Controls.Add(Me.txtDescripcionDiagnostico)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
@@ -53,6 +53,60 @@ Partial Class VerDiagnostico
         Me.GroupBox1.Size = New System.Drawing.Size(327, 363)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
+        '
+        'txtDescripcionEnfermedad
+        '
+        Me.txtDescripcionEnfermedad.Location = New System.Drawing.Point(13, 286)
+        Me.txtDescripcionEnfermedad.Multiline = True
+        Me.txtDescripcionEnfermedad.Name = "txtDescripcionEnfermedad"
+        Me.txtDescripcionEnfermedad.Size = New System.Drawing.Size(293, 61)
+        Me.txtDescripcionEnfermedad.TabIndex = 14
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(11, 270)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(74, 13)
+        Me.Label5.TabIndex = 13
+        Me.Label5.Text = "Descripcion"
+        '
+        'txtSintomasEnfermedad
+        '
+        Me.txtSintomasEnfermedad.Location = New System.Drawing.Point(12, 204)
+        Me.txtSintomasEnfermedad.Multiline = True
+        Me.txtSintomasEnfermedad.Name = "txtSintomasEnfermedad"
+        Me.txtSintomasEnfermedad.Size = New System.Drawing.Size(293, 61)
+        Me.txtSintomasEnfermedad.TabIndex = 12
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(10, 188)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(58, 13)
+        Me.Label1.TabIndex = 11
+        Me.Label1.Text = "Sintomas"
+        '
+        'lblEnfermedadNombre
+        '
+        Me.lblEnfermedadNombre.AutoSize = True
+        Me.lblEnfermedadNombre.Location = New System.Drawing.Point(9, 163)
+        Me.lblEnfermedadNombre.Name = "lblEnfermedadNombre"
+        Me.lblEnfermedadNombre.Size = New System.Drawing.Size(39, 13)
+        Me.lblEnfermedadNombre.TabIndex = 10
+        Me.lblEnfermedadNombre.Text = "Label1"
+        '
+        'lblFechaSintomas
+        '
+        Me.lblFechaSintomas.AutoSize = True
+        Me.lblFechaSintomas.Location = New System.Drawing.Point(6, 39)
+        Me.lblFechaSintomas.Name = "lblFechaSintomas"
+        Me.lblFechaSintomas.Size = New System.Drawing.Size(39, 13)
+        Me.lblFechaSintomas.TabIndex = 9
+        Me.lblFechaSintomas.Text = "Label1"
         '
         'Label4
         '
@@ -64,13 +118,13 @@ Partial Class VerDiagnostico
         Me.Label4.TabIndex = 5
         Me.Label4.Text = "Enfermedad"
         '
-        'txtDescripcion
+        'txtDescripcionDiagnostico
         '
-        Me.txtDescripcion.Location = New System.Drawing.Point(9, 82)
-        Me.txtDescripcion.Multiline = True
-        Me.txtDescripcion.Name = "txtDescripcion"
-        Me.txtDescripcion.Size = New System.Drawing.Size(296, 61)
-        Me.txtDescripcion.TabIndex = 4
+        Me.txtDescripcionDiagnostico.Location = New System.Drawing.Point(9, 82)
+        Me.txtDescripcionDiagnostico.Multiline = True
+        Me.txtDescripcionDiagnostico.Name = "txtDescripcionDiagnostico"
+        Me.txtDescripcionDiagnostico.Size = New System.Drawing.Size(296, 61)
+        Me.txtDescripcionDiagnostico.TabIndex = 4
         '
         'Label3
         '
@@ -92,60 +146,6 @@ Partial Class VerDiagnostico
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Fecha de Inicio de Sintomas"
         '
-        'lblFechaSintomas
-        '
-        Me.lblFechaSintomas.AutoSize = True
-        Me.lblFechaSintomas.Location = New System.Drawing.Point(6, 39)
-        Me.lblFechaSintomas.Name = "lblFechaSintomas"
-        Me.lblFechaSintomas.Size = New System.Drawing.Size(39, 13)
-        Me.lblFechaSintomas.TabIndex = 9
-        Me.lblFechaSintomas.Text = "Label1"
-        '
-        'lblEnfermedadNombre
-        '
-        Me.lblEnfermedadNombre.AutoSize = True
-        Me.lblEnfermedadNombre.Location = New System.Drawing.Point(9, 163)
-        Me.lblEnfermedadNombre.Name = "lblEnfermedadNombre"
-        Me.lblEnfermedadNombre.Size = New System.Drawing.Size(39, 13)
-        Me.lblEnfermedadNombre.TabIndex = 10
-        Me.lblEnfermedadNombre.Text = "Label1"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(10, 188)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(58, 13)
-        Me.Label1.TabIndex = 11
-        Me.Label1.Text = "Sintomas"
-        '
-        'txtSintomasEnfermedad
-        '
-        Me.txtSintomasEnfermedad.Location = New System.Drawing.Point(12, 204)
-        Me.txtSintomasEnfermedad.Multiline = True
-        Me.txtSintomasEnfermedad.Name = "txtSintomasEnfermedad"
-        Me.txtSintomasEnfermedad.Size = New System.Drawing.Size(293, 61)
-        Me.txtSintomasEnfermedad.TabIndex = 12
-        '
-        'txtDescripcionEnfermedad
-        '
-        Me.txtDescripcionEnfermedad.Location = New System.Drawing.Point(13, 286)
-        Me.txtDescripcionEnfermedad.Multiline = True
-        Me.txtDescripcionEnfermedad.Name = "txtDescripcionEnfermedad"
-        Me.txtDescripcionEnfermedad.Size = New System.Drawing.Size(293, 61)
-        Me.txtDescripcionEnfermedad.TabIndex = 14
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(11, 270)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(74, 13)
-        Me.Label5.TabIndex = 13
-        Me.Label5.Text = "Descripcion"
-        '
         'VerDiagnostico
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -166,7 +166,7 @@ Partial Class VerDiagnostico
 
     Friend WithEvents GroupBox1 As GroupBox
     Public WithEvents Label4 As Label
-    Friend WithEvents txtDescripcion As TextBox
+    Friend WithEvents txtDescripcionDiagnostico As TextBox
     Public WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents lblEnfermedadNombre As Label

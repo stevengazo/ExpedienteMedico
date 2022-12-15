@@ -50,13 +50,13 @@ Public Class EnfermedadNegocio
         End Try
     End Function
     ''' <summary>
-    ''' 
+    ''' Obtiene una enfermedad de la base de datos
     ''' </summary>
     ''' <param name="idEnfermedad"></param>
     ''' <returns></returns>
-    Public Function ObtenerEnfermedadPorId(idEnfermedad As String) As Enfermedad
+    Public Function ObtenerEnfermedadPorId(idEnfermedad As Integer) As Enfermedad
         Try
-            Throw New NotImplementedException()
+            Return ConexionAccesoDatos.ObtenerEnfermedad(idEnfermedad)
             Return New Enfermedad
         Catch ex As Exception
             Throw New NotImplementedException()
@@ -64,9 +64,9 @@ Public Class EnfermedadNegocio
         End Try
     End Function
     ''' <summary>
-    ''' 
+    ''' Lista las enfermedades registradas
     ''' </summary>
-    ''' <returns></returns
+    ''' <returns>Lista de tipo enfermedad</returns
 
     Public Function ListaEnfermedad() As List(Of Objetos.Enfermedad)
         Try

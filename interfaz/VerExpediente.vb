@@ -178,18 +178,21 @@ Public Class VerExpediente
         Dim tipo = btnDiagnostico.Text
         Select Case tipo
             Case "Ver"
-                ' Setear registro en memoria temporal
-
+                VerDiagnostico.ShowDialog()
+                btnEliminarDiagnostico.Enabled = True
                 ' Abrir Ver Diagnostico
             Case "Agregar"
                 ' Abrir Agregar Diagnostico
                 AgregarDiagnostico.ShowDialog()
+                Dim estado = _RegistroNegocios.ActualizarRegistro(TEMPORAL.RegistroTemp)
+                If estado Then
+                    btnDiagnostico.Text = "Ver"
+                    btnDiagnostico.ForeColor = Color.White
+                    btnDiagnostico.BackColor = Color.Blue
+                    btnEliminarDiagnostico.Enabled = True
 
-
-                btnDiagnostico.Text = "Ver"
-                btnDiagnostico.ForeColor = Color.White
-                btnDiagnostico.BackColor = Color.Blue
-
+                End If
+                CargarDatosTabla()
         End Select
     End Sub
 
@@ -236,46 +239,51 @@ Public Class VerExpediente
 
 
     Private Sub ActualizarPanel(registro As Objetos.Registro, sucursal As Objetos.Sucursal)
-        lblSucursal.Text = sucursal.Nombre
-        lblNumeroRegistro.Text = registro.idRegistro
-        ' Citas
-        If registro.idCita = 0 Then
-            ' Agregar Nuevo Registro
-            btnCita.Text = "Agregar"
-            btnCita.BackColor = Color.Green
-            btnCita.ForeColor = Color.White
-            btnEliminarCita.Enabled = False
-        Else
-            ' Ver Registro
-            btnCita.Text = "Ver"
-            btnCita.ForeColor = Color.White
-            btnCita.BackColor = Color.Blue
-            btnEliminarDiagnostico.Enabled = True
-        End If
-        ' Diagnostico
-        If registro.idDiagnostico = 0 Then
-            btnDiagnostico.Text = "Agregar"
-            btnDiagnostico.ForeColor = Color.White
-            btnDiagnostico.BackColor = Color.Green
-            btnEliminarDiagnostico.Enabled = False
-        Else
-            btnDiagnostico.Text = "Ver"
-            btnDiagnostico.ForeColor = Color.White
-            btnDiagnostico.BackColor = Color.Blue
-            btnEliminarDiagnostico.Enabled = True
-        End If
-        ' Receta 
-        If registro.idReceta = 0 Then
-            btnReceta.Text = "Agregar"
-            btnReceta.ForeColor = Color.White
-            btnReceta.BackColor = Color.Green
-            btnEliminarReceta.Enabled = False
-        Else
-            btnReceta.Text = "Ver"
-            btnReceta.ForeColor = Color.White
-            btnReceta.BackColor = Color.Blue
-            btnEliminarReceta.Enabled = True
-        End If
+        Try
+            lblSucursal.Text = sucursal.Nombre
+            lblNumeroRegistro.Text = registro.idRegistro
+            ' Citas
+            If registro.idCita = 0 Then
+                ' Agregar Nuevo Registro
+                btnCita.Text = "Agregar"
+                btnCita.BackColor = Color.Green
+                btnCita.ForeColor = Color.White
+                btnEliminarCita.Enabled = False
+            Else
+                ' Ver Registro
+                btnCita.Text = "Ver"
+                btnCita.ForeColor = Color.White
+                btnCita.BackColor = Color.Blue
+                btnEliminarDiagnostico.Enabled = True
+            End If
+            ' Diagnostico
+            If registro.idDiagnostico = 0 Then
+                btnDiagnostico.Text = "Agregar"
+                btnDiagnostico.ForeColor = Color.White
+                btnDiagnostico.BackColor = Color.Green
+                btnEliminarDiagnostico.Enabled = False
+            Else
+                btnDiagnostico.Text = "Ver"
+                btnDiagnostico.ForeColor = Color.White
+                btnDiagnostico.BackColor = Color.Blue
+                btnEliminarDiagnostico.Enabled = True
+            End If
+            ' Receta 
+            If registro.idReceta = 0 Then
+                btnReceta.Text = "Agregar"
+                btnReceta.ForeColor = Color.White
+                btnReceta.BackColor = Color.Green
+                btnEliminarReceta.Enabled = False
+            Else
+                btnReceta.Text = "Ver"
+                btnReceta.ForeColor = Color.White
+                btnReceta.BackColor = Color.Blue
+                btnEliminarReceta.Enabled = True
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Error: " + ex.Message, "errro")
+        End Try
+
     End Sub
 
     Private Sub btnEliminarCita_Click(sender As Object, e As EventArgs) Handles btnEliminarCita.Click
@@ -307,6 +315,26 @@ Public Class VerExpediente
         Dim result = MessageBox.Show("¿Deseas eliminar el diagnostico asociado a este registro?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
         If result = DialogResult.Yes Then
             ' Borrar 
+            Dim idDiagnostico = TEMPORAL.RegistroTemp.idDiagnostico
+            TEMPORAL.RegistroTemp.idDiagnostico = 0
+            Dim Estado = _RegistroNegocios.ActualizarRegistro(TEMPORAL.RegistroTemp)
+
+
+            ' Borrar Cita en DB
+            If Estado Then
+                Dim _Diagnosticos As New Negocio.DiagnosticoNegocios()
+                Dim Estado1 = _Diagnosticos.BorrarDiagnostico(idDiagnostico)
+                If Estado1 Then
+                    MessageBox.Show("Diagnostico borrada del registro", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    btnEliminarDiagnostico.Enabled = False
+                    btnDiagnostico.Text = "Agregar"
+                    btnDiagnostico.BackColor = Color.Green
+                End If
+            Else
+                MessageBox.Show("Error Interno", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                btnEliminarDiagnostico.Enabled = True
+            End If
+            CargarDatosTabla()
         End If
     End Sub
 
