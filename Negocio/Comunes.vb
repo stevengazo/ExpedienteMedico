@@ -3,6 +3,18 @@ Imports Objetos
 
 Public Class Comunes
 
+    Public Function ObtenerSucursal(id As Integer) As Objetos.Sucursal
+        Try
+            Dim _AccesoSucursal As New AccesoDatos.Sucursal()
+            If id = 0 Then
+                Return New Objetos.Sucursal()
+            Else
+                Return _AccesoSucursal.ObtenerRegistro(id)
+            End If
+        Catch ex As Exception
+            Return New Objetos.Sucursal
+        End Try
+    End Function
     Public Function ListaSucursales() As List(Of Objetos.Sucursal)
         Try
             Dim tmpNegocioSucursal As New AccesoDatos.Sucursal

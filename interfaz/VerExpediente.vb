@@ -1,11 +1,14 @@
 ﻿Imports System.Deployment.Application
+Imports System.Xml
 Imports Negocio
 Imports Objetos
 Public Class VerExpediente
     Private NegociosExpediente As New Objetos.ExpedienteMedico()
+    Private _ComunesNegocio As New Negocio.Comunes()
     Private Expediente As New Objetos.ExpedienteMedico()
     Private ListaSucursales As New List(Of Objetos.Sucursal)
     Private _RegistroNegocios As New Negocio.Registro()
+    Private _ListaRegistros As New List(Of Objetos.Registro)
     Private Paciente As New Objetos.Paciente()
 
     Public Sub New()
@@ -23,8 +26,8 @@ Public Class VerExpediente
 
     Private Sub CargarDatosTabla()
         Try
-            Dim listaRegistros As New List(Of Objetos.Registro)
-            listaRegistros = _RegistroNegocios.ListarRegistrosPorExpediente(Paciente.Expediente.idExpediente)
+
+            _ListaRegistros = _RegistroNegocios.ListarRegistrosPorExpediente(Paciente.Expediente.idExpediente)
 
             Dim _tabla As New DataTable
             _tabla.Columns.Add("Id")
@@ -36,7 +39,7 @@ Public Class VerExpediente
             _tabla.Columns.Add("N° Sucursal")
 
 
-            For Each obj As Objetos.Registro In listaRegistros
+            For Each obj As Objetos.Registro In _ListaRegistros
                 Dim idRegistro As String
                 If obj.idRegistro = 0 Then
                     idRegistro = "No asignado"
@@ -101,14 +104,6 @@ Public Class VerExpediente
             buttonVer.UseColumnTextForButtonValue = True
             dgvRegistrosMedicos.Columns.Add(buttonVer)
 
-            'Dim buttonEliminar As New DataGridViewButtonColumn
-            'buttonVer.HeaderText = "Eliminar"
-            'buttonVer.Text = "Eliminar"
-            'buttonVer.Name = "btnEliminarRegistro"
-            'buttonVer.UseColumnTextForButtonValue = True
-            'dgvRegistrosMedicos.Columns.Add(buttonEliminar)
-
-
         Catch ex As Exception
             MessageBox.Show("Error interno", "Error")
         End Try
@@ -143,7 +138,6 @@ Public Class VerExpediente
 
     Private Sub btnAgregarRegistro_Click(sender As Object, e As EventArgs) Handles btnAgregarRegistro.Click
         Try
-
             PanelAgregarRegistro.Hide()
             btnGenerarRegistro.Enabled = True
             For Each item In ListaSucursales
@@ -165,10 +159,133 @@ Public Class VerExpediente
     Private Sub dgvRegistrosMedicos_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvRegistrosMedicos.CellContentClick
         Try
             If e.ColumnIndex = 7 Then
+                Dim id = dgvRegistrosMedicos.Rows(e.RowIndex).Cells.Item(0).Value.ToString()
+                Dim numId = Integer.Parse(id)
+                Dim Registro = (From regi
+                                    In _ListaRegistros
+                                Where regi.idRegistro = numId
+                                Select regi).FirstOrDefault()
+                Dim sucursal = _ComunesNegocio.ObtenerSucursal(Registro.idSucursal)
                 PanelRegistroInfo.BringToFront()
+                ActualizarPanel(Registro, sucursal)
             End If
         Catch ex As Exception
-
+            MessageBox.Show("Error interno", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
+    End Sub
+
+    Private Sub btnDiagnostico_Click(sender As Object, e As EventArgs) Handles btnDiagnostico.Click
+        Dim tipo = btnDiagnostico.Text
+        Select Case tipo
+            Case "Ver"
+                ' Setear registro en memoria temporal
+
+                ' Abrir Ver Diagnostico
+            Case "Agregar"
+                btnDiagnostico.Text = "Ver"
+                btnDiagnostico.ForeColor = Color.White
+                btnDiagnostico.BackColor = Color.Blue
+                ' Setear registro en memoria temporal
+
+                ' Abrir Agregar Diagnostico
+                AgregarDiagnostico.ShowDialog()
+        End Select
+
+    End Sub
+
+    Private Sub btnCita_Click(sender As Object, e As EventArgs) Handles btnCita.Click
+        Dim tipo = btnCita.Text
+        Select Case tipo
+            Case "Ver"
+                ' Setear registro en memoria temporal
+
+                ' Abrir Ver Diagnostico
+                VerDiagnostico.ShowDialog()
+            Case "Agregar"
+                btnCita.Text = "Ver"
+                btnCita.ForeColor = Color.White
+                btnCita.BackColor = Color.Blue
+                ' Setear registro en memoria temporal
+
+                ' Abrir Agregar Diagnostico
+                AgregarCita.ShowDialog()
+        End Select
+    End Sub
+
+    Private Sub btnReceta_Click(sender As Object, e As EventArgs) Handles btnReceta.Click
+        Dim tipo = btnReceta.Text
+        Select Case tipo
+            Case "Ver"
+                ' Setear registro en memoria temporal
+                VerReceta.ShowDialog()
+                ' Abrir Ver Diagnostico
+            Case "Agregar"
+                btnReceta.Text = "Ver"
+                btnReceta.ForeColor = Color.White
+                btnReceta.BackColor = Color.Blue
+                ' Setear registro en memoria temporal
+
+                ' Abrir Agregar Receta
+                AgregarReceta.ShowDialog()
+        End Select
+    End Sub
+
+
+    Private Sub ActualizarPanel(registro As Objetos.Registro, sucursal As Objetos.Sucursal)
+        lblSucursal.Text = sucursal.Nombre
+        lblNumeroRegistro.Text = registro.idRegistro
+        ' Citas
+        If registro.idCita = 0 Then
+            ' Agregar Nuevo Registro
+            btnCita.Text = "Agregar"
+            btnCita.BackColor = Color.Green
+            btnCita.ForeColor = Color.White
+        Else
+            ' Ver Registro
+            btnCita.Text = "Ver"
+            btnCita.ForeColor = Color.White
+            btnCita.BackColor = Color.Blue
+        End If
+        ' Diagnostico
+        If registro.idDiagnostico = 0 Then
+            btnDiagnostico.Text = "Agregar"
+            btnDiagnostico.ForeColor = Color.White
+            btnDiagnostico.BackColor = Color.Green
+        Else
+            btnDiagnostico.Text = "Ver"
+            btnDiagnostico.ForeColor = Color.White
+            btnDiagnostico.BackColor = Color.Blue
+        End If
+        ' Receta 
+        If registro.idReceta = 0 Then
+            btnReceta.Text = "Agregar"
+            btnReceta.ForeColor = Color.White
+            btnReceta.BackColor = Color.Green
+        Else
+            btnReceta.Text = "Ver"
+            btnReceta.ForeColor = Color.White
+            btnReceta.BackColor = Color.Blue
+        End If
+    End Sub
+
+    Private Sub btnEliminarCita_Click(sender As Object, e As EventArgs) Handles btnEliminarCita.Click
+        Dim result = MessageBox.Show("¿Deseas eliminar la cita asociada a este registro?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
+        If result = DialogResult.Yes Then
+            ' Borrar 
+        End If
+    End Sub
+
+    Private Sub btnEliminarDiagnostico_Click(sender As Object, e As EventArgs) Handles btnEliminarDiagnostico.Click
+        Dim result = MessageBox.Show("¿Deseas eliminar el diagnostico asociado a este registro?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
+        If result = DialogResult.Yes Then
+            ' Borrar 
+        End If
+    End Sub
+
+    Private Sub btnEliminarReceta_Click(sender As Object, e As EventArgs) Handles btnEliminarReceta.Click
+        Dim result = MessageBox.Show("¿Deseas eliminar la receta asociada a este registro?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
+        If result = DialogResult.Yes Then
+            ' Borrar 
+        End If
     End Sub
 End Class

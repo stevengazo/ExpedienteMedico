@@ -42,18 +42,25 @@ Partial Class VerExpediente
         Me.Label11 = New System.Windows.Forms.Label()
         Me.cbSucursal = New System.Windows.Forms.ComboBox()
         Me.PanelRegistroInfo = New System.Windows.Forms.Panel()
-        Me.BtnGuardarCambios = New System.Windows.Forms.Button()
+        Me.btnEliminarRegistro = New System.Windows.Forms.Button()
         Me.btnCerrar = New System.Windows.Forms.Button()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox8 = New System.Windows.Forms.GroupBox()
+        Me.btnEliminarReceta = New System.Windows.Forms.Button()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.Button4 = New System.Windows.Forms.Button()
+        Me.btnReceta = New System.Windows.Forms.Button()
+        Me.GroupBox7 = New System.Windows.Forms.GroupBox()
+        Me.btnEliminarDiagnostico = New System.Windows.Forms.Button()
+        Me.btnDiagnostico = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.btnEliminarCita = New System.Windows.Forms.Button()
+        Me.GroupBox6 = New System.Windows.Forms.GroupBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.btnCita = New System.Windows.Forms.Button()
         Me.lblSucursal = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
+        Me.lblNumeroRegistro = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -63,6 +70,9 @@ Partial Class VerExpediente
         Me.PanelAgregarRegistro.SuspendLayout()
         Me.PanelRegistroInfo.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
+        Me.GroupBox8.SuspendLayout()
+        Me.GroupBox7.SuspendLayout()
+        Me.GroupBox5.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -245,7 +255,7 @@ Partial Class VerExpediente
         '
         'PanelRegistroInfo
         '
-        Me.PanelRegistroInfo.Controls.Add(Me.BtnGuardarCambios)
+        Me.PanelRegistroInfo.Controls.Add(Me.btnEliminarRegistro)
         Me.PanelRegistroInfo.Controls.Add(Me.btnCerrar)
         Me.PanelRegistroInfo.Controls.Add(Me.GroupBox4)
         Me.PanelRegistroInfo.Location = New System.Drawing.Point(410, 1)
@@ -253,16 +263,15 @@ Partial Class VerExpediente
         Me.PanelRegistroInfo.Size = New System.Drawing.Size(407, 426)
         Me.PanelRegistroInfo.TabIndex = 5
         '
-        'BtnGuardarCambios
+        'btnEliminarRegistro
         '
-        Me.BtnGuardarCambios.BackColor = System.Drawing.Color.ForestGreen
-        Me.BtnGuardarCambios.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.BtnGuardarCambios.Location = New System.Drawing.Point(93, 10)
-        Me.BtnGuardarCambios.Name = "BtnGuardarCambios"
-        Me.BtnGuardarCambios.Size = New System.Drawing.Size(75, 23)
-        Me.BtnGuardarCambios.TabIndex = 1
-        Me.BtnGuardarCambios.Text = "Guardar Cambios"
-        Me.BtnGuardarCambios.UseVisualStyleBackColor = False
+        Me.btnEliminarRegistro.ForeColor = System.Drawing.Color.Red
+        Me.btnEliminarRegistro.Location = New System.Drawing.Point(296, 10)
+        Me.btnEliminarRegistro.Name = "btnEliminarRegistro"
+        Me.btnEliminarRegistro.Size = New System.Drawing.Size(103, 23)
+        Me.btnEliminarRegistro.TabIndex = 3
+        Me.btnEliminarRegistro.Text = "EliminarRegistro"
+        Me.btnEliminarRegistro.UseVisualStyleBackColor = True
         '
         'btnCerrar
         '
@@ -275,15 +284,12 @@ Partial Class VerExpediente
         '
         'GroupBox4
         '
-        Me.GroupBox4.Controls.Add(Me.Label10)
-        Me.GroupBox4.Controls.Add(Me.Button4)
-        Me.GroupBox4.Controls.Add(Me.Label9)
-        Me.GroupBox4.Controls.Add(Me.Button3)
-        Me.GroupBox4.Controls.Add(Me.Label8)
-        Me.GroupBox4.Controls.Add(Me.btnCita)
+        Me.GroupBox4.Controls.Add(Me.GroupBox8)
+        Me.GroupBox4.Controls.Add(Me.GroupBox7)
+        Me.GroupBox4.Controls.Add(Me.GroupBox5)
         Me.GroupBox4.Controls.Add(Me.lblSucursal)
         Me.GroupBox4.Controls.Add(Me.Label7)
-        Me.GroupBox4.Controls.Add(Me.Label6)
+        Me.GroupBox4.Controls.Add(Me.lblNumeroRegistro)
         Me.GroupBox4.Controls.Add(Me.Label5)
         Me.GroupBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox4.Location = New System.Drawing.Point(3, 39)
@@ -292,49 +298,118 @@ Partial Class VerExpediente
         Me.GroupBox4.TabIndex = 2
         Me.GroupBox4.TabStop = False
         '
+        'GroupBox8
+        '
+        Me.GroupBox8.Controls.Add(Me.btnEliminarReceta)
+        Me.GroupBox8.Controls.Add(Me.Label10)
+        Me.GroupBox8.Controls.Add(Me.btnReceta)
+        Me.GroupBox8.Location = New System.Drawing.Point(17, 189)
+        Me.GroupBox8.Name = "GroupBox8"
+        Me.GroupBox8.Size = New System.Drawing.Size(373, 49)
+        Me.GroupBox8.TabIndex = 12
+        Me.GroupBox8.TabStop = False
+        '
+        'btnEliminarReceta
+        '
+        Me.btnEliminarReceta.Location = New System.Drawing.Point(254, 13)
+        Me.btnEliminarReceta.Name = "btnEliminarReceta"
+        Me.btnEliminarReceta.Size = New System.Drawing.Size(106, 23)
+        Me.btnEliminarReceta.TabIndex = 14
+        Me.btnEliminarReceta.Text = "Eliminar"
+        Me.btnEliminarReceta.UseVisualStyleBackColor = True
+        '
         'Label10
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(7, 141)
+        Me.Label10.Location = New System.Drawing.Point(18, 17)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(51, 16)
         Me.Label10.TabIndex = 9
         Me.Label10.Text = "Receta"
         '
-        'Button4
+        'btnReceta
         '
-        Me.Button4.Location = New System.Drawing.Point(236, 141)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(141, 23)
-        Me.Button4.TabIndex = 8
-        Me.Button4.Text = "Agregar Receta"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.btnReceta.Location = New System.Drawing.Point(123, 13)
+        Me.btnReceta.Name = "btnReceta"
+        Me.btnReceta.Size = New System.Drawing.Size(110, 23)
+        Me.btnReceta.TabIndex = 8
+        Me.btnReceta.Text = "Agregar Receta"
+        Me.btnReceta.UseVisualStyleBackColor = True
+        '
+        'GroupBox7
+        '
+        Me.GroupBox7.Controls.Add(Me.btnEliminarDiagnostico)
+        Me.GroupBox7.Controls.Add(Me.btnDiagnostico)
+        Me.GroupBox7.Controls.Add(Me.Label9)
+        Me.GroupBox7.Location = New System.Drawing.Point(17, 134)
+        Me.GroupBox7.Name = "GroupBox7"
+        Me.GroupBox7.Size = New System.Drawing.Size(373, 49)
+        Me.GroupBox7.TabIndex = 11
+        Me.GroupBox7.TabStop = False
+        '
+        'btnEliminarDiagnostico
+        '
+        Me.btnEliminarDiagnostico.Location = New System.Drawing.Point(254, 16)
+        Me.btnEliminarDiagnostico.Name = "btnEliminarDiagnostico"
+        Me.btnEliminarDiagnostico.Size = New System.Drawing.Size(106, 23)
+        Me.btnEliminarDiagnostico.TabIndex = 13
+        Me.btnEliminarDiagnostico.Text = "Eliminar"
+        Me.btnEliminarDiagnostico.UseVisualStyleBackColor = True
+        '
+        'btnDiagnostico
+        '
+        Me.btnDiagnostico.Location = New System.Drawing.Point(123, 16)
+        Me.btnDiagnostico.Name = "btnDiagnostico"
+        Me.btnDiagnostico.Size = New System.Drawing.Size(110, 23)
+        Me.btnDiagnostico.TabIndex = 6
+        Me.btnDiagnostico.Text = "Agregar Diagnostico"
+        Me.btnDiagnostico.UseVisualStyleBackColor = True
         '
         'Label9
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(7, 112)
+        Me.Label9.Location = New System.Drawing.Point(18, 20)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(79, 16)
         Me.Label9.TabIndex = 7
         Me.Label9.Text = "Diagnostico"
         '
-        'Button3
+        'GroupBox5
         '
-        Me.Button3.Location = New System.Drawing.Point(236, 112)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(141, 23)
-        Me.Button3.TabIndex = 6
-        Me.Button3.Text = "Agregar Diagnostico"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.GroupBox5.Controls.Add(Me.btnEliminarCita)
+        Me.GroupBox5.Controls.Add(Me.GroupBox6)
+        Me.GroupBox5.Controls.Add(Me.Label8)
+        Me.GroupBox5.Controls.Add(Me.btnCita)
+        Me.GroupBox5.Location = New System.Drawing.Point(17, 85)
+        Me.GroupBox5.Name = "GroupBox5"
+        Me.GroupBox5.Size = New System.Drawing.Size(373, 49)
+        Me.GroupBox5.TabIndex = 10
+        Me.GroupBox5.TabStop = False
+        '
+        'btnEliminarCita
+        '
+        Me.btnEliminarCita.Location = New System.Drawing.Point(254, 17)
+        Me.btnEliminarCita.Name = "btnEliminarCita"
+        Me.btnEliminarCita.Size = New System.Drawing.Size(106, 23)
+        Me.btnEliminarCita.TabIndex = 12
+        Me.btnEliminarCita.Text = "Eliminar"
+        Me.btnEliminarCita.UseVisualStyleBackColor = True
+        '
+        'GroupBox6
+        '
+        Me.GroupBox6.Location = New System.Drawing.Point(0, 55)
+        Me.GroupBox6.Name = "GroupBox6"
+        Me.GroupBox6.Size = New System.Drawing.Size(373, 49)
+        Me.GroupBox6.TabIndex = 11
+        Me.GroupBox6.TabStop = False
         '
         'Label8
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(7, 83)
+        Me.Label8.Location = New System.Drawing.Point(18, 21)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(30, 16)
         Me.Label8.TabIndex = 5
@@ -342,9 +417,10 @@ Partial Class VerExpediente
         '
         'btnCita
         '
-        Me.btnCita.Location = New System.Drawing.Point(236, 83)
+        Me.btnCita.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.btnCita.Location = New System.Drawing.Point(123, 17)
         Me.btnCita.Name = "btnCita"
-        Me.btnCita.Size = New System.Drawing.Size(141, 23)
+        Me.btnCita.Size = New System.Drawing.Size(110, 23)
         Me.btnCita.TabIndex = 4
         Me.btnCita.Text = "Agregar Cita"
         Me.btnCita.UseVisualStyleBackColor = True
@@ -369,15 +445,15 @@ Partial Class VerExpediente
         Me.Label7.TabIndex = 2
         Me.Label7.Text = "Sucursal Elegida"
         '
-        'Label6
+        'lblNumeroRegistro
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(232, 23)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(151, 20)
-        Me.Label6.TabIndex = 1
-        Me.Label6.Text = "Número de Registro"
+        Me.lblNumeroRegistro.AutoSize = True
+        Me.lblNumeroRegistro.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNumeroRegistro.Location = New System.Drawing.Point(232, 23)
+        Me.lblNumeroRegistro.Name = "lblNumeroRegistro"
+        Me.lblNumeroRegistro.Size = New System.Drawing.Size(151, 20)
+        Me.lblNumeroRegistro.TabIndex = 1
+        Me.lblNumeroRegistro.Text = "Número de Registro"
         '
         'Label5
         '
@@ -411,6 +487,12 @@ Partial Class VerExpediente
         Me.PanelRegistroInfo.ResumeLayout(False)
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
+        Me.GroupBox8.ResumeLayout(False)
+        Me.GroupBox8.PerformLayout()
+        Me.GroupBox7.ResumeLayout(False)
+        Me.GroupBox7.PerformLayout()
+        Me.GroupBox5.ResumeLayout(False)
+        Me.GroupBox5.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -432,20 +514,27 @@ Partial Class VerExpediente
     Friend WithEvents PanelRegistroInfo As Panel
     Friend WithEvents GroupBox4 As GroupBox
     Friend WithEvents Label10 As Label
-    Friend WithEvents Button4 As Button
+    Friend WithEvents btnReceta As Button
     Friend WithEvents Label9 As Label
-    Friend WithEvents Button3 As Button
+    Friend WithEvents btnDiagnostico As Button
     Friend WithEvents Label8 As Label
     Friend WithEvents btnCita As Button
     Friend WithEvents lblSucursal As Label
     Friend WithEvents Label7 As Label
-    Friend WithEvents Label6 As Label
+    Friend WithEvents lblNumeroRegistro As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents BtnGuardarCambios As Button
     Friend WithEvents btnCerrar As Button
     Friend WithEvents PanelAgregarRegistro As Panel
     Friend WithEvents btnAgregarRegistro As Button
     Friend WithEvents Label11 As Label
     Friend WithEvents cbSucursal As ComboBox
     Friend WithEvents btnCancelarAgregar As Button
+    Friend WithEvents btnEliminarRegistro As Button
+    Friend WithEvents GroupBox8 As GroupBox
+    Friend WithEvents btnEliminarReceta As Button
+    Friend WithEvents GroupBox7 As GroupBox
+    Friend WithEvents btnEliminarDiagnostico As Button
+    Friend WithEvents GroupBox5 As GroupBox
+    Friend WithEvents btnEliminarCita As Button
+    Friend WithEvents GroupBox6 As GroupBox
 End Class

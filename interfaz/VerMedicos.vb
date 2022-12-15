@@ -56,7 +56,6 @@
         If e.ColumnIndex = 8 Then
             Dim row = dgListaMedicos.Rows(e.RowIndex)
             Dim cells = row.Cells
-
             Dim id = Integer.Parse(cells.Item(0).Value)
             Dim bandera = NegocioMedi.BorrarMedico(id)
             If bandera Then
