@@ -182,13 +182,14 @@ Public Class VerExpediente
 
                 ' Abrir Ver Diagnostico
             Case "Agregar"
+                ' Abrir Agregar Diagnostico
+                AgregarDiagnostico.ShowDialog()
+
+
                 btnDiagnostico.Text = "Ver"
                 btnDiagnostico.ForeColor = Color.White
                 btnDiagnostico.BackColor = Color.Blue
-                ' Setear registro en memoria temporal
 
-                ' Abrir Agregar Diagnostico
-                AgregarDiagnostico.ShowDialog()
         End Select
     End Sub
 
@@ -197,21 +198,22 @@ Public Class VerExpediente
         Dim tipo = btnCita.Text
         Select Case tipo
             Case "Ver"
-                ' Setear registro en memoria temporal
-
                 ' Abrir Ver Diagnostico
                 VerCita.ShowDialog()
-
+                CargarDatosTabla()
+                btnEliminarCita.Enabled = False
             Case "Agregar"
                 ' Abrir Agregar Diagnostico
                 AgregarCita.ShowDialog()
                 ' Setear registro en memoria temporal
                 Dim estado = _RegistroNegocios.ActualizarRegistro(TEMPORAL.RegistroTemp)
-                ' Cambio de Estado
-                btnCita.Text = "Ver"
-                btnCita.ForeColor = Color.White
-                btnCita.BackColor = Color.Blue
-                CargarDatosTabla()
+                If estado Then
+                    ' Cambio de Estado Boton
+                    btnCita.Text = "Ver"
+                    btnCita.ForeColor = Color.White
+                    btnCita.BackColor = Color.Blue
+                    CargarDatosTabla()
+                End If
         End Select
     End Sub
 
@@ -242,38 +244,62 @@ Public Class VerExpediente
             btnCita.Text = "Agregar"
             btnCita.BackColor = Color.Green
             btnCita.ForeColor = Color.White
+            btnEliminarCita.Enabled = False
         Else
             ' Ver Registro
             btnCita.Text = "Ver"
             btnCita.ForeColor = Color.White
             btnCita.BackColor = Color.Blue
+            btnEliminarDiagnostico.Enabled = True
         End If
         ' Diagnostico
         If registro.idDiagnostico = 0 Then
             btnDiagnostico.Text = "Agregar"
             btnDiagnostico.ForeColor = Color.White
             btnDiagnostico.BackColor = Color.Green
+            btnEliminarDiagnostico.Enabled = False
         Else
             btnDiagnostico.Text = "Ver"
             btnDiagnostico.ForeColor = Color.White
             btnDiagnostico.BackColor = Color.Blue
+            btnEliminarDiagnostico.Enabled = True
         End If
         ' Receta 
         If registro.idReceta = 0 Then
             btnReceta.Text = "Agregar"
             btnReceta.ForeColor = Color.White
             btnReceta.BackColor = Color.Green
+            btnEliminarReceta.Enabled = False
         Else
             btnReceta.Text = "Ver"
             btnReceta.ForeColor = Color.White
             btnReceta.BackColor = Color.Blue
+            btnEliminarReceta.Enabled = True
         End If
     End Sub
 
     Private Sub btnEliminarCita_Click(sender As Object, e As EventArgs) Handles btnEliminarCita.Click
         Dim result = MessageBox.Show("¿Deseas eliminar la cita asociada a este registro?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
         If result = DialogResult.Yes Then
-            ' Borrar 
+            ' Actualizar Registro
+            Dim tmpIdCita = TEMPORAL.RegistroTemp.idCita
+            TEMPORAL.RegistroTemp.idCita = 0
+            Dim Estado = _RegistroNegocios.ActualizarRegistro(TEMPORAL.RegistroTemp)
+            ' Borrar Cita en DB
+            If Estado Then
+                Dim _citaNegocios As New Negocio.CitasNegocios()
+                Dim Estado1 = _citaNegocios.BorrarCita(tmpIdCita)
+                If Estado1 Then
+                    MessageBox.Show("Cita borrada del registro", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    btnEliminarCita.Enabled = False
+                    btnCita.Text = "Agregar"
+                    btnCita.BackColor = Color.Green
+                End If
+            Else
+                MessageBox.Show("Error Interno", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                btnEliminarCita.Enabled = True
+            End If
+            CargarDatosTabla()
         End If
     End Sub
 

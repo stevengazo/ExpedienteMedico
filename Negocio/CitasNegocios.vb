@@ -20,12 +20,12 @@ Public Class CitasNegocios
     ''' </summary>
     ''' <param name="objCita">Objeto de tipo cita a borrar</param>
     ''' <returns></returns>
-    Public Function BorrarCita(objCita As Citas) As Boolean
+    Public Function BorrarCita(idCita As Integer) As Boolean
         Try
-            Throw New NotImplementedException()
-            Return True
+            If idCita <> 0 Then
+                Return _CitasAccesoDatos.BorrarCita(idCita)
+            End If
         Catch ex As Exception
-            Throw New NotImplementedException()
             Return False
         End Try
     End Function
@@ -50,10 +50,14 @@ Public Class CitasNegocios
     ''' </summary>
     ''' <param name="idCita"></param>
     ''' <returns></returns>
-    Public Function ObtenerCitaPorId(idCita As String) As Citas
+    Public Function ObtenerCitaPorId(idCita As Integer) As Citas
         Try
-            Throw New NotImplementedException()
-            Return New Citas
+            If idCita <> 0 Then
+                Dim Cita = _CitasAccesoDatos.ObtenerRegistro(idCita)
+                Return Cita
+            Else
+                Return New Citas
+            End If
         Catch ex As Exception
             Throw New NotImplementedException()
             Return New Citas
