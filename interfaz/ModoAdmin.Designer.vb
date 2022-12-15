@@ -50,6 +50,7 @@ Partial Class ModoAdmin
         Me.VerListaDeMedicamentosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AgregarMedicamentoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CerrarSesiónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.InventarioMedicamentosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -206,7 +207,7 @@ Partial Class ModoAdmin
         '
         'MedicamentosToolStripMenuItem
         '
-        Me.MedicamentosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VerListaDeMedicamentosToolStripMenuItem, Me.AgregarMedicamentoToolStripMenuItem})
+        Me.MedicamentosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VerListaDeMedicamentosToolStripMenuItem, Me.AgregarMedicamentoToolStripMenuItem, Me.InventarioMedicamentosToolStripMenuItem})
         Me.MedicamentosToolStripMenuItem.Name = "MedicamentosToolStripMenuItem"
         Me.MedicamentosToolStripMenuItem.Size = New System.Drawing.Size(132, 24)
         Me.MedicamentosToolStripMenuItem.Text = "Medicamentos"
@@ -228,6 +229,12 @@ Partial Class ModoAdmin
         Me.CerrarSesiónToolStripMenuItem.Name = "CerrarSesiónToolStripMenuItem"
         Me.CerrarSesiónToolStripMenuItem.Size = New System.Drawing.Size(120, 24)
         Me.CerrarSesiónToolStripMenuItem.Text = "Cerrar sesión"
+        '
+        'InventarioMedicamentosToolStripMenuItem
+        '
+        Me.InventarioMedicamentosToolStripMenuItem.Name = "InventarioMedicamentosToolStripMenuItem"
+        Me.InventarioMedicamentosToolStripMenuItem.Size = New System.Drawing.Size(278, 24)
+        Me.InventarioMedicamentosToolStripMenuItem.Text = "Inventario Medicamentos"
         '
         'ModoAdmin
         '
@@ -276,4 +283,5 @@ Partial Class ModoAdmin
     Friend WithEvents AgregarUnaEnfermedadToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents VerListaDeMedicamentosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AgregarMedicamentoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents InventarioMedicamentosToolStripMenuItem As ToolStripMenuItem
 End Class

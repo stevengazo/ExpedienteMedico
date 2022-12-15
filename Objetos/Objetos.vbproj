@@ -74,6 +74,7 @@
     <Compile Include="ExpedienteMedico.vb" />
     <Compile Include="InventarioMedico.vb" />
     <Compile Include="InventSucursal.vb" />
+    <Compile Include="InvHasSucur.vb" />
     <Compile Include="MedHasEspe.vb" />
     <Compile Include="Medicamento.vb" />
     <Compile Include="Medico.vb" />

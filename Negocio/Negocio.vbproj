@@ -72,6 +72,9 @@
     <Compile Include="Especialidad.vb" />
     <Compile Include="EspecialidadNegocio.vb" />
     <Compile Include="Expediente.vb" />
+    <Compile Include="Inventario.vb" />
+    <Compile Include="InvHasSucur.vb" />
+    <Compile Include="Medicamento.vb" />
     <Compile Include="MedicoNegocio.vb" />
     <Compile Include="MediHasEspe.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />

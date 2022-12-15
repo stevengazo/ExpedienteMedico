@@ -80,4 +80,8 @@
     Private Sub ModoAdmin_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
         Application.Exit()
     End Sub
+
+    Private Sub InventarioMedicamentosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InventarioMedicamentosToolStripMenuItem.Click
+        VerInventario.ShowDialog()
+    End Sub
 End Class

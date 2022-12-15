@@ -749,8 +749,8 @@ Partial Class VerPaciente
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnEditar)
-        Me.Controls.Add(Me.PanelEditable)
         Me.Controls.Add(Me.PanelInformación)
+        Me.Controls.Add(Me.PanelEditable)
         Me.Name = "VerPaciente"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Información de Paciente"

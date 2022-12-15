@@ -72,7 +72,10 @@
     <Compile Include="Distrito.vb" />
     <Compile Include="Especialidades.vb" />
     <Compile Include="ExpedienteMedico.vb" />
+    <Compile Include="Inventario.vb" />
+    <Compile Include="InvHasSucur.vb" />
     <Compile Include="MedHasEspe.vb" />
+    <Compile Include="Medicamento.vb" />
     <Compile Include="Medico.vb" />
     <Compile Include="MetodoPacientes.vb" />
     <Compile Include="MetodosMedico.vb" />
