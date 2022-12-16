@@ -15,14 +15,20 @@ Public Class VerEnfermedades
             listaEnfe = tmpNegocios.ListaEnfermedad()
 
             If listaEnfe.Count > 0 Then
+
                 Dim _tabla As New DataTable
                 _tabla.Columns.Add("Id")
                 _tabla.Columns.Add("Nombre")
                 _tabla.Columns.Add("Descrición")
                 _tabla.Columns.Add("Sintomas")
 
+
+
                 For Each objE As Objetos.Enfermedad In listaEnfe
-                    _tabla.Rows.Add(objE.idEnfermedad, objE.Nombre, objE.Descripcion, objE.sintomas)
+                    If objE.idEnfermedad > 0 Then
+                        _tabla.Rows.Add(objE.idEnfermedad, objE.Nombre, objE.Descripcion, objE.sintomas)
+                    End If
+
                 Next
 
                 dgListaEnfermedades.Columns.Clear()
@@ -31,8 +37,8 @@ Public Class VerEnfermedades
                 Dim buttonVer As New DataGridViewButtonColumn
                 buttonVer.HeaderText = "Ver"
                 buttonVer.Text = "Ver"
-                buttonVer.Name = "btnVerPaciente"
-                buttonVer.UseColumnTextForButtonValue = True
+                    buttonVer.Name = "btnVerPaciente"
+                    buttonVer.UseColumnTextForButtonValue = True
                 dgListaEnfermedades.Columns.Add(buttonVer)
 
 
