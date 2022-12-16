@@ -13,4 +13,6 @@
     Public Sucursal As Objetos.Sucursal
     Public RegistroTemp As Objetos.Registro
 
+    Public Enfermedad As Objetos.Enfermedad
+
 End Module

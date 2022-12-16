@@ -162,6 +162,12 @@
     <Compile Include="VerDiagnostico.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="VerEnfermedad.Designer.vb">
+      <DependentUpon>VerEnfermedad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VerEnfermedad.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="VerEnfermedades.Designer.vb">
       <DependentUpon>VerEnfermedades.vb</DependentUpon>
     </Compile>
@@ -253,6 +259,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VerDiagnostico.resx">
       <DependentUpon>VerDiagnostico.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerEnfermedad.resx">
+      <DependentUpon>VerEnfermedad.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VerEnfermedades.resx">
       <DependentUpon>VerEnfermedades.vb</DependentUpon>

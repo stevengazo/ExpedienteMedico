@@ -78,4 +78,16 @@ Public Class EnfermedadNegocio
         End Try
     End Function
 
+    'Public Function ObtenerEnfermedad(id As Integer) As Objetos.Enfermedad
+    '    Try
+    '        If id = 0 Then
+    '            Return New Objetos.Enfermedad()
+    '        Else
+    '            Return NegocioEnfe.ObtenerEnfermedadPorId(id)
+    '        End If
+
+    '    Catch ex As Exception
+    '        Return New Objetos.Enfermedad()
+    '    End Try
+    'End Function
 End Class

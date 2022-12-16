@@ -132,4 +132,30 @@ Public Class MetodosEnfermedad
         End Try
     End Function
 
+    Public Function ObtenerEnfermedadPorId(id As Integer) As Objetos.Enfermedad
+        Try
+            Dim _dataset As New DataSet()
+            Dim Enfermedad As New Objetos.Enfermedad()
+            Dim comando As New SqlCommand()
+            comando.CommandText = "SELECT * FROM ENFERMEDADES WHERE idEnfermedad = " + id.ToString()
+            comando.CommandType = CommandType.Text
+            comando.Connection = conection
+            ' Open the connection with sql server
+            conection.Open()
+            Dim adaptador As New SqlDataAdapter(comando)
+            adaptador.Fill(_dataset, "Enfermedades")
+            conection.Close()
+
+            For Each row In _dataset.Tables(0).Rows
+                Enfermedad.idEnfermedad = Integer.Parse(row(0))
+                Enfermedad.Nombre = row(1)
+                Enfermedad.Descripcion = row(2)
+                Enfermedad.sintomas = row(3)
+            Next
+            Return Enfermedad
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+        End Try
+    End Function
+
 End Class

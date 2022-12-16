@@ -2,6 +2,7 @@
 Imports AccesoDatos
 
 Public Class PacienteNegocio
+    Dim ConexionAccesoDatos As New AccesoDatos.MetodoPacientes
     Dim tmpNegocio As New AccesoDatos.MetodoPacientes
 
     Public Function ObtenerPaciente(id As Integer) As Objetos.Paciente
@@ -49,6 +50,20 @@ Public Class PacienteNegocio
             Return accesoDatosPaciente.ListarPacientes()
         Catch ex As Exception
             Return New List(Of Objetos.Paciente)
+        End Try
+    End Function
+
+    Public Function BorrarPaciente(idPaciente As Integer) As Boolean
+        Try
+            Dim codigo As Integer = ConexionAccesoDatos.BorrarPaciente(idPaciente)
+            If codigo = 0 Then
+                Return True
+            Else
+                Return False
+            End If
+        Catch ex As Exception
+            Console.Write(ex.Message)
+            Return False
         End Try
     End Function
 End Class
