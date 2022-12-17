@@ -71,8 +71,7 @@ Public Class VerEnfermedades
                 Dim row = dgListaEnfermedades.Rows(e.RowIndex)
                 Dim cells = row.Cells
 
-                    'Dim Id = Integer.Parse(cells.Item(0).Value)
-                    Dim bandera = NegocioEnfe.BorrarEnfermedad(id)
+                Dim bandera = NegocioEnfe.BorrarEnfermedad(id)
                     If bandera Then
                         Dim tmpNegocios As New Negocio.EnfermedadNegocio
                         Dim listaEnfe As List(Of Objetos.Enfermedad)

@@ -53,53 +53,63 @@
 
 
     Private Sub dgListaMedicos_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgListaMedicos.CellContentClick
-        If e.ColumnIndex = 8 Then
-            Dim row = dgListaMedicos.Rows(e.RowIndex)
-            Dim cells = row.Cells
-            Dim id = Integer.Parse(cells.Item(0).Value)
-            Dim bandera = NegocioMedi.BorrarMedico(id)
-            If bandera Then
-                Dim tmpNegocios As New Negocio.MedicoNegocio
-                Dim listaMedicos As List(Of Objetos.Medico)
-                listaMedicos = tmpNegocios.ListaMedicos()
+        Dim id = Integer.Parse(dgListaMedicos.Rows.Item(e.RowIndex).Cells(0).Value)
+        Dim NegociosEnfe As New Negocio.MedicoNegocio
+        Dim Medico = NegociosEnfe.ObtenerMedico(id)
+        TEMPORAL.Medico = Medico
+        Select Case e.ColumnIndex
+            ' Ver Enfermedad
+            Case 7
+                VerMedico.Show()
+            ' borrar
+            Case 8
+                Dim row = dgListaMedicos.Rows(e.RowIndex)
+                Dim cells = row.Cells
 
-                If listaMedicos.Count > 0 Then
-                    Dim _tabla As New DataTable
-                    _tabla.Columns.Add("Id Interno")
-                    _tabla.Columns.Add("Identificación")
-                    _tabla.Columns.Add("Nombre")
-                    _tabla.Columns.Add("Apellidos")
-                    _tabla.Columns.Add("Sexo")
-                    _tabla.Columns.Add("Número")
-                    _tabla.Columns.Add("Correo")
+                Dim bandera = NegocioMedi.BorrarMedico(id)
+                If bandera Then
+                    Dim tmpNegocios As New Negocio.MedicoNegocio
+                    Dim listaMedicos As List(Of Objetos.Medico)
+                    listaMedicos = tmpNegocios.ListaMedicos()
 
-                    For Each objMedico As Objetos.Medico In listaMedicos
-                        _tabla.Rows.Add(objMedico.idMedico, objMedico.Identificacion, objMedico.Nombre, objMedico.Apellido, objMedico.Sexo, objMedico.NumeroTelefono, objMedico.Correo)
-                    Next
+                    If listaMedicos.Count > 0 Then
+                        Dim _tabla As New DataTable
+                        _tabla.Columns.Add("Id Interno")
+                        _tabla.Columns.Add("Identificación")
+                        _tabla.Columns.Add("Nombre")
+                        _tabla.Columns.Add("Apellidos")
+                        _tabla.Columns.Add("Sexo")
+                        _tabla.Columns.Add("Número")
+                        _tabla.Columns.Add("Correo")
 
-                    dgListaMedicos.Columns.Clear()
-                    dgListaMedicos.DataSource = _tabla
+                        For Each objMedico As Objetos.Medico In listaMedicos
+                            _tabla.Rows.Add(objMedico.idMedico, objMedico.Identificacion, objMedico.Nombre, objMedico.Apellido, objMedico.Sexo, objMedico.NumeroTelefono, objMedico.Correo)
+                        Next
 
-                    Dim buttonVer As New DataGridViewButtonColumn
-                    buttonVer.HeaderText = "Ver"
-                    buttonVer.Text = "Ver"
-                    buttonVer.Name = "btnVerDoctor"
-                    buttonVer.UseColumnTextForButtonValue = True
-                    dgListaMedicos.Columns.Add(buttonVer)
+                        dgListaMedicos.Columns.Clear()
+                        dgListaMedicos.DataSource = _tabla
+
+                        Dim buttonVer As New DataGridViewButtonColumn
+                        buttonVer.HeaderText = "Ver"
+                        buttonVer.Text = "Ver"
+                        buttonVer.Name = "btnVerDoctor"
+                        buttonVer.UseColumnTextForButtonValue = True
+                        dgListaMedicos.Columns.Add(buttonVer)
 
 
-                    Dim buttonBorrar As New DataGridViewButtonColumn
-                    buttonBorrar.HeaderText = "Borrar"
-                    buttonBorrar.Text = "Borrar"
-                    buttonBorrar.Name = "Borrar"
-                    buttonBorrar.UseColumnTextForButtonValue = True
-                    dgListaMedicos.Columns.Add(buttonBorrar)
+                        Dim buttonBorrar As New DataGridViewButtonColumn
+                        buttonBorrar.HeaderText = "Borrar"
+                        buttonBorrar.Text = "Borrar"
+                        buttonBorrar.Name = "Borrar"
+                        buttonBorrar.UseColumnTextForButtonValue = True
+                        dgListaMedicos.Columns.Add(buttonBorrar)
 
+                    End If
+                Else
+                    MessageBox.Show("Error al borrar el médico", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End If
-            Else
-                MessageBox.Show("Error al borrar el médico", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            End If
-        End If
+
+        End Select
     End Sub
 
 End Class

@@ -243,4 +243,40 @@ Public Class MetodosMedico
         End Try
     End Function
 
+    Public Function ObtenerMedicoPorId(id As Integer) As Objetos.Medico
+        Try
+            Dim _dataset As New DataSet()
+            Dim Medico As New Objetos.Medico()
+            Dim comando As New SqlCommand()
+            comando.CommandText = "SELECT * FROM medicos WHERE idEnfermedad = " + id.ToString()
+            comando.CommandType = CommandType.Text
+            comando.Connection = conection
+            ' Open the connection with sql server
+            conection.Open()
+            Dim adaptador As New SqlDataAdapter(comando)
+            adaptador.Fill(_dataset, "Medicos")
+            conection.Close()
+
+            For Each row In _dataset.Tables(0).Rows
+                Medico.idMedico = Integer.Parse(row(0))
+                Medico.Usuario = row(1)
+                Medico.Contraseña = row(2)
+                Medico.Nombre = row(3)
+                Medico.Apellido = row(4)
+                Medico.Identificacion = row(5)
+                Medico.TipoIdentificación = row(6)
+                Medico.Sexo = row(7)
+                Medico.EstadoCivil = row(8)
+                Medico.Nacionalidad = row(9)
+                Medico.FechaNacimiento = row(10)
+                Medico.NumeroTelefono = row(11)
+                Medico.Correo = row(12)
+                Medico.OtrasSenas = row(13)
+                Medico.IdDistrito = row(14)
+            Next
+            Return Medico
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+        End Try
+    End Function
 End Class

@@ -77,4 +77,17 @@ Public Class MedicoNegocio
             Return False
         End Try
     End Function
+
+    Public Function ObtenerMedico(id As Integer) As Objetos.Medico
+        Try
+            If id = 0 Then
+                Return New Objetos.Medico()
+            Else
+                Return ConexionAccesoDatos.ObtenerMedicoPorId(id)
+            End If
+
+        Catch ex As Exception
+            Return New Objetos.Medico()
+        End Try
+    End Function
 End Class
