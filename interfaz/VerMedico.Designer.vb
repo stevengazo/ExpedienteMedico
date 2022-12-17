@@ -99,9 +99,9 @@ Partial Class VerMedico
         Me.GroupBox4.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox4.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.GroupBox4.Location = New System.Drawing.Point(800, 172)
-        Me.GroupBox4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox4.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox4.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox4.Size = New System.Drawing.Size(848, 110)
         Me.GroupBox4.TabIndex = 30
         Me.GroupBox4.TabStop = False
@@ -110,7 +110,7 @@ Partial Class VerMedico
         'txtCorreo
         '
         Me.txtCorreo.Location = New System.Drawing.Point(284, 63)
-        Me.txtCorreo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtCorreo.Margin = New System.Windows.Forms.Padding(4)
         Me.txtCorreo.Name = "txtCorreo"
         Me.txtCorreo.Size = New System.Drawing.Size(415, 27)
         Me.txtCorreo.TabIndex = 21
@@ -118,7 +118,7 @@ Partial Class VerMedico
         'txtTelefono
         '
         Me.txtTelefono.Location = New System.Drawing.Point(284, 30)
-        Me.txtTelefono.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtTelefono.Margin = New System.Windows.Forms.Padding(4)
         Me.txtTelefono.Name = "txtTelefono"
         Me.txtTelefono.Size = New System.Drawing.Size(415, 27)
         Me.txtTelefono.TabIndex = 17
@@ -159,9 +159,9 @@ Partial Class VerMedico
         Me.GroupBox3.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.GroupBox3.Location = New System.Drawing.Point(800, 6)
-        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox3.Size = New System.Drawing.Size(848, 159)
         Me.GroupBox3.TabIndex = 29
         Me.GroupBox3.TabStop = False
@@ -171,7 +171,7 @@ Partial Class VerMedico
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(481, 20)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.Size = New System.Drawing.Size(359, 116)
@@ -181,7 +181,7 @@ Partial Class VerMedico
         '
         Me.cbEspecialidad.FormattingEnabled = True
         Me.cbEspecialidad.Location = New System.Drawing.Point(140, 44)
-        Me.cbEspecialidad.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cbEspecialidad.Margin = New System.Windows.Forms.Padding(4)
         Me.cbEspecialidad.Name = "cbEspecialidad"
         Me.cbEspecialidad.Size = New System.Drawing.Size(200, 26)
         Me.cbEspecialidad.TabIndex = 26
@@ -191,7 +191,7 @@ Partial Class VerMedico
         Me.btnLimpiar.BackColor = System.Drawing.Color.Azure
         Me.btnLimpiar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnLimpiar.Location = New System.Drawing.Point(349, 89)
-        Me.btnLimpiar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnLimpiar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnLimpiar.Name = "btnLimpiar"
         Me.btnLimpiar.Size = New System.Drawing.Size(124, 27)
         Me.btnLimpiar.TabIndex = 25
@@ -203,7 +203,7 @@ Partial Class VerMedico
         Me.btnAgregarEspecialidad.BackColor = System.Drawing.Color.Azure
         Me.btnAgregarEspecialidad.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnAgregarEspecialidad.Location = New System.Drawing.Point(349, 44)
-        Me.btnAgregarEspecialidad.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnAgregarEspecialidad.Margin = New System.Windows.Forms.Padding(4)
         Me.btnAgregarEspecialidad.Name = "btnAgregarEspecialidad"
         Me.btnAgregarEspecialidad.Size = New System.Drawing.Size(124, 28)
         Me.btnAgregarEspecialidad.TabIndex = 24
@@ -213,7 +213,7 @@ Partial Class VerMedico
         'txtAñosExperiencia
         '
         Me.txtAñosExperiencia.Location = New System.Drawing.Point(140, 95)
-        Me.txtAñosExperiencia.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtAñosExperiencia.Margin = New System.Windows.Forms.Padding(4)
         Me.txtAñosExperiencia.Name = "txtAñosExperiencia"
         Me.txtAñosExperiencia.Size = New System.Drawing.Size(201, 27)
         Me.txtAñosExperiencia.TabIndex = 23
@@ -255,9 +255,9 @@ Partial Class VerMedico
         Me.GroupBox2.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.GroupBox2.Location = New System.Drawing.Point(11, 447)
-        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox2.Size = New System.Drawing.Size(781, 203)
         Me.GroupBox2.TabIndex = 28
         Me.GroupBox2.TabStop = False
@@ -267,7 +267,7 @@ Partial Class VerMedico
         '
         Me.cbDistrito.FormattingEnabled = True
         Me.cbDistrito.Location = New System.Drawing.Point(149, 116)
-        Me.cbDistrito.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cbDistrito.Margin = New System.Windows.Forms.Padding(4)
         Me.cbDistrito.Name = "cbDistrito"
         Me.cbDistrito.Size = New System.Drawing.Size(415, 26)
         Me.cbDistrito.TabIndex = 29
@@ -276,7 +276,7 @@ Partial Class VerMedico
         '
         Me.cbCanton.FormattingEnabled = True
         Me.cbCanton.Location = New System.Drawing.Point(149, 70)
-        Me.cbCanton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cbCanton.Margin = New System.Windows.Forms.Padding(4)
         Me.cbCanton.Name = "cbCanton"
         Me.cbCanton.Size = New System.Drawing.Size(415, 26)
         Me.cbCanton.TabIndex = 28
@@ -285,7 +285,7 @@ Partial Class VerMedico
         '
         Me.cbProvincia.FormattingEnabled = True
         Me.cbProvincia.Location = New System.Drawing.Point(149, 28)
-        Me.cbProvincia.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cbProvincia.Margin = New System.Windows.Forms.Padding(4)
         Me.cbProvincia.Name = "cbProvincia"
         Me.cbProvincia.Size = New System.Drawing.Size(415, 26)
         Me.cbProvincia.TabIndex = 27
@@ -293,7 +293,7 @@ Partial Class VerMedico
         'txtOtros
         '
         Me.txtOtros.Location = New System.Drawing.Point(149, 160)
-        Me.txtOtros.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtOtros.Margin = New System.Windows.Forms.Padding(4)
         Me.txtOtros.Name = "txtOtros"
         Me.txtOtros.Size = New System.Drawing.Size(415, 27)
         Me.txtOtros.TabIndex = 17
@@ -367,9 +367,9 @@ Partial Class VerMedico
         Me.GroupBox1.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.GroupBox1.Location = New System.Drawing.Point(11, 6)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Size = New System.Drawing.Size(781, 433)
         Me.GroupBox1.TabIndex = 27
         Me.GroupBox1.TabStop = False
@@ -378,7 +378,7 @@ Partial Class VerMedico
         'dtNacimiento
         '
         Me.dtNacimiento.Location = New System.Drawing.Point(333, 372)
-        Me.dtNacimiento.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dtNacimiento.Margin = New System.Windows.Forms.Padding(4)
         Me.dtNacimiento.Name = "dtNacimiento"
         Me.dtNacimiento.Size = New System.Drawing.Size(415, 27)
         Me.dtNacimiento.TabIndex = 21
@@ -387,7 +387,7 @@ Partial Class VerMedico
         'txtContrasena
         '
         Me.txtContrasena.Location = New System.Drawing.Point(333, 70)
-        Me.txtContrasena.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtContrasena.Margin = New System.Windows.Forms.Padding(4)
         Me.txtContrasena.Name = "txtContrasena"
         Me.txtContrasena.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtContrasena.Size = New System.Drawing.Size(415, 27)
@@ -396,7 +396,7 @@ Partial Class VerMedico
         'txtNacionalidad
         '
         Me.txtNacionalidad.Location = New System.Drawing.Point(333, 336)
-        Me.txtNacionalidad.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtNacionalidad.Margin = New System.Windows.Forms.Padding(4)
         Me.txtNacionalidad.Name = "txtNacionalidad"
         Me.txtNacionalidad.Size = New System.Drawing.Size(415, 27)
         Me.txtNacionalidad.TabIndex = 15
@@ -404,7 +404,7 @@ Partial Class VerMedico
         'txtUsuario
         '
         Me.txtUsuario.Location = New System.Drawing.Point(333, 28)
-        Me.txtUsuario.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtUsuario.Margin = New System.Windows.Forms.Padding(4)
         Me.txtUsuario.Name = "txtUsuario"
         Me.txtUsuario.Size = New System.Drawing.Size(415, 27)
         Me.txtUsuario.TabIndex = 19
@@ -414,7 +414,7 @@ Partial Class VerMedico
         Me.cboEstadoCivil.FormattingEnabled = True
         Me.cboEstadoCivil.Items.AddRange(New Object() {"", "Soltero", "Casado", "Divorciado", "Viudo"})
         Me.cboEstadoCivil.Location = New System.Drawing.Point(333, 300)
-        Me.cboEstadoCivil.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cboEstadoCivil.Margin = New System.Windows.Forms.Padding(4)
         Me.cboEstadoCivil.Name = "cboEstadoCivil"
         Me.cboEstadoCivil.Size = New System.Drawing.Size(415, 26)
         Me.cboEstadoCivil.TabIndex = 14
@@ -436,7 +436,7 @@ Partial Class VerMedico
         Me.cboSexo.FormattingEnabled = True
         Me.cboSexo.Items.AddRange(New Object() {"", "Femenino", "Masculino", "Otro"})
         Me.cboSexo.Location = New System.Drawing.Point(333, 265)
-        Me.cboSexo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cboSexo.Margin = New System.Windows.Forms.Padding(4)
         Me.cboSexo.Name = "cboSexo"
         Me.cboSexo.Size = New System.Drawing.Size(415, 26)
         Me.cboSexo.TabIndex = 13
@@ -458,7 +458,7 @@ Partial Class VerMedico
         Me.cboTipoIdentificacion.FormattingEnabled = True
         Me.cboTipoIdentificacion.Items.AddRange(New Object() {"", "Nacional", "Pasaporte", "DIMEX"})
         Me.cboTipoIdentificacion.Location = New System.Drawing.Point(333, 193)
-        Me.cboTipoIdentificacion.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cboTipoIdentificacion.Margin = New System.Windows.Forms.Padding(4)
         Me.cboTipoIdentificacion.Name = "cboTipoIdentificacion"
         Me.cboTipoIdentificacion.Size = New System.Drawing.Size(415, 26)
         Me.cboTipoIdentificacion.TabIndex = 12
@@ -466,7 +466,7 @@ Partial Class VerMedico
         'txtIdentificacion
         '
         Me.txtIdentificacion.Location = New System.Drawing.Point(333, 229)
-        Me.txtIdentificacion.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtIdentificacion.Margin = New System.Windows.Forms.Padding(4)
         Me.txtIdentificacion.Name = "txtIdentificacion"
         Me.txtIdentificacion.Size = New System.Drawing.Size(415, 27)
         Me.txtIdentificacion.TabIndex = 11
@@ -474,7 +474,7 @@ Partial Class VerMedico
         'txtApellidos
         '
         Me.txtApellidos.Location = New System.Drawing.Point(333, 158)
-        Me.txtApellidos.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtApellidos.Margin = New System.Windows.Forms.Padding(4)
         Me.txtApellidos.Name = "txtApellidos"
         Me.txtApellidos.Size = New System.Drawing.Size(415, 27)
         Me.txtApellidos.TabIndex = 10
@@ -482,7 +482,7 @@ Partial Class VerMedico
         'txtNombre
         '
         Me.txtNombre.Location = New System.Drawing.Point(333, 116)
-        Me.txtNombre.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtNombre.Margin = New System.Windows.Forms.Padding(4)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(415, 27)
         Me.txtNombre.TabIndex = 9
@@ -588,9 +588,9 @@ Partial Class VerMedico
         Me.GroupBox5.Controls.Add(Me.DataGridView2)
         Me.GroupBox5.Controls.Add(Me.Label1)
         Me.GroupBox5.Location = New System.Drawing.Point(800, 289)
-        Me.GroupBox5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox5.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox5.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox5.Size = New System.Drawing.Size(280, 361)
         Me.GroupBox5.TabIndex = 31
         Me.GroupBox5.TabStop = False
@@ -599,7 +599,7 @@ Partial Class VerMedico
         '
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView2.Location = New System.Drawing.Point(12, 47)
-        Me.DataGridView2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DataGridView2.Margin = New System.Windows.Forms.Padding(4)
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.RowHeadersWidth = 51
         Me.DataGridView2.Size = New System.Drawing.Size(260, 290)
@@ -622,9 +622,9 @@ Partial Class VerMedico
         Me.GroupBox6.Controls.Add(Me.DataGridView3)
         Me.GroupBox6.Controls.Add(Me.Label20)
         Me.GroupBox6.Location = New System.Drawing.Point(1088, 289)
-        Me.GroupBox6.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox6.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox6.Name = "GroupBox6"
-        Me.GroupBox6.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox6.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox6.Size = New System.Drawing.Size(280, 361)
         Me.GroupBox6.TabIndex = 32
         Me.GroupBox6.TabStop = False
@@ -633,7 +633,7 @@ Partial Class VerMedico
         '
         Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView3.Location = New System.Drawing.Point(8, 47)
-        Me.DataGridView3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DataGridView3.Margin = New System.Windows.Forms.Padding(4)
         Me.DataGridView3.Name = "DataGridView3"
         Me.DataGridView3.RowHeadersWidth = 51
         Me.DataGridView3.Size = New System.Drawing.Size(264, 290)
@@ -656,9 +656,9 @@ Partial Class VerMedico
         Me.GroupBox7.Controls.Add(Me.DataGridView4)
         Me.GroupBox7.Controls.Add(Me.Label21)
         Me.GroupBox7.Location = New System.Drawing.Point(1376, 289)
-        Me.GroupBox7.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox7.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox7.Name = "GroupBox7"
-        Me.GroupBox7.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox7.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox7.Size = New System.Drawing.Size(280, 361)
         Me.GroupBox7.TabIndex = 33
         Me.GroupBox7.TabStop = False
@@ -667,7 +667,7 @@ Partial Class VerMedico
         '
         Me.DataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView4.Location = New System.Drawing.Point(8, 47)
-        Me.DataGridView4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DataGridView4.Margin = New System.Windows.Forms.Padding(4)
         Me.DataGridView4.Name = "DataGridView4"
         Me.DataGridView4.RowHeadersWidth = 51
         Me.DataGridView4.Size = New System.Drawing.Size(264, 290)
@@ -718,7 +718,7 @@ Partial Class VerMedico
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "VerMedico"
         Me.Text = "Información Médico"
         Me.GroupBox4.ResumeLayout(False)

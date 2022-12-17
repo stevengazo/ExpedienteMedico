@@ -42,10 +42,6 @@ Public Class VerEnfermedad
             Else
                 MessageBox.Show("Error interno", "Error", MessageBoxButtons.OK)
             End If
-
-
-
-
         End If
     End Sub
 

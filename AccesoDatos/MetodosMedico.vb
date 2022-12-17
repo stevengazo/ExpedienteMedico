@@ -248,7 +248,7 @@ Public Class MetodosMedico
             Dim _dataset As New DataSet()
             Dim Medico As New Objetos.Medico()
             Dim comando As New SqlCommand()
-            comando.CommandText = "SELECT * FROM medicos WHERE idEnfermedad = " + id.ToString()
+            comando.CommandText = "SELECT * FROM medicos WHERE idMedico = " + id.ToString()
             comando.CommandType = CommandType.Text
             comando.Connection = conection
             ' Open the connection with sql server
