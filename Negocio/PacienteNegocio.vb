@@ -66,4 +66,17 @@ Public Class PacienteNegocio
             Return False
         End Try
     End Function
+
+    Public Function ActualizarPaciente(paciente As Objetos.Paciente) As Boolean
+        Try
+            Dim estado = ConexionAccesoDatos.ActualizarPaciente(paciente)
+            If estado Then
+                Return True
+            Else
+                Return False
+            End If
+        Catch ex As Exception
+
+        End Try
+    End Function
 End Class

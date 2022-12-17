@@ -16,17 +16,39 @@ Public Class VerPaciente
     End Sub
     Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
         If Bandera Then
-            PanelEditable.Show()
-            PanelInformación.Hide()
+            PanelEditable.BringToFront()
+            PanelInformacion.SendToBack()
             Bandera = False
             btnEditar.Text = "Actualizar Información"
+
         Else
-            PanelEditable.Hide()
-            Bandera = True
-            btnEditar.Text = "Editar información"
-            ActualizarPaciente()
-            ActualizarPanelInformacion()
-            PanelInformación.Show()
+
+            Paciente.Nombre = txtNombrePaciente.Text
+            Paciente.Apellidos = txtApellidosPaciente.Text
+            Paciente.Identificacion = txtIdenPaciente.Text
+            Paciente.TipoIdentificacion = cbTipoIdenPaciente.Text
+            Paciente.Sexo = cbSexoPaciente.Text
+            Paciente.EstadoCivil = cbEstadoCivilPaciente.Text
+            Paciente.Nacionalidad = txtNacionalidadPaciente.Text
+            Paciente.NumeroTelefonico = txtTelefonoPaciente.Text
+            Paciente.Distrito.Nombre = cbDistrito.Text
+            Paciente.Distrito.Canton.Canton = cbCanton.Text
+            Paciente.Distrito.Canton.Provincia.Nombre = cbProvincia.Text
+
+
+
+            Dim flag = tmpNegocioPaciente.ActualizarPaciente(Paciente)
+            If flag Then
+                PanelEditable.SendToBack()
+                Bandera = True
+                btnEditar.Text = "Editar información"
+                ActualizarPaciente()
+                ActualizarPanelInformacion()
+                PanelInformacion.BringToFront()
+                MessageBox.Show("Paciente actualizado correctamente", "Información", MessageBoxButtons.OK)
+            Else
+                MessageBox.Show("Error interno", "Error", MessageBoxButtons.OK)
+            End If
         End If
     End Sub
 

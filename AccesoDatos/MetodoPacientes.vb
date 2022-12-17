@@ -187,4 +187,43 @@ Public Class MetodoPacientes
             Return 1
         End Try
     End Function
+
+    Public Function ActualizarPaciente(paciente As Objetos.Paciente) As Boolean
+        Try
+            Dim comando As New SqlCommand()
+            comando.CommandText = "[dbo].[PacientesActualizar]"
+            comando.CommandType = CommandType.StoredProcedure
+            comando.Connection = conection
+            'Parametros Entrada
+            comando.Parameters.Add("@idPaciente", SqlDbType.Int).Value = paciente.idPaciente
+            comando.Parameters.Add("@_Nombre", SqlDbType.VarChar, 25).Value = paciente.Nombre
+            comando.Parameters.Add("@_Apellidos", SqlDbType.VarChar, 50).Value = paciente.Apellidos
+            comando.Parameters.Add("@_Identificacion", SqlDbType.VarChar, 30).Value = paciente.Identificacion
+            comando.Parameters.Add("@_TipoIdentificacion", SqlDbType.VarChar, 15).Value = paciente.TipoIdentificacion
+            comando.Parameters.Add("@_Sexo", SqlDbType.VarChar, 15).Value = paciente.Sexo
+            comando.Parameters.Add("@_EstadoCivil", SqlDbType.VarChar, 15).Value = paciente.EstadoCivil
+            comando.Parameters.Add("@_Nacionalidad", SqlDbType.VarChar, 15).Value = paciente.Nacionalidad
+            comando.Parameters.Add("@_FechaNacimiento", SqlDbType.Date).Value = paciente.FechaNacimiento
+            comando.Parameters.Add("@_NumeroTelefonico", SqlDbType.Int).Value = paciente.NumeroTelefonico
+            comando.Parameters.Add("@_Correo", SqlDbType.VarChar, 40).Value = paciente.Correo
+            comando.Parameters.Add("@_EstaActivo", SqlDbType.Bit).Value = paciente.EstaActivo
+            comando.Parameters.Add("@_IdDistrito", SqlDbType.Int).Value = paciente.IdDistrito
+            ' Parametros salida
+            comando.Parameters.Add("@_codigo_error", SqlDbType.Int).Direction = ParameterDirection.Output
+            comando.Parameters.Add("@_mensaje_error", SqlDbType.VarChar, 255).Direction = ParameterDirection.Output
+            comando.Parameters.Add("@Editado", SqlDbType.Bit).Direction = ParameterDirection.Output
+            ' Conexion
+            conection.Open()
+            comando.ExecuteNonQuery()
+            conection.Close()
+            '
+            If comando.Parameters("@Editado").Value Then
+                Return True
+            Else
+                Return False
+            End If
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
 End Class
