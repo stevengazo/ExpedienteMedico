@@ -58,7 +58,7 @@ Public Class MetodosEnfermedad
             Dim _dataSet As New DataSet()
             Dim listaEnfe As New List(Of Objetos.Enfermedad)
             Dim comando As New SqlCommand()
-            comando.CommandText = "Select * from Enfermedades"
+            comando.CommandText = "Select * from Enfermedades where idEnfermedad > 0"
             comando.CommandType = CommandType.Text
             comando.Connection = conection
 

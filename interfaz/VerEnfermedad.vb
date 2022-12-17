@@ -14,7 +14,7 @@ Public Class VerEnfermedad
 
     Private Sub VerEnfermedad_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Enfe = TEMPORAL.Enfermedad
-        'ActualizarPanelInformacion()
+        ActualizarPanelInformacion()
         ActualizarEnfermedad()
     End Sub
 
@@ -29,16 +29,16 @@ Public Class VerEnfermedad
             Bandera = True
             btnEditar.Text = "Editar información"
             ActualizarEnfermedad()
-            'ActualizarPanelInformacion()
+            ActualizarPanelInformacion()
             PanelInfo.Show()
         End If
     End Sub
 
-    'Private Sub ActualizarPanelInformacion()
-    '    lblNombre.Text = Enfe.Nombre
-    '    lblDes.Text = Enfermedad.Descripcion
-    '    lblSin.Text = Enfermedad.sintomas
-    'End Sub
+    Private Sub ActualizarPanelInformacion()
+        lblNombre.Text = Enfe.Nombre
+        lblDes.Text = Enfermedad.Descripcion
+        lblSin.Text = Enfermedad.sintomas
+    End Sub
 
     Private Sub ActualizarEnfermedad()
 

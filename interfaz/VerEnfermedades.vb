@@ -60,7 +60,7 @@ Public Class VerEnfermedades
     Private Sub dgListaEnfermedades_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgListaEnfermedades.CellContentClick
         Dim id = Integer.Parse(dgListaEnfermedades.Rows.Item(e.RowIndex).Cells(0).Value)
         Dim NegociosEnfe As New Negocio.EnfermedadNegocio
-        'Dim Enfermedad = NegociosEnfe.ObtenerEnfermedad(id)
+        Dim Enfermedad = NegociosEnfe.ObtenerEnfermedad(id)
         TEMPORAL.Enfermedad = Enfermedad
         Select Case e.ColumnIndex
             ' Ver Enfermedad
