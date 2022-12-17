@@ -229,6 +229,7 @@ Public Class MetodosMedico
             'agregar los parametros de salida
             _comando.Parameters.Add("@ErrorMessage", SqlDbType.VarChar, 255).Direction = ParameterDirection.Output
             _comando.Parameters.Add("@ErrorCode", SqlDbType.Int).Direction = ParameterDirection.Output
+            _comando.Parameters.Add("@borrado", SqlDbType.Bit).Direction = ParameterDirection.Output
 
             conection.Open()
             _comando.ExecuteNonQuery()
