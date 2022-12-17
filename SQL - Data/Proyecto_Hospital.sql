@@ -1,6 +1,6 @@
 USE [master]
 GO
-/****** Object:  Database [Proyecto_Hospital]    Script Date: 16/12/2022 23:27:45 ******/
+/****** Object:  Database [Proyecto_Hospital]    Script Date: 17/12/2022 14:57:17 ******/
 CREATE DATABASE [Proyecto_Hospital]
  CONTAINMENT = NONE
  ON  PRIMARY 
@@ -80,7 +80,7 @@ ALTER DATABASE [Proyecto_Hospital] SET QUERY_STORE = OFF
 GO
 USE [Proyecto_Hospital]
 GO
-/****** Object:  Table [dbo].[Administrador]    Script Date: 16/12/2022 23:27:46 ******/
+/****** Object:  Table [dbo].[Administrador]    Script Date: 17/12/2022 14:57:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -97,7 +97,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Canton]    Script Date: 16/12/2022 23:27:46 ******/
+/****** Object:  Table [dbo].[Canton]    Script Date: 17/12/2022 14:57:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -112,7 +112,7 @@ CREATE TABLE [dbo].[Canton](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Citas]    Script Date: 16/12/2022 23:27:46 ******/
+/****** Object:  Table [dbo].[Citas]    Script Date: 17/12/2022 14:57:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -126,7 +126,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Diagnostico]    Script Date: 16/12/2022 23:27:46 ******/
+/****** Object:  Table [dbo].[Diagnostico]    Script Date: 17/12/2022 14:57:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -142,7 +142,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Distrito]    Script Date: 16/12/2022 23:27:46 ******/
+/****** Object:  Table [dbo].[Distrito]    Script Date: 17/12/2022 14:57:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -157,7 +157,7 @@ CREATE TABLE [dbo].[Distrito](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Enfermedades]    Script Date: 16/12/2022 23:27:46 ******/
+/****** Object:  Table [dbo].[Enfermedades]    Script Date: 17/12/2022 14:57:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -173,7 +173,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Especialidad]    Script Date: 16/12/2022 23:27:46 ******/
+/****** Object:  Table [dbo].[Especialidad]    Script Date: 17/12/2022 14:57:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -187,7 +187,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[ExpedienteMedico]    Script Date: 16/12/2022 23:27:46 ******/
+/****** Object:  Table [dbo].[ExpedienteMedico]    Script Date: 17/12/2022 14:57:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -202,7 +202,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[InventarioMedico]    Script Date: 16/12/2022 23:27:46 ******/
+/****** Object:  Table [dbo].[InventarioMedico]    Script Date: 17/12/2022 14:57:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -221,7 +221,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[InvHasSucur]    Script Date: 16/12/2022 23:27:46 ******/
+/****** Object:  Table [dbo].[InvHasSucur]    Script Date: 17/12/2022 14:57:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -231,7 +231,7 @@ CREATE TABLE [dbo].[InvHasSucur](
 	[idInventario] [int] NULL
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[MedHasEspe]    Script Date: 16/12/2022 23:27:46 ******/
+/****** Object:  Table [dbo].[MedHasEspe]    Script Date: 17/12/2022 14:57:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -242,7 +242,7 @@ CREATE TABLE [dbo].[MedHasEspe](
 	[idEspecialidad] [int] NULL
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Medicamento]    Script Date: 16/12/2022 23:27:46 ******/
+/****** Object:  Table [dbo].[Medicamento]    Script Date: 17/12/2022 14:57:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -258,7 +258,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Medicos]    Script Date: 16/12/2022 23:27:46 ******/
+/****** Object:  Table [dbo].[Medicos]    Script Date: 17/12/2022 14:57:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -285,7 +285,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Pacientes]    Script Date: 16/12/2022 23:27:46 ******/
+/****** Object:  Table [dbo].[Pacientes]    Script Date: 17/12/2022 14:57:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -311,7 +311,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Provincia]    Script Date: 16/12/2022 23:27:46 ******/
+/****** Object:  Table [dbo].[Provincia]    Script Date: 17/12/2022 14:57:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -325,7 +325,7 @@ CREATE TABLE [dbo].[Provincia](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[ReceHasMedi]    Script Date: 16/12/2022 23:27:46 ******/
+/****** Object:  Table [dbo].[ReceHasMedi]    Script Date: 17/12/2022 14:57:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -336,7 +336,7 @@ CREATE TABLE [dbo].[ReceHasMedi](
 	[idReceta] [int] NULL
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Receta]    Script Date: 16/12/2022 23:27:46 ******/
+/****** Object:  Table [dbo].[Receta]    Script Date: 17/12/2022 14:57:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -352,7 +352,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Registro]    Script Date: 16/12/2022 23:27:46 ******/
+/****** Object:  Table [dbo].[Registro]    Script Date: 17/12/2022 14:57:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -371,7 +371,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Sucursal]    Script Date: 16/12/2022 23:27:46 ******/
+/****** Object:  Table [dbo].[Sucursal]    Script Date: 17/12/2022 14:57:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -571,6 +571,13 @@ SET IDENTITY_INSERT [dbo].[ExpedienteMedico] ON
 
 INSERT [dbo].[ExpedienteMedico] ([idExpediente], [FechaApertura], [UltimaModificacion]) VALUES (0, CAST(N'2001-01-01' AS Date), CAST(N'2001-01-01' AS Date))
 INSERT [dbo].[ExpedienteMedico] ([idExpediente], [FechaApertura], [UltimaModificacion]) VALUES (1, CAST(N'2022-12-01' AS Date), CAST(N'2022-12-01' AS Date))
+INSERT [dbo].[ExpedienteMedico] ([idExpediente], [FechaApertura], [UltimaModificacion]) VALUES (2, CAST(N'2022-12-17' AS Date), CAST(N'2022-12-17' AS Date))
+INSERT [dbo].[ExpedienteMedico] ([idExpediente], [FechaApertura], [UltimaModificacion]) VALUES (3, CAST(N'2022-12-17' AS Date), CAST(N'2022-12-17' AS Date))
+INSERT [dbo].[ExpedienteMedico] ([idExpediente], [FechaApertura], [UltimaModificacion]) VALUES (4, CAST(N'2022-12-17' AS Date), CAST(N'2022-12-17' AS Date))
+INSERT [dbo].[ExpedienteMedico] ([idExpediente], [FechaApertura], [UltimaModificacion]) VALUES (5, CAST(N'2022-12-17' AS Date), CAST(N'2022-12-17' AS Date))
+INSERT [dbo].[ExpedienteMedico] ([idExpediente], [FechaApertura], [UltimaModificacion]) VALUES (6, CAST(N'2022-12-17' AS Date), CAST(N'2022-12-17' AS Date))
+INSERT [dbo].[ExpedienteMedico] ([idExpediente], [FechaApertura], [UltimaModificacion]) VALUES (7, CAST(N'2022-12-17' AS Date), CAST(N'2022-12-17' AS Date))
+INSERT [dbo].[ExpedienteMedico] ([idExpediente], [FechaApertura], [UltimaModificacion]) VALUES (8, CAST(N'2022-12-17' AS Date), CAST(N'2022-12-17' AS Date))
 SET IDENTITY_INSERT [dbo].[ExpedienteMedico] OFF
 GO
 SET IDENTITY_INSERT [dbo].[InventarioMedico] ON 
@@ -582,9 +589,7 @@ INSERT [dbo].[InvHasSucur] ([idSucursal], [idInventario]) VALUES (2, 10)
 GO
 INSERT [dbo].[MedHasEspe] ([idMedico], [años], [idEspecialidad]) VALUES (0, 0, 0)
 INSERT [dbo].[MedHasEspe] ([idMedico], [años], [idEspecialidad]) VALUES (23, 1, 47)
-INSERT [dbo].[MedHasEspe] ([idMedico], [años], [idEspecialidad]) VALUES (26, 10, 46)
-INSERT [dbo].[MedHasEspe] ([idMedico], [años], [idEspecialidad]) VALUES (27, 2, 61)
-INSERT [dbo].[MedHasEspe] ([idMedico], [años], [idEspecialidad]) VALUES (28, 8, 55)
+INSERT [dbo].[MedHasEspe] ([idMedico], [años], [idEspecialidad]) VALUES (29, 8, 46)
 GO
 SET IDENTITY_INSERT [dbo].[Medicamento] ON 
 
@@ -598,14 +603,13 @@ SET IDENTITY_INSERT [dbo].[Medicos] ON
 
 INSERT [dbo].[Medicos] ([idMedico], [Usuario], [HashContraseña], [Nombre], [Apellidos], [Identificacion], [TipoIdentificacion], [Sexo], [EstadoCivil], [Nacionalidad], [FechaNacimiento], [NumeroTelefonico], [Correo], [otrasSenas], [IdDistrito]) VALUES (0, N'', NULL, N'', N'', N'', N'', N'', N'', N'', N'2000-01-01', 0, N'', N'', 0)
 INSERT [dbo].[Medicos] ([idMedico], [Usuario], [HashContraseña], [Nombre], [Apellidos], [Identificacion], [TipoIdentificacion], [Sexo], [EstadoCivil], [Nacionalidad], [FechaNacimiento], [NumeroTelefonico], [Correo], [otrasSenas], [IdDistrito]) VALUES (23, N'Sfabricio', N'1234567890', N'Fabricio', N'Gazo M', N'1234567890', N'', N'', N'', N'', N'2000-01-01', 0, N'', N'', 1)
-INSERT [dbo].[Medicos] ([idMedico], [Usuario], [HashContraseña], [Nombre], [Apellidos], [Identificacion], [TipoIdentificacion], [Sexo], [EstadoCivil], [Nacionalidad], [FechaNacimiento], [NumeroTelefonico], [Correo], [otrasSenas], [IdDistrito]) VALUES (26, N'lruiz', N'1234', N'Luis', N'Ruiz Ulloa', N'203360145', N'', N'', N'', N'', N'2000-01-01', 0, N'', N'', 6)
-INSERT [dbo].[Medicos] ([idMedico], [Usuario], [HashContraseña], [Nombre], [Apellidos], [Identificacion], [TipoIdentificacion], [Sexo], [EstadoCivil], [Nacionalidad], [FechaNacimiento], [NumeroTelefonico], [Correo], [otrasSenas], [IdDistrito]) VALUES (27, N'srojas', N'1234', N'Susan', N'Rojas Salazar', N'208170235', N'', N'', N'', N'', N'2000-01-01', 0, N'', N'', 15)
-INSERT [dbo].[Medicos] ([idMedico], [Usuario], [HashContraseña], [Nombre], [Apellidos], [Identificacion], [TipoIdentificacion], [Sexo], [EstadoCivil], [Nacionalidad], [FechaNacimiento], [NumeroTelefonico], [Correo], [otrasSenas], [IdDistrito]) VALUES (28, N'AAA', N'1234', N'Allan', N'Alfaro', N'102560236', N'', N'', N'', N'', N'2000-01-01', 0, N'', N'', 16)
+INSERT [dbo].[Medicos] ([idMedico], [Usuario], [HashContraseña], [Nombre], [Apellidos], [Identificacion], [TipoIdentificacion], [Sexo], [EstadoCivil], [Nacionalidad], [FechaNacimiento], [NumeroTelefonico], [Correo], [otrasSenas], [IdDistrito]) VALUES (29, N'aalfaro', N'1234', N'Allen', N'Alfaro', N'102360245', N'Nacional', N'Masculino', N'Soltero', N'Costarricense', N'1994-04-05', 89456710, N'aa@gmail.com', N'Calle 12', 2)
 SET IDENTITY_INSERT [dbo].[Medicos] OFF
 GO
 SET IDENTITY_INSERT [dbo].[Pacientes] ON 
 
-INSERT [dbo].[Pacientes] ([idPaciente], [Nombre], [Apellidos], [Identificacion], [TipoIdentificacion], [Sexo], [EstadoCivil], [Nacionalidad], [FechaNacimiento], [NumeroTelefonico], [Correo], [EstaActivo], [Expediente_id], [IdDistrito]) VALUES (1, N'Juan Pablo', N'Perez Luna', N'104870145', N'Cédula de ident', N'Masculino', N'Casado', N'Costarricense', CAST(N'1982-04-05' AS Date), 89630147, N'juan@gmail.com', 1, 1, 1)
+INSERT [dbo].[Pacientes] ([idPaciente], [Nombre], [Apellidos], [Identificacion], [TipoIdentificacion], [Sexo], [EstadoCivil], [Nacionalidad], [FechaNacimiento], [NumeroTelefonico], [Correo], [EstaActivo], [Expediente_id], [IdDistrito]) VALUES (1, N'Juan Pablo', N'Perez Luna', N'104870145', N'Cédula de ident', N'Masculino', N'Casado', N'Costarricense', CAST(N'1982-04-05' AS Date), 89630148, N'juan@gmail.com', 1, 1, 1)
+INSERT [dbo].[Pacientes] ([idPaciente], [Nombre], [Apellidos], [Identificacion], [TipoIdentificacion], [Sexo], [EstadoCivil], [Nacionalidad], [FechaNacimiento], [NumeroTelefonico], [Correo], [EstaActivo], [Expediente_id], [IdDistrito]) VALUES (5, N'Ana', N'Salas', N'102360214', N'Nacional ', N'Femenino', N'Soltero', N'Costarricense', CAST(N'2014-06-18' AS Date), 89745622, N'ana@gmail.com', 1, 8, 13)
 SET IDENTITY_INSERT [dbo].[Pacientes] OFF
 GO
 SET IDENTITY_INSERT [dbo].[Provincia] ON 
@@ -738,7 +742,7 @@ REFERENCES [dbo].[Sucursal] ([idSucursal])
 GO
 ALTER TABLE [dbo].[Registro] CHECK CONSTRAINT [FK_Registro_Sucursal]
 GO
-/****** Object:  StoredProcedure [dbo].[AdministradorAgregar]    Script Date: 16/12/2022 23:27:47 ******/
+/****** Object:  StoredProcedure [dbo].[AdministradorAgregar]    Script Date: 17/12/2022 14:57:18 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -769,7 +773,7 @@ BEGIN
 	END CATCH
 END
 GO
-/****** Object:  StoredProcedure [dbo].[AdministradorComprobarSesion]    Script Date: 16/12/2022 23:27:47 ******/
+/****** Object:  StoredProcedure [dbo].[AdministradorComprobarSesion]    Script Date: 17/12/2022 14:57:18 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -802,7 +806,7 @@ BEGIN
 	END CATCH
 END
 GO
-/****** Object:  StoredProcedure [dbo].[CitaAgregar]    Script Date: 16/12/2022 23:27:47 ******/
+/****** Object:  StoredProcedure [dbo].[CitaAgregar]    Script Date: 17/12/2022 14:57:18 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -834,7 +838,7 @@ BEGIN CATCH
 END CATCH
 END
 GO
-/****** Object:  StoredProcedure [dbo].[CitaBorrar]    Script Date: 16/12/2022 23:27:47 ******/
+/****** Object:  StoredProcedure [dbo].[CitaBorrar]    Script Date: 17/12/2022 14:57:18 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -866,7 +870,7 @@ BEGIN CATCH
 END CATCH
 END
 GO
-/****** Object:  StoredProcedure [dbo].[DiagnosticoAgregar]    Script Date: 16/12/2022 23:27:47 ******/
+/****** Object:  StoredProcedure [dbo].[DiagnosticoAgregar]    Script Date: 17/12/2022 14:57:18 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -894,7 +898,7 @@ BEGIN
 	END CATCH 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[DiagnosticoEliminar]    Script Date: 16/12/2022 23:27:47 ******/
+/****** Object:  StoredProcedure [dbo].[DiagnosticoEliminar]    Script Date: 17/12/2022 14:57:18 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -922,7 +926,7 @@ BEGIN CATCH
 END CATCH
 END
 GO
-/****** Object:  StoredProcedure [dbo].[EliminarEnfermedad]    Script Date: 16/12/2022 23:27:47 ******/
+/****** Object:  StoredProcedure [dbo].[EliminarEnfermedad]    Script Date: 17/12/2022 14:57:18 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -945,7 +949,7 @@ BEGIN CATCH
 END CATCH
 END
 GO
-/****** Object:  StoredProcedure [dbo].[EliminarMedicamento]    Script Date: 16/12/2022 23:27:47 ******/
+/****** Object:  StoredProcedure [dbo].[EliminarMedicamento]    Script Date: 17/12/2022 14:57:18 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -968,7 +972,7 @@ BEGIN CATCH
 END CATCH
 END
 GO
-/****** Object:  StoredProcedure [dbo].[EliminarMedico]    Script Date: 16/12/2022 23:27:47 ******/
+/****** Object:  StoredProcedure [dbo].[EliminarMedico]    Script Date: 17/12/2022 14:57:18 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -998,7 +1002,7 @@ BEGIN CATCH
 END CATCH
 END
 GO
-/****** Object:  StoredProcedure [dbo].[EliminarPaciente]    Script Date: 16/12/2022 23:27:47 ******/
+/****** Object:  StoredProcedure [dbo].[EliminarPaciente]    Script Date: 17/12/2022 14:57:18 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1023,7 +1027,7 @@ BEGIN CATCH
 END CATCH
 END
 GO
-/****** Object:  StoredProcedure [dbo].[EnfermedadActualizar]    Script Date: 16/12/2022 23:27:47 ******/
+/****** Object:  StoredProcedure [dbo].[EnfermedadActualizar]    Script Date: 17/12/2022 14:57:18 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1057,7 +1061,7 @@ BEGIN
 	END CATCH
 END
 GO
-/****** Object:  StoredProcedure [dbo].[EnfermedadAgregar]    Script Date: 16/12/2022 23:27:47 ******/
+/****** Object:  StoredProcedure [dbo].[EnfermedadAgregar]    Script Date: 17/12/2022 14:57:18 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1085,7 +1089,7 @@ BEGIN
 	END CATCH
 END
 GO
-/****** Object:  StoredProcedure [dbo].[EspecialidadAgregar]    Script Date: 16/12/2022 23:27:47 ******/
+/****** Object:  StoredProcedure [dbo].[EspecialidadAgregar]    Script Date: 17/12/2022 14:57:18 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1113,7 +1117,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[ExpedienteMedicoAgregar]    Script Date: 16/12/2022 23:27:47 ******/
+/****** Object:  StoredProcedure [dbo].[ExpedienteMedicoAgregar]    Script Date: 17/12/2022 14:57:18 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1140,7 +1144,33 @@ BEGIN
 	END CATCH
 END
 GO
-/****** Object:  StoredProcedure [dbo].[GenerarRegistroEnExpediente]    Script Date: 16/12/2022 23:27:47 ******/
+/****** Object:  StoredProcedure [dbo].[GenerarExpediente]    Script Date: 17/12/2022 14:57:18 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[GenerarExpediente]	
+	@_codigo_error int output, 
+    @_mensaje_error varchar(MaX) output,
+    @_idExpediente int output
+AS
+BEGIN
+	BEGIN TRY
+		insert into ExpedienteMedico (FechaApertura,UltimaModificacion)
+							values ( GETDATE(),GETDATE())
+		set @_idExpediente =SCOPE_IDENTITY()
+		set @_codigo_error=0
+		set @_mensaje_error=' '
+	END TRY
+	BEGIN CATCH
+			set @_codigo_error=@@ERROR
+			set @_mensaje_error=ERROR_MESSAGE()
+			SET @_idExpediente =0;
+	END CATCH
+END
+
+GO
+/****** Object:  StoredProcedure [dbo].[GenerarRegistroEnExpediente]    Script Date: 17/12/2022 14:57:18 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1171,7 +1201,7 @@ BEGIN
 	end catch
 END
 GO
-/****** Object:  StoredProcedure [dbo].[InventarioActualizar]    Script Date: 16/12/2022 23:27:47 ******/
+/****** Object:  StoredProcedure [dbo].[InventarioActualizar]    Script Date: 17/12/2022 14:57:18 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1212,7 +1242,7 @@ BEGIN
 	END CATCH
 END
 GO
-/****** Object:  StoredProcedure [dbo].[InventarioAgregar]    Script Date: 16/12/2022 23:27:47 ******/
+/****** Object:  StoredProcedure [dbo].[InventarioAgregar]    Script Date: 17/12/2022 14:57:18 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1244,7 +1274,7 @@ BEGIN
 	END CATCH
 END
 GO
-/****** Object:  StoredProcedure [dbo].[InvHasSucurAgregar]    Script Date: 16/12/2022 23:27:47 ******/
+/****** Object:  StoredProcedure [dbo].[InvHasSucurAgregar]    Script Date: 17/12/2022 14:57:18 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1273,7 +1303,7 @@ BEGIN
 	end catch
 END
 GO
-/****** Object:  StoredProcedure [dbo].[MedicamentoActualizar]    Script Date: 16/12/2022 23:27:47 ******/
+/****** Object:  StoredProcedure [dbo].[MedicamentoActualizar]    Script Date: 17/12/2022 14:57:18 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1310,7 +1340,7 @@ BEGIN
 	END CATCH
 END
 GO
-/****** Object:  StoredProcedure [dbo].[MedicamentoAgregar]    Script Date: 16/12/2022 23:27:47 ******/
+/****** Object:  StoredProcedure [dbo].[MedicamentoAgregar]    Script Date: 17/12/2022 14:57:18 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1338,7 +1368,7 @@ BEGIN
 	END CATCH
 END
 GO
-/****** Object:  StoredProcedure [dbo].[MedicoAgregar]    Script Date: 16/12/2022 23:27:47 ******/
+/****** Object:  StoredProcedure [dbo].[MedicoAgregar]    Script Date: 17/12/2022 14:57:18 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1377,7 +1407,7 @@ BEGIN
 	END CATCH
 END
 GO
-/****** Object:  StoredProcedure [dbo].[MedicoComprobarSesion]    Script Date: 16/12/2022 23:27:47 ******/
+/****** Object:  StoredProcedure [dbo].[MedicoComprobarSesion]    Script Date: 17/12/2022 14:57:18 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1409,7 +1439,7 @@ BEGIN
 	END CATCH
 END
 GO
-/****** Object:  StoredProcedure [dbo].[MediHasEspeAgregar]    Script Date: 16/12/2022 23:27:47 ******/
+/****** Object:  StoredProcedure [dbo].[MediHasEspeAgregar]    Script Date: 17/12/2022 14:57:18 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1439,7 +1469,7 @@ BEGIN
 	END CATCH
 END
 GO
-/****** Object:  StoredProcedure [dbo].[PacientesActualizar]    Script Date: 16/12/2022 23:27:47 ******/
+/****** Object:  StoredProcedure [dbo].[PacientesActualizar]    Script Date: 17/12/2022 14:57:18 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1494,7 +1524,7 @@ BEGIN
 	END CATCH
 END
 GO
-/****** Object:  StoredProcedure [dbo].[PacientesAgregar]    Script Date: 16/12/2022 23:27:47 ******/
+/****** Object:  StoredProcedure [dbo].[PacientesAgregar]    Script Date: 17/12/2022 14:57:18 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1560,7 +1590,7 @@ BEGIN
 	END CATCH
 END
 GO
-/****** Object:  StoredProcedure [dbo].[RecetaAgregar]    Script Date: 16/12/2022 23:27:47 ******/
+/****** Object:  StoredProcedure [dbo].[RecetaAgregar]    Script Date: 17/12/2022 14:57:18 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1588,7 +1618,7 @@ BEGIN
 	END CATCH
 END
 GO
-/****** Object:  StoredProcedure [dbo].[RegistroActualizar]    Script Date: 16/12/2022 23:27:47 ******/
+/****** Object:  StoredProcedure [dbo].[RegistroActualizar]    Script Date: 17/12/2022 14:57:18 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
