@@ -30,11 +30,11 @@
         cbDistrito.Enabled = False
 
         txtUsuario.Text = Medico.Usuario
-        txtContrasena.Text = Medico.Contraseña
+        txtContrasena.Text = "Información no disponible"
         txtNombre.Text = Medico.Nombre
         txtApellidos.Text = Medico.Apellido
         txtIdentificacion.Text = Medico.Identificacion
-        cboTipoIdentificacion.ValueMember = Medico.TipoIdentificación
+        cboTipoIdentificacion.Text = Medico.TipoIdentificación
         cboSexo.Text = Medico.Sexo
         cboEstadoCivil.Text = Medico.EstadoCivil
         txtNacionalidad.Text = Medico.Nacionalidad

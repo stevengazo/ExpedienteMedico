@@ -389,7 +389,6 @@ Partial Class VerMedico
         Me.txtContrasena.Location = New System.Drawing.Point(333, 70)
         Me.txtContrasena.Margin = New System.Windows.Forms.Padding(4)
         Me.txtContrasena.Name = "txtContrasena"
-        Me.txtContrasena.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtContrasena.Size = New System.Drawing.Size(415, 27)
         Me.txtContrasena.TabIndex = 20
         '

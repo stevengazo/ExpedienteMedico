@@ -71,7 +71,7 @@ Public Class MetodosMedico
             Dim _dataSet As New DataSet()
             Dim listaMedicos As New List(Of Objetos.Medico)
             Dim comando As New SqlCommand()
-            comando.CommandText = "Select * from Medicos"
+            comando.CommandText = "Select * from Medicos where idMedico > 0"
             comando.CommandType = CommandType.Text
             comando.Connection = conection
 

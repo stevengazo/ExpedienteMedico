@@ -76,23 +76,23 @@ Partial Class AgregarPaciente
         Me.GroupBox3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.GroupBox3.Location = New System.Drawing.Point(8, 302)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(836, 128)
+        Me.GroupBox3.Size = New System.Drawing.Size(866, 128)
         Me.GroupBox3.TabIndex = 2
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Contactos"
         '
         'txtCorreoPaciente
         '
-        Me.txtCorreoPaciente.Location = New System.Drawing.Point(147, 80)
+        Me.txtCorreoPaciente.Location = New System.Drawing.Point(180, 80)
         Me.txtCorreoPaciente.Name = "txtCorreoPaciente"
-        Me.txtCorreoPaciente.Size = New System.Drawing.Size(165, 26)
+        Me.txtCorreoPaciente.Size = New System.Drawing.Size(165, 31)
         Me.txtCorreoPaciente.TabIndex = 6
         '
         'txtTelefonoPaciente
         '
-        Me.txtTelefonoPaciente.Location = New System.Drawing.Point(147, 37)
+        Me.txtTelefonoPaciente.Location = New System.Drawing.Point(180, 37)
         Me.txtTelefonoPaciente.Name = "txtTelefonoPaciente"
-        Me.txtTelefonoPaciente.Size = New System.Drawing.Size(165, 26)
+        Me.txtTelefonoPaciente.Size = New System.Drawing.Size(165, 31)
         Me.txtTelefonoPaciente.TabIndex = 5
         '
         'cbTipoCorreoPaciente
@@ -101,7 +101,7 @@ Partial Class AgregarPaciente
         Me.cbTipoCorreoPaciente.Items.AddRange(New Object() {"", "casa", "trabajo", "personal"})
         Me.cbTipoCorreoPaciente.Location = New System.Drawing.Point(366, 80)
         Me.cbTipoCorreoPaciente.Name = "cbTipoCorreoPaciente"
-        Me.cbTipoCorreoPaciente.Size = New System.Drawing.Size(142, 24)
+        Me.cbTipoCorreoPaciente.Size = New System.Drawing.Size(142, 29)
         Me.cbTipoCorreoPaciente.TabIndex = 4
         '
         'cbTipoTelefonoPaciente
@@ -110,7 +110,7 @@ Partial Class AgregarPaciente
         Me.cbTipoTelefonoPaciente.Items.AddRange(New Object() {"", "celular", "casa", "trabajo"})
         Me.cbTipoTelefonoPaciente.Location = New System.Drawing.Point(366, 40)
         Me.cbTipoTelefonoPaciente.Name = "cbTipoTelefonoPaciente"
-        Me.cbTipoTelefonoPaciente.Size = New System.Drawing.Size(142, 24)
+        Me.cbTipoTelefonoPaciente.Size = New System.Drawing.Size(142, 29)
         Me.cbTipoTelefonoPaciente.TabIndex = 3
         '
         'Label14
@@ -118,7 +118,7 @@ Partial Class AgregarPaciente
         Me.Label14.AutoSize = True
         Me.Label14.Location = New System.Drawing.Point(8, 83)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(124, 16)
+        Me.Label14.Size = New System.Drawing.Size(162, 21)
         Me.Label14.TabIndex = 2
         Me.Label14.Text = "Correo electronico"
         '
@@ -127,7 +127,7 @@ Partial Class AgregarPaciente
         Me.Label12.AutoSize = True
         Me.Label12.Location = New System.Drawing.Point(8, 40)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(133, 16)
+        Me.Label12.Size = New System.Drawing.Size(172, 21)
         Me.Label12.TabIndex = 0
         Me.Label12.Text = "Número de teléfono"
         '
@@ -142,7 +142,7 @@ Partial Class AgregarPaciente
         Me.GroupBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.GroupBox2.Location = New System.Drawing.Point(8, 185)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(836, 111)
+        Me.GroupBox2.Size = New System.Drawing.Size(866, 111)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Lugar de Residencia"
@@ -152,7 +152,7 @@ Partial Class AgregarPaciente
         Me.cbDistrito.FormattingEnabled = True
         Me.cbDistrito.Location = New System.Drawing.Point(529, 24)
         Me.cbDistrito.Name = "cbDistrito"
-        Me.cbDistrito.Size = New System.Drawing.Size(290, 24)
+        Me.cbDistrito.Size = New System.Drawing.Size(290, 29)
         Me.cbDistrito.TabIndex = 20
         '
         'cbCanton
@@ -160,7 +160,7 @@ Partial Class AgregarPaciente
         Me.cbCanton.FormattingEnabled = True
         Me.cbCanton.Location = New System.Drawing.Point(136, 64)
         Me.cbCanton.Name = "cbCanton"
-        Me.cbCanton.Size = New System.Drawing.Size(209, 24)
+        Me.cbCanton.Size = New System.Drawing.Size(209, 29)
         Me.cbCanton.TabIndex = 19
         '
         'cbProvincia
@@ -168,7 +168,7 @@ Partial Class AgregarPaciente
         Me.cbProvincia.FormattingEnabled = True
         Me.cbProvincia.Location = New System.Drawing.Point(136, 24)
         Me.cbProvincia.Name = "cbProvincia"
-        Me.cbProvincia.Size = New System.Drawing.Size(209, 24)
+        Me.cbProvincia.Size = New System.Drawing.Size(209, 29)
         Me.cbProvincia.TabIndex = 18
         '
         'Label11
@@ -176,7 +176,7 @@ Partial Class AgregarPaciente
         Me.Label11.AutoSize = True
         Me.Label11.Location = New System.Drawing.Point(15, 67)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(53, 16)
+        Me.Label11.Size = New System.Drawing.Size(68, 21)
         Me.Label11.TabIndex = 17
         Me.Label11.Text = "Cantón"
         '
@@ -185,7 +185,7 @@ Partial Class AgregarPaciente
         Me.Label10.AutoSize = True
         Me.Label10.Location = New System.Drawing.Point(363, 27)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(54, 16)
+        Me.Label10.Size = New System.Drawing.Size(73, 21)
         Me.Label10.TabIndex = 16
         Me.Label10.Text = "Distrito"
         '
@@ -194,7 +194,7 @@ Partial Class AgregarPaciente
         Me.Label9.AutoSize = True
         Me.Label9.Location = New System.Drawing.Point(15, 34)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(67, 16)
+        Me.Label9.Size = New System.Drawing.Size(88, 21)
         Me.Label9.TabIndex = 15
         Me.Label9.Text = "Provincia"
         '
@@ -220,16 +220,16 @@ Partial Class AgregarPaciente
         Me.GroupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.GroupBox1.Location = New System.Drawing.Point(8, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(836, 167)
+        Me.GroupBox1.Size = New System.Drawing.Size(866, 167)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Información Personal"
         '
         'datePaciente
         '
-        Me.datePaciente.Location = New System.Drawing.Point(529, 129)
+        Me.datePaciente.Location = New System.Drawing.Point(549, 129)
         Me.datePaciente.Name = "datePaciente"
-        Me.datePaciente.Size = New System.Drawing.Size(290, 26)
+        Me.datePaciente.Size = New System.Drawing.Size(288, 31)
         Me.datePaciente.TabIndex = 16
         '
         'cbEstadoCivilPaciente
@@ -237,9 +237,9 @@ Partial Class AgregarPaciente
         Me.cbEstadoCivilPaciente.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
         Me.cbEstadoCivilPaciente.FormattingEnabled = True
         Me.cbEstadoCivilPaciente.Items.AddRange(New Object() {"Soltero", "Casado", "Viudo", "Divorciado", "Unión Libre"})
-        Me.cbEstadoCivilPaciente.Location = New System.Drawing.Point(531, 96)
+        Me.cbEstadoCivilPaciente.Location = New System.Drawing.Point(549, 96)
         Me.cbEstadoCivilPaciente.Name = "cbEstadoCivilPaciente"
-        Me.cbEstadoCivilPaciente.Size = New System.Drawing.Size(288, 24)
+        Me.cbEstadoCivilPaciente.Size = New System.Drawing.Size(288, 29)
         Me.cbEstadoCivilPaciente.TabIndex = 15
         '
         'cbSexoPaciente
@@ -248,44 +248,44 @@ Partial Class AgregarPaciente
         Me.cbSexoPaciente.Items.AddRange(New Object() {"Otro", "Masculino", "Femenino"})
         Me.cbSexoPaciente.Location = New System.Drawing.Point(136, 96)
         Me.cbSexoPaciente.Name = "cbSexoPaciente"
-        Me.cbSexoPaciente.Size = New System.Drawing.Size(209, 24)
+        Me.cbSexoPaciente.Size = New System.Drawing.Size(209, 29)
         Me.cbSexoPaciente.TabIndex = 14
         '
         'cbTipoIdenPaciente
         '
         Me.cbTipoIdenPaciente.FormattingEnabled = True
         Me.cbTipoIdenPaciente.Items.AddRange(New Object() {"Nacional ", "DIMEX", "Pasaporte"})
-        Me.cbTipoIdenPaciente.Location = New System.Drawing.Point(531, 65)
+        Me.cbTipoIdenPaciente.Location = New System.Drawing.Point(549, 60)
         Me.cbTipoIdenPaciente.Name = "cbTipoIdenPaciente"
-        Me.cbTipoIdenPaciente.Size = New System.Drawing.Size(288, 24)
+        Me.cbTipoIdenPaciente.Size = New System.Drawing.Size(288, 29)
         Me.cbTipoIdenPaciente.TabIndex = 13
         '
         'txtNacionalidadPaciente
         '
         Me.txtNacionalidadPaciente.Location = New System.Drawing.Point(136, 129)
         Me.txtNacionalidadPaciente.Name = "txtNacionalidadPaciente"
-        Me.txtNacionalidadPaciente.Size = New System.Drawing.Size(209, 26)
+        Me.txtNacionalidadPaciente.Size = New System.Drawing.Size(209, 31)
         Me.txtNacionalidadPaciente.TabIndex = 12
         '
         'txtApellidosPaciente
         '
-        Me.txtApellidosPaciente.Location = New System.Drawing.Point(531, 24)
+        Me.txtApellidosPaciente.Location = New System.Drawing.Point(549, 24)
         Me.txtApellidosPaciente.Name = "txtApellidosPaciente"
-        Me.txtApellidosPaciente.Size = New System.Drawing.Size(288, 26)
+        Me.txtApellidosPaciente.Size = New System.Drawing.Size(288, 31)
         Me.txtApellidosPaciente.TabIndex = 11
         '
         'txtIdenPaciente
         '
-        Me.txtIdenPaciente.Location = New System.Drawing.Point(138, 62)
+        Me.txtIdenPaciente.Location = New System.Drawing.Point(136, 58)
         Me.txtIdenPaciente.Name = "txtIdenPaciente"
-        Me.txtIdenPaciente.Size = New System.Drawing.Size(209, 26)
+        Me.txtIdenPaciente.Size = New System.Drawing.Size(209, 31)
         Me.txtIdenPaciente.TabIndex = 10
         '
         'txtNombrePaciente
         '
-        Me.txtNombrePaciente.Location = New System.Drawing.Point(138, 24)
+        Me.txtNombrePaciente.Location = New System.Drawing.Point(136, 24)
         Me.txtNombrePaciente.Name = "txtNombrePaciente"
-        Me.txtNombrePaciente.Size = New System.Drawing.Size(209, 26)
+        Me.txtNombrePaciente.Size = New System.Drawing.Size(209, 31)
         Me.txtNombrePaciente.TabIndex = 8
         '
         'Label8
@@ -293,7 +293,7 @@ Partial Class AgregarPaciente
         Me.Label8.AutoSize = True
         Me.Label8.Location = New System.Drawing.Point(363, 132)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(137, 16)
+        Me.Label8.Size = New System.Drawing.Size(178, 21)
         Me.Label8.TabIndex = 7
         Me.Label8.Text = "Fecha de nacimiento"
         '
@@ -302,7 +302,7 @@ Partial Class AgregarPaciente
         Me.Label7.AutoSize = True
         Me.Label7.Location = New System.Drawing.Point(6, 132)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(91, 16)
+        Me.Label7.Size = New System.Drawing.Size(118, 21)
         Me.Label7.TabIndex = 6
         Me.Label7.Text = "Nacionalidad"
         '
@@ -311,7 +311,7 @@ Partial Class AgregarPaciente
         Me.Label6.AutoSize = True
         Me.Label6.Location = New System.Drawing.Point(363, 104)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(85, 16)
+        Me.Label6.Size = New System.Drawing.Size(111, 21)
         Me.Label6.TabIndex = 5
         Me.Label6.Text = "Estado Civil"
         '
@@ -320,7 +320,7 @@ Partial Class AgregarPaciente
         Me.Label5.AutoSize = True
         Me.Label5.Location = New System.Drawing.Point(8, 99)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(39, 16)
+        Me.Label5.Size = New System.Drawing.Size(50, 21)
         Me.Label5.TabIndex = 4
         Me.Label5.Text = "Sexo"
         '
@@ -329,7 +329,7 @@ Partial Class AgregarPaciente
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(363, 65)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(145, 16)
+        Me.Label4.Size = New System.Drawing.Size(190, 21)
         Me.Label4.TabIndex = 3
         Me.Label4.Text = "Tipo de identificación"
         '
@@ -338,7 +338,7 @@ Partial Class AgregarPaciente
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(8, 68)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(93, 16)
+        Me.Label3.Size = New System.Drawing.Size(124, 21)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Identificación"
         '
@@ -347,7 +347,7 @@ Partial Class AgregarPaciente
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(363, 27)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(68, 16)
+        Me.Label2.Size = New System.Drawing.Size(89, 21)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Apellidos"
         '
@@ -356,7 +356,7 @@ Partial Class AgregarPaciente
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(8, 27)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(59, 16)
+        Me.Label1.Size = New System.Drawing.Size(76, 21)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Nombre"
         '
@@ -385,7 +385,7 @@ Partial Class AgregarPaciente
         Me.Label13.AutoSize = True
         Me.Label13.Location = New System.Drawing.Point(133, 28)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(240, 16)
+        Me.Label13.Size = New System.Drawing.Size(310, 21)
         Me.Label13.TabIndex = 4
         Me.Label13.Text = "¿Posee algún tipo de seguro médico?"
         '
@@ -393,9 +393,9 @@ Partial Class AgregarPaciente
         '
         Me.cbSeguro.FormattingEnabled = True
         Me.cbSeguro.Items.AddRange(New Object() {"Sí", "No"})
-        Me.cbSeguro.Location = New System.Drawing.Point(408, 25)
+        Me.cbSeguro.Location = New System.Drawing.Point(449, 25)
         Me.cbSeguro.Name = "cbSeguro"
-        Me.cbSeguro.Size = New System.Drawing.Size(149, 24)
+        Me.cbSeguro.Size = New System.Drawing.Size(149, 29)
         Me.cbSeguro.TabIndex = 5
         Me.cbSeguro.Text = "No"
         '
@@ -405,16 +405,16 @@ Partial Class AgregarPaciente
         Me.GroupBox4.Controls.Add(Me.Label13)
         Me.GroupBox4.Location = New System.Drawing.Point(8, 436)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(836, 68)
+        Me.GroupBox4.Size = New System.Drawing.Size(866, 68)
         Me.GroupBox4.TabIndex = 6
         Me.GroupBox4.TabStop = False
         '
         'AgregarPaciente
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 21.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightSlateGray
-        Me.ClientSize = New System.Drawing.Size(862, 568)
+        Me.ClientSize = New System.Drawing.Size(886, 568)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox3)
