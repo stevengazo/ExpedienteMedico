@@ -20,17 +20,32 @@ Public Class VerEnfermedad
 
     Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
         If Bandera Then
-            PanelEditable.Show()
-            PanelInfo.Hide()
+            PanelEditable.BringToFront()
+            PanelInfo.SendToBack()
             Bandera = False
             btnEditar.Text = "Actualizar Información"
+
         Else
-            PanelEditable.Hide()
-            Bandera = True
-            btnEditar.Text = "Editar información"
-            ActualizarEnfermedad()
-            ActualizarPanelInformacion()
-            PanelInfo.Show()
+
+            Enfe.Nombre = txtNombre.Text
+            Enfe.Descripcion = txtDes.Text
+            Enfe.sintomas = txtSin.Text
+            Dim flag = tmpNegocioEnfermedad.ActualizarEnfermedad(Enfermedad)
+            If flag Then
+                PanelEditable.SendToBack()
+                Bandera = True
+                btnEditar.Text = "Editar información"
+                ActualizarEnfermedad()
+                ActualizarPanelInformacion()
+                PanelInfo.BringToFront()
+                MessageBox.Show("Enfermedad actualizada correctamente", "Información", MessageBoxButtons.OK)
+            Else
+                MessageBox.Show("Error interno", "Error", MessageBoxButtons.OK)
+            End If
+
+
+
+
         End If
     End Sub
 

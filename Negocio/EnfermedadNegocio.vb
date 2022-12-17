@@ -40,13 +40,16 @@ Public Class EnfermedadNegocio
     ''' </summary>
     ''' <param name="objEnfermedad"></param>
     ''' <returns></returns>
-    Public Function ActualizarEnfermedad(objEnfermedad As Enfermedad) As Boolean
+    Public Function ActualizarEnfermedad(Enfermedad As Objetos.Enfermedad) As Boolean
         Try
-            Throw New NotImplementedException()
-            Return True
+            Dim estado = ConexionAccesoDatos.ActualizarEnfermedad(Enfermedad)
+            If estado Then
+                Return True
+            Else
+                Return False
+            End If
         Catch ex As Exception
-            Throw New NotImplementedException()
-            Return False
+
         End Try
     End Function
     ''' <summary>

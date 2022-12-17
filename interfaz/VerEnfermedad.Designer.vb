@@ -35,13 +35,13 @@ Partial Class VerEnfermedad
         Me.Button2 = New System.Windows.Forms.Button()
         Me.PanelEditable = New System.Windows.Forms.Panel()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.txtSin = New System.Windows.Forms.TextBox()
+        Me.txtDes = New System.Windows.Forms.TextBox()
+        Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.txtNombre = New System.Windows.Forms.TextBox()
-        Me.txtDes = New System.Windows.Forms.TextBox()
-        Me.txtSin = New System.Windows.Forms.TextBox()
         Me.PanelInfo.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.PanelEditable.SuspendLayout()
@@ -50,6 +50,7 @@ Partial Class VerEnfermedad
         '
         'PanelInfo
         '
+        Me.PanelInfo.BackColor = System.Drawing.SystemColors.Control
         Me.PanelInfo.Controls.Add(Me.GroupBox1)
         Me.PanelInfo.Controls.Add(Me.Label1)
         Me.PanelInfo.Location = New System.Drawing.Point(13, 13)
@@ -159,9 +160,10 @@ Partial Class VerEnfermedad
         '
         'PanelEditable
         '
+        Me.PanelEditable.BackColor = System.Drawing.SystemColors.Control
         Me.PanelEditable.Controls.Add(Me.GroupBox2)
         Me.PanelEditable.Controls.Add(Me.Label11)
-        Me.PanelEditable.Location = New System.Drawing.Point(13, 12)
+        Me.PanelEditable.Location = New System.Drawing.Point(12, 13)
         Me.PanelEditable.Name = "PanelEditable"
         Me.PanelEditable.Size = New System.Drawing.Size(772, 315)
         Me.PanelEditable.TabIndex = 2
@@ -181,6 +183,27 @@ Partial Class VerEnfermedad
         Me.GroupBox2.TabIndex = 3
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Información"
+        '
+        'txtSin
+        '
+        Me.txtSin.Location = New System.Drawing.Point(135, 151)
+        Me.txtSin.Name = "txtSin"
+        Me.txtSin.Size = New System.Drawing.Size(560, 24)
+        Me.txtSin.TabIndex = 5
+        '
+        'txtDes
+        '
+        Me.txtDes.Location = New System.Drawing.Point(135, 95)
+        Me.txtDes.Name = "txtDes"
+        Me.txtDes.Size = New System.Drawing.Size(560, 24)
+        Me.txtDes.TabIndex = 4
+        '
+        'txtNombre
+        '
+        Me.txtNombre.Location = New System.Drawing.Point(135, 37)
+        Me.txtNombre.Name = "txtNombre"
+        Me.txtNombre.Size = New System.Drawing.Size(560, 24)
+        Me.txtNombre.TabIndex = 3
         '
         'Label8
         '
@@ -219,36 +242,15 @@ Partial Class VerEnfermedad
         Me.Label11.TabIndex = 2
         Me.Label11.Text = "Medicamento"
         '
-        'txtNombre
-        '
-        Me.txtNombre.Location = New System.Drawing.Point(135, 37)
-        Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(560, 24)
-        Me.txtNombre.TabIndex = 3
-        '
-        'txtDes
-        '
-        Me.txtDes.Location = New System.Drawing.Point(135, 95)
-        Me.txtDes.Name = "txtDes"
-        Me.txtDes.Size = New System.Drawing.Size(560, 24)
-        Me.txtDes.TabIndex = 4
-        '
-        'txtSin
-        '
-        Me.txtSin.Location = New System.Drawing.Point(135, 151)
-        Me.txtSin.Name = "txtSin"
-        Me.txtSin.Size = New System.Drawing.Size(560, 24)
-        Me.txtSin.TabIndex = 5
-        '
         'VerEnfermedad
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 409)
-        Me.Controls.Add(Me.PanelEditable)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.btnEditar)
         Me.Controls.Add(Me.PanelInfo)
+        Me.Controls.Add(Me.PanelEditable)
         Me.Name = "VerEnfermedad"
         Me.Text = "VerEnfermedad"
         Me.PanelInfo.ResumeLayout(False)

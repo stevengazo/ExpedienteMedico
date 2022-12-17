@@ -158,4 +158,34 @@ Public Class MetodosEnfermedad
         End Try
     End Function
 
+    Public Function ActualizarEnfermedad(Enfermedad As Objetos.Enfermedad) As Boolean
+        Try
+            Dim comando As New SqlCommand()
+            comando.CommandText = "[dbo].[EnfermedadActualizar]"
+            comando.CommandType = CommandType.StoredProcedure
+            comando.Connection = conection
+            'Parametros Entrada
+            comando.Parameters.Add("@idEnfermedad", SqlDbType.Int).Value = Enfermedad.idEnfermedad
+            comando.Parameters.Add("@_Nombre", SqlDbType.VarChar, 50).Value = Enfermedad.Nombre
+            comando.Parameters.Add("@_Descripcion", SqlDbType.VarChar, 1000).Value = Enfermedad.Descripcion
+            comando.Parameters.Add("@_Sintomas", SqlDbType.VarChar, 100).Value = Enfermedad.sintomas
+            ' Parametros salida
+            comando.Parameters.Add("@_codigo_error", SqlDbType.Int).Direction = ParameterDirection.Output
+            comando.Parameters.Add("@_mensaje_error", SqlDbType.VarChar, 255).Direction = ParameterDirection.Output
+            comando.Parameters.Add("@Editado", SqlDbType.Bit).Direction = ParameterDirection.Output
+            ' Conexion
+            conection.Open()
+            comando.ExecuteNonQuery()
+            conection.Close()
+            '
+            If comando.Parameters("@Editado").Value Then
+                Return True
+            Else
+                Return False
+            End If
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
+
 End Class
