@@ -38,7 +38,28 @@ Partial Class ModoAdmin
         Me.AgregarMedicamentoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InventarioMedicamentosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CerrarSesiónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.dgvSucursales = New System.Windows.Forms.DataGridView()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.dgvMedicos = New System.Windows.Forms.DataGridView()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.dgvCitas = New System.Windows.Forms.DataGridView()
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.dgvPacientes = New System.Windows.Forms.DataGridView()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblPacientes = New System.Windows.Forms.Label()
+        Me.lblSucursales = New System.Windows.Forms.Label()
+        Me.lblCitas = New System.Windows.Forms.Label()
+        Me.lblMedicos = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
+        CType(Me.dgvSucursales, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox2.SuspendLayout()
+        CType(Me.dgvMedicos, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox3.SuspendLayout()
+        CType(Me.dgvCitas, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox4.SuspendLayout()
+        CType(Me.dgvPacientes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -49,7 +70,7 @@ Partial Class ModoAdmin
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(4, 2, 0, 2)
-        Me.MenuStrip1.Size = New System.Drawing.Size(634, 28)
+        Me.MenuStrip1.Size = New System.Drawing.Size(781, 28)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -141,12 +162,151 @@ Partial Class ModoAdmin
         Me.CerrarSesiónToolStripMenuItem.Size = New System.Drawing.Size(120, 24)
         Me.CerrarSesiónToolStripMenuItem.Text = "Cerrar sesión"
         '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.lblSucursales)
+        Me.GroupBox1.Controls.Add(Me.dgvSucursales)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 77)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(337, 150)
+        Me.GroupBox1.TabIndex = 1
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Sucursales"
+        '
+        'dgvSucursales
+        '
+        Me.dgvSucursales.AllowUserToAddRows = False
+        Me.dgvSucursales.AllowUserToDeleteRows = False
+        Me.dgvSucursales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvSucursales.Location = New System.Drawing.Point(6, 52)
+        Me.dgvSucursales.Name = "dgvSucursales"
+        Me.dgvSucursales.ReadOnly = True
+        Me.dgvSucursales.Size = New System.Drawing.Size(325, 92)
+        Me.dgvSucursales.TabIndex = 0
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.lblMedicos)
+        Me.GroupBox2.Controls.Add(Me.dgvMedicos)
+        Me.GroupBox2.Location = New System.Drawing.Point(349, 233)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(379, 156)
+        Me.GroupBox2.TabIndex = 2
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Médicos Existentes"
+        '
+        'dgvMedicos
+        '
+        Me.dgvMedicos.AllowUserToAddRows = False
+        Me.dgvMedicos.AllowUserToDeleteRows = False
+        Me.dgvMedicos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvMedicos.Location = New System.Drawing.Point(8, 40)
+        Me.dgvMedicos.Name = "dgvMedicos"
+        Me.dgvMedicos.ReadOnly = True
+        Me.dgvMedicos.Size = New System.Drawing.Size(361, 110)
+        Me.dgvMedicos.TabIndex = 1
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.lblCitas)
+        Me.GroupBox3.Controls.Add(Me.dgvCitas)
+        Me.GroupBox3.Location = New System.Drawing.Point(12, 233)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(322, 156)
+        Me.GroupBox3.TabIndex = 3
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "Citas Registradas"
+        '
+        'dgvCitas
+        '
+        Me.dgvCitas.AllowUserToAddRows = False
+        Me.dgvCitas.AllowUserToDeleteRows = False
+        Me.dgvCitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvCitas.Location = New System.Drawing.Point(6, 40)
+        Me.dgvCitas.Name = "dgvCitas"
+        Me.dgvCitas.ReadOnly = True
+        Me.dgvCitas.Size = New System.Drawing.Size(310, 110)
+        Me.dgvCitas.TabIndex = 2
+        '
+        'GroupBox4
+        '
+        Me.GroupBox4.Controls.Add(Me.lblPacientes)
+        Me.GroupBox4.Controls.Add(Me.dgvPacientes)
+        Me.GroupBox4.Location = New System.Drawing.Point(351, 77)
+        Me.GroupBox4.Name = "GroupBox4"
+        Me.GroupBox4.Size = New System.Drawing.Size(377, 156)
+        Me.GroupBox4.TabIndex = 3
+        Me.GroupBox4.TabStop = False
+        Me.GroupBox4.Text = "Pacientes"
+        '
+        'dgvPacientes
+        '
+        Me.dgvPacientes.AllowUserToAddRows = False
+        Me.dgvPacientes.AllowUserToDeleteRows = False
+        Me.dgvPacientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvPacientes.Location = New System.Drawing.Point(6, 52)
+        Me.dgvPacientes.Name = "dgvPacientes"
+        Me.dgvPacientes.ReadOnly = True
+        Me.dgvPacientes.Size = New System.Drawing.Size(365, 98)
+        Me.dgvPacientes.TabIndex = 1
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(18, 46)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(462, 13)
+        Me.Label1.TabIndex = 4
+        Me.Label1.Text = "Este sistema permite el registro de pacientes  y algunos aspectos básicos relacio" &
+    "nados con ellos "
+        '
+        'lblPacientes
+        '
+        Me.lblPacientes.AutoSize = True
+        Me.lblPacientes.Location = New System.Drawing.Point(6, 36)
+        Me.lblPacientes.Name = "lblPacientes"
+        Me.lblPacientes.Size = New System.Drawing.Size(39, 13)
+        Me.lblPacientes.TabIndex = 2
+        Me.lblPacientes.Text = "Label2"
+        '
+        'lblSucursales
+        '
+        Me.lblSucursales.AutoSize = True
+        Me.lblSucursales.Location = New System.Drawing.Point(6, 36)
+        Me.lblSucursales.Name = "lblSucursales"
+        Me.lblSucursales.Size = New System.Drawing.Size(39, 13)
+        Me.lblSucursales.TabIndex = 3
+        Me.lblSucursales.Text = "Label3"
+        '
+        'lblCitas
+        '
+        Me.lblCitas.AutoSize = True
+        Me.lblCitas.Location = New System.Drawing.Point(6, 24)
+        Me.lblCitas.Name = "lblCitas"
+        Me.lblCitas.Size = New System.Drawing.Size(39, 13)
+        Me.lblCitas.TabIndex = 4
+        Me.lblCitas.Text = "Label4"
+        '
+        'lblMedicos
+        '
+        Me.lblMedicos.AutoSize = True
+        Me.lblMedicos.Location = New System.Drawing.Point(8, 24)
+        Me.lblMedicos.Name = "lblMedicos"
+        Me.lblMedicos.Size = New System.Drawing.Size(39, 13)
+        Me.lblMedicos.TabIndex = 5
+        Me.lblMedicos.Text = "Label5"
+        '
         'ModoAdmin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightBlue
-        Me.ClientSize = New System.Drawing.Size(634, 474)
+        Me.ClientSize = New System.Drawing.Size(781, 438)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.GroupBox4)
+        Me.Controls.Add(Me.GroupBox3)
+        Me.Controls.Add(Me.GroupBox2)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
@@ -156,6 +316,18 @@ Partial Class ModoAdmin
         Me.Text = "Modo Administrador"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
+        CType(Me.dgvSucursales, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
+        CType(Me.dgvMedicos, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox3.ResumeLayout(False)
+        Me.GroupBox3.PerformLayout()
+        CType(Me.dgvCitas, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox4.ResumeLayout(False)
+        Me.GroupBox4.PerformLayout()
+        CType(Me.dgvPacientes, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -176,4 +348,17 @@ Partial Class ModoAdmin
     Friend WithEvents VerListaDeMedicamentosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AgregarMedicamentoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents InventarioMedicamentosToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents dgvSucursales As DataGridView
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents dgvMedicos As DataGridView
+    Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents dgvCitas As DataGridView
+    Friend WithEvents GroupBox4 As GroupBox
+    Friend WithEvents dgvPacientes As DataGridView
+    Friend WithEvents Label1 As Label
+    Friend WithEvents lblSucursales As Label
+    Friend WithEvents lblMedicos As Label
+    Friend WithEvents lblCitas As Label
+    Friend WithEvents lblPacientes As Label
 End Class
