@@ -55,7 +55,7 @@ Public Class Inventario
             _conexion.Close()
             For Each row In data.Tables(0).Rows
                 Dim tmp As New Objetos.InventarioMedico()
-                tmp.IdMedicamento = Integer.Parse(row(0))
+                tmp.idInventario = row(0)
                 tmp.NumLote = row(1)
                 tmp.FechaIngreso = Date.Parse(row(2))
                 tmp.FechaVencimiento = Date.Parse(row(3))
