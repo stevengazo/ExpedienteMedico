@@ -53,9 +53,10 @@ Partial Class VerEnfermedad
         Me.PanelInfo.BackColor = System.Drawing.SystemColors.Control
         Me.PanelInfo.Controls.Add(Me.GroupBox1)
         Me.PanelInfo.Controls.Add(Me.Label1)
-        Me.PanelInfo.Location = New System.Drawing.Point(13, 13)
+        Me.PanelInfo.Location = New System.Drawing.Point(10, 11)
+        Me.PanelInfo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PanelInfo.Name = "PanelInfo"
-        Me.PanelInfo.Size = New System.Drawing.Size(775, 318)
+        Me.PanelInfo.Size = New System.Drawing.Size(581, 258)
         Me.PanelInfo.TabIndex = 0
         '
         'GroupBox1
@@ -67,9 +68,11 @@ Partial Class VerEnfermedad
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(26, 67)
+        Me.GroupBox1.Location = New System.Drawing.Point(20, 54)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(728, 222)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Size = New System.Drawing.Size(546, 180)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Información"
@@ -77,54 +80,60 @@ Partial Class VerEnfermedad
         'lblDes
         '
         Me.lblDes.AutoSize = True
-        Me.lblDes.Location = New System.Drawing.Point(120, 101)
+        Me.lblDes.Location = New System.Drawing.Point(90, 82)
+        Me.lblDes.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblDes.Name = "lblDes"
-        Me.lblDes.Size = New System.Drawing.Size(104, 18)
+        Me.lblDes.Size = New System.Drawing.Size(91, 15)
         Me.lblDes.TabIndex = 5
         Me.lblDes.Text = "____________"
         '
         'lblSin
         '
         Me.lblSin.AutoSize = True
-        Me.lblSin.Location = New System.Drawing.Point(120, 157)
+        Me.lblSin.Location = New System.Drawing.Point(90, 128)
+        Me.lblSin.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblSin.Name = "lblSin"
-        Me.lblSin.Size = New System.Drawing.Size(104, 18)
+        Me.lblSin.Size = New System.Drawing.Size(91, 15)
         Me.lblSin.TabIndex = 4
         Me.lblSin.Text = "____________"
         '
         'lblNombre
         '
         Me.lblNombre.AutoSize = True
-        Me.lblNombre.Location = New System.Drawing.Point(120, 46)
+        Me.lblNombre.Location = New System.Drawing.Point(90, 37)
+        Me.lblNombre.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblNombre.Name = "lblNombre"
-        Me.lblNombre.Size = New System.Drawing.Size(104, 18)
+        Me.lblNombre.Size = New System.Drawing.Size(91, 15)
         Me.lblNombre.TabIndex = 3
         Me.lblNombre.Text = "____________"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(21, 101)
+        Me.Label4.Location = New System.Drawing.Point(16, 82)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(95, 18)
+        Me.Label4.Size = New System.Drawing.Size(78, 15)
         Me.Label4.TabIndex = 2
         Me.Label4.Text = "Descripción: "
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(21, 157)
+        Me.Label3.Location = New System.Drawing.Point(16, 128)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(75, 18)
+        Me.Label3.Size = New System.Drawing.Size(62, 15)
         Me.Label3.TabIndex = 1
         Me.Label3.Text = "Síntomas:"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(21, 46)
+        Me.Label2.Location = New System.Drawing.Point(16, 37)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(70, 18)
+        Me.Label2.Size = New System.Drawing.Size(58, 15)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Nombre: "
         '
@@ -132,18 +141,20 @@ Partial Class VerEnfermedad
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(21, 18)
+        Me.Label1.Location = New System.Drawing.Point(16, 15)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(145, 29)
+        Me.Label1.Size = New System.Drawing.Size(114, 24)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Enfermedad"
         '
         'btnEditar
         '
         Me.btnEditar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEditar.Location = New System.Drawing.Point(24, 360)
+        Me.btnEditar.Location = New System.Drawing.Point(18, 292)
+        Me.btnEditar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnEditar.Name = "btnEditar"
-        Me.btnEditar.Size = New System.Drawing.Size(199, 39)
+        Me.btnEditar.Size = New System.Drawing.Size(149, 32)
         Me.btnEditar.TabIndex = 1
         Me.btnEditar.Text = "Editar información"
         Me.btnEditar.UseVisualStyleBackColor = True
@@ -151,9 +162,10 @@ Partial Class VerEnfermedad
         'Button2
         '
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(238, 360)
+        Me.Button2.Location = New System.Drawing.Point(178, 292)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(199, 39)
+        Me.Button2.Size = New System.Drawing.Size(149, 32)
         Me.Button2.TabIndex = 2
         Me.Button2.Text = "Cancelar"
         Me.Button2.UseVisualStyleBackColor = True
@@ -163,9 +175,10 @@ Partial Class VerEnfermedad
         Me.PanelEditable.BackColor = System.Drawing.SystemColors.Control
         Me.PanelEditable.Controls.Add(Me.GroupBox2)
         Me.PanelEditable.Controls.Add(Me.Label11)
-        Me.PanelEditable.Location = New System.Drawing.Point(12, 13)
+        Me.PanelEditable.Location = New System.Drawing.Point(9, 11)
+        Me.PanelEditable.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PanelEditable.Name = "PanelEditable"
-        Me.PanelEditable.Size = New System.Drawing.Size(772, 315)
+        Me.PanelEditable.Size = New System.Drawing.Size(579, 256)
         Me.PanelEditable.TabIndex = 2
         '
         'GroupBox2
@@ -177,58 +190,66 @@ Partial Class VerEnfermedad
         Me.GroupBox2.Controls.Add(Me.Label9)
         Me.GroupBox2.Controls.Add(Me.Label10)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(25, 71)
+        Me.GroupBox2.Location = New System.Drawing.Point(19, 58)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(728, 222)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox2.Size = New System.Drawing.Size(546, 180)
         Me.GroupBox2.TabIndex = 3
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Información"
         '
         'txtSin
         '
-        Me.txtSin.Location = New System.Drawing.Point(135, 151)
+        Me.txtSin.Location = New System.Drawing.Point(101, 123)
+        Me.txtSin.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtSin.Name = "txtSin"
-        Me.txtSin.Size = New System.Drawing.Size(560, 24)
+        Me.txtSin.Size = New System.Drawing.Size(421, 21)
         Me.txtSin.TabIndex = 5
         '
         'txtDes
         '
-        Me.txtDes.Location = New System.Drawing.Point(135, 95)
+        Me.txtDes.Location = New System.Drawing.Point(101, 77)
+        Me.txtDes.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtDes.Name = "txtDes"
-        Me.txtDes.Size = New System.Drawing.Size(560, 24)
+        Me.txtDes.Size = New System.Drawing.Size(421, 21)
         Me.txtDes.TabIndex = 4
         '
         'txtNombre
         '
-        Me.txtNombre.Location = New System.Drawing.Point(135, 37)
+        Me.txtNombre.Location = New System.Drawing.Point(101, 30)
+        Me.txtNombre.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(560, 24)
+        Me.txtNombre.Size = New System.Drawing.Size(421, 21)
         Me.txtNombre.TabIndex = 3
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(21, 101)
+        Me.Label8.Location = New System.Drawing.Point(16, 82)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(95, 18)
+        Me.Label8.Size = New System.Drawing.Size(78, 15)
         Me.Label8.TabIndex = 2
         Me.Label8.Text = "Descripción: "
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(21, 157)
+        Me.Label9.Location = New System.Drawing.Point(16, 128)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(75, 18)
+        Me.Label9.Size = New System.Drawing.Size(62, 15)
         Me.Label9.TabIndex = 1
         Me.Label9.Text = "Síntomas:"
         '
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(21, 46)
+        Me.Label10.Location = New System.Drawing.Point(16, 37)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(70, 18)
+        Me.Label10.Size = New System.Drawing.Size(58, 15)
         Me.Label10.TabIndex = 0
         Me.Label10.Text = "Nombre: "
         '
@@ -236,22 +257,27 @@ Partial Class VerEnfermedad
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(20, 22)
+        Me.Label11.Location = New System.Drawing.Point(15, 18)
+        Me.Label11.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(159, 29)
+        Me.Label11.Size = New System.Drawing.Size(125, 24)
         Me.Label11.TabIndex = 2
         Me.Label11.Text = "Medicamento"
         '
         'VerEnfermedad
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 409)
+        Me.ClientSize = New System.Drawing.Size(600, 332)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.btnEditar)
         Me.Controls.Add(Me.PanelInfo)
         Me.Controls.Add(Me.PanelEditable)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "VerEnfermedad"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "VerEnfermedad"
         Me.PanelInfo.ResumeLayout(False)
         Me.PanelInfo.PerformLayout()

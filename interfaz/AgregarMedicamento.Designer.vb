@@ -125,6 +125,7 @@ Partial Class AgregarMedicamento
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(5, 3, 5, 3)
         Me.Name = "AgregarMedicamento"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Agregar Medicamento"
         Me.ResumeLayout(False)
         Me.PerformLayout()

@@ -3,15 +3,15 @@
         AgregarMedico.Show()
     End Sub
 
-    Private Sub MédicosToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles MédicosToolStripMenuItem1.Click
+    Private Sub MédicosToolStripMenuItem1_Click(sender As Object, e As EventArgs)
         VerMedicos.Show()
     End Sub
 
-    Private Sub MédicosToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles MédicosToolStripMenuItem2.Click
+    Private Sub MédicosToolStripMenuItem2_Click(sender As Object, e As EventArgs)
         VerMedicos.Show()
     End Sub
 
-    Private Sub MédicosToolStripMenuItem3_Click(sender As Object, e As EventArgs) Handles MédicosToolStripMenuItem3.Click
+    Private Sub MédicosToolStripMenuItem3_Click(sender As Object, e As EventArgs)
         VerMedicos.Show()
     End Sub
 
@@ -28,15 +28,15 @@
 
     End Sub
 
-    Private Sub InventarioDeMedicamentosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InventarioDeMedicamentosToolStripMenuItem.Click
+    Private Sub InventarioDeMedicamentosToolStripMenuItem_Click(sender As Object, e As EventArgs)
         VerMedicamentos.Show()
     End Sub
 
-    Private Sub InventarioDeMedicamentosToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles InventarioDeMedicamentosToolStripMenuItem1.Click
+    Private Sub InventarioDeMedicamentosToolStripMenuItem1_Click(sender As Object, e As EventArgs)
         VerMedicamentos.Show()
     End Sub
 
-    Private Sub InventarioDeMedicamentosToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles InventarioDeMedicamentosToolStripMenuItem2.Click
+    Private Sub InventarioDeMedicamentosToolStripMenuItem2_Click(sender As Object, e As EventArgs)
         VerMedicamentos.Show()
     End Sub
 
@@ -64,16 +64,16 @@
 
     End Sub
 
-    Private Sub PacientesToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles PacientesToolStripMenuItem1.Click
+    Private Sub PacientesToolStripMenuItem1_Click(sender As Object, e As EventArgs)
         ModoMedicos.ShowDialog()
 
     End Sub
 
-    Private Sub PacientesToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles PacientesToolStripMenuItem2.Click
+    Private Sub PacientesToolStripMenuItem2_Click(sender As Object, e As EventArgs)
         ModoMedicos.ShowDialog()
     End Sub
 
-    Private Sub PacientesToolStripMenuItem3_Click(sender As Object, e As EventArgs) Handles PacientesToolStripMenuItem3.Click
+    Private Sub PacientesToolStripMenuItem3_Click(sender As Object, e As EventArgs)
         ModoMedicos.ShowDialog()
     End Sub
 
@@ -83,5 +83,9 @@
 
     Private Sub InventarioMedicamentosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InventarioMedicamentosToolStripMenuItem.Click
         VerInventario.ShowDialog()
+    End Sub
+
+    Private Sub CerrarSesiónToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CerrarSesiónToolStripMenuItem.Click
+        Me.Close()
     End Sub
 End Class

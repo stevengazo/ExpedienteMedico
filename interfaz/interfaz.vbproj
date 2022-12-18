@@ -186,6 +186,18 @@
     <Compile Include="VerInventario.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="VerInventarioMedicamento.Designer.vb">
+      <DependentUpon>VerInventarioMedicamento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VerInventarioMedicamento.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerMedicamento.Designer.vb">
+      <DependentUpon>VerMedicamento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VerMedicamento.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="VerMedicamentos.Designer.vb">
       <DependentUpon>VerMedicamentos.vb</DependentUpon>
     </Compile>
@@ -271,6 +283,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VerInventario.resx">
       <DependentUpon>VerInventario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerInventarioMedicamento.resx">
+      <DependentUpon>VerInventarioMedicamento.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerMedicamento.resx">
+      <DependentUpon>VerMedicamento.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VerMedicamentos.resx">
       <DependentUpon>VerMedicamentos.vb</DependentUpon>

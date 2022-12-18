@@ -22,25 +22,27 @@ Partial Class VerExpediente
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.txtFechaNacimiento = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.txtapellidos = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.txtnombre = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.txtIdentificacion = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.dgvRegistrosMedicos = New System.Windows.Forms.DataGridView()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.btnGenerarRegistro = New System.Windows.Forms.Button()
         Me.PanelGeneral = New System.Windows.Forms.Panel()
         Me.PanelAgregarRegistro = New System.Windows.Forms.Panel()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.cbMedico = New System.Windows.Forms.ComboBox()
         Me.btnCancelarAgregar = New System.Windows.Forms.Button()
         Me.btnAgregarRegistro = New System.Windows.Forms.Button()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.cbSucursal = New System.Windows.Forms.ComboBox()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.lblFechaNacimiento = New System.Windows.Forms.Label()
+        Me.lblApellidos = New System.Windows.Forms.Label()
+        Me.lblNombre = New System.Windows.Forms.Label()
+        Me.lblDNI = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.PanelRegistroInfo = New System.Windows.Forms.Panel()
         Me.btnEliminarRegistro = New System.Windows.Forms.Button()
         Me.btnCerrar = New System.Windows.Forms.Button()
@@ -62,12 +64,12 @@ Partial Class VerExpediente
         Me.Label7 = New System.Windows.Forms.Label()
         Me.lblNumeroRegistro = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.dgvRegistrosMedicos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
         Me.PanelGeneral.SuspendLayout()
         Me.PanelAgregarRegistro.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
         Me.PanelRegistroInfo.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         Me.GroupBox8.SuspendLayout()
@@ -75,93 +77,12 @@ Partial Class VerExpediente
         Me.GroupBox5.SuspendLayout()
         Me.SuspendLayout()
         '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Controls.Add(Me.txtFechaNacimiento)
-        Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.txtapellidos)
-        Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.txtnombre)
-        Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Controls.Add(Me.txtIdentificacion)
-        Me.GroupBox1.Location = New System.Drawing.Point(19, 23)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(265, 139)
-        Me.GroupBox1.TabIndex = 0
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Paciente"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(6, 101)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(93, 13)
-        Me.Label4.TabIndex = 7
-        Me.Label4.Text = "Fecha Nacimiento"
-        '
-        'txtFechaNacimiento
-        '
-        Me.txtFechaNacimiento.Location = New System.Drawing.Point(113, 98)
-        Me.txtFechaNacimiento.Name = "txtFechaNacimiento"
-        Me.txtFechaNacimiento.Size = New System.Drawing.Size(146, 20)
-        Me.txtFechaNacimiento.TabIndex = 6
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(6, 75)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(49, 13)
-        Me.Label3.TabIndex = 5
-        Me.Label3.Text = "Apellidos"
-        '
-        'txtapellidos
-        '
-        Me.txtapellidos.Location = New System.Drawing.Point(113, 72)
-        Me.txtapellidos.Name = "txtapellidos"
-        Me.txtapellidos.Size = New System.Drawing.Size(146, 20)
-        Me.txtapellidos.TabIndex = 4
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(6, 49)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(44, 13)
-        Me.Label2.TabIndex = 3
-        Me.Label2.Text = "Nombre"
-        '
-        'txtnombre
-        '
-        Me.txtnombre.Location = New System.Drawing.Point(113, 46)
-        Me.txtnombre.Name = "txtnombre"
-        Me.txtnombre.Size = New System.Drawing.Size(146, 20)
-        Me.txtnombre.TabIndex = 2
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(6, 23)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(70, 13)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Identificación"
-        '
-        'txtIdentificacion
-        '
-        Me.txtIdentificacion.Location = New System.Drawing.Point(113, 20)
-        Me.txtIdentificacion.Name = "txtIdentificacion"
-        Me.txtIdentificacion.Size = New System.Drawing.Size(146, 20)
-        Me.txtIdentificacion.TabIndex = 0
-        '
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.dgvRegistrosMedicos)
         Me.GroupBox2.Location = New System.Drawing.Point(290, 23)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(505, 384)
+        Me.GroupBox2.Size = New System.Drawing.Size(939, 384)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Registro Médico"
@@ -174,7 +95,7 @@ Partial Class VerExpediente
         Me.dgvRegistrosMedicos.Location = New System.Drawing.Point(6, 19)
         Me.dgvRegistrosMedicos.Name = "dgvRegistrosMedicos"
         Me.dgvRegistrosMedicos.ReadOnly = True
-        Me.dgvRegistrosMedicos.Size = New System.Drawing.Size(493, 359)
+        Me.dgvRegistrosMedicos.Size = New System.Drawing.Size(927, 359)
         Me.dgvRegistrosMedicos.TabIndex = 0
         '
         'GroupBox3
@@ -202,25 +123,44 @@ Partial Class VerExpediente
         Me.PanelGeneral.Controls.Add(Me.GroupBox1)
         Me.PanelGeneral.Controls.Add(Me.GroupBox2)
         Me.PanelGeneral.Controls.Add(Me.GroupBox3)
-        Me.PanelGeneral.Location = New System.Drawing.Point(1, 1)
+        Me.PanelGeneral.Location = New System.Drawing.Point(1, 12)
         Me.PanelGeneral.Name = "PanelGeneral"
-        Me.PanelGeneral.Size = New System.Drawing.Size(819, 426)
+        Me.PanelGeneral.Size = New System.Drawing.Size(1232, 415)
         Me.PanelGeneral.TabIndex = 4
         '
         'PanelAgregarRegistro
         '
+        Me.PanelAgregarRegistro.Controls.Add(Me.Label6)
+        Me.PanelAgregarRegistro.Controls.Add(Me.cbMedico)
         Me.PanelAgregarRegistro.Controls.Add(Me.btnCancelarAgregar)
         Me.PanelAgregarRegistro.Controls.Add(Me.btnAgregarRegistro)
         Me.PanelAgregarRegistro.Controls.Add(Me.Label11)
         Me.PanelAgregarRegistro.Controls.Add(Me.cbSucursal)
         Me.PanelAgregarRegistro.Location = New System.Drawing.Point(19, 226)
         Me.PanelAgregarRegistro.Name = "PanelAgregarRegistro"
-        Me.PanelAgregarRegistro.Size = New System.Drawing.Size(265, 75)
+        Me.PanelAgregarRegistro.Size = New System.Drawing.Size(265, 128)
         Me.PanelAgregarRegistro.TabIndex = 3
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(6, 43)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(39, 13)
+        Me.Label6.TabIndex = 12
+        Me.Label6.Text = "Doctor"
+        '
+        'cbMedico
+        '
+        Me.cbMedico.FormattingEnabled = True
+        Me.cbMedico.Location = New System.Drawing.Point(113, 40)
+        Me.cbMedico.Name = "cbMedico"
+        Me.cbMedico.Size = New System.Drawing.Size(140, 21)
+        Me.cbMedico.TabIndex = 11
         '
         'btnCancelarAgregar
         '
-        Me.btnCancelarAgregar.Location = New System.Drawing.Point(142, 40)
+        Me.btnCancelarAgregar.Location = New System.Drawing.Point(136, 67)
         Me.btnCancelarAgregar.Name = "btnCancelarAgregar"
         Me.btnCancelarAgregar.Size = New System.Drawing.Size(111, 23)
         Me.btnCancelarAgregar.TabIndex = 10
@@ -229,7 +169,7 @@ Partial Class VerExpediente
         '
         'btnAgregarRegistro
         '
-        Me.btnAgregarRegistro.Location = New System.Drawing.Point(9, 40)
+        Me.btnAgregarRegistro.Location = New System.Drawing.Point(3, 67)
         Me.btnAgregarRegistro.Name = "btnAgregarRegistro"
         Me.btnAgregarRegistro.Size = New System.Drawing.Size(111, 23)
         Me.btnAgregarRegistro.TabIndex = 9
@@ -253,12 +193,101 @@ Partial Class VerExpediente
         Me.cbSucursal.Size = New System.Drawing.Size(140, 21)
         Me.cbSucursal.TabIndex = 1
         '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.lblFechaNacimiento)
+        Me.GroupBox1.Controls.Add(Me.lblApellidos)
+        Me.GroupBox1.Controls.Add(Me.lblNombre)
+        Me.GroupBox1.Controls.Add(Me.lblDNI)
+        Me.GroupBox1.Controls.Add(Me.Label4)
+        Me.GroupBox1.Controls.Add(Me.Label3)
+        Me.GroupBox1.Controls.Add(Me.Label2)
+        Me.GroupBox1.Controls.Add(Me.Label1)
+        Me.GroupBox1.Location = New System.Drawing.Point(19, 23)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(265, 139)
+        Me.GroupBox1.TabIndex = 0
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Paciente"
+        '
+        'lblFechaNacimiento
+        '
+        Me.lblFechaNacimiento.AutoSize = True
+        Me.lblFechaNacimiento.Location = New System.Drawing.Point(127, 101)
+        Me.lblFechaNacimiento.Name = "lblFechaNacimiento"
+        Me.lblFechaNacimiento.Size = New System.Drawing.Size(93, 13)
+        Me.lblFechaNacimiento.TabIndex = 11
+        Me.lblFechaNacimiento.Text = "Fecha Nacimiento"
+        '
+        'lblApellidos
+        '
+        Me.lblApellidos.AutoSize = True
+        Me.lblApellidos.Location = New System.Drawing.Point(127, 75)
+        Me.lblApellidos.Name = "lblApellidos"
+        Me.lblApellidos.Size = New System.Drawing.Size(93, 13)
+        Me.lblApellidos.TabIndex = 10
+        Me.lblApellidos.Text = "Fecha Nacimiento"
+        '
+        'lblNombre
+        '
+        Me.lblNombre.AutoSize = True
+        Me.lblNombre.Location = New System.Drawing.Point(127, 46)
+        Me.lblNombre.Name = "lblNombre"
+        Me.lblNombre.Size = New System.Drawing.Size(93, 13)
+        Me.lblNombre.TabIndex = 9
+        Me.lblNombre.Text = "Fecha Nacimiento"
+        '
+        'lblDNI
+        '
+        Me.lblDNI.AutoSize = True
+        Me.lblDNI.Location = New System.Drawing.Point(127, 23)
+        Me.lblDNI.Name = "lblDNI"
+        Me.lblDNI.Size = New System.Drawing.Size(93, 13)
+        Me.lblDNI.TabIndex = 8
+        Me.lblDNI.Text = "Fecha Nacimiento"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(6, 101)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(93, 13)
+        Me.Label4.TabIndex = 7
+        Me.Label4.Text = "Fecha Nacimiento"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(6, 75)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(49, 13)
+        Me.Label3.TabIndex = 5
+        Me.Label3.Text = "Apellidos"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(6, 49)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(44, 13)
+        Me.Label2.TabIndex = 3
+        Me.Label2.Text = "Nombre"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(6, 23)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(70, 13)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "Identificación"
+        '
         'PanelRegistroInfo
         '
         Me.PanelRegistroInfo.Controls.Add(Me.btnEliminarRegistro)
         Me.PanelRegistroInfo.Controls.Add(Me.btnCerrar)
         Me.PanelRegistroInfo.Controls.Add(Me.GroupBox4)
-        Me.PanelRegistroInfo.Location = New System.Drawing.Point(410, 1)
+        Me.PanelRegistroInfo.Location = New System.Drawing.Point(826, 1)
         Me.PanelRegistroInfo.Name = "PanelRegistroInfo"
         Me.PanelRegistroInfo.Size = New System.Drawing.Size(407, 426)
         Me.PanelRegistroInfo.TabIndex = 5
@@ -469,21 +498,21 @@ Partial Class VerExpediente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(829, 433)
+        Me.ClientSize = New System.Drawing.Size(1245, 433)
         Me.Controls.Add(Me.PanelGeneral)
         Me.Controls.Add(Me.PanelRegistroInfo)
         Me.Name = "VerExpediente"
         Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Ver Expediente"
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         CType(Me.dgvRegistrosMedicos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox3.ResumeLayout(False)
         Me.PanelGeneral.ResumeLayout(False)
         Me.PanelAgregarRegistro.ResumeLayout(False)
         Me.PanelAgregarRegistro.PerformLayout()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.PanelRegistroInfo.ResumeLayout(False)
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
@@ -496,16 +525,6 @@ Partial Class VerExpediente
         Me.ResumeLayout(False)
 
     End Sub
-
-    Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents Label1 As Label
-    Friend WithEvents txtIdentificacion As TextBox
-    Friend WithEvents Label4 As Label
-    Friend WithEvents txtFechaNacimiento As TextBox
-    Friend WithEvents Label3 As Label
-    Friend WithEvents txtapellidos As TextBox
-    Friend WithEvents Label2 As Label
-    Friend WithEvents txtnombre As TextBox
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents dgvRegistrosMedicos As DataGridView
     Friend WithEvents GroupBox3 As GroupBox
@@ -537,4 +556,15 @@ Partial Class VerExpediente
     Friend WithEvents GroupBox5 As GroupBox
     Friend WithEvents btnEliminarCita As Button
     Friend WithEvents GroupBox6 As GroupBox
+    Friend WithEvents Label6 As Label
+    Friend WithEvents cbMedico As ComboBox
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents lblFechaNacimiento As Label
+    Friend WithEvents lblApellidos As Label
+    Friend WithEvents lblNombre As Label
+    Friend WithEvents lblDNI As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label1 As Label
 End Class

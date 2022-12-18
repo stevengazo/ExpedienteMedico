@@ -121,9 +121,9 @@ Public Class VerInventario
                 dgvInventario.Columns.Add(buttonVer)
 
                 Dim buttonVerInvent As New DataGridViewButtonColumn
-                buttonVerInvent.HeaderText = "Inventario"
-                buttonVerInvent.Text = "Inventario"
-                buttonVerInvent.Name = "btnVerInventario"
+                buttonVerInvent.HeaderText = "Medicamento"
+                buttonVerInvent.Text = "Medicamento"
+                buttonVerInvent.Name = "btnVerMedicamento"
                 buttonVerInvent.UseColumnTextForButtonValue = True
                 dgvInventario.Columns.Add(buttonVerInvent)
 
@@ -149,11 +149,15 @@ Public Class VerInventario
                                   Select reg).FirstOrDefault()
         Select Case e.ColumnIndex
             ' ver inventario
-            Case 8
 
+            Case 8
+                TEMPORAL.InventarioMedicamento = registroInventario
+                TEMPORAL.Sucursal = New Objetos.Sucursal()
+                VerInventarioMedicamento.ShowDialog()
             ' ver medicamento
             Case 9
-
+                TEMPORAL.Medicamento = registroInventario.Medicamento
+                VerMedicamento.ShowDialog()
             ' Borrar
             Case 10
                 Dim resultado = MessageBox.Show("Deseas borrar este registro de inventario?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)

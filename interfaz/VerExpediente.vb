@@ -115,6 +115,10 @@ Public Class VerExpediente
         PanelAgregarRegistro.Hide()
         PanelRegistroInfo.Show()
         Paciente = TEMPORAL.Paciente
+        lblApellidos.Text = Paciente.Apellidos
+        lblNombre.Text = Paciente.Nombre
+        lblDNI.Text = Paciente.Identificacion
+        lblFechaNacimiento.Text = Paciente.FechaNacimiento.ToString()
         Dim NegocioComun As New Negocio.Comunes()
         ListaSucursales = NegocioComun.ListaSucursales()
         For Each item As Objetos.Sucursal In ListaSucursales

@@ -27,7 +27,12 @@ Public Class PacienteNegocio
     ''' 
     Public Function ListaPacientes() As List(Of Objetos.Paciente)
         Try
-            Return tmpNegocio.ObtenerListaPacientes()
+            Dim lista = tmpNegocio.ObtenerListaPacientes()
+            Dim listaOrdenada = (From pac In lista
+                                 Order By pac.Apellidos Descending
+                                 Select pac
+            ).ToList()
+            Return listaOrdenada
         Catch ex As Exception
             Throw New Exception(ex.Message)
             Return New List(Of Objetos.Paciente)

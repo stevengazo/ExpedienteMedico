@@ -13,7 +13,11 @@ Public Class Medicamento
 
     Public Function ListarMedicamentos() As List(Of Objetos.Medicamento)
         Try
-            Return _Medicamento.ListarRegistros()
+            Dim lista = _Medicamento.ListarRegistros()
+            Dim listaOrdenada = (From medi In lista
+                                 Order By medi.Nombre
+                                 Select medi).ToList()
+            Return listaOrdenada
         Catch ex As Exception
             Return New List(Of Objetos.Medicamento)
         End Try

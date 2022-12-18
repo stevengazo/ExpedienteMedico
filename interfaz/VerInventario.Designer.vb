@@ -77,12 +77,11 @@ Partial Class VerInventario
         '
         'PanelGeneral
         '
-        Me.PanelGeneral.Controls.Add(Me.GroupBox3)
         Me.PanelGeneral.Controls.Add(Me.GroupBox2)
         Me.PanelGeneral.Controls.Add(Me.GroupBox1)
         Me.PanelGeneral.Location = New System.Drawing.Point(3, 12)
         Me.PanelGeneral.Name = "PanelGeneral"
-        Me.PanelGeneral.Size = New System.Drawing.Size(776, 426)
+        Me.PanelGeneral.Size = New System.Drawing.Size(1113, 426)
         Me.PanelGeneral.TabIndex = 0
         '
         'GroupBox3
@@ -90,9 +89,9 @@ Partial Class VerInventario
         Me.GroupBox3.Controls.Add(Me.dgvInventario)
         Me.GroupBox3.Controls.Add(Me.lblSucursalNombre)
         Me.GroupBox3.Controls.Add(Me.Label9)
-        Me.GroupBox3.Location = New System.Drawing.Point(249, 4)
+        Me.GroupBox3.Location = New System.Drawing.Point(252, 12)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(524, 419)
+        Me.GroupBox3.Size = New System.Drawing.Size(861, 419)
         Me.GroupBox3.TabIndex = 2
         Me.GroupBox3.TabStop = False
         '
@@ -101,7 +100,7 @@ Partial Class VerInventario
         Me.dgvInventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvInventario.Location = New System.Drawing.Point(6, 37)
         Me.dgvInventario.Name = "dgvInventario"
-        Me.dgvInventario.Size = New System.Drawing.Size(512, 376)
+        Me.dgvInventario.Size = New System.Drawing.Size(849, 376)
         Me.dgvInventario.TabIndex = 2
         '
         'lblSucursalNombre
@@ -484,10 +483,12 @@ Partial Class VerInventario
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(1128, 450)
+        Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.PanelGeneral)
         Me.Controls.Add(Me.PanelActualizar)
         Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "VerInventario"
         Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

@@ -11,7 +11,7 @@ Public Class Sucursal
             Dim data As New DataSet()
             Dim listaSucursales As New List(Of Objetos.Sucursal)
             Dim comando As New SqlCommand()
-            comando.CommandText = "select * from Sucursal"
+            comando.CommandText = "select * from Sucursal where idSucursal > 0"
             comando.CommandType = CommandType.Text
             comando.Connection = conexion
             conexion.Open()

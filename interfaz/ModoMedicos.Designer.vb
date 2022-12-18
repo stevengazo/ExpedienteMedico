@@ -38,7 +38,7 @@ Partial Class ModoMedicos
         Me.Panel1.Controls.Add(Me.dgListaPacientes)
         Me.Panel1.Location = New System.Drawing.Point(2, 73)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(920, 430)
+        Me.Panel1.Size = New System.Drawing.Size(1331, 474)
         Me.Panel1.TabIndex = 0
         '
         'Label2
@@ -48,7 +48,7 @@ Partial Class ModoMedicos
         Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label2.Location = New System.Drawing.Point(19, 9)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(307, 18)
+        Me.Label2.Size = New System.Drawing.Size(250, 15)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Información de pacientes registrados"
         '
@@ -62,7 +62,7 @@ Partial Class ModoMedicos
         Me.dgListaPacientes.ReadOnly = True
         Me.dgListaPacientes.RowHeadersWidth = 51
         Me.dgListaPacientes.RowTemplate.Height = 24
-        Me.dgListaPacientes.Size = New System.Drawing.Size(900, 376)
+        Me.dgListaPacientes.Size = New System.Drawing.Size(1315, 436)
         Me.dgListaPacientes.TabIndex = 0
         '
         'Label1
@@ -70,18 +70,18 @@ Partial Class ModoMedicos
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Mongolian Baiti", 28.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label1.Location = New System.Drawing.Point(248, 9)
+        Me.Label1.Location = New System.Drawing.Point(577, 20)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(422, 50)
+        Me.Label1.Size = New System.Drawing.Size(343, 40)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Módulo de Médicos"
         '
         'ModoMedicos
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 14.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 11.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightBlue
-        Me.ClientSize = New System.Drawing.Size(921, 522)
+        Me.ClientSize = New System.Drawing.Size(1338, 559)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("Mongolian Baiti", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))

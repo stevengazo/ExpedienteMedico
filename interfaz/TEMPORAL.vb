@@ -14,5 +14,6 @@
     Public RegistroTemp As Objetos.Registro
 
     Public Enfermedad As Objetos.Enfermedad
-
+    Public Medicamento As Objetos.Medicamento
+    Public InventarioMedicamento As Objetos.InventarioMedico
 End Module

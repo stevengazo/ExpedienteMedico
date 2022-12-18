@@ -68,7 +68,10 @@ Partial Class VerMedicos
         Me.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(8)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "VerMedicos"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Médicos"
         CType(Me.dgListaMedicos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)

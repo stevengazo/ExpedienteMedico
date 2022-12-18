@@ -37,17 +37,19 @@ Partial Class AgregarEnfermedad
         'txtDescripcionEnfermedad
         '
         Me.txtDescripcionEnfermedad.Font = New System.Drawing.Font("Mongolian Baiti", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDescripcionEnfermedad.Location = New System.Drawing.Point(211, 168)
+        Me.txtDescripcionEnfermedad.Location = New System.Drawing.Point(158, 136)
+        Me.txtDescripcionEnfermedad.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtDescripcionEnfermedad.Name = "txtDescripcionEnfermedad"
-        Me.txtDescripcionEnfermedad.Size = New System.Drawing.Size(420, 28)
+        Me.txtDescripcionEnfermedad.Size = New System.Drawing.Size(316, 24)
         Me.txtDescripcionEnfermedad.TabIndex = 15
         '
         'txtNombreEnfermedad
         '
         Me.txtNombreEnfermedad.Font = New System.Drawing.Font("Mongolian Baiti", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNombreEnfermedad.Location = New System.Drawing.Point(211, 126)
+        Me.txtNombreEnfermedad.Location = New System.Drawing.Point(158, 102)
+        Me.txtNombreEnfermedad.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtNombreEnfermedad.Name = "txtNombreEnfermedad"
-        Me.txtNombreEnfermedad.Size = New System.Drawing.Size(420, 28)
+        Me.txtNombreEnfermedad.Size = New System.Drawing.Size(316, 24)
         Me.txtNombreEnfermedad.TabIndex = 14
         '
         'Label6
@@ -55,9 +57,10 @@ Partial Class AgregarEnfermedad
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Mongolian Baiti", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label6.Location = New System.Drawing.Point(52, 172)
+        Me.Label6.Location = New System.Drawing.Point(39, 140)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(140, 24)
+        Me.Label6.Size = New System.Drawing.Size(117, 20)
         Me.Label6.TabIndex = 13
         Me.Label6.Text = "Descripción:"
         '
@@ -66,9 +69,10 @@ Partial Class AgregarEnfermedad
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Mongolian Baiti", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label2.Location = New System.Drawing.Point(52, 125)
+        Me.Label2.Location = New System.Drawing.Point(39, 102)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(99, 24)
+        Me.Label2.Size = New System.Drawing.Size(84, 20)
         Me.Label2.TabIndex = 12
         Me.Label2.Text = "Nombre:"
         '
@@ -77,9 +81,10 @@ Partial Class AgregarEnfermedad
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Mongolian Baiti", 22.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label1.Location = New System.Drawing.Point(143, 42)
+        Me.Label1.Location = New System.Drawing.Point(107, 34)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(443, 40)
+        Me.Label1.Size = New System.Drawing.Size(363, 31)
         Me.Label1.TabIndex = 11
         Me.Label1.Text = "Agregar nueva enfermedad"
         '
@@ -88,9 +93,10 @@ Partial Class AgregarEnfermedad
         Me.btnAgregarEnfermedad.BackColor = System.Drawing.Color.SteelBlue
         Me.btnAgregarEnfermedad.Font = New System.Drawing.Font("Mongolian Baiti", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAgregarEnfermedad.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnAgregarEnfermedad.Location = New System.Drawing.Point(264, 282)
+        Me.btnAgregarEnfermedad.Location = New System.Drawing.Point(198, 229)
+        Me.btnAgregarEnfermedad.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnAgregarEnfermedad.Name = "btnAgregarEnfermedad"
-        Me.btnAgregarEnfermedad.Size = New System.Drawing.Size(204, 50)
+        Me.btnAgregarEnfermedad.Size = New System.Drawing.Size(153, 41)
         Me.btnAgregarEnfermedad.TabIndex = 16
         Me.btnAgregarEnfermedad.Text = "Agregar"
         Me.btnAgregarEnfermedad.UseVisualStyleBackColor = False
@@ -104,9 +110,10 @@ Partial Class AgregarEnfermedad
         'txtSintomas
         '
         Me.txtSintomas.Font = New System.Drawing.Font("Mongolian Baiti", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSintomas.Location = New System.Drawing.Point(211, 212)
+        Me.txtSintomas.Location = New System.Drawing.Point(158, 172)
+        Me.txtSintomas.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtSintomas.Name = "txtSintomas"
-        Me.txtSintomas.Size = New System.Drawing.Size(420, 28)
+        Me.txtSintomas.Size = New System.Drawing.Size(316, 24)
         Me.txtSintomas.TabIndex = 18
         '
         'Label3
@@ -114,18 +121,19 @@ Partial Class AgregarEnfermedad
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Mongolian Baiti", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label3.Location = New System.Drawing.Point(52, 216)
+        Me.Label3.Location = New System.Drawing.Point(39, 176)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(111, 24)
+        Me.Label3.Size = New System.Drawing.Size(94, 20)
         Me.Label3.TabIndex = 17
         Me.Label3.Text = "Síntomas:"
         '
         'AgregarEnfermedad
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightBlue
-        Me.ClientSize = New System.Drawing.Size(718, 374)
+        Me.ClientSize = New System.Drawing.Size(538, 304)
         Me.Controls.Add(Me.txtSintomas)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.btnAgregarEnfermedad)
@@ -135,7 +143,11 @@ Partial Class AgregarEnfermedad
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "AgregarEnfermedad"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Agregar Enfermedad"
         Me.ResumeLayout(False)
         Me.PerformLayout()

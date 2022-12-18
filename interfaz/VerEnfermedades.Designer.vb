@@ -35,45 +35,54 @@ Partial Class VerEnfermedades
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Mongolian Baiti", 22.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label1.Location = New System.Drawing.Point(228, 78)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(8, 0, 8, 0)
+        Me.Label1.Location = New System.Drawing.Point(172, 22)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(375, 40)
+        Me.Label1.Size = New System.Drawing.Size(308, 31)
         Me.Label1.TabIndex = 5
         Me.Label1.Text = "Lista de Enfermedades"
         '
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.interfaz.My.Resources.Resources.enfe
-        Me.PictureBox1.Location = New System.Drawing.Point(656, 36)
+        Me.PictureBox1.Location = New System.Drawing.Point(508, 12)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(140, 111)
+        Me.PictureBox1.Size = New System.Drawing.Size(54, 48)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 7
         Me.PictureBox1.TabStop = False
         '
         'dgListaEnfermedades
         '
+        Me.dgListaEnfermedades.AllowUserToAddRows = False
+        Me.dgListaEnfermedades.AllowUserToDeleteRows = False
         Me.dgListaEnfermedades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgListaEnfermedades.Location = New System.Drawing.Point(99, 179)
+        Me.dgListaEnfermedades.Location = New System.Drawing.Point(11, 72)
+        Me.dgListaEnfermedades.Margin = New System.Windows.Forms.Padding(2)
         Me.dgListaEnfermedades.Name = "dgListaEnfermedades"
+        Me.dgListaEnfermedades.ReadOnly = True
         Me.dgListaEnfermedades.RowHeadersWidth = 51
         Me.dgListaEnfermedades.RowTemplate.Height = 24
-        Me.dgListaEnfermedades.Size = New System.Drawing.Size(757, 278)
+        Me.dgListaEnfermedades.Size = New System.Drawing.Size(710, 299)
         Me.dgListaEnfermedades.TabIndex = 10
         '
         'VerEnfermedades
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightBlue
-        Me.ClientSize = New System.Drawing.Size(976, 570)
+        Me.ClientSize = New System.Drawing.Size(732, 395)
         Me.Controls.Add(Me.dgListaEnfermedades)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label1)
         Me.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "VerEnfermedades"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Enfermedades"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgListaEnfermedades, System.ComponentModel.ISupportInitialize).EndInit()
