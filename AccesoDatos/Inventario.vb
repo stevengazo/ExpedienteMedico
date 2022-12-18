@@ -4,6 +4,49 @@ Imports Objetos
 Public Class Inventario
     Dim _conexion As New SqlConnection(DATOSGENERALES.StringConnection)
 
+
+    Public Function ListarInventarioPorSucursal(idSucursal As Integer) As List(Of Objetos.InventarioMedico)
+        Try
+            Dim data As New DataSet()
+            Dim listaInventario As New List(Of Objetos.InventarioMedico)
+            Dim comando As New SqlCommand()
+            comando.CommandText = "
+                DECLARE @_idSucursal int = " & idSucursal & "
+                SELECT IM.*, m.Nombre  
+                FROM INVENTARIOMEDICO AS IM
+                INNER JOIN 
+	                (SELECT idInventario  FROM InvHasSucur WHERE InvHasSucur.idSucursal = @_idSucursal) AS TMP
+	                ON IM.idInventario = TMP.idInventario
+                inner join 
+	                Medicamento as M	
+	                on im.Medicamento_id = m.idMedicamento
+                where IM.CantDisponible>0
+                "
+            comando.CommandType = CommandType.Text
+            comando.Connection = _conexion
+            _conexion.Open()
+            Dim adapter As New SqlDataAdapter(comando)
+            adapter.Fill(data, "InventarioMedico")
+            _conexion.Close()
+            For Each row In data.Tables(0).Rows
+                Dim tmp As New Objetos.InventarioMedico()
+                tmp.idInventario = row(0)
+                tmp.NumLote = row(1)
+                tmp.FechaIngreso = Date.Parse(row(2))
+                tmp.FechaVencimiento = Date.Parse(row(3))
+                tmp.Refrigeracion = Boolean.Parse(row(4))
+                tmp.CantidadDisponible = Integer.Parse(row(5))
+                tmp.IdMedicamento = Integer.Parse(row(6))
+                Dim tmpMediAccess As New AccesoDatos.Medicamento
+                tmp.Medicamento = tmpMediAccess.ObtenerRegistro(tmp.IdMedicamento)
+                listaInventario.Add(tmp)
+            Next
+            Return listaInventario
+        Catch ex As Exception
+            Return New List(Of Objetos.InventarioMedico)
+        End Try
+    End Function
+
     Public Function AgregarRegistro(obj As Objetos.InventarioMedico) As Integer
         Try
             Dim comando As New SqlCommand()

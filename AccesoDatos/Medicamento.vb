@@ -4,6 +4,9 @@ Imports Objetos
 Public Class Medicamento
     Private _conection As New SqlConnection(DATOSGENERALES.StringConnection)
 
+
+
+
     Public Function InsertarRegistro(obj As Objetos.Medicamento) As Integer
         Try
             Dim comando As New SqlCommand()

@@ -4,4 +4,6 @@
     Public Indicaciones As String
     Public FechaVencimiento As DateTime
 
+
+
 End Class

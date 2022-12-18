@@ -187,7 +187,8 @@ Public Class VerExpediente
                 ' Abrir Ver Diagnostico
             Case "Agregar"
                 ' Abrir Agregar Diagnostico
-                AgregarDiagnostico.ShowDialog()
+                Dim tmp1 As New AgregarDiagnostico()
+                tmp1.ShowDialog()
                 Dim estado = _RegistroNegocios.ActualizarRegistro(TEMPORAL.RegistroTemp)
                 If estado Then
                     btnDiagnostico.Text = "Ver"
@@ -233,7 +234,8 @@ Public Class VerExpediente
                 ' Abrir Ver Diagnostico
             Case "Agregar"
                 ' Abrir Agregar Receta
-                AgregarReceta.ShowDialog()
+                Dim recetaAgregar As New AgregarReceta
+                recetaAgregar.ShowDialog()
                 ' Cambio de Estado 
                 btnReceta.Text = "Ver"
                 btnReceta.ForeColor = Color.White

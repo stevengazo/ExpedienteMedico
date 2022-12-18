@@ -96,6 +96,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Provincia.vb" />
+    <Compile Include="Receta.vb" />
     <Compile Include="Registro.vb" />
     <Compile Include="Sucursal.vb" />
   </ItemGroup>

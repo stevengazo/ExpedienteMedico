@@ -15,7 +15,7 @@ Public Class Inventario
 
     Public Function ListaInventarioPorSucursal(idSucursal As Integer) As List(Of Objetos.InventarioMedico)
         Try
-            Return _InventarioAccesoDatos.ListarRegistros(idSucursal)
+            Return _InventarioAccesoDatos.ListarInventarioPorSucursal(idSucursal)
         Catch ex As Exception
             Return New List(Of InventarioMedico)
         End Try
