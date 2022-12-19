@@ -14,7 +14,7 @@ Public Class Provincia
             Dim listaProvincias As New List(Of Objetos.Provincia)
             ''
             Dim comando As New SqlCommand()
-            comando.CommandText = "Select * from Provincia"
+            comando.CommandText = "Select * from Provincia where idProvincia >0"
             comando.CommandType = CommandType.Text
             comando.Connection = conection
 
