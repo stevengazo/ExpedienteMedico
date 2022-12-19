@@ -84,6 +84,34 @@ Public Class Inventario
     End Function
 
 
+    Public Function ObtenerRegistro(inventario As Integer) As Objetos.InventarioMedico
+        Try
+            Dim data As New DataSet()
+            Dim listaInventario As New List(Of Objetos.InventarioMedico)
+            Dim comando As New SqlCommand()
+            comando.CommandText = "select * from InventarioMedico where idInventario =" + inventario.ToString()
+            comando.CommandType = CommandType.Text
+            comando.Connection = _conexion
+            _conexion.Open()
+            Dim adapter As New SqlDataAdapter(comando)
+            adapter.Fill(data, "InventarioMedico")
+            _conexion.Close()
+            Dim tmp As New Objetos.InventarioMedico
+            For Each row In data.Tables(0).Rows
+                tmp.idInventario = row(0)
+                tmp.NumLote = row(1)
+                tmp.FechaIngreso = Date.Parse(row(2))
+                tmp.FechaVencimiento = Date.Parse(row(3))
+                tmp.Refrigeracion = Boolean.Parse(row(4))
+                tmp.CantidadDisponible = Integer.Parse(row(5))
+                tmp.IdMedicamento = Integer.Parse(row(6))
+            Next
+            Return tmp
+        Catch ex As Exception
+            Return New Objetos.InventarioMedico
+        End Try
+    End Function
+
     Public Function ListarRegistros(idSucursal) As List(Of Objetos.InventarioMedico)
         Try
             Dim data As New DataSet()

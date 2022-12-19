@@ -93,6 +93,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="PacienteNegocio.vb" />
+    <Compile Include="ReceHasInv.vb" />
     <Compile Include="Receta.vb" />
     <Compile Include="Registro.vb" />
   </ItemGroup>

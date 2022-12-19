@@ -6,6 +6,8 @@ Public Class AgregarReceta
     Private _Inventario As New List(Of Objetos.InventarioMedico)
     Private _InventarioSeleccionados As New List(Of Objetos.InventarioMedico)
     Private _NegoReceta As New Negocio.Receta
+    Private _NegoRecetaInventario As New Negocio.ReceHasInv
+
     Private Sub AgregarReceta_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         CargaDatos()
     End Sub
@@ -45,16 +47,21 @@ Public Class AgregarReceta
                 receta.FechaVencimiento = dtpFechaVencimiento.Value
                 receta.Indicaciones = txtIndicaciones.Text
                 receta.idReceta = _NegoReceta.AgregarReceta(receta)
-
+                ' vincula los medicamentos en inventario seleccionados
                 If receta.idReceta > 0 Then
-                    ' agrego la dependencia en la tabla intermedia 
+                    TEMPORAL.RegistroTemp.idReceta = receta.idReceta
+                    For Each i In _InventarioSeleccionados
+                        Dim receinve As New Objetos.ReceHasMedi(receta.idReceta, i.CantidadDisponible, i.idInventario)
+                        _NegoRecetaInventario.IngresarRecetaInventario(receinve)
+
+                    Next
+                    MessageBox.Show("Elementos Agregados", "Error")
+                    Me.Close()
+
                 Else
                     MessageBox.Show("Error interno", "Error")
                 End If
             End If
-
-
-
         Else
             MessageBox.Show("Indicaciones vacias", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
@@ -65,13 +72,13 @@ Public Class AgregarReceta
             If Not cbMedicamentos.Text = Nothing And Not cbCantidad.Text = Nothing Then
                 Dim nombreMedicamento = cbMedicamentos.Text
                 Dim cantidad = Integer.Parse(cbCantidad.Text)
-
                 For Each item In _Inventario
                     If item.Medicamento.Nombre.Equals(nombreMedicamento) Then
                         Dim existe = (From i In _InventarioSeleccionados Where i.IdMedicamento = item.idInventario Select i).Count()
                         If existe > 0 Then
                             MessageBox.Show("Elemento ya agregado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information)
                         Else
+                            item.CantidadDisponible = cantidad
                             _InventarioSeleccionados.Add(item)
                             cargarMedicamento()
                         End If
@@ -99,11 +106,9 @@ Public Class AgregarReceta
                 _tabla.Columns.Add("Id Inventario")
                 _tabla.Columns.Add("Nombre")
                 _tabla.Columns.Add("Cantidad")
-
                 For Each obj As Objetos.InventarioMedico In _InventarioSeleccionados
                     _tabla.Rows.Add(obj.idInventario, obj.Medicamento.Nombre, obj.CantidadDisponible.ToString())
                 Next
-
                 dgvMedicamentos.DataSource = _tabla
                 Dim buttonVer As New DataGridViewButtonColumn
                 buttonVer.HeaderText = "Eliminar"
@@ -133,7 +138,6 @@ Public Class AgregarReceta
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-
         Me.Close()
     End Sub
 End Class

@@ -23,6 +23,8 @@ Partial Class VerReceta
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.lblFechaVencimiento = New System.Windows.Forms.Label()
+        Me.lblFechaRetiro = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.dgvMedicamentos = New System.Windows.Forms.DataGridView()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -30,8 +32,6 @@ Partial Class VerReceta
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.lblFechaRetiro = New System.Windows.Forms.Label()
-        Me.lblFechaVencimiento = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgvMedicamentos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -52,6 +52,24 @@ Partial Class VerReceta
         Me.GroupBox1.Size = New System.Drawing.Size(344, 409)
         Me.GroupBox1.TabIndex = 3
         Me.GroupBox1.TabStop = False
+        '
+        'lblFechaVencimiento
+        '
+        Me.lblFechaVencimiento.AutoSize = True
+        Me.lblFechaVencimiento.Location = New System.Drawing.Point(167, 96)
+        Me.lblFechaVencimiento.Name = "lblFechaVencimiento"
+        Me.lblFechaVencimiento.Size = New System.Drawing.Size(39, 13)
+        Me.lblFechaVencimiento.TabIndex = 12
+        Me.lblFechaVencimiento.Text = "Label7"
+        '
+        'lblFechaRetiro
+        '
+        Me.lblFechaRetiro.AutoSize = True
+        Me.lblFechaRetiro.Location = New System.Drawing.Point(167, 69)
+        Me.lblFechaRetiro.Name = "lblFechaRetiro"
+        Me.lblFechaRetiro.Size = New System.Drawing.Size(39, 13)
+        Me.lblFechaRetiro.TabIndex = 11
+        Me.lblFechaRetiro.Text = "Label6"
         '
         'Label5
         '
@@ -118,27 +136,9 @@ Partial Class VerReceta
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(6, 69)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(80, 13)
+        Me.Label1.Size = New System.Drawing.Size(116, 13)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Fecha Retiro"
-        '
-        'lblFechaRetiro
-        '
-        Me.lblFechaRetiro.AutoSize = True
-        Me.lblFechaRetiro.Location = New System.Drawing.Point(167, 69)
-        Me.lblFechaRetiro.Name = "lblFechaRetiro"
-        Me.lblFechaRetiro.Size = New System.Drawing.Size(39, 13)
-        Me.lblFechaRetiro.TabIndex = 11
-        Me.lblFechaRetiro.Text = "Label6"
-        '
-        'lblFechaVencimiento
-        '
-        Me.lblFechaVencimiento.AutoSize = True
-        Me.lblFechaVencimiento.Location = New System.Drawing.Point(167, 96)
-        Me.lblFechaVencimiento.Name = "lblFechaVencimiento"
-        Me.lblFechaVencimiento.Size = New System.Drawing.Size(39, 13)
-        Me.lblFechaVencimiento.TabIndex = 12
-        Me.lblFechaVencimiento.Text = "Label7"
+        Me.Label1.Text = "Fecha Prescripcion"
         '
         'VerReceta
         '

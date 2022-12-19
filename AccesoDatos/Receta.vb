@@ -34,4 +34,27 @@ Public Class Receta
         End Try
     End Function
 
+    Public Function ObtenerRegistro(idReceta) As Objetos.Receta
+        Try
+            Dim data As New DataSet()
+            Dim receta As New Objetos.Receta
+            Dim comando As New SqlCommand()
+            comando.CommandText = "select * from Receta where idReceta = " + idReceta.ToString()
+            comando.CommandType = CommandType.Text
+            comando.Connection = _conection
+            _conection.Open()
+            Dim adapter As New SqlDataAdapter(comando)
+            adapter.Fill(data, "Receta")
+            _conection.Close()
+            For Each i In data.Tables(0).Rows
+                receta.idReceta = Integer.Parse(i(0))
+                receta.Fecha = Date.Parse(i(1))
+                receta.Indicaciones = i(2)
+                receta.FechaVencimiento = Date.Parse(i(3))
+            Next
+            Return receta
+        Catch ex As Exception
+            Return New Objetos.Receta
+        End Try
+    End Function
 End Class

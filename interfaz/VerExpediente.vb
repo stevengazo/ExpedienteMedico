@@ -230,16 +230,22 @@ Public Class VerExpediente
         Select Case tipo
             Case "Ver"
                 ' Setear registro en memoria temporal
+                Dim tmp1 As New VerReceta()
+                tmp1.ShowDialog()
                 VerReceta.ShowDialog()
-                ' Abrir Ver Diagnostico
             Case "Agregar"
                 ' Abrir Agregar Receta
                 Dim recetaAgregar As New AgregarReceta
                 recetaAgregar.ShowDialog()
-                ' Cambio de Estado 
-                btnReceta.Text = "Ver"
-                btnReceta.ForeColor = Color.White
-                btnReceta.BackColor = Color.Blue
+
+                Dim estado = _RegistroNegocios.ActualizarRegistro(TEMPORAL.RegistroTemp)
+                If estado Then
+                    CargarDatosTabla()
+                    ' Cambio de Estado 
+                    btnReceta.Text = "Ver"
+                    btnReceta.ForeColor = Color.White
+                    btnReceta.BackColor = Color.Blue
+                End If
         End Select
     End Sub
 
