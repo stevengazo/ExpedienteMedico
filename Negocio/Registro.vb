@@ -48,4 +48,17 @@ Public Class Registro
 
         End Try
     End Function
+
+    Public Function BorrarRegistro(id As Integer) As Boolean
+        Try
+            Dim estado = _AccesoDatosRegistro.BorrarRegistro(id)
+            If estado Then
+                Return True
+            Else
+                Return False
+            End If
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
 End Class

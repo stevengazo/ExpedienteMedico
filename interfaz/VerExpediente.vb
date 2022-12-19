@@ -10,6 +10,7 @@ Public Class VerExpediente
     Private _RegistroNegocios As New Negocio.Registro()
     Private _ListaRegistros As New List(Of Objetos.Registro)
     Private Paciente As New Objetos.Paciente()
+    Private _RecetaNegocios As New Negocio.Receta()
 
     Public Sub New()
 
@@ -212,7 +213,8 @@ Public Class VerExpediente
                 btnEliminarCita.Enabled = False
             Case "Agregar"
                 ' Abrir Agregar Diagnostico
-                AgregarCita.ShowDialog()
+                Dim tmp As New AgregarCita()
+                tmp.ShowDialog()
                 ' Setear registro en memoria temporal
                 Dim estado = _RegistroNegocios.ActualizarRegistro(TEMPORAL.RegistroTemp)
                 If estado Then
@@ -232,7 +234,6 @@ Public Class VerExpediente
                 ' Setear registro en memoria temporal
                 Dim tmp1 As New VerReceta()
                 tmp1.ShowDialog()
-                VerReceta.ShowDialog()
             Case "Agregar"
                 ' Abrir Agregar Receta
                 Dim recetaAgregar As New AgregarReceta
@@ -330,8 +331,6 @@ Public Class VerExpediente
             Dim idDiagnostico = TEMPORAL.RegistroTemp.idDiagnostico
             TEMPORAL.RegistroTemp.idDiagnostico = 0
             Dim Estado = _RegistroNegocios.ActualizarRegistro(TEMPORAL.RegistroTemp)
-
-
             ' Borrar Cita en DB
             If Estado Then
                 Dim _Diagnosticos As New Negocio.DiagnosticoNegocios()
@@ -354,6 +353,19 @@ Public Class VerExpediente
         Dim result = MessageBox.Show("¿Deseas eliminar la receta asociada a este registro?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
         If result = DialogResult.Yes Then
             ' Borrar 
+            Dim idAborrar = TEMPORAL.RegistroTemp.idReceta
+            TEMPORAL.RegistroTemp.idReceta = 0
+            Dim Estado = _RegistroNegocios.ActualizarRegistro(TEMPORAL.RegistroTemp)
+            If Estado Then
+                Dim resultado = _RecetaNegocios.BorrarReceta(idAborrar)
+                If resultado Then
+                    MessageBox.Show("Diagnostico borrada del registro", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    btnReceta.ForeColor = Color.White
+                    btnEliminarReceta.Enabled = False
+                    btnReceta.Text = "Agregar"
+                    btnReceta.BackColor = Color.Green
+                End If
+            End If
         End If
     End Sub
 
@@ -361,6 +373,12 @@ Public Class VerExpediente
         Dim result = MessageBox.Show("¿Deseas eliminar el registro asociado al expediente?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
         If result = DialogResult.Yes Then
             ' Borrar 
+            Dim idRegistro = TEMPORAL.RegistroTemp.idRegistro
+            Dim estado = _RegistroNegocios.BorrarRegistro(idRegistro)
+            If estado Then
+                MessageBox.Show("Registro del Expediente eliminado", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                CargarDatosTabla()
+            End If
         End If
     End Sub
 End Class

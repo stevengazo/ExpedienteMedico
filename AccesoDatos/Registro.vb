@@ -99,4 +99,22 @@ Public Class Registro
             Return False
         End Try
     End Function
+
+
+    Public Function BorrarRegistro(id As Integer) As Boolean
+        Try
+            Dim _dataSet As New DataSet()
+            Dim listaRegistros As New List(Of Objetos.Registro)
+            Dim comando As New SqlCommand()
+            comando.CommandText = "delete from Registro where idRegistro = " + id.ToString()
+            comando.CommandType = CommandType.Text
+            comando.Connection = conexion
+            conexion.Open()
+            comando.ExecuteNonQuery()
+            conexion.Close()
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
 End Class

@@ -15,4 +15,20 @@ Public Class Receta
             Return 0
         End Try
     End Function
+
+    Public Function ObtenerReceta(id As Integer) As Objetos.Receta
+        Try
+            Return _accesodatosReceta.ObtenerRegistro(id)
+        Catch ex As Exception
+            Return New Objetos.Receta
+        End Try
+    End Function
+
+    Public Function BorrarReceta(id As Integer) As Boolean
+        Try
+            Return _accesodatosReceta.BorrarRegistro(id)
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
 End Class

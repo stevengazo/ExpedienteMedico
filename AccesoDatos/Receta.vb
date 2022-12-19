@@ -57,4 +57,28 @@ Public Class Receta
             Return New Objetos.Receta
         End Try
     End Function
+
+    Public Function BorrarRegistro(id As Integer) As Boolean
+        Try
+            Dim data As New DataSet()
+            Dim receta As New Objetos.Receta
+            Dim comando As New SqlCommand()
+            comando.CommandText = "
+
+                    DECLARE @_idBorrar int= " & id & "
+                    DELETE FROM ReceHasMedi
+                    WHERE ReceHasMedi.idReceta = @_idBorrar 
+                    DELETE FROM Receta 
+                    WHERE Receta.idReceta = @_idBorrar
+                    "
+            comando.CommandType = CommandType.Text
+            comando.Connection = _conection
+            _conection.Open()
+            comando.ExecuteNonQuery()
+            _conection.Close()
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
 End Class

@@ -3,12 +3,11 @@ Imports Objetos
 
 Public Class VerReceta
     Dim idReceta As Integer
+    Dim _receta As New Negocio.Receta
     Dim _RecetaInventario As New Negocio.ReceHasInv
     Dim _receInven As New List(Of Objetos.ReceHasMedi)
     Private Sub VerReceta_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
         _receInven = _RecetaInventario.ListaRecetasInventario(TEMPORAL.RegistroTemp.idReceta)
-
         idReceta = TEMPORAL.RegistroTemp.idReceta
         cargarInformacion()
         cargarMedicamento()
@@ -18,7 +17,11 @@ Public Class VerReceta
 
     Private Sub cargarInformacion()
         Try
-
+            Dim data = _receta.ObtenerReceta(TEMPORAL.RegistroTemp.idReceta)
+            lblFechaRetiro.Text = data.Fecha.ToShortDateString()
+            lblFechaVencimiento.Text = data.FechaVencimiento.ToShortDateString()
+            txtIndicaciones.Text = data.Indicaciones
+            txtIndicaciones.Enabled = False
         Catch ex As Exception
             MessageBox.Show("Error interno", "Error")
         End Try
@@ -39,6 +42,8 @@ Public Class VerReceta
                                          obj.Inventario.Medicamento.Nombre,
                                          obj.Cantidad.ToString())
                     Next
+
+                    dgvMedicamentos.DataSource = _tabla
                 End If
             End If
         Catch ex As Exception
