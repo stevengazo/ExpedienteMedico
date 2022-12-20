@@ -184,6 +184,6 @@ Public Class ModoMedicos
     End Sub
 
     Private Sub ModoMedicos_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
-        Application.Exit()
+        '    Application.Exit()
     End Sub
 End Class

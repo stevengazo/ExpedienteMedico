@@ -178,7 +178,7 @@ Public Class VerExpediente
                                 Where regi.idRegistro = numId
                                 Select regi).FirstOrDefault()
                 Dim tmpDoctor As New Negocio.MedicoNegocio()
-                _doctor = tmpDoctor.ObtenerMedico(Registro.idRegistro)
+                _doctor = tmpDoctor.ObtenerMedico(Registro.idMedico)
                 Dim sucursal = _ComunesNegocio.ObtenerSucursal(Registro.idSucursal)
                 TEMPORAL.RegistroTemp = Registro
                 TEMPORAL.Sucursal = sucursal
