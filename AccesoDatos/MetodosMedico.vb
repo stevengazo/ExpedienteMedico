@@ -280,4 +280,46 @@ Public Class MetodosMedico
             Throw New Exception(ex.Message)
         End Try
     End Function
+
+
+    Public Function ActualizarMedico(medico As Objetos.Medico) As Boolean
+        Try
+            Dim comando As New SqlCommand()
+            comando.CommandText = "[dbo].[MedicoActualizar]"
+            comando.CommandType = CommandType.StoredProcedure
+            comando.Connection = conection
+            'Parametros Entrada
+            comando.Parameters.Add("@_idMedico", SqlDbType.Int).Value = medico.idMedico
+            comando.Parameters.Add("@_Usuario", SqlDbType.VarChar, 25).Value = medico.Usuario
+            comando.Parameters.Add("@_Contrasena", SqlDbType.VarChar, 50).Value = medico.Contraseña
+            comando.Parameters.Add("@_Nombre", SqlDbType.VarChar, 25).Value = medico.Nombre
+            comando.Parameters.Add("@_Apellidos", SqlDbType.VarChar, 50).Value = medico.Apellido
+            comando.Parameters.Add("@_Identificacion", SqlDbType.VarChar, 30).Value = medico.Identificacion
+            comando.Parameters.Add("@_TipoIdentificacion", SqlDbType.VarChar, 15).Value = medico.TipoIdentificación
+            comando.Parameters.Add("@_Sexo", SqlDbType.VarChar, 15).Value = medico.Sexo
+            comando.Parameters.Add("@_EstadoCivil", SqlDbType.VarChar, 15).Value = medico.EstadoCivil
+            comando.Parameters.Add("@_Nacionalidad", SqlDbType.VarChar, 15).Value = medico.Nacionalidad
+            comando.Parameters.Add("@_FechaNacimiento", SqlDbType.VarChar, 10).Value = medico.FechaNacimiento.ToString()
+            comando.Parameters.Add("@_NumeroTelefonico", SqlDbType.Int).Value = medico.NumeroTelefono
+            comando.Parameters.Add("@_Correo", SqlDbType.VarChar, 40).Value = medico.Correo
+            comando.Parameters.Add("@_OtrasSenas", SqlDbType.VarChar, 100).Value = medico.OtrasSenas
+            comando.Parameters.Add("@_IdDistrito", SqlDbType.Int).Value = medico.IdDistrito.ToString()
+            ' Parametros salida
+            comando.Parameters.Add("@_codigo_error", SqlDbType.Int).Direction = ParameterDirection.Output
+            comando.Parameters.Add("@_mensaje_error", SqlDbType.VarChar, 255).Direction = ParameterDirection.Output
+            comando.Parameters.Add("@Editado", SqlDbType.Bit).Direction = ParameterDirection.Output
+            ' Conexion
+            conection.Open()
+            comando.ExecuteNonQuery()
+            conection.Close()
+            '
+            If comando.Parameters("@Editado").Value Then
+                Return True
+            Else
+                Return False
+            End If
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
 End Class

@@ -31,4 +31,17 @@ Public Class Medicamento
         End Try
     End Function
 
+    Public Function BorrarMedicamento(idMedicamento As Integer) As Boolean
+        Try
+            Dim codigo As Integer = _Medicamento.BorrarMedicamento(idMedicamento)
+            If codigo = 0 Then
+                Return True
+            Else
+                Return False
+            End If
+        Catch ex As Exception
+            Console.Write(ex.Message)
+            Return False
+        End Try
+    End Function
 End Class

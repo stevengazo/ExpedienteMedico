@@ -72,97 +72,44 @@ Public Class VerEnfermedades
                 Dim cells = row.Cells
 
                 Dim bandera = NegocioEnfe.BorrarEnfermedad(id)
-                    If bandera Then
-                        Dim tmpNegocios As New Negocio.EnfermedadNegocio
-                        Dim listaEnfe As List(Of Objetos.Enfermedad)
-                        listaEnfe = tmpNegocios.ListaEnfermedad()
+                If bandera Then
+                    Dim tmpNegocios As New Negocio.EnfermedadNegocio
+                    Dim listaEnfe As List(Of Objetos.Enfermedad)
+                    listaEnfe = tmpNegocios.ListaEnfermedad()
 
-                        If listaEnfe.Count > 0 Then
-                            Dim _tabla As New DataTable
-                            _tabla.Columns.Add("Id")
-                            _tabla.Columns.Add("Nombre")
-                            _tabla.Columns.Add("Descrición")
-                            _tabla.Columns.Add("Sintomas")
+                    If listaEnfe.Count > 0 Then
+                        Dim _tabla As New DataTable
+                        _tabla.Columns.Add("Id")
+                        _tabla.Columns.Add("Nombre")
+                        _tabla.Columns.Add("Descrición")
+                        _tabla.Columns.Add("Sintomas")
 
-                            For Each objE As Objetos.Enfermedad In listaEnfe
-                                _tabla.Rows.Add(objE.idEnfermedad, objE.Nombre, objE.Descripcion, objE.sintomas)
-                            Next
+                        For Each objE As Objetos.Enfermedad In listaEnfe
+                            _tabla.Rows.Add(objE.idEnfermedad, objE.Nombre, objE.Descripcion, objE.sintomas)
+                        Next
 
-                            dgListaEnfermedades.Columns.Clear()
-                            dgListaEnfermedades.DataSource = _tabla
+                        dgListaEnfermedades.Columns.Clear()
+                        dgListaEnfermedades.DataSource = _tabla
 
-                            Dim buttonVer As New DataGridViewButtonColumn
-                            buttonVer.HeaderText = "Ver"
-                            buttonVer.Text = "Ver"
-                            buttonVer.Name = "btnVerPaciente"
-                            buttonVer.UseColumnTextForButtonValue = True
-                            dgListaEnfermedades.Columns.Add(buttonVer)
+                        Dim buttonVer As New DataGridViewButtonColumn
+                        buttonVer.HeaderText = "Ver"
+                        buttonVer.Text = "Ver"
+                        buttonVer.Name = "btnVerPaciente"
+                        buttonVer.UseColumnTextForButtonValue = True
+                        dgListaEnfermedades.Columns.Add(buttonVer)
 
 
-                            Dim buttonBorrar As New DataGridViewButtonColumn
-                            buttonBorrar.HeaderText = "Borrar"
-                            buttonBorrar.Text = "Borrar"
-                            buttonBorrar.Name = "Borrar"
-                            buttonBorrar.UseColumnTextForButtonValue = True
-                            dgListaEnfermedades.Columns.Add(buttonBorrar)
+                        Dim buttonBorrar As New DataGridViewButtonColumn
+                        buttonBorrar.HeaderText = "Borrar"
+                        buttonBorrar.Text = "Borrar"
+                        buttonBorrar.Name = "Borrar"
+                        buttonBorrar.UseColumnTextForButtonValue = True
+                        dgListaEnfermedades.Columns.Add(buttonBorrar)
 
-                        End If
-                    Else
-                        MessageBox.Show("Error al borrar la enfermedad", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     End If
-
+                Else
+                    MessageBox.Show("Error al borrar la enfermedad, existen dependencias de diagnosticos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                End If
         End Select
-
-
-
-        'If e.ColumnIndex = 5 Then
-        '    Dim row = dgListaEnfermedades.Rows(e.RowIndex)
-        '    Dim cells = row.Cells
-
-        '    Dim id = Integer.Parse(cells.Item(0).Value)
-        '    Dim bandera = NegocioEnfe.BorrarEnfermedad(id)
-        '    If bandera Then
-        '        Dim tmpNegocios As New Negocio.EnfermedadNegocio
-        '        Dim listaEnfe As List(Of Objetos.Enfermedad)
-        '        listaEnfe = tmpNegocios.ListaEnfermedad()
-
-        '        If listaEnfe.Count > 0 Then
-        '            Dim _tabla As New DataTable
-        '            _tabla.Columns.Add("Id")
-        '            _tabla.Columns.Add("Nombre")
-        '            _tabla.Columns.Add("Descrición")
-        '            _tabla.Columns.Add("Sintomas")
-
-        '            For Each objE As Objetos.Enfermedad In listaEnfe
-        '                _tabla.Rows.Add(objE.idEnfermedad, objE.Nombre, objE.Descripcion, objE.sintomas)
-        '            Next
-
-        '            dgListaEnfermedades.Columns.Clear()
-        '            dgListaEnfermedades.DataSource = _tabla
-
-        '            Dim buttonVer As New DataGridViewButtonColumn
-        '            buttonVer.HeaderText = "Ver"
-        '            buttonVer.Text = "Ver"
-        '            buttonVer.Name = "btnVerPaciente"
-        '            buttonVer.UseColumnTextForButtonValue = True
-        '            dgListaEnfermedades.Columns.Add(buttonVer)
-
-
-        '            Dim buttonBorrar As New DataGridViewButtonColumn
-        '            buttonBorrar.HeaderText = "Borrar"
-        '            buttonBorrar.Text = "Borrar"
-        '            buttonBorrar.Name = "Borrar"
-        '            buttonBorrar.UseColumnTextForButtonValue = True
-        '            dgListaEnfermedades.Columns.Add(buttonBorrar)
-
-        '        End If
-        '    Else
-        '        MessageBox.Show("Error al borrar la enfermedad", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        '    End If
-        'End If
-        'If e.ColumnIndex = 4 Then
-        '    VerEnfermedad.Show()
-        'End If
-
     End Sub
 End Class

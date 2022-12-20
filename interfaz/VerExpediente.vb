@@ -11,6 +11,9 @@ Public Class VerExpediente
     Private _ListaRegistros As New List(Of Objetos.Registro)
     Private Paciente As New Objetos.Paciente()
     Private _RecetaNegocios As New Negocio.Receta()
+    Private _listaMedicos As New List(Of Objetos.Medico)
+    Private _doctor As New Objetos.Medico
+    Private _negociosMedico As New Negocio.MedicoNegocio()
 
     Public Sub New()
 
@@ -106,6 +109,10 @@ Public Class VerExpediente
         Try
             PanelAgregarRegistro.Show()
             btnGenerarRegistro.Enabled = False
+            _listaMedicos = _negociosMedico.ListaMedicos()
+            For Each i In _listaMedicos
+                cbMedico.Items.Add(i.Nombre + " " + i.Apellido)
+            Next
         Catch ex As Exception
             MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
@@ -113,6 +120,7 @@ Public Class VerExpediente
 
 
     Private Sub VerExpediente_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         PanelAgregarRegistro.Hide()
         PanelRegistroInfo.Show()
         Paciente = TEMPORAL.Paciente
@@ -139,16 +147,18 @@ Public Class VerExpediente
 
     Private Sub btnAgregarRegistro_Click(sender As Object, e As EventArgs) Handles btnAgregarRegistro.Click
         Try
+            Dim doctor = (From i In _listaMedicos Where (i.Nombre + " " + i.Apellido) = cbMedico.SelectedItem Select i).FirstOrDefault()
             PanelAgregarRegistro.Hide()
             btnGenerarRegistro.Enabled = True
             For Each item In ListaSucursales
                 If item.Nombre.Equals(cbSucursal.Text) Then
                     Dim NegociosRegistro As New Negocio.Registro()
-                    Dim id As Integer = NegociosRegistro.GenerarRegistro(Paciente.Expediente.idExpediente, item.idSucursal)
+                    Dim id As Integer = NegociosRegistro.GenerarRegistro(Paciente.Expediente.idExpediente, item.idSucursal, doctor.idMedico)
                     If id = 0 Then
                         MessageBox.Show("Error interno", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     Else
-                        MessageBox.Show("Registro Agregado. Número: " + id, "información", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        MessageBox.Show("Registro Agregado. Número: " + id.ToString(), "información", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        CargarDatosTabla()
                     End If
                 End If
             Next
@@ -167,6 +177,8 @@ Public Class VerExpediente
                                     In _ListaRegistros
                                 Where regi.idRegistro = numId
                                 Select regi).FirstOrDefault()
+                Dim tmpDoctor As New Negocio.MedicoNegocio()
+                _doctor = tmpDoctor.ObtenerMedico(Registro.idRegistro)
                 Dim sucursal = _ComunesNegocio.ObtenerSucursal(Registro.idSucursal)
                 TEMPORAL.RegistroTemp = Registro
                 TEMPORAL.Sucursal = sucursal
@@ -255,6 +267,7 @@ Public Class VerExpediente
         Try
             lblSucursal.Text = sucursal.Nombre
             lblNumeroRegistro.Text = registro.idRegistro
+            lblDoctor.Text = _doctor.Nombre + " " + _doctor.Apellido
             ' Citas
             If registro.idCita = 0 Then
                 ' Agregar Nuevo Registro

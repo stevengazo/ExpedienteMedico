@@ -89,7 +89,7 @@
         Me.Close()
     End Sub
 
-    Private Sub GroupBox3_Enter(sender As Object, e As EventArgs) Handles GroupBox3.Enter
+    Private Sub GroupBox3_Enter(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -132,7 +132,7 @@
                 dgvSucursales.Columns.Clear()
                 dgvSucursales.DataSource = _tabla
             End If
-            lblSucursales.Text = "En el sistema existen" + listaSucursal.Count.ToString() + "Sucursales"
+            lblSucursales.Text = "En el sistema existen " + listaSucursal.Count.ToString() + "Sucursales"
 
             Dim listaPacients = _NegoPacientes.ListaPacientes()
             If listaPacients.Count > 0 Then
@@ -148,7 +148,7 @@
                 dgvPacientes.Columns.Clear()
                 dgvPacientes.DataSource = _tabla
             End If
-            lblPacientes.Text = "La cantidad de pacientes existentes es de " + listaPacients.Count.ToString() + "personas"
+            lblPacientes.Text = "La cantidad de pacientes existentes es de " + listaPacients.Count.ToString() + " personas"
 
 
         Catch ex As Exception

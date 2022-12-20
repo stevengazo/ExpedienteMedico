@@ -47,6 +47,8 @@ Partial Class VerExpediente
         Me.btnEliminarRegistro = New System.Windows.Forms.Button()
         Me.btnCerrar = New System.Windows.Forms.Button()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.lblDoctor = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
         Me.GroupBox8 = New System.Windows.Forms.GroupBox()
         Me.btnEliminarReceta = New System.Windows.Forms.Button()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -313,6 +315,8 @@ Partial Class VerExpediente
         '
         'GroupBox4
         '
+        Me.GroupBox4.Controls.Add(Me.lblDoctor)
+        Me.GroupBox4.Controls.Add(Me.Label13)
         Me.GroupBox4.Controls.Add(Me.GroupBox8)
         Me.GroupBox4.Controls.Add(Me.GroupBox7)
         Me.GroupBox4.Controls.Add(Me.GroupBox5)
@@ -327,12 +331,32 @@ Partial Class VerExpediente
         Me.GroupBox4.TabIndex = 2
         Me.GroupBox4.TabStop = False
         '
+        'lblDoctor
+        '
+        Me.lblDoctor.AutoSize = True
+        Me.lblDoctor.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDoctor.Location = New System.Drawing.Point(269, 86)
+        Me.lblDoctor.Name = "lblDoctor"
+        Me.lblDoctor.Size = New System.Drawing.Size(109, 16)
+        Me.lblDoctor.TabIndex = 14
+        Me.lblDoctor.Text = "Sucursal Elegida"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Location = New System.Drawing.Point(7, 88)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(50, 16)
+        Me.Label13.TabIndex = 13
+        Me.Label13.Text = "Doctor "
+        '
         'GroupBox8
         '
         Me.GroupBox8.Controls.Add(Me.btnEliminarReceta)
         Me.GroupBox8.Controls.Add(Me.Label10)
         Me.GroupBox8.Controls.Add(Me.btnReceta)
-        Me.GroupBox8.Location = New System.Drawing.Point(17, 189)
+        Me.GroupBox8.Location = New System.Drawing.Point(17, 211)
         Me.GroupBox8.Name = "GroupBox8"
         Me.GroupBox8.Size = New System.Drawing.Size(373, 49)
         Me.GroupBox8.TabIndex = 12
@@ -371,7 +395,7 @@ Partial Class VerExpediente
         Me.GroupBox7.Controls.Add(Me.btnEliminarDiagnostico)
         Me.GroupBox7.Controls.Add(Me.btnDiagnostico)
         Me.GroupBox7.Controls.Add(Me.Label9)
-        Me.GroupBox7.Location = New System.Drawing.Point(17, 134)
+        Me.GroupBox7.Location = New System.Drawing.Point(17, 156)
         Me.GroupBox7.Name = "GroupBox7"
         Me.GroupBox7.Size = New System.Drawing.Size(373, 49)
         Me.GroupBox7.TabIndex = 11
@@ -411,7 +435,7 @@ Partial Class VerExpediente
         Me.GroupBox5.Controls.Add(Me.GroupBox6)
         Me.GroupBox5.Controls.Add(Me.Label8)
         Me.GroupBox5.Controls.Add(Me.btnCita)
-        Me.GroupBox5.Location = New System.Drawing.Point(17, 85)
+        Me.GroupBox5.Location = New System.Drawing.Point(17, 107)
         Me.GroupBox5.Name = "GroupBox5"
         Me.GroupBox5.Size = New System.Drawing.Size(373, 49)
         Me.GroupBox5.TabIndex = 10
@@ -567,4 +591,6 @@ Partial Class VerExpediente
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents lblDoctor As Label
+    Friend WithEvents Label13 As Label
 End Class

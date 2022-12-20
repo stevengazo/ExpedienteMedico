@@ -14,10 +14,8 @@ Public Class Autenticacion
                 Dim aceptado = negocioAdmin.InicioSesion(txtNombreUsuario.Text, txtContraseña.Text)
                 If aceptado Then
                     Dim MedForm As ModoAdmin = New ModoAdmin()
-                    Me.Hide()
                     'Me.Dispose()
                     MedForm.ShowDialog()
-                    Me.Show()
                     'Me.Close()
                     clean()
                 Else

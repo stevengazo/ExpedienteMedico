@@ -90,4 +90,18 @@ Public Class MedicoNegocio
             Return New Objetos.Medico()
         End Try
     End Function
+
+
+    Public Function ActualizarMedico(medico As Objetos.Medico) As Boolean
+        Try
+            Dim estado = ConexionAccesoDatos.ActualizarMedico(medico)
+            If estado Then
+                Return True
+            Else
+                Return False
+            End If
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
 End Class

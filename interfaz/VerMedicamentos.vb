@@ -77,6 +77,13 @@ Public Class VerMedicamentos
                     Dim resultado = MessageBox.Show("¿Desea eliminar este registro?", "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
                     If resultado Then
                         ' borrar 
+                        Dim resultad1 = _MedicamentosNegocios.BorrarMedicamento(medicamento.idMedicamento)
+                        If resultad1 Then
+                            MessageBox.Show("Eliminado", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                            CargarTabla()
+                        Else
+                            MessageBox.Show("Error interno, no es posible borrar el medicamento", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                        End If
                     End If
             End Select
 

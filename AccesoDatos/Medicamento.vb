@@ -120,4 +120,30 @@ Public Class Medicamento
             Return New List(Of Objetos.Medicamento)
         End Try
     End Function
+
+    Public Function BorrarMedicamento(idMedicamento As Integer) As Integer
+        Try
+            Dim _comando As New SqlCommand()
+            _comando.CommandText = "[dbo].[EliminarMedicamento]"
+            _comando.CommandType = CommandType.StoredProcedure
+            _comando.Connection = _conection
+            'son parametros de entrada (envia el id al procedimiento)
+            _comando.Parameters.Add("@idMedicamento", SqlDbType.Int).Value = idMedicamento
+            'agregar los parametros de salida
+            _comando.Parameters.Add("@ErrorMessage", SqlDbType.VarChar, 255).Direction = ParameterDirection.Output
+            _comando.Parameters.Add("@ErrorCode", SqlDbType.Int).Direction = ParameterDirection.Output
+
+            _conection.Open()
+            _comando.ExecuteNonQuery()
+            _conection.Close()
+            If _comando.Parameters("@ErrorCode").Value = 0 Then
+                Return 0
+            Else
+                Return _comando.Parameters("@ErrorCode").Value
+            End If
+        Catch ex As Exception
+            Return 1
+        End Try
+    End Function
+
 End Class

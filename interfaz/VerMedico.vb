@@ -76,6 +76,21 @@
         cbProvincia.Enabled = True
     End Sub
 
+    Private Sub DesHabilitarCampos()
+        txtUsuario.Enabled = False
+        txtContrasena.Enabled = False
+        txtNombre.Enabled = False
+        txtApellidos.Enabled = False
+        txtIdentificacion.Enabled = False
+        cboTipoIdentificacion.Enabled = False
+        cboSexo.Enabled = False
+        cboEstadoCivil.Enabled = False
+        txtNacionalidad.Enabled = False
+        dtNacimiento.Enabled = False
+        cbDistrito.Enabled = False
+        cbCanton.Enabled = False
+        cbProvincia.Enabled = False
+    End Sub
 
     Private Sub cbProvincia_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbProvincia.SelectedIndexChanged
         cbDistrito.Items.Clear()
@@ -116,25 +131,46 @@
             btnEditar.Text = "Actualizar Información"
 
         Else
+            If Not String.IsNullOrEmpty(txtContrasena.Text) Then
+                Medico.Usuario = txtUsuario.Text
+                Medico.Nombre = txtNombre.Text
+                Medico.Apellido = txtApellidos.Text
+                Medico.Contraseña = txtContrasena.Text
+                Medico.Identificacion = txtIdentificacion.Text
+                Medico.TipoIdentificación = txtIdentificacion.Text
+                Medico.Sexo = cboSexo.SelectedItem
+                Medico.EstadoCivil = cboEstadoCivil.SelectedItem
+                Medico.FechaNacimiento = Date.Parse(dtNacimiento.Value)
+                Medico.Nacionalidad = txtNacionalidad.Text
+                If String.IsNullOrEmpty(txtTelefono.Text) Then
+                    Medico.NumeroTelefono = 0
+                Else
+                    Medico.NumeroTelefono = Integer.Parse(txtTelefono.Text)
+                End If
 
-            'Enfe.Nombre = txtNombre.Text
-            'Enfe.Descripcion = txtDes.Text
-            'Enfe.sintomas = txtSin.Text
-            'Dim flag = tmpNegocioEnfermedad.ActualizarEnfermedad(Enfermedad)
-            'If flag Then
-            '    PanelEditable.SendToBack()
-            '    Bandera = True
-            '    btnEditar.Text = "Editar información"
-            '    ActualizarEnfermedad()
-            '    ActualizarPanelInformacion()
-            '    PanelInfo.BringToFront()
-            '    MessageBox.Show("Enfermedad actualizada correctamente", "Información", MessageBoxButtons.OK)
-            'Else
-            '    MessageBox.Show("Error interno", "Error", MessageBoxButtons.OK)
-            'End If
+                Medico.Correo = txtCorreo.Text
+                If String.IsNullOrEmpty(cbDistrito.SelectedItem) Then
+                    Medico.IdDistrito = 0
+                Else
+                    Dim distrito = (From i In listaDistritos Where i.Nombre = cbDistrito.SelectedItem Select i).FirstOrDefault()
+                    Medico.IdDistrito = distrito.IdDistrito
+                End If
 
+                Medico.OtrasSenas = txtOtros.Text
 
+                Dim BanderitaDeSusan = tmpNegocioMedico.ActualizarMedico(Medico)
 
+                If BanderitaDeSusan Then
+                    MessageBox.Show("Médico actualizado", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    DesHabilitarCampos()
+                    Bandera = True
+                    btnEditar.Text = "Editar Enfermedad"
+                Else
+                    MessageBox.Show("Error interno", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                End If
+            Else
+                MessageBox.Show("Ingrese una contraseña", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            End If
 
         End If
     End Sub

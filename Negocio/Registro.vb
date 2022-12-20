@@ -28,9 +28,9 @@ Public Class Registro
     ''' <param name="idExpediente"> Expediente al cual se agrega</param>
     ''' <param name="idSucursal">Sucursal en las cual será atendido (general de uso general para cita,receta y diagnostico)</param>
     ''' <returns>True si agrega el registro, false si no lo logra o presenta error</returns>
-    Public Function GenerarRegistro(idExpediente As Integer, idSucursal As Integer) As Integer
+    Public Function GenerarRegistro(idExpediente As Integer, idSucursal As Integer, idMedico As Integer) As Integer
         Try
-            Return _AccesoDatosRegistro.AñadirRegistro(idExpediente, idSucursal)
+            Return _AccesoDatosRegistro.AñadirRegistro(idExpediente, idSucursal, idMedico)
         Catch ex As Exception
             Return 0
         End Try

@@ -8,7 +8,7 @@ Public Class Registro
     ''' </summary>
     Private conexion As New SqlConnection(DATOSGENERALES.StringConnection)
 
-    Public Function AñadirRegistro(idExpediente As Integer, idSucursal As Integer) As Integer
+    Public Function AñadirRegistro(idExpediente As Integer, idSucursal As Integer, idMedico As Integer) As Integer
         Try
             Dim comando As New SqlCommand()
             comando.CommandText = "[dbo].[GenerarRegistroEnExpediente]"
@@ -17,6 +17,7 @@ Public Class Registro
             'Parametros Entrada
             comando.Parameters.Add("@_idExpediente", SqlDbType.Int).Value = idExpediente
             comando.Parameters.Add("@_idSucursal", SqlDbType.Int).Value = idSucursal
+            comando.Parameters.Add("@_idMedico", SqlDbType.Int).Value = idMedico
             ' Parametros salida
             comando.Parameters.Add("@_codigo_error", SqlDbType.Int).Direction = ParameterDirection.Output
             comando.Parameters.Add("@_mensaje_error", SqlDbType.VarChar, 255).Direction = ParameterDirection.Output
